@@ -1,0 +1,708 @@
+\hypertarget{class_point}{}\section{Dokumentacja klasy Point}
+\label{class_point}\index{Point@{Point}}
+
+
+Klasa opisujaca Punkt.  
+
+
+
+
+{\ttfamily \#include $<$point.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point_ac7a42329250c07c3f7e8c688ab1c1fcb}{Point} (double x, double y, int type, int type1)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_point_ac77aa12fe810c6a1409fb63c64a70521}{Point} (double x, double y, int flag)
+\item 
+\hyperlink{class_point_aa26891d8be99659f996873b6cf3e6a9c}{Point} (double x, double y, double vx, double vy, int flag)
+\item 
+\hyperlink{class_point_ac13d6b1e1fb4aa41b8f17d298afbb15e}{Point} (double x, double y, double vx, double vy, double Dxx, double Dyy, double Dxy, int flag)
+\item 
+\hyperlink{class_point_a29c1d7d3887b5df5fb43ece80c7ee633}{Point} (double x, double y, double Dxx, double Dyy, double Dxy, int flag)
+\item 
+\hyperlink{class_point_ad92f2337b839a94ce97dcdb439b4325a}{Point} ()
+\item 
+int \hyperlink{class_point_ae6971f02ce5cf409b2e3dec6f873a9df}{get\+\_\+flag} () const 
+\item 
+double \hyperlink{class_point_a2018e6c0f7d91b0aab42317de89fdaea}{get\+\_\+x} () const 
+\item 
+double \hyperlink{class_point_ac4f7350d9c545e907b0c513a03201c4b}{get\+\_\+y} () const 
+\item 
+long double \hyperlink{class_point_aaea8d464458b82d80848895b6d828db9}{get\+\_\+\+Next} () const 
+\item 
+long double \hyperlink{class_point_a7a14be44e32b2987324213788b3b0593}{get\+\_\+\+Curr} () const 
+\item 
+long double \hyperlink{class_point_a7f61780c19bf584c97fcdb432e2d6e08}{get\+\_\+\+Prev} () const 
+\item 
+double \hyperlink{class_point_ad0f0083a12b3ff699e7edcd7adc90c81}{get\+\_\+vx} () const 
+\item 
+double \hyperlink{class_point_a6ed9a9e001af8ca030c648c280a05c69}{get\+\_\+vy} () const 
+\item 
+double \hyperlink{class_point_aef2637aabdb8e7dae3b20e67dfdc6e7a}{get\+\_\+\+Dxx} () const 
+\item 
+double \hyperlink{class_point_ad5be3c0b4fd5f65bc00ab3787361329c}{get\+\_\+\+Dxy} () const 
+\item 
+double \hyperlink{class_point_a4b4279a85ad655a77d90831c805a59e6}{get\+\_\+\+Dyy} () const 
+\item 
+double \hyperlink{class_point_aecfeb69a6a1ec3001343e9734e2e9746}{get\+\_\+\+Cur\+Ax} () const 
+\item 
+double \hyperlink{class_point_a3fc8a4d0cba11093f4468a52f641c517}{get\+\_\+\+Cur\+Ay} () const 
+\item 
+double \hyperlink{class_point_af2fef2c2ec81c04fe713f381ca2b2998}{get\+\_\+\+Cur\+Dx} () const 
+\item 
+double \hyperlink{class_point_a6b98226c33a0e7ba2302c13e33e25ea5}{get\+\_\+\+Cur\+Dxy} () const 
+\item 
+double \hyperlink{class_point_ab32d6e369d8cfc8beeb1e8c20c2a26bd}{get\+\_\+\+Cur\+Dy} () const 
+\item 
+double \hyperlink{class_point_a392f5d75605bd50620e2051ee15bc771}{get\+\_\+factor\+\_\+f} (string f) const 
+\item 
+double \hyperlink{class_point_a0d5dc8de308faf6875fa36074d6fc0f0}{get\+\_\+factor} (string f) const 
+\item 
+map$<$ int, \hyperlink{class_point}{Point} $>$ $\ast$ \hyperlink{class_point_a762956127e312f695530da058488fa22}{get\+\_\+map} () const 
+\item 
+int \hyperlink{class_point_a1cb03d7d73b39c92b7e56240b9184955}{get\+\_\+near\+\_\+neighbour} (int nr)
+\item 
+int \hyperlink{class_point_a64866cd58b7216bc8cbebe6dc8b46df1}{get\+\_\+distant\+\_\+neighbours} (int number)
+\item 
+void \hyperlink{class_point_ac0be2a43c354fed97e018c2b8fbf63b4}{set\+\_\+flag} (int f)
+\item 
+void \hyperlink{class_point_adaaf2fe64c78448b3c8d6e121ae3bca0}{set\+\_\+x} (double x)
+\item 
+void \hyperlink{class_point_a44bf07535f5dd99991a274833462379b}{set\+\_\+y} (double y)
+\item 
+void \hyperlink{class_point_ab68cfb3cd44fe4624dd89ec5b9275350}{set\+\_\+vx} (double v\+X)
+\item 
+void \hyperlink{class_point_aae045afff208fbd09dc3e466a0768781}{set\+\_\+vy} (double v\+Y)
+\item 
+void \hyperlink{class_point_a9c89304540fc3a2f9b7a6720f5bad95b}{set\+\_\+\+Dxx} (double Dx)
+\item 
+void \hyperlink{class_point_a0bf3e2831a50b62754eefb0cab6c3bbd}{set\+\_\+\+Dxy} (double Dxy)
+\item 
+void \hyperlink{class_point_adc5e03973821b3dee14d6b1c0a8e43ea}{set\+\_\+\+Dyy} (double Dy)
+\item 
+void \hyperlink{class_point_a1efdadc2ab2df0ba02ede0b23a3c2b40}{set\+\_\+\+Prev} (long double val)
+\item 
+void \hyperlink{class_point_a1f21dc53976e93ad52cfd2eafdb94209}{set\+\_\+\+Curr} (long double val)
+\item 
+void \hyperlink{class_point_a9be4fd3f7363583345023997921895ec}{set\+\_\+\+Next} (long double val)
+\item 
+void \hyperlink{class_point_ac25220ccb634802bdebc6de755afc807}{set\+\_\+factor\+\_\+fij} (string f, double val)
+\item 
+void \hyperlink{class_point_a9f37bcdde4f274fc2c9ee4e39fad9b22}{set\+\_\+factor} (string f, double val)
+\item 
+void \hyperlink{class_point_a743e76edf28eaf25c726051b66c2e256}{set\+\_\+map} (map$<$ int, \hyperlink{class_point}{Point} $>$ $\ast$Map)
+\item 
+void \hyperlink{class_point_a6c692685f4895204fb073a7a588dac29}{set\+\_\+near\+\_\+neighbours} (int opt=1)
+\item 
+void \hyperlink{class_point_aa3c1caf1c115df1bdf3ba45357f072ea}{set\+\_\+distant\+\_\+neighbours} (int opt=1)
+\item 
+void \hyperlink{class_point_abc3f1cb86556e34771306b46eac6a19a}{set\+\_\+\+Courant\+\_\+numbers} (double dx, double dy, double dt)
+\item 
+void \hyperlink{class_point_a20b27dff6a871012fa5e7c0d52fd6b98}{print} () const 
+\item 
+bool \hyperlink{class_point_a0d3c6e86bf5796952b0ac6d6092f7747}{operator$<$} (const \hyperlink{class_point}{Point} \&obj) const 
+\end{DoxyCompactItemize}
+\subsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static map$<$ int, \hyperlink{class_point}{Point} $>$ $\ast$ \hyperlink{class_point_a3384c3194e3d3c3196317013929e40d4}{\+\_\+\+Point\+Map} = 0
+\begin{DoxyCompactList}\small\item\em tylko jedna mapa moze byc \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_point_a63cebd1e00f14bdabf5000aa76174b03}{operator$<$$<$} (ostream \&out, const \hyperlink{class_point}{Point} \&obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa opisujaca Punkt. 
+
+Zawiera wszystkie informacje na temat konkretnego Punktu siatki, metody do ich ustawiaenia i dobrania sie do nich 
+
+Definicja w linii 34 pliku point.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_point_ac7a42329250c07c3f7e8c688ab1c1fcb}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{int}]{type, }
+\item[{int}]{type1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac7a42329250c07c3f7e8c688ab1c1fcb}
+
+
+Konstruktor. 
+
+Tworzy Punkt 
+\begin{DoxyParams}{Parametry}
+{\em -\/} & nazwa pliku z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 43 pliku point.\+h.
+
+\hypertarget{class_point_ac77aa12fe810c6a1409fb63c64a70521}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac77aa12fe810c6a1409fb63c64a70521}
+
+
+Definicja w linii 50 pliku point.\+h.
+
+\hypertarget{class_point_aa26891d8be99659f996873b6cf3e6a9c}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_aa26891d8be99659f996873b6cf3e6a9c}
+
+
+Definicja w linii 57 pliku point.\+h.
+
+\hypertarget{class_point_ac13d6b1e1fb4aa41b8f17d298afbb15e}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{Dxx, }
+\item[{double}]{Dyy, }
+\item[{double}]{Dxy, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac13d6b1e1fb4aa41b8f17d298afbb15e}
+
+
+Definicja w linii 64 pliku point.\+h.
+
+\hypertarget{class_point_a29c1d7d3887b5df5fb43ece80c7ee633}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{Dxx, }
+\item[{double}]{Dyy, }
+\item[{double}]{Dxy, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a29c1d7d3887b5df5fb43ece80c7ee633}
+
+
+Definicja w linii 71 pliku point.\+h.
+
+\hypertarget{class_point_ad92f2337b839a94ce97dcdb439b4325a}{}\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{Point}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}
+
+
+Definicja w linii 78 pliku point.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_point_aecfeb69a6a1ec3001343e9734e2e9746}{}\index{Point@{Point}!get\+\_\+\+Cur\+Ax@{get\+\_\+\+Cur\+Ax}}
+\index{get\+\_\+\+Cur\+Ax@{get\+\_\+\+Cur\+Ax}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Cur\+Ax}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Cur\+Ax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_aecfeb69a6a1ec3001343e9734e2e9746}
+zwaraca wartosc liczby Couranta dla danego pkt 
+
+Definicja w linii 119 pliku point.\+h.
+
+\hypertarget{class_point_a3fc8a4d0cba11093f4468a52f641c517}{}\index{Point@{Point}!get\+\_\+\+Cur\+Ay@{get\+\_\+\+Cur\+Ay}}
+\index{get\+\_\+\+Cur\+Ay@{get\+\_\+\+Cur\+Ay}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Cur\+Ay}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Cur\+Ay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a3fc8a4d0cba11093f4468a52f641c517}
+
+
+Definicja w linii 120 pliku point.\+h.
+
+\hypertarget{class_point_af2fef2c2ec81c04fe713f381ca2b2998}{}\index{Point@{Point}!get\+\_\+\+Cur\+Dx@{get\+\_\+\+Cur\+Dx}}
+\index{get\+\_\+\+Cur\+Dx@{get\+\_\+\+Cur\+Dx}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Cur\+Dx}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Cur\+Dx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_af2fef2c2ec81c04fe713f381ca2b2998}
+
+
+Definicja w linii 121 pliku point.\+h.
+
+\hypertarget{class_point_a6b98226c33a0e7ba2302c13e33e25ea5}{}\index{Point@{Point}!get\+\_\+\+Cur\+Dxy@{get\+\_\+\+Cur\+Dxy}}
+\index{get\+\_\+\+Cur\+Dxy@{get\+\_\+\+Cur\+Dxy}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Cur\+Dxy}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Cur\+Dxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a6b98226c33a0e7ba2302c13e33e25ea5}
+
+
+Definicja w linii 122 pliku point.\+h.
+
+\hypertarget{class_point_ab32d6e369d8cfc8beeb1e8c20c2a26bd}{}\index{Point@{Point}!get\+\_\+\+Cur\+Dy@{get\+\_\+\+Cur\+Dy}}
+\index{get\+\_\+\+Cur\+Dy@{get\+\_\+\+Cur\+Dy}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Cur\+Dy}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Cur\+Dy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ab32d6e369d8cfc8beeb1e8c20c2a26bd}
+
+
+Definicja w linii 123 pliku point.\+h.
+
+\hypertarget{class_point_a7a14be44e32b2987324213788b3b0593}{}\index{Point@{Point}!get\+\_\+\+Curr@{get\+\_\+\+Curr}}
+\index{get\+\_\+\+Curr@{get\+\_\+\+Curr}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Curr}]{\setlength{\rightskip}{0pt plus 5cm}long double Point\+::get\+\_\+\+Curr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a7a14be44e32b2987324213788b3b0593}
+zwraca wartosc obecna 
+
+Definicja w linii 98 pliku point.\+h.
+
+\hypertarget{class_point_a64866cd58b7216bc8cbebe6dc8b46df1}{}\index{Point@{Point}!get\+\_\+distant\+\_\+neighbours@{get\+\_\+distant\+\_\+neighbours}}
+\index{get\+\_\+distant\+\_\+neighbours@{get\+\_\+distant\+\_\+neighbours}!Point@{Point}}
+\subsubsection[{get\+\_\+distant\+\_\+neighbours}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::get\+\_\+distant\+\_\+neighbours (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a64866cd58b7216bc8cbebe6dc8b46df1}
+zwraca index odpowieniengo sasiada z dalszych sasiadow 
+
+Definicja w linii 145 pliku point.\+h.
+
+\hypertarget{class_point_aef2637aabdb8e7dae3b20e67dfdc6e7a}{}\index{Point@{Point}!get\+\_\+\+Dxx@{get\+\_\+\+Dxx}}
+\index{get\+\_\+\+Dxx@{get\+\_\+\+Dxx}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Dxx}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Dxx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_aef2637aabdb8e7dae3b20e67dfdc6e7a}
+zwraca wartosc wspolczynnika tensors dyspersji Dxx w danym pkt 
+
+Definicja w linii 110 pliku point.\+h.
+
+\hypertarget{class_point_ad5be3c0b4fd5f65bc00ab3787361329c}{}\index{Point@{Point}!get\+\_\+\+Dxy@{get\+\_\+\+Dxy}}
+\index{get\+\_\+\+Dxy@{get\+\_\+\+Dxy}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Dxy}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Dxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ad5be3c0b4fd5f65bc00ab3787361329c}
+zwraca wartosc wspolczynnika tensora dyspersji Dxy w danym pkt 
+
+Definicja w linii 113 pliku point.\+h.
+
+\hypertarget{class_point_a4b4279a85ad655a77d90831c805a59e6}{}\index{Point@{Point}!get\+\_\+\+Dyy@{get\+\_\+\+Dyy}}
+\index{get\+\_\+\+Dyy@{get\+\_\+\+Dyy}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Dyy}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+\+Dyy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a4b4279a85ad655a77d90831c805a59e6}
+zwraca wartosc wspolczynnika dyspersji Dy w danym pkt 
+
+Definicja w linii 116 pliku point.\+h.
+
+\hypertarget{class_point_a0d5dc8de308faf6875fa36074d6fc0f0}{}\index{Point@{Point}!get\+\_\+factor@{get\+\_\+factor}}
+\index{get\+\_\+factor@{get\+\_\+factor}!Point@{Point}}
+\subsubsection[{get\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+factor (
+\begin{DoxyParamCaption}
+\item[{string}]{f}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a0d5dc8de308faf6875fa36074d6fc0f0}
+
+
+Definicja w linii 133 pliku point.\+h.
+
+\hypertarget{class_point_a392f5d75605bd50620e2051ee15bc771}{}\index{Point@{Point}!get\+\_\+factor\+\_\+f@{get\+\_\+factor\+\_\+f}}
+\index{get\+\_\+factor\+\_\+f@{get\+\_\+factor\+\_\+f}!Point@{Point}}
+\subsubsection[{get\+\_\+factor\+\_\+f}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+factor\+\_\+f (
+\begin{DoxyParamCaption}
+\item[{string}]{f}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a392f5d75605bd50620e2051ee15bc771}
+zwaraca wartosc liczb Peclet-\/a dla danego pkt 
+
+Definicja w linii 132 pliku point.\+h.
+
+\hypertarget{class_point_ae6971f02ce5cf409b2e3dec6f873a9df}{}\index{Point@{Point}!get\+\_\+flag@{get\+\_\+flag}}
+\index{get\+\_\+flag@{get\+\_\+flag}!Point@{Point}}
+\subsubsection[{get\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::get\+\_\+flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ae6971f02ce5cf409b2e3dec6f873a9df}
+zwraca flage pkt 
+
+Definicja w linii 86 pliku point.\+h.
+
+\hypertarget{class_point_a762956127e312f695530da058488fa22}{}\index{Point@{Point}!get\+\_\+map@{get\+\_\+map}}
+\index{get\+\_\+map@{get\+\_\+map}!Point@{Point}}
+\subsubsection[{get\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Point}$>$$\ast$ Point\+::get\+\_\+map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a762956127e312f695530da058488fa22}
+zwraca mape do ktorej pkt nalezy 
+
+Definicja w linii 139 pliku point.\+h.
+
+\hypertarget{class_point_a1cb03d7d73b39c92b7e56240b9184955}{}\index{Point@{Point}!get\+\_\+near\+\_\+neighbour@{get\+\_\+near\+\_\+neighbour}}
+\index{get\+\_\+near\+\_\+neighbour@{get\+\_\+near\+\_\+neighbour}!Point@{Point}}
+\subsubsection[{get\+\_\+near\+\_\+neighbour}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::get\+\_\+near\+\_\+neighbour (
+\begin{DoxyParamCaption}
+\item[{int}]{nr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a1cb03d7d73b39c92b7e56240b9184955}
+zwraca index odpowieniengo sasiada z najblizszych sasiadow 
+
+Definicja w linii 142 pliku point.\+h.
+
+\hypertarget{class_point_aaea8d464458b82d80848895b6d828db9}{}\index{Point@{Point}!get\+\_\+\+Next@{get\+\_\+\+Next}}
+\index{get\+\_\+\+Next@{get\+\_\+\+Next}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Next}]{\setlength{\rightskip}{0pt plus 5cm}long double Point\+::get\+\_\+\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_aaea8d464458b82d80848895b6d828db9}
+zwraca wartosc nastepna 
+
+Definicja w linii 95 pliku point.\+h.
+
+\hypertarget{class_point_a7f61780c19bf584c97fcdb432e2d6e08}{}\index{Point@{Point}!get\+\_\+\+Prev@{get\+\_\+\+Prev}}
+\index{get\+\_\+\+Prev@{get\+\_\+\+Prev}!Point@{Point}}
+\subsubsection[{get\+\_\+\+Prev}]{\setlength{\rightskip}{0pt plus 5cm}long double Point\+::get\+\_\+\+Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a7f61780c19bf584c97fcdb432e2d6e08}
+zwraca wartosc poprzednia 
+
+Definicja w linii 101 pliku point.\+h.
+
+\hypertarget{class_point_ad0f0083a12b3ff699e7edcd7adc90c81}{}\index{Point@{Point}!get\+\_\+vx@{get\+\_\+vx}}
+\index{get\+\_\+vx@{get\+\_\+vx}!Point@{Point}}
+\subsubsection[{get\+\_\+vx}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+vx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ad0f0083a12b3ff699e7edcd7adc90c81}
+zwraca wartosc wspolrzednej Vx predkosci w danym pkt 
+
+Definicja w linii 104 pliku point.\+h.
+
+\hypertarget{class_point_a6ed9a9e001af8ca030c648c280a05c69}{}\index{Point@{Point}!get\+\_\+vy@{get\+\_\+vy}}
+\index{get\+\_\+vy@{get\+\_\+vy}!Point@{Point}}
+\subsubsection[{get\+\_\+vy}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+vy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a6ed9a9e001af8ca030c648c280a05c69}
+zwraca wartosc wspolrzednej Vy predkosci w danym pkt 
+
+Definicja w linii 107 pliku point.\+h.
+
+\hypertarget{class_point_a2018e6c0f7d91b0aab42317de89fdaea}{}\index{Point@{Point}!get\+\_\+x@{get\+\_\+x}}
+\index{get\+\_\+x@{get\+\_\+x}!Point@{Point}}
+\subsubsection[{get\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a2018e6c0f7d91b0aab42317de89fdaea}
+zwraca wspolrzednza x pkt 
+
+Definicja w linii 89 pliku point.\+h.
+
+\hypertarget{class_point_ac4f7350d9c545e907b0c513a03201c4b}{}\index{Point@{Point}!get\+\_\+y@{get\+\_\+y}}
+\index{get\+\_\+y@{get\+\_\+y}!Point@{Point}}
+\subsubsection[{get\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::get\+\_\+y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac4f7350d9c545e907b0c513a03201c4b}
+zwraca wspolrzednza y pkt 
+
+Definicja w linii 92 pliku point.\+h.
+
+\hypertarget{class_point_a0d3c6e86bf5796952b0ac6d6092f7747}{}\index{Point@{Point}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Point@{Point}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Point\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{obj}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a0d3c6e86bf5796952b0ac6d6092f7747}
+porownuje inny pkt z aktualnym 
+
+Definicja w linii 220 pliku point.\+h.
+
+\hypertarget{class_point_a20b27dff6a871012fa5e7c0d52fd6b98}{}\index{Point@{Point}!print@{print}}
+\index{print@{print}!Point@{Point}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_point_a20b27dff6a871012fa5e7c0d52fd6b98}
+Oblicza liczby Pecleta dla danego pkt
+
+wypisuje na ekranie informacje o danym pkt 
+
+Definicja w linii 12 pliku point.\+cpp.
+
+\hypertarget{class_point_abc3f1cb86556e34771306b46eac6a19a}{}\index{Point@{Point}!set\+\_\+\+Courant\+\_\+numbers@{set\+\_\+\+Courant\+\_\+numbers}}
+\index{set\+\_\+\+Courant\+\_\+numbers@{set\+\_\+\+Courant\+\_\+numbers}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Courant\+\_\+numbers}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Courant\+\_\+numbers (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}\label{class_point_abc3f1cb86556e34771306b46eac6a19a}
+Oblicza liczby adwekcyjne i dyfuzyjne Couranta dla danego pkt 
+
+Definicja w linii 218 pliku point.\+cpp.
+
+\hypertarget{class_point_a1f21dc53976e93ad52cfd2eafdb94209}{}\index{Point@{Point}!set\+\_\+\+Curr@{set\+\_\+\+Curr}}
+\index{set\+\_\+\+Curr@{set\+\_\+\+Curr}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Curr}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Curr (
+\begin{DoxyParamCaption}
+\item[{long double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a1f21dc53976e93ad52cfd2eafdb94209}
+ustwaia wartosc w pkt 
+
+Definicja w linii 177 pliku point.\+h.
+
+\hypertarget{class_point_aa3c1caf1c115df1bdf3ba45357f072ea}{}\index{Point@{Point}!set\+\_\+distant\+\_\+neighbours@{set\+\_\+distant\+\_\+neighbours}}
+\index{set\+\_\+distant\+\_\+neighbours@{set\+\_\+distant\+\_\+neighbours}!Point@{Point}}
+\subsubsection[{set\+\_\+distant\+\_\+neighbours}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+distant\+\_\+neighbours (
+\begin{DoxyParamCaption}
+\item[{int}]{opt = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_point_aa3c1caf1c115df1bdf3ba45357f072ea}
+Ustawia dalszych sasiadow danego pkt 
+
+Definicja w linii 169 pliku point.\+cpp.
+
+\hypertarget{class_point_a9c89304540fc3a2f9b7a6720f5bad95b}{}\index{Point@{Point}!set\+\_\+\+Dxx@{set\+\_\+\+Dxx}}
+\index{set\+\_\+\+Dxx@{set\+\_\+\+Dxx}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Dxx}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Dxx (
+\begin{DoxyParamCaption}
+\item[{double}]{Dx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a9c89304540fc3a2f9b7a6720f5bad95b}
+ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt 
+
+Definicja w linii 165 pliku point.\+h.
+
+\hypertarget{class_point_a0bf3e2831a50b62754eefb0cab6c3bbd}{}\index{Point@{Point}!set\+\_\+\+Dxy@{set\+\_\+\+Dxy}}
+\index{set\+\_\+\+Dxy@{set\+\_\+\+Dxy}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Dxy}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Dxy (
+\begin{DoxyParamCaption}
+\item[{double}]{Dxy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a0bf3e2831a50b62754eefb0cab6c3bbd}
+ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt 
+
+Definicja w linii 168 pliku point.\+h.
+
+\hypertarget{class_point_adc5e03973821b3dee14d6b1c0a8e43ea}{}\index{Point@{Point}!set\+\_\+\+Dyy@{set\+\_\+\+Dyy}}
+\index{set\+\_\+\+Dyy@{set\+\_\+\+Dyy}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Dyy}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Dyy (
+\begin{DoxyParamCaption}
+\item[{double}]{Dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_adc5e03973821b3dee14d6b1c0a8e43ea}
+ustwaia wartosc wspolczynnika tensora dyspersji Dyy w danym pkt 
+
+Definicja w linii 171 pliku point.\+h.
+
+\hypertarget{class_point_a9f37bcdde4f274fc2c9ee4e39fad9b22}{}\index{Point@{Point}!set\+\_\+factor@{set\+\_\+factor}}
+\index{set\+\_\+factor@{set\+\_\+factor}!Point@{Point}}
+\subsubsection[{set\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+factor (
+\begin{DoxyParamCaption}
+\item[{string}]{f, }
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a9f37bcdde4f274fc2c9ee4e39fad9b22}
+
+
+Definicja w linii 184 pliku point.\+h.
+
+\hypertarget{class_point_ac25220ccb634802bdebc6de755afc807}{}\index{Point@{Point}!set\+\_\+factor\+\_\+fij@{set\+\_\+factor\+\_\+fij}}
+\index{set\+\_\+factor\+\_\+fij@{set\+\_\+factor\+\_\+fij}!Point@{Point}}
+\subsubsection[{set\+\_\+factor\+\_\+fij}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+factor\+\_\+fij (
+\begin{DoxyParamCaption}
+\item[{string}]{f, }
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac25220ccb634802bdebc6de755afc807}
+
+
+Definicja w linii 182 pliku point.\+h.
+
+\hypertarget{class_point_ac0be2a43c354fed97e018c2b8fbf63b4}{}\index{Point@{Point}!set\+\_\+flag@{set\+\_\+flag}}
+\index{set\+\_\+flag@{set\+\_\+flag}!Point@{Point}}
+\subsubsection[{set\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{int}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ac0be2a43c354fed97e018c2b8fbf63b4}
+ustawia flage pkt 
+
+Definicja w linii 150 pliku point.\+h.
+
+\hypertarget{class_point_a743e76edf28eaf25c726051b66c2e256}{}\index{Point@{Point}!set\+\_\+map@{set\+\_\+map}}
+\index{set\+\_\+map@{set\+\_\+map}!Point@{Point}}
+\subsubsection[{set\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ $\ast$}]{Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a743e76edf28eaf25c726051b66c2e256}
+ustawia mape dla pkt 
+
+Definicja w linii 187 pliku point.\+h.
+
+\hypertarget{class_point_a6c692685f4895204fb073a7a588dac29}{}\index{Point@{Point}!set\+\_\+near\+\_\+neighbours@{set\+\_\+near\+\_\+neighbours}}
+\index{set\+\_\+near\+\_\+neighbours@{set\+\_\+near\+\_\+neighbours}!Point@{Point}}
+\subsubsection[{set\+\_\+near\+\_\+neighbours}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+near\+\_\+neighbours (
+\begin{DoxyParamCaption}
+\item[{int}]{opt = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_point_a6c692685f4895204fb073a7a588dac29}
+Ustawia najblizszych sasiadow danego pkt 
+
+Definicja w linii 23 pliku point.\+cpp.
+
+\hypertarget{class_point_a9be4fd3f7363583345023997921895ec}{}\index{Point@{Point}!set\+\_\+\+Next@{set\+\_\+\+Next}}
+\index{set\+\_\+\+Next@{set\+\_\+\+Next}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Next}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Next (
+\begin{DoxyParamCaption}
+\item[{long double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a9be4fd3f7363583345023997921895ec}
+ustwaia wartosc nastepna dla pkt 
+
+Definicja w linii 180 pliku point.\+h.
+
+\hypertarget{class_point_a1efdadc2ab2df0ba02ede0b23a3c2b40}{}\index{Point@{Point}!set\+\_\+\+Prev@{set\+\_\+\+Prev}}
+\index{set\+\_\+\+Prev@{set\+\_\+\+Prev}!Point@{Point}}
+\subsubsection[{set\+\_\+\+Prev}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+\+Prev (
+\begin{DoxyParamCaption}
+\item[{long double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a1efdadc2ab2df0ba02ede0b23a3c2b40}
+ustwaia wartosc poprzednia dla pkt 
+
+Definicja w linii 174 pliku point.\+h.
+
+\hypertarget{class_point_ab68cfb3cd44fe4624dd89ec5b9275350}{}\index{Point@{Point}!set\+\_\+vx@{set\+\_\+vx}}
+\index{set\+\_\+vx@{set\+\_\+vx}!Point@{Point}}
+\subsubsection[{set\+\_\+vx}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+vx (
+\begin{DoxyParamCaption}
+\item[{double}]{v\+X}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_ab68cfb3cd44fe4624dd89ec5b9275350}
+ustawia wartosc skladowej x predkosci 
+
+Definicja w linii 159 pliku point.\+h.
+
+\hypertarget{class_point_aae045afff208fbd09dc3e466a0768781}{}\index{Point@{Point}!set\+\_\+vy@{set\+\_\+vy}}
+\index{set\+\_\+vy@{set\+\_\+vy}!Point@{Point}}
+\subsubsection[{set\+\_\+vy}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+vy (
+\begin{DoxyParamCaption}
+\item[{double}]{v\+Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_aae045afff208fbd09dc3e466a0768781}
+ustawia wartosc skaldowej y predkosci 
+
+Definicja w linii 162 pliku point.\+h.
+
+\hypertarget{class_point_adaaf2fe64c78448b3c8d6e121ae3bca0}{}\index{Point@{Point}!set\+\_\+x@{set\+\_\+x}}
+\index{set\+\_\+x@{set\+\_\+x}!Point@{Point}}
+\subsubsection[{set\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_adaaf2fe64c78448b3c8d6e121ae3bca0}
+ustwaia wspolrzedna x pkt. 
+
+Definicja w linii 153 pliku point.\+h.
+
+\hypertarget{class_point_a44bf07535f5dd99991a274833462379b}{}\index{Point@{Point}!set\+\_\+y@{set\+\_\+y}}
+\index{set\+\_\+y@{set\+\_\+y}!Point@{Point}}
+\subsubsection[{set\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_point_a44bf07535f5dd99991a274833462379b}
+ustwaia wspolrzedna y pkt 
+
+Definicja w linii 156 pliku point.\+h.
+
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{class_point_a63cebd1e00f14bdabf5000aa76174b03}{}\index{Point@{Point}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Point@{Point}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf Point} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_point_a63cebd1e00f14bdabf5000aa76174b03}
+wypisuje informacje o danym pkt 
+
+Definicja w linii 211 pliku point.\+h.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_point_a3384c3194e3d3c3196317013929e40d4}{}\index{Point@{Point}!\+\_\+\+Point\+Map@{\+\_\+\+Point\+Map}}
+\index{\+\_\+\+Point\+Map@{\+\_\+\+Point\+Map}!Point@{Point}}
+\subsubsection[{\+\_\+\+Point\+Map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ int, {\bf Point} $>$ $\ast$ Point\+::\+\_\+\+Point\+Map = 0\hspace{0.3cm}{\ttfamily [static]}}\label{class_point_a3384c3194e3d3c3196317013929e40d4}
+
+
+tylko jedna mapa moze byc 
+
+
+
+Definicja w linii 224 pliku point.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{point_8h}{point.\+h}\item 
+\hyperlink{point_8cpp}{point.\+cpp}\end{DoxyCompactItemize}

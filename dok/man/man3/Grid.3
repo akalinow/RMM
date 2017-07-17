@@ -1,0 +1,373 @@
+.TH "Grid" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Grid \- Klasa Przygotowujaca siatke do symulacji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <grid\&.h>\fP
+.PP
+Dziedziczona przez \fBGridAll\fP, \fBGridDispersion\fP, \fBGridOnly\fP i \fBGridVelocity\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "virtual int \fBReadData\fP (map< int, \fBPoint\fP > &PointMap, const string &file, \fBSimulationParameters\fP &sym_param)"
+.br
+.ti -1c
+.RI "void \fBSetMaxValues\fP (double &vx, double &vy, double &Dxx, double &Dxy, double Dyy, \fBSimulationParameters\fP &param)"
+.br
+.ti -1c
+.RI "void \fBSetMinValues\fP (double &vx, double &vy, double &Dxx, double &Dxy, double Dyy, \fBSimulationParameters\fP &param)"
+.br
+.ti -1c
+.RI "void \fBSetExtremeValues\fP (double &xmax, double &xmin, double &ymax, double &ymin)"
+.br
+.ti -1c
+.RI "void \fBSetExtremePoints\fP (\fBPoint\fP &pxmax, \fBPoint\fP &pxmin, \fBPoint\fP &pymax, \fBPoint\fP &pymin)"
+.br
+.ti -1c
+.RI "void \fBCompleteOutsideFlow\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "int \fBCorrectGrid\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "void \fBMarkBorderPoints\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "void \fBMarkNearBorderPoints\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "int \fBMarkInOutPoints\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "void \fBset_pxmax\fP (\fBPoint\fP pkt)"
+.br
+.ti -1c
+.RI "void \fBset_pymax\fP (\fBPoint\fP pkt)"
+.br
+.ti -1c
+.RI "void \fBset_pxmin\fP (\fBPoint\fP pkt)"
+.br
+.ti -1c
+.RI "void \fBset_pymin\fP (\fBPoint\fP pkt)"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBget_pxmax\fP () const "
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBget_pymax\fP () const "
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBget_pxmin\fP () const "
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBget_pymin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_xmax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_ymax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_xmin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_ymin\fP () const "
+.br
+.in -1c
+.SS "Statyczne atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBempty_index\fP = -99999999"
+.br
+.ti -1c
+.RI "static int \fB_xmax\fP = 0"
+.br
+.ti -1c
+.RI "static int \fB_xmin\fP = 0"
+.br
+.ti -1c
+.RI "static int \fB_ymax\fP = 0"
+.br
+.ti -1c
+.RI "static int \fB_ymin\fP = 0"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa Przygotowujaca siatke do symulacji\&. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, wspolne dla roznych sposobow wczytywania danych\&. 
+.PP
+Definicja w linii 26 pliku grid\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void Grid::CompleteOutsideFlow (map< int, \fBPoint\fP > & PointMap)"
+Korzystajac z wyznaczony wartosci namniejszych i najwiekszych wspolrzednych na siatce, uzuplnia siatke punktami, ktore leza poza przeplywem nadajac im flage 0 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii 65 pliku grid\&.cpp\&.
+.SS "int Grid::CorrectGrid (map< int, \fBPoint\fP > & PointMap)"
+Po oznaczeniu najblizszych sasiadow kazdego pktu koryguje siatkę (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia flagi 0 (poza przepływem) dla 'dziwnych' punktow dla których punkty obok są poza przepływem (nie ma sensu liczyc w tych punktach - generowaloby to tylko bledy nyumeryczne): 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii 84 pliku grid\&.cpp\&.
+.SS "\fBPoint\fP Grid::get_pxmax () const\fC [inline]\fP"
+Zwaraca pkt majacy maksymalna wartosc wspolrzednej x na siatce 
+.PP
+Definicja w linii 159 pliku grid\&.h\&.
+.SS "\fBPoint\fP Grid::get_pxmin () const\fC [inline]\fP"
+Zwaraca pkt majacy minimalna wartosc wspolzrednej x na siatce 
+.PP
+Definicja w linii 165 pliku grid\&.h\&.
+.SS "\fBPoint\fP Grid::get_pymax () const\fC [inline]\fP"
+Zwaraca pkt majacy maksymalna wartosc wspolrzednej y na siatce 
+.PP
+Definicja w linii 162 pliku grid\&.h\&.
+.SS "\fBPoint\fP Grid::get_pymin () const\fC [inline]\fP"
+Zwaraca pkt majacy minimalna wartosc wpolrzednej y na siatce 
+.PP
+Definicja w linii 168 pliku grid\&.h\&.
+.SS "double Grid::get_xmax () const\fC [inline]\fP"
+Zwaraca maksymalna wartosc wspolrzednej x na siatce 
+.PP
+Definicja w linii 172 pliku grid\&.h\&.
+.SS "double Grid::get_xmin () const\fC [inline]\fP"
+Zwaraca minimalna wartosc wspolzrednej x na siatce 
+.PP
+Definicja w linii 178 pliku grid\&.h\&.
+.SS "double Grid::get_ymax () const\fC [inline]\fP"
+Zwaraca maksymalna wartosc wspolrzednej y na siatce 
+.PP
+Definicja w linii 175 pliku grid\&.h\&.
+.SS "double Grid::get_ymin () const\fC [inline]\fP"
+Zwaraca minimalna wartosc wpolrzednej y na siatce 
+.PP
+Definicja w linii 181 pliku grid\&.h\&.
+.SS "void Grid::MarkBorderPoints (map< int, \fBPoint\fP > & PointMap)"
+Po oznaczeniu najblizszych sasiadow kazdego pktu i ewentulanie korekcji siatki wyznacza brzeg obszaru przeplywu (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia odpowiednie flagi punktow w zaleznosci od rodzaju brzegu do ktorego pktr nalezy: 
+.PD 0
+
+.IP "\(bu" 2
+brzeg gorny -> flaga \fB2\fP 
+.IP "\(bu" 2
+brzeg dolny -> flaga \fB3\fP 
+.IP "\(bu" 2
+brzeg lewy -> flaga \fB4\fP 
+.IP "\(bu" 2
+brzeg prawy -> flaga \fB5\fP 
+.IP "\(bu" 2
+rog gorny-lewy -> flaga \fB24\fP 
+.IP "\(bu" 2
+rog gorny-prawy -> flaga \fB25\fP 
+.IP "\(bu" 2
+rog dolny-lewy -> flaga \fB34\fP 
+.IP "\(bu" 2
+rog dolny-prawy -> flaga \fB35\fP 
+.IP "\(bu" 2
+kanty -> flaga \fB1\fP 
+.IP "\(bu" 2
+zrodla -> flaga \fB101\fP 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii 174 pliku grid\&.cpp\&.
+.SS "int Grid::MarkInOutPoints (map< int, \fBPoint\fP > & PointMap)"
+Ustawia odpowiednie flagi punktow lezacych na wejsciach i wyjsciach; 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow
+.RE
+.PP
+\fBDO NAPISANIA \fP na razie prowizorycznie w konkretnym przypadku!!! !! moze pozniej bedzie potrzbne !! 
+.PP
+Definicja w linii 361 pliku grid\&.cpp\&.
+.SS "void Grid::MarkNearBorderPoints (map< int, \fBPoint\fP > & PointMap)"
+Po oznaczeniu dalszych sasiadow kazdego pktu, Ustawia odpowiednie flagi punktow lezacych przy brzegach; w zaleznosci od rodzaju brzegu do ktorym lezy pkt : 
+.PD 0
+
+.IP "\(bu" 2
+przy brzegu gornym -> flaga \fB22\fP 
+.IP "\(bu" 2
+przy brzegu dolnym -> flaga \fB33\fP 
+.IP "\(bu" 2
+przy brzegu lewym -> flaga \fB44\fP 
+.IP "\(bu" 2
+przy brzegu prawym -> flaga \fB55\fP 
+.IP "\(bu" 2
+przy rogu gornym-lewym -> flaga \fB2244\fP 
+.IP "\(bu" 2
+przy rogu gornym-prawym -> flaga \fB2255\fP 
+.IP "\(bu" 2
+przy rogu dolnym-lewym -> flaga \fB3344\fP 
+.IP "\(bu" 2
+przy rogu dolnym-prawym -> flaga \fB3355\fP 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii 464 pliku grid\&.cpp\&.
+.SS "virtual int Grid::ReadData (map< int, \fBPoint\fP > & PointMap, const string & file, \fBSimulationParameters\fP & sym_param)\fC [inline]\fP, \fC [virtual]\fP"
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.br
+\fIfile\fP - nazwa pliku z danymi 
+.br
+\fIsym_param\fP - obiekt z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBGridDispersion\fP, \fBGridAll\fP, \fBGridVelocity\fP i \fBGridOnly\fP\&.
+.PP
+Definicja w linii 34 pliku grid\&.h\&.
+.SS "void Grid::set_pxmax (\fBPoint\fP pkt)\fC [inline]\fP"
+Ustawia pkt z maxymalana wartoscia wspolrzednej x 
+.PP
+Definicja w linii 145 pliku grid\&.h\&.
+.SS "void Grid::set_pxmin (\fBPoint\fP pkt)\fC [inline]\fP"
+Ustawia pkt z minimalan wartoscia wspolrzednej x 
+.PP
+Definicja w linii 151 pliku grid\&.h\&.
+.SS "void Grid::set_pymax (\fBPoint\fP pkt)\fC [inline]\fP"
+Ustawia pkt z maxymalana wartoscia wspolrzednej y 
+.PP
+Definicja w linii 148 pliku grid\&.h\&.
+.SS "void Grid::set_pymin (\fBPoint\fP pkt)\fC [inline]\fP"
+Ustawia pkt z minimalna wartoscia wspolrzednej y 
+.PP
+Definicja w linii 154 pliku grid\&.h\&.
+.SS "void Grid::SetExtremePoints (\fBPoint\fP & pxmax, \fBPoint\fP & pxmin, \fBPoint\fP & pymax, \fBPoint\fP & pymin)"
+Ustawia punkty graniczne siatki 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIpxmax\fP - refer\&. do punktu psosiadajacego najwieksza wartosc wspolz\&. x na siatce 
+.br
+\fIpxmin\fP - refer\&. do punktu psosiadajacego najmniejsza wartosc wspolz\&. x na siatce 
+.br
+\fIpxmax\fP - refer\&. do punktu psosiadajacego najwieksza wartosc wspolz\&. y na siatce 
+.br
+\fIpxmax\fP - refer\&. do punktu psosiadajacego najmniejsza wartosc wspolz\&. y na siatce 
+.RE
+.PP
+
+.PP
+Definicja w linii 51 pliku grid\&.cpp\&.
+.SS "void Grid::SetExtremeValues (double & xmax, double & xmin, double & ymax, double & ymin)"
+Ustawia wartosci max i min wspolrzednych x i y na siatce 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIxmax\fP - refer\&. do najwiekszej wartosc wspolz\&. x na siatce 
+.br
+\fIxmin\fP - refer\&. do najmniejszej wartosc wspolz\&. x na siatce 
+.br
+\fIxmax\fP - refer\&. do najwiekszej wartosc wspolz\&. y na siatce 
+.br
+\fIxmax\fP - refer\&. do najmniejszej wartosc wspolz\&. y na siatce 
+.RE
+.PP
+
+.PP
+Definicja w linii 43 pliku grid\&.cpp\&.
+.SS "void Grid::SetMaxValues (double & vx, double & vy, double & Dxx, double & Dxy, double Dyy, \fBSimulationParameters\fP & param)"
+Ustawianie max wartosci zmiennych w parametrcha symulacji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIvx\fP - refer\&. do maksymalnej skladowej x wektora predkosci 
+.br
+\fIvy\fP - refer\&. do maksymalnej skladowej y wektora predkosci 
+.br
+\fIDxx\fP - refer\&. do maksymalnej skladowej xx tensora Dyspersji 
+.br
+\fIDxy\fP - refer\&. do maksymalnej skladowej xy tensora Dyspersji 
+.br
+\fIDyy\fP - refer\&. do maksymalnej skladowej tensora Dyspersji 
+.br
+\fIparam\fP - referencje do obiektu z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 23 pliku grid\&.cpp\&.
+.SS "void Grid::SetMinValues (double & vx, double & vy, double & Dxx, double & Dxy, double Dyy, \fBSimulationParameters\fP & param)"
+Ustawianie min wartosci zmiennych w parametrcha symulacji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIvx\fP - refer\&. do minimalnej skladowej x wektora predkosci 
+.br
+\fIvy\fP - refer\&. do minimalnej skladowej y wektora predkosci 
+.br
+\fIDxx\fP - refer\&. do minimalnej skladowej xx tensora Dyspersji 
+.br
+\fIDxy\fP - refer\&. do minimalnej skladowej xy tensora Dyspersji 
+.br
+\fIDyy\fP - refer\&. do minimalnej skladowej tensora Dyspersji 
+.br
+\fIparam\fP - referencje do obiektu z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 33 pliku grid\&.cpp\&.
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "int Grid::_xmax = 0\fC [static]\fP"
+
+.PP
+Definicja w linii 184 pliku grid\&.h\&.
+.SS "int Grid::_xmin = 0\fC [static]\fP"
+
+.PP
+Definicja w linii 184 pliku grid\&.h\&.
+.SS "int Grid::_ymax = 0\fC [static]\fP"
+
+.PP
+Definicja w linii 184 pliku grid\&.h\&.
+.SS "int Grid::_ymin = 0\fC [static]\fP"
+
+.PP
+Definicja w linii 184 pliku grid\&.h\&.
+.SS "const int Grid::empty_index = -99999999\fC [static]\fP"
+
+.PP
+Definicja w linii 181 pliku grid\&.h\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

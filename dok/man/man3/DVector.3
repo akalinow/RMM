@@ -1,0 +1,62 @@
+.TH "DVector" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DVector \- Klasa tensora dyspersji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tensor\&.h>\fP
+.PP
+Dziedziczy \fBDTensor\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBDVector\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBComputeTensor\fP (double Dl, double Dt, \fBPoint\fP &p)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa tensora dyspersji\&. 
+
+Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, traktujac tensor jako wektor w ukaladzie wspolrzednych [Dl,Dt] i obracajac go do wektora [Dxx, Dyy]\&. 
+.PP
+Definicja w linii 88 pliku tensor\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "DVector::DVector ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt Tensora Dyspersji traktowanego jako wektor 
+.PP
+Definicja w linii 95 pliku tensor\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void DVector::ComputeTensor (double Dl, double Dt, \fBPoint\fP & p)\fC [virtual]\fP"
+Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIDl\fP - wspolczyniki dyspersji podluznej 
+.br
+\fIDt\fP - wspolczynnik dyspersji porzecznej 
+.br
+\fIp\fP - punkt dla ktorego obiczany jest tensor 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBDTensor\fP\&.
+.PP
+Definicja w linii 82 pliku tensor\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

@@ -1,0 +1,86 @@
+\hypertarget{class_d_vector}{}\section{Dokumentacja klasy D\+Vector}
+\label{class_d_vector}\index{D\+Vector@{D\+Vector}}
+
+
+Klasa tensora dyspersji.  
+
+
+
+
+{\ttfamily \#include $<$tensor.\+h$>$}
+
+Diagram dziedziczenia dla D\+Vector\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_vector}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_vector_a8acb7f030a2049c718f79d265da12e62}{D\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_vector_a2069ef34d3db2a9965f07e27f17e12dd}{Compute\+Tensor} (double Dl, double Dt, \hyperlink{class_point}{Point} \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa tensora dyspersji. 
+
+Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, traktujac tensor jako wektor w ukaladzie wspolrzednych \mbox{[}Dl,Dt\mbox{]} i obracajac go do wektora \mbox{[}Dxx, Dyy\mbox{]}. 
+
+Definicja w linii 88 pliku tensor.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_d_vector_a8acb7f030a2049c718f79d265da12e62}{}\index{D\+Vector@{D\+Vector}!D\+Vector@{D\+Vector}}
+\index{D\+Vector@{D\+Vector}!D\+Vector@{D\+Vector}}
+\subsubsection[{D\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}D\+Vector\+::\+D\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_d_vector_a8acb7f030a2049c718f79d265da12e62}
+
+
+Konstruktor. 
+
+Tworzy obiekt Tensora Dyspersji traktowanego jako wektor 
+
+Definicja w linii 95 pliku tensor.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_d_vector_a2069ef34d3db2a9965f07e27f17e12dd}{}\index{D\+Vector@{D\+Vector}!Compute\+Tensor@{Compute\+Tensor}}
+\index{Compute\+Tensor@{Compute\+Tensor}!D\+Vector@{D\+Vector}}
+\subsubsection[{Compute\+Tensor}]{\setlength{\rightskip}{0pt plus 5cm}void D\+Vector\+::\+Compute\+Tensor (
+\begin{DoxyParamCaption}
+\item[{double}]{Dl, }
+\item[{double}]{Dt, }
+\item[{{\bf Point} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_d_vector_a2069ef34d3db2a9965f07e27f17e12dd}
+Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym 
+\begin{DoxyParams}{Parametry}
+{\em Dl} & -\/ wspolczyniki dyspersji podluznej \\
+\hline
+{\em Dt} & -\/ wspolczynnik dyspersji porzecznej \\
+\hline
+{\em p} & -\/ punkt dla ktorego obiczany jest tensor \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \hyperlink{class_d_tensor_a0ed66ce3f3ab159c4d7f6a019bfea9da}{D\+Tensor}.
+
+
+
+Definicja w linii 82 pliku tensor.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tensor_8h}{tensor.\+h}\item 
+\hyperlink{tensor_8cpp}{tensor.\+cpp}\end{DoxyCompactItemize}

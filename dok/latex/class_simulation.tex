@@ -1,0 +1,472 @@
+\hypertarget{class_simulation}{}\section{Dokumentacja klasy Simulation}
+\label{class_simulation}\index{Simulation@{Simulation}}
+
+
+Klasa odpowiedzialna za symulacje.  
+
+
+
+
+{\ttfamily \#include $<$simulation.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulation_af6d6faabf99b4147db641658d1fcfc08}{Simulation} (const string \&param\+File, const string \&save\+File)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulation_a900ea19845f934638b3e2cf755e14302}{My\+Simulation} (const string \&param\+\_\+file, const string \&save\+\_\+file)
+\item 
+int \hyperlink{class_simulation_ab76ff3b4cdd23182a21a69535c4b064b}{Set\+Param} (\hyperlink{class_simulation_parameters}{Simulation\+Parameters} $\ast$param, const string \&file)
+\item 
+int \hyperlink{class_simulation_a7f0f2ce0a990c9823748cee649224bfc}{Prepare\+Map} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param)
+\item 
+int \hyperlink{class_simulation_a01d0cc9ca7a6b8bb20504b0d303c077a}{Set\+Save\+Parameters} (const string \&file, int n)
+\begin{DoxyCompactList}\small\item\em Odczytuje z pliku i ustawia parametry zapisu wyników symulacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulation_a471316287d132dba2d8dd10fbcc1a192}{Save\+Map} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, const string \&file, const string \&opt)
+\item 
+void \hyperlink{class_simulation_ac9b7432d7f91aaee99100187fac8d73e}{Set\+Source\+Concentration} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, double \&val)
+\item 
+void \hyperlink{class_simulation_ad8c565d908664e7b5d419261af556ae9}{Set\+Source\+Concentration\+Temp} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param, double \&val)
+\item 
+double \hyperlink{class_simulation_a9bd641b3fd013d152d03b5b5ea718d73}{Compute\+Effective\+Temp} (\hyperlink{class_point}{Point} \&p, double dx, double val, double hz=-\/9999.\+99, double Qz=-\/9999.\+99)
+\item 
+int \hyperlink{class_simulation_a3253bdc42110ee6653d7f02a420b56af}{Set\+Initial\+Concentration} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param)
+\item 
+void \hyperlink{class_simulation_ae713b7bd19b86d3e426c899785b9ce8a}{Set\+Initial\+Concentration\+Point} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param, double x0, double y0, double val)
+\item 
+void \hyperlink{class_simulation_a41155db84b2177e858dfd8274a9a4a93}{Set\+Initial\+Concentration\+Plane\+Wave} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+void \hyperlink{class_simulation_aed95dfa701b563cbd85421bfeb4f74fd}{Set\+Initial\+Concentration\+Gauss} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param, double x0, double y0, double val, int krok)
+\item 
+void \hyperlink{class_simulation_a4f95080d3efd1568155f493150ea6a5e}{Set\+Initial\+Concentration\+Gauss\+Non\+Diag} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param, double x0, double y0, double val, int krok)
+\item 
+double \hyperlink{class_simulation_a99e94c6106312a2e741e4a7fbfc17acc}{Gaus} (double x, double mean, double sigma, bool norm)
+\item 
+int \hyperlink{class_simulation_a63da2c122d167f06255071009070f0b2}{Set\+Initial\+Concentration\+File} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+void \hyperlink{class_simulation_a404b11e725f52fc7e87986956229fa38}{Set\+In\+Out\+Point\+Value} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+double \hyperlink{class_simulation_affeb8b328bfd85259dfd4942591a3210}{My\+\_\+\+Gaus} (double x, double y, double mean\+X, double mean\+Y, double sigma)
+\item 
+void \hyperlink{class_simulation_ac9e2c2d48ff778482992d64ec3d63f60}{set\+\_\+file} (string file)
+\item 
+string \hyperlink{class_simulation_af8e26312c6ff919274ca640abe83bca2}{get\+\_\+file} () const 
+\item 
+double \hyperlink{class_simulation_a7a0437249ae44f92299590cf7fbdb7bd}{Compute\+Effective\+Temp} (\hyperlink{class_point}{Point} pkt, double arg2, double arg3, double val1, double hz, double Qz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiedzialna za symulacje. 
+
+Odpowiedizlna za przygotowanie danych do symulacji start i przebieg symulacji 
+
+Definicja w linii 35 pliku simulation.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_simulation_af6d6faabf99b4147db641658d1fcfc08}{}\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\subsubsection[{Simulation}]{\setlength{\rightskip}{0pt plus 5cm}Simulation\+::\+Simulation (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{param\+File, }
+\item[{const string \&}]{save\+File}
+\end{DoxyParamCaption}
+)}\label{class_simulation_af6d6faabf99b4147db641658d1fcfc08}
+
+
+Konstruktor. 
+
+Tworzy obiekt simuation 
+\begin{DoxyParams}{Parametry}
+{\em param\+File} & -\/ nazwa pliku z parametrami symulacji \\
+\hline
+{\em save\+File} & -\/ nazwa pliku z parametrami zapisu wyników symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 15 pliku simulation.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_simulation_a9bd641b3fd013d152d03b5b5ea718d73}{}\index{Simulation@{Simulation}!Compute\+Effective\+Temp@{Compute\+Effective\+Temp}}
+\index{Compute\+Effective\+Temp@{Compute\+Effective\+Temp}!Simulation@{Simulation}}
+\subsubsection[{Compute\+Effective\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+::\+Compute\+Effective\+Temp (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} \&}]{p, }
+\item[{double}]{dx, }
+\item[{double}]{val, }
+\item[{double}]{hz = {\ttfamily -\/9999.99}, }
+\item[{double}]{Qz = {\ttfamily -\/9999.99}}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a9bd641b3fd013d152d03b5b5ea718d73}
+
+
+Definicja w linii 936 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a7a0437249ae44f92299590cf7fbdb7bd}{}\index{Simulation@{Simulation}!Compute\+Effective\+Temp@{Compute\+Effective\+Temp}}
+\index{Compute\+Effective\+Temp@{Compute\+Effective\+Temp}!Simulation@{Simulation}}
+\subsubsection[{Compute\+Effective\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+::\+Compute\+Effective\+Temp (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{pkt, }
+\item[{double}]{arg2, }
+\item[{double}]{arg3, }
+\item[{double}]{val1, }
+\item[{double}]{hz, }
+\item[{double}]{Qz}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a7a0437249ae44f92299590cf7fbdb7bd}
+\hypertarget{class_simulation_a99e94c6106312a2e741e4a7fbfc17acc}{}\index{Simulation@{Simulation}!Gaus@{Gaus}}
+\index{Gaus@{Gaus}!Simulation@{Simulation}}
+\subsubsection[{Gaus}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+::\+Gaus (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{mean, }
+\item[{double}]{sigma, }
+\item[{bool}]{norm}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a99e94c6106312a2e741e4a7fbfc17acc}
+
+
+Definicja w linii 768 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_af8e26312c6ff919274ca640abe83bca2}{}\index{Simulation@{Simulation}!get\+\_\+file@{get\+\_\+file}}
+\index{get\+\_\+file@{get\+\_\+file}!Simulation@{Simulation}}
+\subsubsection[{get\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+::get\+\_\+file (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_af8e26312c6ff919274ca640abe83bca2}
+
+
+Definicja w linii 176 pliku simulation.\+h.
+
+\hypertarget{class_simulation_affeb8b328bfd85259dfd4942591a3210}{}\index{Simulation@{Simulation}!My\+\_\+\+Gaus@{My\+\_\+\+Gaus}}
+\index{My\+\_\+\+Gaus@{My\+\_\+\+Gaus}!Simulation@{Simulation}}
+\subsubsection[{My\+\_\+\+Gaus}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+::\+My\+\_\+\+Gaus (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{mean\+X, }
+\item[{double}]{mean\+Y, }
+\item[{double}]{sigma}
+\end{DoxyParamCaption}
+)}\label{class_simulation_affeb8b328bfd85259dfd4942591a3210}
+
+
+Definicja w linii 925 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a900ea19845f934638b3e2cf755e14302}{}\index{Simulation@{Simulation}!My\+Simulation@{My\+Simulation}}
+\index{My\+Simulation@{My\+Simulation}!Simulation@{Simulation}}
+\subsubsection[{My\+Simulation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+My\+Simulation (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{param\+\_\+file, }
+\item[{const string \&}]{save\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a900ea19845f934638b3e2cf755e14302}
+Przebieg symulacji od ustawienia parametrow przez uruchominie obiczen po zapis danych i zakonczenie double val = 2.\+0; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku 
+
+Definicja w linii 23 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a7f0f2ce0a990c9823748cee649224bfc}{}\index{Simulation@{Simulation}!Prepare\+Map@{Prepare\+Map}}
+\index{Prepare\+Map@{Prepare\+Map}!Simulation@{Simulation}}
+\subsubsection[{Prepare\+Map}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+::\+Prepare\+Map (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a7f0f2ce0a990c9823748cee649224bfc}
+Przygotowuje Mape Punktow (siatke) na ktorej bedize przeprowadona symulacja 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ pusta mapa \\
+\hline
+{\em param} & -\/ obiekt z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 196 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a471316287d132dba2d8dd10fbcc1a192}{}\index{Simulation@{Simulation}!Save\+Map@{Save\+Map}}
+\index{Save\+Map@{Save\+Map}!Simulation@{Simulation}}
+\subsubsection[{Save\+Map}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Save\+Map (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{const string \&}]{file, }
+\item[{const string \&}]{opt}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a471316287d132dba2d8dd10fbcc1a192}
+zapisueje Mape Punktow do podanego pliku 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa pkt \\
+\hline
+{\em file} & -\/ nazwa pliku do ktorego ma byc zapisana mapa punktow \\
+\hline
+{\em opt} & -\/ opcja wskazujaca co mam byc zapisane 
+\begin{DoxyItemize}
+\item all -\/ zapisuje wszystkie dostepne wartosci dla kazdego pkt 
+\item grid -\/ zapisuje tylko siatke pkt (wpolrzedne x, y pktow i ich flagi)  
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 356 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_ac9e2c2d48ff778482992d64ec3d63f60}{}\index{Simulation@{Simulation}!set\+\_\+file@{set\+\_\+file}}
+\index{set\+\_\+file@{set\+\_\+file}!Simulation@{Simulation}}
+\subsubsection[{set\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::set\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_ac9e2c2d48ff778482992d64ec3d63f60}
+
+
+Definicja w linii 175 pliku simulation.\+h.
+
+\hypertarget{class_simulation_a3253bdc42110ee6653d7f02a420b56af}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration@{Set\+Initial\+Concentration}}
+\index{Set\+Initial\+Concentration@{Set\+Initial\+Concentration}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Initial\+Concentration (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a3253bdc42110ee6653d7f02a420b56af}
+Wczytuje dane z pliku  \char`\"{}ini\+\_\+cond.\+txt\char`\"{} dotyczące wartości początkowej koncentracji/temperatury i wywołuje właściwą funckcję zająca wartosci koncentracji/temperatur początkowej na siatce 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ pusta mapa \\
+\hline
+{\em param} & -\/ obiekt z parametrami symulacji ~\newline
+\\
+\hline
+\end{DoxyParams}
+format pliku {\ttfamily \char`\"{}ini\+\_\+cond.\+txt\char`\"{}} \+:~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- ~\newline
+ \hyperlink{class_simulation_parameters_a76420499d58b303411f21c385d82303f}{pollutant} ~\newline
+ \hyperlink{class_simulation_parameters_a1848a63487254ccce60bc06886d29847}{dump} ~\newline
+ \hyperlink{class_simulation_parameters_a05862812dec3b947f124886aaea1cb84}{area} ~\newline
+ \hyperlink{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{mod} $x$ $y$ $val$ $h_{z}$ $Q_{z}$ ~\newline
+ \hyperlink{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{mod} $x$ $y$ $val$ $h_{z}$ $Q_{z}$ ~\newline
+ ...~\newline
+ \hyperlink{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{mod} $x$ $y$ $val$ $h_{z}$ $Q_{z}$ ~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- ~\newline
+ Kliknij na zmienną aby zoabczyć możliwe wartości~\newline
+ $x$ $y$ -\/ współrzędne punktu lokalizacji źródła ~\newline
+ jeśli mod == val $h_{z}$ $Q_{z}$ -\/ wartości głebokości oraz natężenia przepływu w miejscu źródła ~\newline
+ $val$ -\/ wartość koncentracji/temperatury w miejscu źródła\textbackslash{} Można podać wiele punktów w kolejnych liniach !!!!! zrobic by bylo to czytane z pliku 
+
+Definicja w linii 950 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a63da2c122d167f06255071009070f0b2}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration\+File@{Set\+Initial\+Concentration\+File}}
+\index{Set\+Initial\+Concentration\+File@{Set\+Initial\+Concentration\+File}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration\+File}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+::\+Set\+Initial\+Concentration\+File (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a63da2c122d167f06255071009070f0b2}
+\hypertarget{class_simulation_aed95dfa701b563cbd85421bfeb4f74fd}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration\+Gauss@{Set\+Initial\+Concentration\+Gauss}}
+\index{Set\+Initial\+Concentration\+Gauss@{Set\+Initial\+Concentration\+Gauss}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration\+Gauss}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Initial\+Concentration\+Gauss (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{val, }
+\item[{int}]{krok}
+\end{DoxyParamCaption}
+)}\label{class_simulation_aed95dfa701b563cbd85421bfeb4f74fd}
+
+
+Definicja w linii 703 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a4f95080d3efd1568155f493150ea6a5e}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration\+Gauss\+Non\+Diag@{Set\+Initial\+Concentration\+Gauss\+Non\+Diag}}
+\index{Set\+Initial\+Concentration\+Gauss\+Non\+Diag@{Set\+Initial\+Concentration\+Gauss\+Non\+Diag}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration\+Gauss\+Non\+Diag}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Initial\+Concentration\+Gauss\+Non\+Diag (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{val, }
+\item[{int}]{krok}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a4f95080d3efd1568155f493150ea6a5e}
+!!! double norm = 4$\ast$pi$\ast$krok$\ast$dt$\ast$sqrt(D); 
+
+Definicja w linii 785 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a41155db84b2177e858dfd8274a9a4a93}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration\+Plane\+Wave@{Set\+Initial\+Concentration\+Plane\+Wave}}
+\index{Set\+Initial\+Concentration\+Plane\+Wave@{Set\+Initial\+Concentration\+Plane\+Wave}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration\+Plane\+Wave}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Initial\+Concentration\+Plane\+Wave (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a41155db84b2177e858dfd8274a9a4a93}
+
+
+Definicja w linii 889 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_ae713b7bd19b86d3e426c899785b9ce8a}{}\index{Simulation@{Simulation}!Set\+Initial\+Concentration\+Point@{Set\+Initial\+Concentration\+Point}}
+\index{Set\+Initial\+Concentration\+Point@{Set\+Initial\+Concentration\+Point}!Simulation@{Simulation}}
+\subsubsection[{Set\+Initial\+Concentration\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Initial\+Concentration\+Point (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ae713b7bd19b86d3e426c899785b9ce8a}
+
+
+Definicja w linii 676 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a404b11e725f52fc7e87986956229fa38}{}\index{Simulation@{Simulation}!Set\+In\+Out\+Point\+Value@{Set\+In\+Out\+Point\+Value}}
+\index{Set\+In\+Out\+Point\+Value@{Set\+In\+Out\+Point\+Value}!Simulation@{Simulation}}
+\subsubsection[{Set\+In\+Out\+Point\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+In\+Out\+Point\+Value (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a404b11e725f52fc7e87986956229fa38}
+
+
+Definicja w linii 1048 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_ab76ff3b4cdd23182a21a69535c4b064b}{}\index{Simulation@{Simulation}!Set\+Param@{Set\+Param}}
+\index{Set\+Param@{Set\+Param}!Simulation@{Simulation}}
+\subsubsection[{Set\+Param}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+::\+Set\+Param (
+\begin{DoxyParamCaption}
+\item[{{\bf Simulation\+Parameters} $\ast$}]{param, }
+\item[{const string \&}]{file}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ab76ff3b4cdd23182a21a69535c4b064b}
+Pobiera i ustawia parametry symulacji 
+\begin{DoxyParams}{Parametry}
+{\em param} & -\/ obiekt w ktorym beda zapisane parmetry symulacji \\
+\hline
+{\em file} & -\/ nazwa pliku z param symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 131 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_a01d0cc9ca7a6b8bb20504b0d303c077a}{}\index{Simulation@{Simulation}!Set\+Save\+Parameters@{Set\+Save\+Parameters}}
+\index{Set\+Save\+Parameters@{Set\+Save\+Parameters}!Simulation@{Simulation}}
+\subsubsection[{Set\+Save\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+::\+Set\+Save\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{class_simulation_a01d0cc9ca7a6b8bb20504b0d303c077a}
+
+
+Odczytuje z pliku i ustawia parametry zapisu wyników symulacji. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em file} & -\/ plik w który zapsano parametry symulacji \\
+\hline
+{\em n} & -\/ liczba kroków czasowych symylacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+1 gdy wszystko poszło O\+K
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+format pliku wejściowego \textcolor{stringliteral}{"save.txt"} (domyślnie): 
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+1 range   pattern 
+2 step0   step1   ... stepN 
+\end{DoxyCode}
+
+
+{\ttfamily range} -\/ definiuje czy maja zapisywane być wszystkie kroki symulacji czy tylko kroki wybrane możliwe wartości\+: 
+\begin{DoxyItemize}
+\item {\itshape steps} – zapisuje tylko wybrane kroki symulacji,  
+\item {\itshape all} – zapisuje wszystkie kroki symulacji.  
+\end{DoxyItemize}{\ttfamily pattern} -\/ definiuje, co ile kroków czasowych ma się odbywać zapis do pliku, możliwe wartości\+: 
+\begin{DoxyItemize}
+\item {\itshape last} (wartość domyślna) – zapisuje tylko ostatni krok symulacji, 
+\item {\itshape int} (zmienna typu int) – dodatnia liczba naturalna określająca, co ile kroków czasowych ma być dokonywany zapis do pliku np. 1, 10, 100, 1000 ... -\/ oznacza odpowiednio zapis, co 1, 10, 100 lub 1000 kroków czasowych. 
+\end{DoxyItemize}{\ttfamily step0}, {\ttfamily step1}, ... -\/ opcjonalnie istnieje możliwość zdefiniowania w 2 linii pliku save.\+txt dodatkowych kroków czasowych, w których ma być dokonywany zapis. Możliwe tylko dodatnie liczby naturalne oddzielone od siebie tabulatorami. Przykład\+: oprócz zapisu ostatniego kroku (co zdefiniowano w pierwszej linijce pliku save.\+txt, podając wartości „steps” i „last”), chcemy dokonać zapisu pierwszych 10 kroków czasowych; druga linijka pliku save.\+txt powinna wyglądać następująco\+: 
+\begin{DoxyCode}
+1   2   3   4   5   6   7   8   9   10
+\end{DoxyCode}
+ 
+
+Definicja w linii 309 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_ac9b7432d7f91aaee99100187fac8d73e}{}\index{Simulation@{Simulation}!Set\+Source\+Concentration@{Set\+Source\+Concentration}}
+\index{Set\+Source\+Concentration@{Set\+Source\+Concentration}!Simulation@{Simulation}}
+\subsubsection[{Set\+Source\+Concentration}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Source\+Concentration (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{double \&}]{val}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ac9b7432d7f91aaee99100187fac8d73e}
+ustawia w miejscu zrodla odpowiednia wartosc koncentracji 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa pkt \\
+\hline
+{\em val} & -\/ wartosc koncentracji zadawanej w punkcie zrodla \\
+\hline
+\end{DoxyParams}
+!!!!! zrobic by bylo to czytane z pliku 
+
+Definicja w linii 443 pliku simulation.\+cpp.
+
+\hypertarget{class_simulation_ad8c565d908664e7b5d419261af556ae9}{}\index{Simulation@{Simulation}!Set\+Source\+Concentration\+Temp@{Set\+Source\+Concentration\+Temp}}
+\index{Set\+Source\+Concentration\+Temp@{Set\+Source\+Concentration\+Temp}!Simulation@{Simulation}}
+\subsubsection[{Set\+Source\+Concentration\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::\+Set\+Source\+Concentration\+Temp (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{{\bf Simulation\+Parameters} \&}]{param, }
+\item[{double \&}]{val}
+\end{DoxyParamCaption}
+)}\label{class_simulation_ad8c565d908664e7b5d419261af556ae9}
+ustawia w miejscu zrodla odpowiednia wartosc koncentracji dla temeratury 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa pkt \\
+\hline
+{\em param} & -\/ obiekt z parametrami symulacji \\
+\hline
+{\em val} & -\/ wartosc koncentracji zadawanej w punkcie zrodla \\
+\hline
+\end{DoxyParams}
+double x0 = 1730/param.\+get\+\_\+dx(), y0 = 690/param.\+get\+\_\+dy();//dla Wisly -\/ ekspertyza 
+
+Definicja w linii 521 pliku simulation.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{simulation_8h}{simulation.\+h}\item 
+\hyperlink{simulation_8cpp}{simulation.\+cpp}\item 
+\hyperlink{simulation_8cpp__kopia_8cpp}{simulation.\+cpp\+\_\+kopia.\+cpp}\item 
+\hyperlink{simulation__1_8cpp}{simulation\+\_\+1.\+cpp}\item 
+\hyperlink{simulation__2011__03__25_8cpp}{simulation\+\_\+2011\+\_\+03\+\_\+25.\+cpp}\item 
+\hyperlink{simulation___dodc_8cpp}{simulation\+\_\+\+Dodc.\+cpp}\item 
+\hyperlink{simulation___kodc_8cpp}{simulation\+\_\+\+Kodc.\+cpp}\item 
+\hyperlink{simulation___kodc__1780__90__730__40_8cpp}{simulation\+\_\+\+Kodc\+\_\+1780\+\_\+90\+\_\+730\+\_\+40.\+cpp}\item 
+\hyperlink{simulation___kodc__1790__800__740__50_8cpp}{simulation\+\_\+\+Kodc\+\_\+1790\+\_\+800\+\_\+740\+\_\+50.\+cpp}\item 
+\hyperlink{simulation___kodc___zapis_8cpp}{simulation\+\_\+\+Kodc\+\_\+\+Zapis.\+cpp}\item 
+\hyperlink{simulation___l_pkt_8cpp}{simulation\+\_\+\+L\+Pkt.\+cpp}\item 
+\hyperlink{simulation___l_pkt___zapis_8cpp}{simulation\+\_\+\+L\+Pkt\+\_\+\+Zapis.\+cpp}\item 
+\hyperlink{simulation___pkt__1780__730_8cpp}{simulation\+\_\+\+Pkt\+\_\+1780\+\_\+730.\+cpp}\item 
+\hyperlink{simulation___pkt__1790__740_8cpp}{simulation\+\_\+\+Pkt\+\_\+1790\+\_\+740.\+cpp}\item 
+\hyperlink{simulation___pkt__1800__750_8cpp}{simulation\+\_\+\+Pkt\+\_\+1800\+\_\+750.\+cpp}\item 
+\hyperlink{simulation___sr_pkt_8cpp}{simulation\+\_\+\+Sr\+Pkt.\+cpp}\item 
+\hyperlink{simulation___sr_pkt__5m_8cpp}{simulation\+\_\+\+Sr\+Pkt\+\_\+5m.\+cpp}\item 
+\hyperlink{simulation___sr_pkt__t0_8cpp}{simulation\+\_\+\+Sr\+Pkt\+\_\+t0.\+cpp}\item 
+\hyperlink{simulation___sr_pkt__t0__plus_8cpp}{simulation\+\_\+\+Sr\+Pkt\+\_\+t0\+\_\+plus.\+cpp}\item 
+\hyperlink{simulation___sr_pkt__t0__plus__f_8cpp}{simulation\+\_\+\+Sr\+Pkt\+\_\+t0\+\_\+plus\+\_\+f.\+cpp}\item 
+\hyperlink{simulation___sr_pkt___zapis_8cpp}{simulation\+\_\+\+Sr\+Pkt\+\_\+\+Zapis.\+cpp}\end{DoxyCompactItemize}

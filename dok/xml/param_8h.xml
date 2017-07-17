@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="param_8h" kind="file" language="C++">
+    <compoundname>param.h</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes refid="tensor_8h" local="yes">tensor.h</includes>
+    <includes refid="scheme_8h" local="yes">scheme.h</includes>
+    <includedby refid="simulation_8h" local="yes">simulation.h</includedby>
+    <includedby refid="param_8cpp" local="yes">param.cpp</includedby>
+    <includedby refid="scheme_8cpp" local="yes">scheme.cpp</includedby>
+    <includedby refid="scheme__new__bez_q_8cpp" local="yes">scheme_new_bezQ.cpp</includedby>
+    <includedby refid="scheme__new__z_q_8cpp" local="yes">scheme_new_zQ.cpp</includedby>
+    <includedby refid="scheme__przed__zmina__09092015_8cpp" local="yes">scheme_przed_zmina_09092015.cpp</includedby>
+    <incdepgraph>
+      <node id="194">
+        <label>param.h</label>
+        <link refid="param.h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>cmath</label>
+      </node>
+      <node id="204">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>string</label>
+      </node>
+      <node id="203">
+        <label>map</label>
+      </node>
+      <node id="195">
+        <label>fstream</label>
+      </node>
+      <node id="202">
+        <label>vector</label>
+      </node>
+      <node id="199">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>cstdlib</label>
+      </node>
+      <node id="196">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="235">
+        <label>simulation_SrPkt_t0.cpp</label>
+        <link refid="simulation___sr_pkt__t0_8cpp"/>
+      </node>
+      <node id="205">
+        <label>param.h</label>
+        <link refid="param.h"/>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>simulation_Kodc_1780_90_730_40.cpp</label>
+        <link refid="simulation___kodc__1780__90__730__40_8cpp"/>
+      </node>
+      <node id="218">
+        <label>rmm.cpp</label>
+        <link refid="rmm_8cpp"/>
+      </node>
+      <node id="223">
+        <label>simulation_Dodc.cpp</label>
+        <link refid="simulation___dodc_8cpp"/>
+      </node>
+      <node id="228">
+        <label>simulation_LPkt.cpp</label>
+        <link refid="simulation___l_pkt_8cpp"/>
+      </node>
+      <node id="211">
+        <label>point.cpp</label>
+        <link refid="point_8cpp"/>
+      </node>
+      <node id="212">
+        <label>scheme.cpp</label>
+        <link refid="scheme_8cpp"/>
+      </node>
+      <node id="215">
+        <label>scheme_przed_zmina_09092015.cpp</label>
+        <link refid="scheme__przed__zmina__09092015_8cpp"/>
+      </node>
+      <node id="229">
+        <label>simulation_LPkt_Zapis.cpp</label>
+        <link refid="simulation___l_pkt___zapis_8cpp"/>
+      </node>
+      <node id="214">
+        <label>scheme_new_zQ.cpp</label>
+        <link refid="scheme__new__z_q_8cpp"/>
+      </node>
+      <node id="226">
+        <label>simulation_Kodc_1790_800_740_50.cpp</label>
+        <link refid="simulation___kodc__1790__800__740__50_8cpp"/>
+      </node>
+      <node id="213">
+        <label>scheme_new_bezQ.cpp</label>
+        <link refid="scheme__new__bez_q_8cpp"/>
+      </node>
+      <node id="206">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>simulation_Kodc_Zapis.cpp</label>
+        <link refid="simulation___kodc___zapis_8cpp"/>
+      </node>
+      <node id="217">
+        <label>param.cpp</label>
+        <link refid="param_8cpp"/>
+      </node>
+      <node id="231">
+        <label>simulation_Pkt_1790_740.cpp</label>
+        <link refid="simulation___pkt__1790__740_8cpp"/>
+      </node>
+      <node id="232">
+        <label>simulation_Pkt_1800_750.cpp</label>
+        <link refid="simulation___pkt__1800__750_8cpp"/>
+      </node>
+      <node id="209">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>simulation.cpp_kopia.cpp</label>
+        <link refid="simulation_8cpp__kopia_8cpp"/>
+      </node>
+      <node id="224">
+        <label>simulation_Kodc.cpp</label>
+        <link refid="simulation___kodc_8cpp"/>
+      </node>
+      <node id="216">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="237">
+        <label>simulation_SrPkt_t0_plus_f.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus__f_8cpp"/>
+      </node>
+      <node id="207">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>simulation_SrPkt.cpp</label>
+        <link refid="simulation___sr_pkt_8cpp"/>
+      </node>
+      <node id="222">
+        <label>simulation_2011_03_25.cpp</label>
+        <link refid="simulation__2011__03__25_8cpp"/>
+      </node>
+      <node id="219">
+        <label>simulation.cpp</label>
+        <link refid="simulation_8cpp"/>
+      </node>
+      <node id="221">
+        <label>simulation_1.cpp</label>
+        <link refid="simulation__1_8cpp"/>
+      </node>
+      <node id="238">
+        <label>simulation_SrPkt_Zapis.cpp</label>
+        <link refid="simulation___sr_pkt___zapis_8cpp"/>
+      </node>
+      <node id="236">
+        <label>simulation_SrPkt_t0_plus.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus_8cpp"/>
+      </node>
+      <node id="230">
+        <label>simulation_Pkt_1780_730.cpp</label>
+        <link refid="simulation___pkt__1780__730_8cpp"/>
+      </node>
+      <node id="210">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="208">
+        <label>comments.cpp</label>
+        <link refid="comments_8cpp"/>
+      </node>
+      <node id="234">
+        <label>simulation_SrPkt_5m.cpp</label>
+        <link refid="simulation___sr_pkt__5m_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_simulation_parameters" prot="public">SimulationParameters</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>param.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tensor_8h" kindref="compound">tensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheme_8h" kindref="compound">scheme.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"></codeline>
+<codeline lineno="26" refid="class_simulation_parameters" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>param);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//_________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="40" refid="class_simulation_parameters_1ae2858173523e3d44efdb5e7cb1c41785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_simulation_parameters_1ae2858173523e3d44efdb5e7cb1c41785" kindref="member">~SimulationParameters</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//____________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_simulation_parameters_1a68fcda888ff9c17f3d8cc548ecb2a971" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a68fcda888ff9c17f3d8cc548ecb2a971" kindref="member">get_flag</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_flag;};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_simulation_parameters_1a9966bac3c9484aeed65d4aa4a7c31c17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a9966bac3c9484aeed65d4aa4a7c31c17" kindref="member">get_n</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_n;};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_simulation_parameters_1a17ece2a3b38e27abe7902345debcc292" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a17ece2a3b38e27abe7902345debcc292" kindref="member">get_dx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_dx;};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="class_simulation_parameters_1ab86fb4ed8f1f9fe460e860e1973cba03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ab86fb4ed8f1f9fe460e860e1973cba03" kindref="member">get_dy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_dy;};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="class_simulation_parameters_1ad939af4a1bd01ab8d28ae089d3443695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ad939af4a1bd01ab8d28ae089d3443695" kindref="member">get_dt</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_dt;};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>get_dtmax()<sp/>const<sp/>{return<sp/>_dtmax;};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_simulation_parameters_1a4d5e46cf9fedbbf3f54730dfd3ae8e48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a4d5e46cf9fedbbf3f54730dfd3ae8e48" kindref="member">get_vx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vx;};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_simulation_parameters_1afafb8a1cd0b36e1a44634ef12f63a131" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1afafb8a1cd0b36e1a44634ef12f63a131" kindref="member">get_vy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vy;};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="class_simulation_parameters_1a4c1f68d7b6c1171914b14746e72e1aeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a4c1f68d7b6c1171914b14746e72e1aeb" kindref="member">get_vxmax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vxmax;};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_simulation_parameters_1a7b16803d329c7487313123a4939be4fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a7b16803d329c7487313123a4939be4fd" kindref="member">get_vymax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vymax;};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="class_simulation_parameters_1a3fd57d0fbabac8276a67ffe47e187a7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a3fd57d0fbabac8276a67ffe47e187a7a" kindref="member">get_vxmin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vxmin;};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="class_simulation_parameters_1a82fdd4554487c44608ec8481e2238a99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a82fdd4554487c44608ec8481e2238a99" kindref="member">get_vymin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vymin;};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_simulation_parameters_1a3b0ff9c4b88fb8c112bc6fbd69a43363" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a3b0ff9c4b88fb8c112bc6fbd69a43363" kindref="member">get_Dlong</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dlong;};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_simulation_parameters_1ae5fc90d369cbb210e31d6e052bf77a6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ae5fc90d369cbb210e31d6e052bf77a6d" kindref="member">get_Dtrans</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dtrans;};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_simulation_parameters_1ad3de01622aedae26ca32c92efa82b164" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ad3de01622aedae26ca32c92efa82b164" kindref="member">get_Dxxmax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxxmax;};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_simulation_parameters_1a3f6624fc83d5fd91e8c70cfb3a73e5f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a3f6624fc83d5fd91e8c70cfb3a73e5f4" kindref="member">get_Dyymax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dyymax;};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_simulation_parameters_1a61cf0e0d8c8713825c38f130fcb64c74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a61cf0e0d8c8713825c38f130fcb64c74" kindref="member">get_Dxymax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxymax;};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_simulation_parameters_1aab1156e02ae3d3f48dd77e47481ece90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1aab1156e02ae3d3f48dd77e47481ece90" kindref="member">get_Dxxmin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxxmin;};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="class_simulation_parameters_1a4c66a266c6943fa10afef74b8332002a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a4c66a266c6943fa10afef74b8332002a" kindref="member">get_Dyymin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dyymin;};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="class_simulation_parameters_1ab63e1bb54a319885139aace910da678c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ab63e1bb54a319885139aace910da678c" kindref="member">get_Dxymin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxymin;};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="class_simulation_parameters_1aac4e34a1ab864d4b0c076a45b74fb98d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1aac4e34a1ab864d4b0c076a45b74fb98d" kindref="member">get_scheme</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_scheme;};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="class_simulation_parameters_1a2d8b7ca6c945714efeef2916b2caaeb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a2d8b7ca6c945714efeef2916b2caaeb3" kindref="member">get_dispersion</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_dispersion;};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_simulation_parameters_1aee24f2305aca60bc8d4c4182333abce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1aee24f2305aca60bc8d4c4182333abce3" kindref="member">get_gridFile</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_gridFile;};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="class_simulation_parameters_1a23dc711ac13c3929910efd5c9877e414" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a23dc711ac13c3929910efd5c9877e414" kindref="member">get_pollutant</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pollutant;};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="class_simulation_parameters_1ab396fcc5b261e17f81760e1846fc1569" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ab396fcc5b261e17f81760e1846fc1569" kindref="member">get_dump</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_dump;};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="class_simulation_parameters_1a3e1410e837506a6d0f4225c5c224d260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a3e1410e837506a6d0f4225c5c224d260" kindref="member">get_area</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_area;};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_simulation_parameters_1acc53a811c1a21e0996a0fc044a6b7b3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1acc53a811c1a21e0996a0fc044a6b7b3d" kindref="member">get_mod</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_mod;};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="class_simulation_parameters_1aaaba7d7f4d33a6f6fa13143979360d31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref><sp/>*<ref refid="class_simulation_parameters_1aaaba7d7f4d33a6f6fa13143979360d31" kindref="member">get_tensor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;biore<sp/>tensor&quot;&lt;&lt;endl;*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_tensor;};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_simulation_parameters_1a7b49731434f236aff3bf92e1ce4636e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_scheme" kindref="compound">SScheme</ref><sp/>*<ref refid="class_simulation_parameters_1a7b49731434f236aff3bf92e1ce4636e6" kindref="member">get_s_scheme</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;biore<sp/>schemat&quot;&lt;&lt;endl*/</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_s_scheme;};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//____________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="class_simulation_parameters_1a1c90f74ed579065b2785a6dc5d9c7645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a1c90f74ed579065b2785a6dc5d9c7645" kindref="member">set_flag</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag)<sp/>{_flag<sp/>=<sp/>flag;};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="class_simulation_parameters_1a310374d248e0fdc02c236936538d2f80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a310374d248e0fdc02c236936538d2f80" kindref="member">set_n</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{_n<sp/>=<sp/>n;};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="class_simulation_parameters_1ae06426aa1336727b706234b6bf0a9b2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ae06426aa1336727b706234b6bf0a9b2f" kindref="member">set_dx</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx)<sp/>{_dx<sp/>=<sp/>dx;};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="166" refid="class_simulation_parameters_1a4ea672088cfe311f4fff6ef8fce7b4bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a4ea672088cfe311f4fff6ef8fce7b4bb" kindref="member">set_dy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy)<sp/>{_dy<sp/>=<sp/>dy;};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169" refid="class_simulation_parameters_1a85f6aea7fcbca0436594e6c73845aab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a85f6aea7fcbca0436594e6c73845aab8" kindref="member">set_vx</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx)<sp/>{_vx<sp/>=<sp/>vx;};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="class_simulation_parameters_1a569357bd6d6245684770a80501a45ac4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a569357bd6d6245684770a80501a45ac4" kindref="member">set_vy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vy)<sp/>{_vy<sp/>=<sp/>vy;};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175" refid="class_simulation_parameters_1a3d14efe09cd7ca79b44e12ee3fe8761c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a3d14efe09cd7ca79b44e12ee3fe8761c" kindref="member">set_vxmax</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vxmax)<sp/>{_vxmax<sp/>=<sp/>vxmax;};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="class_simulation_parameters_1ad5df52a205d10f457e3500295884ab7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ad5df52a205d10f457e3500295884ab7e" kindref="member">set_vymax</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vymax)<sp/>{_vymax<sp/>=<sp/>vymax;};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="class_simulation_parameters_1a31a365f0f5d131507ed2608acf8b5fd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a31a365f0f5d131507ed2608acf8b5fd7" kindref="member">set_vxmin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vxmin)<sp/>{_vxmin<sp/>=<sp/>vxmin;};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_simulation_parameters_1a1e611a9995e5f7a38ad527c5e13507d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a1e611a9995e5f7a38ad527c5e13507d9" kindref="member">set_vymin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vymin)<sp/>{_vymin<sp/>=<sp/>vymin;};</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="class_simulation_parameters_1acd9d8da9786d6dce5b78ffcaedfe0a74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1acd9d8da9786d6dce5b78ffcaedfe0a74" kindref="member">set_Dlong</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dlong)<sp/>{_Dlong<sp/>=<sp/>Dlong;};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="class_simulation_parameters_1a4cb8bab39bb4ba86b988edde543d97da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a4cb8bab39bb4ba86b988edde543d97da" kindref="member">set_Dtrans</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dtrans)<sp/>{_Dtrans<sp/>=<sp/>Dtrans;};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="class_simulation_parameters_1ae2c2b65aff97393dbd1b685e598970fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ae2c2b65aff97393dbd1b685e598970fe" kindref="member">set_dt</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt)<sp/>{_dt<sp/>=<sp/>dt;};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>set_dtmax(double<sp/>dtmax)<sp/>{_dtmax<sp/>=<sp/>dtmax;};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="class_simulation_parameters_1a2c55847f253f98af295b89f32aa4cc1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a2c55847f253f98af295b89f32aa4cc1c" kindref="member">set_Dxxmax</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxxmax)<sp/>{_Dxxmax<sp/>=<sp/>Dxxmax;};</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="class_simulation_parameters_1a7337f50ff0f37ac9936f3586016661bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a7337f50ff0f37ac9936f3586016661bf" kindref="member">set_Dyymax</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyymax)<sp/>{_Dyymax<sp/>=<sp/>Dyymax;};</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="class_simulation_parameters_1a93877f3fd2e247afa730d63dd338f4c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a93877f3fd2e247afa730d63dd338f4c4" kindref="member">set_Dxymax</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxymax)<sp/>{_Dxymax<sp/>=<sp/>Dxymax;};</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_simulation_parameters_1a9a213f854271721cf381ef08d03b805b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a9a213f854271721cf381ef08d03b805b" kindref="member">set_Dxxmin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxxmin)<sp/>{_Dxxmin<sp/>=<sp/>Dxxmin;};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_simulation_parameters_1a26a229a4abb16fd60b9904091b56bd48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a26a229a4abb16fd60b9904091b56bd48" kindref="member">set_Dyymin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyymin)<sp/>{_Dyymin<sp/>=<sp/>Dyymin;};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="class_simulation_parameters_1a5f1a3d9b5357192cdea0da48d37330cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a5f1a3d9b5357192cdea0da48d37330cc" kindref="member">set_Dxymin</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxymin)<sp/>{_Dxymin<sp/>=<sp/>Dxymin;};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//______________________________________________________________________________</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_scheme(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>scheme);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_dispersion(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dispersion);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="227" refid="class_simulation_parameters_1ab17f56dbd5bfcfadd13b55665b27222f" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1ab17f56dbd5bfcfadd13b55665b27222f" kindref="member">set_gridFile</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>gridFile)<sp/>{_gridFile<sp/>=<sp/>gridFile;};</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="237" refid="class_simulation_parameters_1a76420499d58b303411f21c385d82303f" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a76420499d58b303411f21c385d82303f" kindref="member">set_pollutant</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pollutant)<sp/>{_pollutant<sp/>=<sp/>pollutant;};</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="245" refid="class_simulation_parameters_1a1848a63487254ccce60bc06886d29847" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a1848a63487254ccce60bc06886d29847" kindref="member">set_dump</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dump)<sp/>{_dump<sp/>=<sp/>dump;};</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="257" refid="class_simulation_parameters_1a05862812dec3b947f124886aaea1cb84" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a05862812dec3b947f124886aaea1cb84" kindref="member">set_area</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>area)<sp/>{_area<sp/>=<sp/>area;};</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="268" refid="class_simulation_parameters_1a16d7b0beff55cf45ca7cf23d99fbbd10" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a16d7b0beff55cf45ca7cf23d99fbbd10" kindref="member">set_mod</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mod)<sp/>{_mod<sp/>=<sp/>mod;};</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ComputePecletNumber(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="286"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ComputeCourantNumber();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_flag,<sp/>_n;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_dx,<sp/>_dy,<sp/>_dt,<sp/>_vx,<sp/>_vy,<sp/>_Dlong,<sp/>_Dtrans;</highlight><highlight class="comment">//,<sp/>_Dxx,<sp/>_Dxy,<sp/>_Dyy,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_Dlmax,<sp/>_Dtmax,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_Dxxmax,<sp/>_Dyymax,<sp/>_Dxymax,<sp/>_vxmax,<sp/>_vymax;<sp/></highlight><highlight class="comment">//maxsmlane<sp/>wartosci<sp/>zmiennych<sp/>na<sp/>siatce</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_Dxxmin,<sp/>_Dyymin,<sp/>_Dxymin,<sp/>_vxmin,<sp/>_vymin;<sp/></highlight><highlight class="comment">//minimalne<sp/>wartosci<sp/>zmiennych<sp/>na<sp/>siatce</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_param,<sp/>_scheme,<sp/>_dispersion,<sp/>_gridFile;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_pollutant;</highlight><highlight class="comment">//<sp/>rodzaj<sp/>zenieszcyszenia<sp/>dra<sp/>ktorego<sp/>wykonywane<sp/>beda<sp/>obliczenia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;conc&quot;<sp/>-<sp/>zanieczyszczenie<sp/>chemiczne<sp/>-<sp/>sybstancja<sp/>pasywana<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;temp&quot;<sp/>-<sp/>zanieczyszczenie<sp/>teramiczne<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_dump;<sp/></highlight><highlight class="comment">//<sp/>sposób<sp/>zrzutu<sp/>zanieczyszczen<sp/>-<sp/>chwilowy<sp/>-<sp/>&quot;inst&quot;,<sp/><sp/>lub<sp/>ciągły<sp/>-<sp/>&quot;cont&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_area;<sp/><sp/><sp/></highlight><highlight class="comment">//obszar<sp/>zrzutu:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;point&quot;<sp/>-<sp/>w<sp/>jednym<sp/>pukcie,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;points&quot;<sp/>-<sp/>w<sp/>kilku<sp/>zdefiniowanych<sp/>punktach,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;area&quot;<sp/>-<sp/>na<sp/>konkretnym<sp/>obszare</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;gaus&quot;<sp/>-<sp/>rokład<sp/>gausa<sp/>wokół<sp/>daneg<sp/>punktu<sp/>(diagonalny)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;gausnondiag&quot;<sp/>-<sp/>rozkład<sp/>gaussa<sp/>niediagonalny</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_mod;<sp/></highlight><highlight class="comment">//czy<sp/>podawana<sp/>wartosc<sp/>temperatury/concentracji<sp/>jest<sp/>okreslona<sp/>w<sp/>danym<sp/>punkcie<sp/>jako<sp/>wartosc<sp/>zakladana<sp/>czy<sp/>efektywana</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;val&quot;<sp/>-<sp/>wartosc<sp/>nominalan<sp/>koncentracji/temperatury<sp/>jaka<sp/>chcemy<sp/>miec<sp/>w<sp/>danym<sp/>punkcie<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-<sp/>nie<sp/>uwzglednia<sp/>kroku<sp/>przestrzennego<sp/>na<sp/>siatce<sp/>i<sp/>glebokosci<sp/>w<sp/>danym<sp/>punkcie<sp/>siatki<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>na<sp/>jej<sp/>podstawie<sp/>i<sp/>na<sp/>podstawie<sp/>danych<sp/>o<sp/>głebokosci<sp/>w<sp/>danym<sp/>pukcie<sp/>i<sp/>wartosci<sp/>natęzenia<sp/>przepływu<sp/>zanieczyszcznie</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wyznaczana<sp/>jest<sp/>wartosc<sp/>efektywna<sp/>koncentracji/temperatury</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;val_e&quot;<sp/>-<sp/>wartosc<sp/>efektywna<sp/>koncentracji/temperatury<sp/>w<sp/>danym<sp/>punkcie<sp/>(powinna<sp/>uwzgledniac<sp/>juz<sp/><sp/>juz<sp/>krok<sp/>przestrzenny,<sp/>glebokosc<sp/>i<sp/>natezenie<sp/>zrzutu)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref><sp/>*_tensor;<sp/></highlight><highlight class="comment">//wskanik<sp/>do<sp/>obiektu<sp/>pod<sp/>ktorym<sp/>bedzie<sp/>odpowiedni<sp/>sposob<sp/>liczenia<sp/>tensora<sp/>dyspersji</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref><sp/>_t_simple;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_fischer" kindref="compound">DFischer</ref><sp/>_t_fischer;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_vector" kindref="compound">DVector</ref><sp/>_t_vector;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_fischer2" kindref="compound">DFischer2</ref><sp/>_t_fischer2;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_scheme" kindref="compound">SScheme</ref><sp/>*<sp/>_s_scheme;<sp/></highlight><highlight class="comment">//wskaznik<sp/>do<sp/>obiektu<sp/>pod<sp/>ktorym<sp/>bedzie<sp/>odpowiedni<sp/>schemat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_crank_nicolson" kindref="compound">SCrankNicolson</ref><sp/>_s_CN;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_up_wind" kindref="compound">SUpWind</ref><sp/>_s_UP;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_a_d_i" kindref="compound">SADI</ref><sp/>_s_ADI;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_a_d_i2" kindref="compound">SADI2</ref><sp/>_s_ADI2;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/param.h"/>
+  </compounddef>
+</doxygen>

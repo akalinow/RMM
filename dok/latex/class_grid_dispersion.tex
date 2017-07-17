@@ -1,0 +1,87 @@
+\hypertarget{class_grid_dispersion}{}\section{Dokumentacja klasy Grid\+Dispersion}
+\label{class_grid_dispersion}\index{Grid\+Dispersion@{Grid\+Dispersion}}
+
+
+Klasa Przygotowujaca siatke do symulacji.  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+Diagram dziedziczenia dla Grid\+Dispersion\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid_dispersion}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_dispersion_aa91ae00919a4f12049f9415e3b584b31}{Grid\+Dispersion} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_dispersion_afbc03fca9459c90c19959c24df944766}{Read\+Data} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, const string \&file, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&sym\+\_\+param)
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa Przygotowujaca siatke do symulacji. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa wspolrzedne pktow przeplywu i wartosci wspolczynnikow dyspersji, a skladowe predkosci sa stale na calej siatce. 
+
+Definicja w linii 258 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_grid_dispersion_aa91ae00919a4f12049f9415e3b584b31}{}\index{Grid\+Dispersion@{Grid\+Dispersion}!Grid\+Dispersion@{Grid\+Dispersion}}
+\index{Grid\+Dispersion@{Grid\+Dispersion}!Grid\+Dispersion@{Grid\+Dispersion}}
+\subsubsection[{Grid\+Dispersion}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+Dispersion\+::\+Grid\+Dispersion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_dispersion_aa91ae00919a4f12049f9415e3b584b31}
+
+
+Konstruktor. 
+
+Tworzy obiekt \hyperlink{class_grid}{Grid} Dispersion 
+
+Definicja w linii 264 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_grid_dispersion_afbc03fca9459c90c19959c24df944766}{}\index{Grid\+Dispersion@{Grid\+Dispersion}!Read\+Data@{Read\+Data}}
+\index{Read\+Data@{Read\+Data}!Grid\+Dispersion@{Grid\+Dispersion}}
+\subsubsection[{Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+Dispersion\+::\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{const string \&}]{file, }
+\item[{{\bf Simulation\+Parameters} \&}]{sym\+\_\+param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_grid_dispersion_afbc03fca9459c90c19959c24df944766}
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+{\em file} & -\/ nazwa pliku z danymi \\
+\hline
+{\em sym\+\_\+param} & -\/ obiekt z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \hyperlink{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}{Grid}.
+
+
+
+Definicja w linii 726 pliku grid.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{grid_8h}{grid.\+h}\item 
+\hyperlink{grid_8cpp}{grid.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,393 @@
+.TH "Point" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Point \- Klasa opisujaca Punkt\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <point\&.h>\fP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBPoint\fP (double x, double y, int type, int type1)"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "\fBPoint\fP (double x, double y, int flag)"
+.br
+.ti -1c
+.RI "\fBPoint\fP (double x, double y, double vx, double vy, int flag)"
+.br
+.ti -1c
+.RI "\fBPoint\fP (double x, double y, double vx, double vy, double Dxx, double Dyy, double Dxy, int flag)"
+.br
+.ti -1c
+.RI "\fBPoint\fP (double x, double y, double Dxx, double Dyy, double Dxy, int flag)"
+.br
+.ti -1c
+.RI "\fBPoint\fP ()"
+.br
+.ti -1c
+.RI "int \fBget_flag\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_x\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_y\fP () const "
+.br
+.ti -1c
+.RI "long double \fBget_Next\fP () const "
+.br
+.ti -1c
+.RI "long double \fBget_Curr\fP () const "
+.br
+.ti -1c
+.RI "long double \fBget_Prev\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dyy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_CurAx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_CurAy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_CurDx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_CurDxy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_CurDy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_factor_f\fP (string f) const "
+.br
+.ti -1c
+.RI "double \fBget_factor\fP (string f) const "
+.br
+.ti -1c
+.RI "map< int, \fBPoint\fP > * \fBget_map\fP () const "
+.br
+.ti -1c
+.RI "int \fBget_near_neighbour\fP (int nr)"
+.br
+.ti -1c
+.RI "int \fBget_distant_neighbours\fP (int number)"
+.br
+.ti -1c
+.RI "void \fBset_flag\fP (int f)"
+.br
+.ti -1c
+.RI "void \fBset_x\fP (double x)"
+.br
+.ti -1c
+.RI "void \fBset_y\fP (double y)"
+.br
+.ti -1c
+.RI "void \fBset_vx\fP (double vX)"
+.br
+.ti -1c
+.RI "void \fBset_vy\fP (double vY)"
+.br
+.ti -1c
+.RI "void \fBset_Dxx\fP (double Dx)"
+.br
+.ti -1c
+.RI "void \fBset_Dxy\fP (double Dxy)"
+.br
+.ti -1c
+.RI "void \fBset_Dyy\fP (double Dy)"
+.br
+.ti -1c
+.RI "void \fBset_Prev\fP (long double val)"
+.br
+.ti -1c
+.RI "void \fBset_Curr\fP (long double val)"
+.br
+.ti -1c
+.RI "void \fBset_Next\fP (long double val)"
+.br
+.ti -1c
+.RI "void \fBset_factor_fij\fP (string f, double val)"
+.br
+.ti -1c
+.RI "void \fBset_factor\fP (string f, double val)"
+.br
+.ti -1c
+.RI "void \fBset_map\fP (map< int, \fBPoint\fP > *Map)"
+.br
+.ti -1c
+.RI "void \fBset_near_neighbours\fP (int opt=1)"
+.br
+.ti -1c
+.RI "void \fBset_distant_neighbours\fP (int opt=1)"
+.br
+.ti -1c
+.RI "void \fBset_Courant_numbers\fP (double dx, double dy, double dt)"
+.br
+.ti -1c
+.RI "void \fBprint\fP () const "
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBPoint\fP &obj) const "
+.br
+.in -1c
+.SS "Statyczne atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "static map< int, \fBPoint\fP > * \fB_PointMap\fP = 0"
+.br
+.RI "\fItylko jedna mapa moze byc \fP"
+.in -1c
+.SS "Przyjaciele"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &out, const \fBPoint\fP &obj)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa opisujaca Punkt\&. 
+
+Zawiera wszystkie informacje na temat konkretnego Punktu siatki, metody do ich ustawiaenia i dobrania sie do nich 
+.PP
+Definicja w linii 34 pliku point\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "Point::Point (double x, double y, int type, int type1)\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy Punkt 
+.PP
+\fBParametry:\fP
+.RS 4
+\fI-\fP nazwa pliku z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 43 pliku point\&.h\&.
+.SS "Point::Point (double x, double y, int flag)\fC [inline]\fP"
+
+.PP
+Definicja w linii 50 pliku point\&.h\&.
+.SS "Point::Point (double x, double y, double vx, double vy, int flag)\fC [inline]\fP"
+
+.PP
+Definicja w linii 57 pliku point\&.h\&.
+.SS "Point::Point (double x, double y, double vx, double vy, double Dxx, double Dyy, double Dxy, int flag)\fC [inline]\fP"
+
+.PP
+Definicja w linii 64 pliku point\&.h\&.
+.SS "Point::Point (double x, double y, double Dxx, double Dyy, double Dxy, int flag)\fC [inline]\fP"
+
+.PP
+Definicja w linii 71 pliku point\&.h\&.
+.SS "Point::Point ()\fC [inline]\fP"
+
+.PP
+Definicja w linii 78 pliku point\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "double Point::get_CurAx () const\fC [inline]\fP"
+zwaraca wartosc liczby Couranta dla danego pkt 
+.PP
+Definicja w linii 119 pliku point\&.h\&.
+.SS "double Point::get_CurAy () const\fC [inline]\fP"
+
+.PP
+Definicja w linii 120 pliku point\&.h\&.
+.SS "double Point::get_CurDx () const\fC [inline]\fP"
+
+.PP
+Definicja w linii 121 pliku point\&.h\&.
+.SS "double Point::get_CurDxy () const\fC [inline]\fP"
+
+.PP
+Definicja w linii 122 pliku point\&.h\&.
+.SS "double Point::get_CurDy () const\fC [inline]\fP"
+
+.PP
+Definicja w linii 123 pliku point\&.h\&.
+.SS "long double Point::get_Curr () const\fC [inline]\fP"
+zwraca wartosc obecna 
+.PP
+Definicja w linii 98 pliku point\&.h\&.
+.SS "int Point::get_distant_neighbours (int number)\fC [inline]\fP"
+zwraca index odpowieniengo sasiada z dalszych sasiadow 
+.PP
+Definicja w linii 145 pliku point\&.h\&.
+.SS "double Point::get_Dxx () const\fC [inline]\fP"
+zwraca wartosc wspolczynnika tensors dyspersji Dxx w danym pkt 
+.PP
+Definicja w linii 110 pliku point\&.h\&.
+.SS "double Point::get_Dxy () const\fC [inline]\fP"
+zwraca wartosc wspolczynnika tensora dyspersji Dxy w danym pkt 
+.PP
+Definicja w linii 113 pliku point\&.h\&.
+.SS "double Point::get_Dyy () const\fC [inline]\fP"
+zwraca wartosc wspolczynnika dyspersji Dy w danym pkt 
+.PP
+Definicja w linii 116 pliku point\&.h\&.
+.SS "double Point::get_factor (string f) const\fC [inline]\fP"
+
+.PP
+Definicja w linii 133 pliku point\&.h\&.
+.SS "double Point::get_factor_f (string f) const\fC [inline]\fP"
+zwaraca wartosc liczb Peclet-a dla danego pkt 
+.PP
+Definicja w linii 132 pliku point\&.h\&.
+.SS "int Point::get_flag () const\fC [inline]\fP"
+zwraca flage pkt 
+.PP
+Definicja w linii 86 pliku point\&.h\&.
+.SS "map<int, \fBPoint\fP>* Point::get_map () const\fC [inline]\fP"
+zwraca mape do ktorej pkt nalezy 
+.PP
+Definicja w linii 139 pliku point\&.h\&.
+.SS "int Point::get_near_neighbour (int nr)\fC [inline]\fP"
+zwraca index odpowieniengo sasiada z najblizszych sasiadow 
+.PP
+Definicja w linii 142 pliku point\&.h\&.
+.SS "long double Point::get_Next () const\fC [inline]\fP"
+zwraca wartosc nastepna 
+.PP
+Definicja w linii 95 pliku point\&.h\&.
+.SS "long double Point::get_Prev () const\fC [inline]\fP"
+zwraca wartosc poprzednia 
+.PP
+Definicja w linii 101 pliku point\&.h\&.
+.SS "double Point::get_vx () const\fC [inline]\fP"
+zwraca wartosc wspolrzednej Vx predkosci w danym pkt 
+.PP
+Definicja w linii 104 pliku point\&.h\&.
+.SS "double Point::get_vy () const\fC [inline]\fP"
+zwraca wartosc wspolrzednej Vy predkosci w danym pkt 
+.PP
+Definicja w linii 107 pliku point\&.h\&.
+.SS "double Point::get_x () const\fC [inline]\fP"
+zwraca wspolrzednza x pkt 
+.PP
+Definicja w linii 89 pliku point\&.h\&.
+.SS "double Point::get_y () const\fC [inline]\fP"
+zwraca wspolrzednza y pkt 
+.PP
+Definicja w linii 92 pliku point\&.h\&.
+.SS "bool Point::operator< (const \fBPoint\fP & obj) const\fC [inline]\fP"
+porownuje inny pkt z aktualnym 
+.PP
+Definicja w linii 220 pliku point\&.h\&.
+.SS "void Point::print () const"
+Oblicza liczby Pecleta dla danego pkt
+.PP
+wypisuje na ekranie informacje o danym pkt 
+.PP
+Definicja w linii 12 pliku point\&.cpp\&.
+.SS "void Point::set_Courant_numbers (double dx, double dy, double dt)"
+Oblicza liczby adwekcyjne i dyfuzyjne Couranta dla danego pkt 
+.PP
+Definicja w linii 218 pliku point\&.cpp\&.
+.SS "void Point::set_Curr (long double val)\fC [inline]\fP"
+ustwaia wartosc w pkt 
+.PP
+Definicja w linii 177 pliku point\&.h\&.
+.SS "void Point::set_distant_neighbours (int opt = \fC1\fP)"
+Ustawia dalszych sasiadow danego pkt 
+.PP
+Definicja w linii 169 pliku point\&.cpp\&.
+.SS "void Point::set_Dxx (double Dx)\fC [inline]\fP"
+ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt 
+.PP
+Definicja w linii 165 pliku point\&.h\&.
+.SS "void Point::set_Dxy (double Dxy)\fC [inline]\fP"
+ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt 
+.PP
+Definicja w linii 168 pliku point\&.h\&.
+.SS "void Point::set_Dyy (double Dy)\fC [inline]\fP"
+ustwaia wartosc wspolczynnika tensora dyspersji Dyy w danym pkt 
+.PP
+Definicja w linii 171 pliku point\&.h\&.
+.SS "void Point::set_factor (string f, double val)\fC [inline]\fP"
+
+.PP
+Definicja w linii 184 pliku point\&.h\&.
+.SS "void Point::set_factor_fij (string f, double val)\fC [inline]\fP"
+
+.PP
+Definicja w linii 182 pliku point\&.h\&.
+.SS "void Point::set_flag (int f)\fC [inline]\fP"
+ustawia flage pkt 
+.PP
+Definicja w linii 150 pliku point\&.h\&.
+.SS "void Point::set_map (map< int, \fBPoint\fP > * Map)\fC [inline]\fP"
+ustawia mape dla pkt 
+.PP
+Definicja w linii 187 pliku point\&.h\&.
+.SS "void Point::set_near_neighbours (int opt = \fC1\fP)"
+Ustawia najblizszych sasiadow danego pkt 
+.PP
+Definicja w linii 23 pliku point\&.cpp\&.
+.SS "void Point::set_Next (long double val)\fC [inline]\fP"
+ustwaia wartosc nastepna dla pkt 
+.PP
+Definicja w linii 180 pliku point\&.h\&.
+.SS "void Point::set_Prev (long double val)\fC [inline]\fP"
+ustwaia wartosc poprzednia dla pkt 
+.PP
+Definicja w linii 174 pliku point\&.h\&.
+.SS "void Point::set_vx (double vX)\fC [inline]\fP"
+ustawia wartosc skladowej x predkosci 
+.PP
+Definicja w linii 159 pliku point\&.h\&.
+.SS "void Point::set_vy (double vY)\fC [inline]\fP"
+ustawia wartosc skaldowej y predkosci 
+.PP
+Definicja w linii 162 pliku point\&.h\&.
+.SS "void Point::set_x (double x)\fC [inline]\fP"
+ustwaia wspolrzedna x pkt\&. 
+.PP
+Definicja w linii 153 pliku point\&.h\&.
+.SS "void Point::set_y (double y)\fC [inline]\fP"
+ustwaia wspolrzedna y pkt 
+.PP
+Definicja w linii 156 pliku point\&.h\&.
+.SH "Dokumentacja przyjaciół i funkcji związanych"
+.PP 
+.SS "ostream& operator<< (ostream & out, const \fBPoint\fP & obj)\fC [friend]\fP"
+wypisuje informacje o danym pkt 
+.PP
+Definicja w linii 211 pliku point\&.h\&.
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "map< int, \fBPoint\fP > * Point::_PointMap = 0\fC [static]\fP"
+
+.PP
+tylko jedna mapa moze byc 
+.PP
+Definicja w linii 224 pliku point\&.h\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

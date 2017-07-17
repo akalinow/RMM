@@ -1,0 +1,505 @@
+\hypertarget{class_grid}{}\section{Dokumentacja klasy Grid}
+\label{class_grid}\index{Grid@{Grid}}
+
+
+Klasa Przygotowujaca siatke do symulacji.  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+Diagram dziedziczenia dla Grid\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}{Read\+Data} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, const string \&file, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&sym\+\_\+param)
+\item 
+void \hyperlink{class_grid_affe0d058372cb86ef7816d536793341b}{Set\+Max\+Values} (double \&vx, double \&vy, double \&Dxx, double \&Dxy, double Dyy, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param)
+\item 
+void \hyperlink{class_grid_a25ecf93fd041648dcde213623589fa27}{Set\+Min\+Values} (double \&vx, double \&vy, double \&Dxx, double \&Dxy, double Dyy, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&param)
+\item 
+void \hyperlink{class_grid_a4fc635f29b3dfa2075dc7e3cc6861762}{Set\+Extreme\+Values} (double \&xmax, double \&xmin, double \&ymax, double \&ymin)
+\item 
+void \hyperlink{class_grid_a03696ec5383f1a0222b447a0ff15d47c}{Set\+Extreme\+Points} (\hyperlink{class_point}{Point} \&pxmax, \hyperlink{class_point}{Point} \&pxmin, \hyperlink{class_point}{Point} \&pymax, \hyperlink{class_point}{Point} \&pymin)
+\item 
+void \hyperlink{class_grid_a3070db37370246f2028310f412d3d8c3}{Complete\+Outside\+Flow} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+int \hyperlink{class_grid_ac438ff968a29cfaaebb410f2a08a48f4}{Correct\+Grid} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+void \hyperlink{class_grid_a1e040eda61d389f8e0d141933ed6fb48}{Mark\+Border\+Points} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+void \hyperlink{class_grid_a6270d5bfcdefee9477865a3a60baae73}{Mark\+Near\+Border\+Points} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+int \hyperlink{class_grid_a0cc5771c532b0a92abb64d7f2df8eb1f}{Mark\+In\+Out\+Points} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+void \hyperlink{class_grid_acdec1d78fe3ead312d1098837325d113}{set\+\_\+pxmax} (\hyperlink{class_point}{Point} pkt)
+\item 
+void \hyperlink{class_grid_a51aaeb13d9c299ebc07e1e9d3b9fe47f}{set\+\_\+pymax} (\hyperlink{class_point}{Point} pkt)
+\item 
+void \hyperlink{class_grid_ab01ea11cdb5d87a4d8cddb51b40dd52c}{set\+\_\+pxmin} (\hyperlink{class_point}{Point} pkt)
+\item 
+void \hyperlink{class_grid_a666541ca159aebd16470f1fa7b2d16c2}{set\+\_\+pymin} (\hyperlink{class_point}{Point} pkt)
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_grid_ae90bb3028aa13b363d61e6617f4dbd89}{get\+\_\+pxmax} () const 
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_grid_ab45d29e63d5a92a97d2a8bc034e96234}{get\+\_\+pymax} () const 
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_grid_aa52105935ef29936395898215bcf40a7}{get\+\_\+pxmin} () const 
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_grid_a9865c790dde45934add338c055247a4c}{get\+\_\+pymin} () const 
+\item 
+double \hyperlink{class_grid_a2646150f8d14820de6c40a296d2eba17}{get\+\_\+xmax} () const 
+\item 
+double \hyperlink{class_grid_a385b11b22ff42896d522400d9ddd7e97}{get\+\_\+ymax} () const 
+\item 
+double \hyperlink{class_grid_a1ff74bf0898894452d67ccda6e3dc266}{get\+\_\+xmin} () const 
+\item 
+double \hyperlink{class_grid_ae776aec819443b168ebe15a52632ad77}{get\+\_\+ymin} () const 
+\end{DoxyCompactItemize}
+\subsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_grid_a557878ff6ca7473b0a0acb3ae9c599cb}{empty\+\_\+index} = -\/99999999
+\item 
+static int \hyperlink{class_grid_a1f0576a19198685cba8f1067b7e1ba7c}{\+\_\+xmax} = 0
+\item 
+static int \hyperlink{class_grid_a293bb2eb514f57749e92d2dcf914ca57}{\+\_\+xmin} = 0
+\item 
+static int \hyperlink{class_grid_ab4c6a5500c2540b48194a7bcdefab235}{\+\_\+ymax} = 0
+\item 
+static int \hyperlink{class_grid_a6e548ba7ad924ef369c7fc24be04f0b2}{\+\_\+ymin} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa Przygotowujaca siatke do symulacji. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, wspolne dla roznych sposobow wczytywania danych. 
+
+Definicja w linii 26 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_grid_a3070db37370246f2028310f412d3d8c3}{}\index{Grid@{Grid}!Complete\+Outside\+Flow@{Complete\+Outside\+Flow}}
+\index{Complete\+Outside\+Flow@{Complete\+Outside\+Flow}!Grid@{Grid}}
+\subsubsection[{Complete\+Outside\+Flow}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Complete\+Outside\+Flow (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_grid_a3070db37370246f2028310f412d3d8c3}
+Korzystajac z wyznaczony wartosci namniejszych i najwiekszych wspolrzednych na siatce, uzuplnia siatke punktami, ktore leza poza przeplywem nadajac im flage 0 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 65 pliku grid.\+cpp.
+
+\hypertarget{class_grid_ac438ff968a29cfaaebb410f2a08a48f4}{}\index{Grid@{Grid}!Correct\+Grid@{Correct\+Grid}}
+\index{Correct\+Grid@{Correct\+Grid}!Grid@{Grid}}
+\subsubsection[{Correct\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+Correct\+Grid (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_grid_ac438ff968a29cfaaebb410f2a08a48f4}
+Po oznaczeniu najblizszych sasiadow kazdego pktu koryguje siatkę (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia flagi 0 (poza przepływem) dla \char`\"{}dziwnych\char`\"{} punktow dla których punkty obok są poza przepływem (nie ma sensu liczyc w tych punktach -\/ generowaloby to tylko bledy nyumeryczne)\+: 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 84 pliku grid.\+cpp.
+
+\hypertarget{class_grid_ae90bb3028aa13b363d61e6617f4dbd89}{}\index{Grid@{Grid}!get\+\_\+pxmax@{get\+\_\+pxmax}}
+\index{get\+\_\+pxmax@{get\+\_\+pxmax}!Grid@{Grid}}
+\subsubsection[{get\+\_\+pxmax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Grid\+::get\+\_\+pxmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_ae90bb3028aa13b363d61e6617f4dbd89}
+Zwaraca pkt majacy maksymalna wartosc wspolrzednej x na siatce 
+
+Definicja w linii 159 pliku grid.\+h.
+
+\hypertarget{class_grid_aa52105935ef29936395898215bcf40a7}{}\index{Grid@{Grid}!get\+\_\+pxmin@{get\+\_\+pxmin}}
+\index{get\+\_\+pxmin@{get\+\_\+pxmin}!Grid@{Grid}}
+\subsubsection[{get\+\_\+pxmin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Grid\+::get\+\_\+pxmin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_aa52105935ef29936395898215bcf40a7}
+Zwaraca pkt majacy minimalna wartosc wspolzrednej x na siatce 
+
+Definicja w linii 165 pliku grid.\+h.
+
+\hypertarget{class_grid_ab45d29e63d5a92a97d2a8bc034e96234}{}\index{Grid@{Grid}!get\+\_\+pymax@{get\+\_\+pymax}}
+\index{get\+\_\+pymax@{get\+\_\+pymax}!Grid@{Grid}}
+\subsubsection[{get\+\_\+pymax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Grid\+::get\+\_\+pymax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_ab45d29e63d5a92a97d2a8bc034e96234}
+Zwaraca pkt majacy maksymalna wartosc wspolrzednej y na siatce 
+
+Definicja w linii 162 pliku grid.\+h.
+
+\hypertarget{class_grid_a9865c790dde45934add338c055247a4c}{}\index{Grid@{Grid}!get\+\_\+pymin@{get\+\_\+pymin}}
+\index{get\+\_\+pymin@{get\+\_\+pymin}!Grid@{Grid}}
+\subsubsection[{get\+\_\+pymin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Grid\+::get\+\_\+pymin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a9865c790dde45934add338c055247a4c}
+Zwaraca pkt majacy minimalna wartosc wpolrzednej y na siatce 
+
+Definicja w linii 168 pliku grid.\+h.
+
+\hypertarget{class_grid_a2646150f8d14820de6c40a296d2eba17}{}\index{Grid@{Grid}!get\+\_\+xmax@{get\+\_\+xmax}}
+\index{get\+\_\+xmax@{get\+\_\+xmax}!Grid@{Grid}}
+\subsubsection[{get\+\_\+xmax}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::get\+\_\+xmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a2646150f8d14820de6c40a296d2eba17}
+Zwaraca maksymalna wartosc wspolrzednej x na siatce 
+
+Definicja w linii 172 pliku grid.\+h.
+
+\hypertarget{class_grid_a1ff74bf0898894452d67ccda6e3dc266}{}\index{Grid@{Grid}!get\+\_\+xmin@{get\+\_\+xmin}}
+\index{get\+\_\+xmin@{get\+\_\+xmin}!Grid@{Grid}}
+\subsubsection[{get\+\_\+xmin}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::get\+\_\+xmin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a1ff74bf0898894452d67ccda6e3dc266}
+Zwaraca minimalna wartosc wspolzrednej x na siatce 
+
+Definicja w linii 178 pliku grid.\+h.
+
+\hypertarget{class_grid_a385b11b22ff42896d522400d9ddd7e97}{}\index{Grid@{Grid}!get\+\_\+ymax@{get\+\_\+ymax}}
+\index{get\+\_\+ymax@{get\+\_\+ymax}!Grid@{Grid}}
+\subsubsection[{get\+\_\+ymax}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::get\+\_\+ymax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a385b11b22ff42896d522400d9ddd7e97}
+Zwaraca maksymalna wartosc wspolrzednej y na siatce 
+
+Definicja w linii 175 pliku grid.\+h.
+
+\hypertarget{class_grid_ae776aec819443b168ebe15a52632ad77}{}\index{Grid@{Grid}!get\+\_\+ymin@{get\+\_\+ymin}}
+\index{get\+\_\+ymin@{get\+\_\+ymin}!Grid@{Grid}}
+\subsubsection[{get\+\_\+ymin}]{\setlength{\rightskip}{0pt plus 5cm}double Grid\+::get\+\_\+ymin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_ae776aec819443b168ebe15a52632ad77}
+Zwaraca minimalna wartosc wpolrzednej y na siatce 
+
+Definicja w linii 181 pliku grid.\+h.
+
+\hypertarget{class_grid_a1e040eda61d389f8e0d141933ed6fb48}{}\index{Grid@{Grid}!Mark\+Border\+Points@{Mark\+Border\+Points}}
+\index{Mark\+Border\+Points@{Mark\+Border\+Points}!Grid@{Grid}}
+\subsubsection[{Mark\+Border\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Mark\+Border\+Points (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_grid_a1e040eda61d389f8e0d141933ed6fb48}
+Po oznaczeniu najblizszych sasiadow kazdego pktu i ewentulanie korekcji siatki wyznacza brzeg obszaru przeplywu (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia odpowiednie flagi punktow w zaleznosci od rodzaju brzegu do ktorego pktr nalezy\+: 
+\begin{DoxyItemize}
+\item brzeg gorny -\/$>$ flaga {\bfseries 2} 
+\item brzeg dolny -\/$>$ flaga {\bfseries 3} 
+\item brzeg lewy -\/$>$ flaga {\bfseries 4} 
+\item brzeg prawy -\/$>$ flaga {\bfseries 5} 
+\item rog gorny-\/lewy -\/$>$ flaga {\bfseries 24} 
+\item rog gorny-\/prawy -\/$>$ flaga {\bfseries 25} 
+\item rog dolny-\/lewy -\/$>$ flaga {\bfseries 34} 
+\item rog dolny-\/prawy -\/$>$ flaga {\bfseries 35} 
+\item kanty -\/$>$ flaga {\bfseries 1} 
+\item zrodla -\/$>$ flaga {\bfseries 101} 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 174 pliku grid.\+cpp.
+
+\hypertarget{class_grid_a0cc5771c532b0a92abb64d7f2df8eb1f}{}\index{Grid@{Grid}!Mark\+In\+Out\+Points@{Mark\+In\+Out\+Points}}
+\index{Mark\+In\+Out\+Points@{Mark\+In\+Out\+Points}!Grid@{Grid}}
+\subsubsection[{Mark\+In\+Out\+Points}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+Mark\+In\+Out\+Points (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_grid_a0cc5771c532b0a92abb64d7f2df8eb1f}
+Ustawia odpowiednie flagi punktow lezacych na wejsciach i wyjsciach; 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow\\
+\hline
+\end{DoxyParams}
+{\bfseries D\+O N\+A\+P\+I\+S\+A\+N\+I\+A } na razie prowizorycznie w konkretnym przypadku!!! !! moze pozniej bedzie potrzbne !! 
+
+Definicja w linii 361 pliku grid.\+cpp.
+
+\hypertarget{class_grid_a6270d5bfcdefee9477865a3a60baae73}{}\index{Grid@{Grid}!Mark\+Near\+Border\+Points@{Mark\+Near\+Border\+Points}}
+\index{Mark\+Near\+Border\+Points@{Mark\+Near\+Border\+Points}!Grid@{Grid}}
+\subsubsection[{Mark\+Near\+Border\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Mark\+Near\+Border\+Points (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_grid_a6270d5bfcdefee9477865a3a60baae73}
+Po oznaczeniu dalszych sasiadow kazdego pktu, Ustawia odpowiednie flagi punktow lezacych przy brzegach; w zaleznosci od rodzaju brzegu do ktorym lezy pkt \+: 
+\begin{DoxyItemize}
+\item przy brzegu gornym -\/$>$ flaga {\bfseries 22} 
+\item przy brzegu dolnym -\/$>$ flaga {\bfseries 33} 
+\item przy brzegu lewym -\/$>$ flaga {\bfseries 44} 
+\item przy brzegu prawym -\/$>$ flaga {\bfseries 55} 
+\item przy rogu gornym-\/lewym -\/$>$ flaga {\bfseries 2244} 
+\item przy rogu gornym-\/prawym -\/$>$ flaga {\bfseries 2255} 
+\item przy rogu dolnym-\/lewym -\/$>$ flaga {\bfseries 3344} 
+\item przy rogu dolnym-\/prawym -\/$>$ flaga {\bfseries 3355} 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 464 pliku grid.\+cpp.
+
+\hypertarget{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}{}\index{Grid@{Grid}!Read\+Data@{Read\+Data}}
+\index{Read\+Data@{Read\+Data}!Grid@{Grid}}
+\subsubsection[{Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Grid\+::\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{const string \&}]{file, }
+\item[{{\bf Simulation\+Parameters} \&}]{sym\+\_\+param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+{\em file} & -\/ nazwa pliku z danymi \\
+\hline
+{\em sym\+\_\+param} & -\/ obiekt z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \hyperlink{class_grid_dispersion_afbc03fca9459c90c19959c24df944766}{Grid\+Dispersion}, \hyperlink{class_grid_all_aa513371e605fe9bea7489edfe3d40a1f}{Grid\+All}, \hyperlink{class_grid_velocity_a00143f2982252ae30ceb725886c11ab6}{Grid\+Velocity} i \hyperlink{class_grid_only_a86e143a957ba61c0a5b215b65ea24902}{Grid\+Only}.
+
+
+
+Definicja w linii 34 pliku grid.\+h.
+
+\hypertarget{class_grid_acdec1d78fe3ead312d1098837325d113}{}\index{Grid@{Grid}!set\+\_\+pxmax@{set\+\_\+pxmax}}
+\index{set\+\_\+pxmax@{set\+\_\+pxmax}!Grid@{Grid}}
+\subsubsection[{set\+\_\+pxmax}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+\_\+pxmax (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{pkt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_acdec1d78fe3ead312d1098837325d113}
+Ustawia pkt z maxymalana wartoscia wspolrzednej x 
+
+Definicja w linii 145 pliku grid.\+h.
+
+\hypertarget{class_grid_ab01ea11cdb5d87a4d8cddb51b40dd52c}{}\index{Grid@{Grid}!set\+\_\+pxmin@{set\+\_\+pxmin}}
+\index{set\+\_\+pxmin@{set\+\_\+pxmin}!Grid@{Grid}}
+\subsubsection[{set\+\_\+pxmin}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+\_\+pxmin (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{pkt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_ab01ea11cdb5d87a4d8cddb51b40dd52c}
+Ustawia pkt z minimalan wartoscia wspolrzednej x 
+
+Definicja w linii 151 pliku grid.\+h.
+
+\hypertarget{class_grid_a51aaeb13d9c299ebc07e1e9d3b9fe47f}{}\index{Grid@{Grid}!set\+\_\+pymax@{set\+\_\+pymax}}
+\index{set\+\_\+pymax@{set\+\_\+pymax}!Grid@{Grid}}
+\subsubsection[{set\+\_\+pymax}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+\_\+pymax (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{pkt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a51aaeb13d9c299ebc07e1e9d3b9fe47f}
+Ustawia pkt z maxymalana wartoscia wspolrzednej y 
+
+Definicja w linii 148 pliku grid.\+h.
+
+\hypertarget{class_grid_a666541ca159aebd16470f1fa7b2d16c2}{}\index{Grid@{Grid}!set\+\_\+pymin@{set\+\_\+pymin}}
+\index{set\+\_\+pymin@{set\+\_\+pymin}!Grid@{Grid}}
+\subsubsection[{set\+\_\+pymin}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+\_\+pymin (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{pkt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a666541ca159aebd16470f1fa7b2d16c2}
+Ustawia pkt z minimalna wartoscia wspolrzednej y 
+
+Definicja w linii 154 pliku grid.\+h.
+
+\hypertarget{class_grid_a03696ec5383f1a0222b447a0ff15d47c}{}\index{Grid@{Grid}!Set\+Extreme\+Points@{Set\+Extreme\+Points}}
+\index{Set\+Extreme\+Points@{Set\+Extreme\+Points}!Grid@{Grid}}
+\subsubsection[{Set\+Extreme\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Set\+Extreme\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} \&}]{pxmax, }
+\item[{{\bf Point} \&}]{pxmin, }
+\item[{{\bf Point} \&}]{pymax, }
+\item[{{\bf Point} \&}]{pymin}
+\end{DoxyParamCaption}
+)}\label{class_grid_a03696ec5383f1a0222b447a0ff15d47c}
+Ustawia punkty graniczne siatki 
+\begin{DoxyParams}{Parametry}
+{\em pxmax} & -\/ refer. do punktu psosiadajacego najwieksza wartosc wspolz. x na siatce \\
+\hline
+{\em pxmin} & -\/ refer. do punktu psosiadajacego najmniejsza wartosc wspolz. x na siatce \\
+\hline
+{\em pxmax} & -\/ refer. do punktu psosiadajacego najwieksza wartosc wspolz. y na siatce \\
+\hline
+{\em pxmax} & -\/ refer. do punktu psosiadajacego najmniejsza wartosc wspolz. y na siatce \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 51 pliku grid.\+cpp.
+
+\hypertarget{class_grid_a4fc635f29b3dfa2075dc7e3cc6861762}{}\index{Grid@{Grid}!Set\+Extreme\+Values@{Set\+Extreme\+Values}}
+\index{Set\+Extreme\+Values@{Set\+Extreme\+Values}!Grid@{Grid}}
+\subsubsection[{Set\+Extreme\+Values}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Set\+Extreme\+Values (
+\begin{DoxyParamCaption}
+\item[{double \&}]{xmax, }
+\item[{double \&}]{xmin, }
+\item[{double \&}]{ymax, }
+\item[{double \&}]{ymin}
+\end{DoxyParamCaption}
+)}\label{class_grid_a4fc635f29b3dfa2075dc7e3cc6861762}
+Ustawia wartosci max i min wspolrzednych x i y na siatce 
+\begin{DoxyParams}{Parametry}
+{\em xmax} & -\/ refer. do najwiekszej wartosc wspolz. x na siatce \\
+\hline
+{\em xmin} & -\/ refer. do najmniejszej wartosc wspolz. x na siatce \\
+\hline
+{\em xmax} & -\/ refer. do najwiekszej wartosc wspolz. y na siatce \\
+\hline
+{\em xmax} & -\/ refer. do najmniejszej wartosc wspolz. y na siatce \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 43 pliku grid.\+cpp.
+
+\hypertarget{class_grid_affe0d058372cb86ef7816d536793341b}{}\index{Grid@{Grid}!Set\+Max\+Values@{Set\+Max\+Values}}
+\index{Set\+Max\+Values@{Set\+Max\+Values}!Grid@{Grid}}
+\subsubsection[{Set\+Max\+Values}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Set\+Max\+Values (
+\begin{DoxyParamCaption}
+\item[{double \&}]{vx, }
+\item[{double \&}]{vy, }
+\item[{double \&}]{Dxx, }
+\item[{double \&}]{Dxy, }
+\item[{double}]{Dyy, }
+\item[{{\bf Simulation\+Parameters} \&}]{param}
+\end{DoxyParamCaption}
+)}\label{class_grid_affe0d058372cb86ef7816d536793341b}
+Ustawianie max wartosci zmiennych w parametrcha symulacji 
+\begin{DoxyParams}{Parametry}
+{\em vx} & -\/ refer. do maksymalnej skladowej x wektora predkosci \\
+\hline
+{\em vy} & -\/ refer. do maksymalnej skladowej y wektora predkosci \\
+\hline
+{\em Dxx} & -\/ refer. do maksymalnej skladowej xx tensora Dyspersji \\
+\hline
+{\em Dxy} & -\/ refer. do maksymalnej skladowej xy tensora Dyspersji \\
+\hline
+{\em Dyy} & -\/ refer. do maksymalnej skladowej tensora Dyspersji \\
+\hline
+{\em param} & -\/ referencje do obiektu z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 23 pliku grid.\+cpp.
+
+\hypertarget{class_grid_a25ecf93fd041648dcde213623589fa27}{}\index{Grid@{Grid}!Set\+Min\+Values@{Set\+Min\+Values}}
+\index{Set\+Min\+Values@{Set\+Min\+Values}!Grid@{Grid}}
+\subsubsection[{Set\+Min\+Values}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::\+Set\+Min\+Values (
+\begin{DoxyParamCaption}
+\item[{double \&}]{vx, }
+\item[{double \&}]{vy, }
+\item[{double \&}]{Dxx, }
+\item[{double \&}]{Dxy, }
+\item[{double}]{Dyy, }
+\item[{{\bf Simulation\+Parameters} \&}]{param}
+\end{DoxyParamCaption}
+)}\label{class_grid_a25ecf93fd041648dcde213623589fa27}
+Ustawianie min wartosci zmiennych w parametrcha symulacji 
+\begin{DoxyParams}{Parametry}
+{\em vx} & -\/ refer. do minimalnej skladowej x wektora predkosci \\
+\hline
+{\em vy} & -\/ refer. do minimalnej skladowej y wektora predkosci \\
+\hline
+{\em Dxx} & -\/ refer. do minimalnej skladowej xx tensora Dyspersji \\
+\hline
+{\em Dxy} & -\/ refer. do minimalnej skladowej xy tensora Dyspersji \\
+\hline
+{\em Dyy} & -\/ refer. do minimalnej skladowej tensora Dyspersji \\
+\hline
+{\em param} & -\/ referencje do obiektu z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 33 pliku grid.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_grid_a1f0576a19198685cba8f1067b7e1ba7c}{}\index{Grid@{Grid}!\+\_\+xmax@{\+\_\+xmax}}
+\index{\+\_\+xmax@{\+\_\+xmax}!Grid@{Grid}}
+\subsubsection[{\+\_\+xmax}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+\_\+xmax = 0\hspace{0.3cm}{\ttfamily [static]}}\label{class_grid_a1f0576a19198685cba8f1067b7e1ba7c}
+
+
+Definicja w linii 184 pliku grid.\+h.
+
+\hypertarget{class_grid_a293bb2eb514f57749e92d2dcf914ca57}{}\index{Grid@{Grid}!\+\_\+xmin@{\+\_\+xmin}}
+\index{\+\_\+xmin@{\+\_\+xmin}!Grid@{Grid}}
+\subsubsection[{\+\_\+xmin}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+\_\+xmin = 0\hspace{0.3cm}{\ttfamily [static]}}\label{class_grid_a293bb2eb514f57749e92d2dcf914ca57}
+
+
+Definicja w linii 184 pliku grid.\+h.
+
+\hypertarget{class_grid_ab4c6a5500c2540b48194a7bcdefab235}{}\index{Grid@{Grid}!\+\_\+ymax@{\+\_\+ymax}}
+\index{\+\_\+ymax@{\+\_\+ymax}!Grid@{Grid}}
+\subsubsection[{\+\_\+ymax}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+\_\+ymax = 0\hspace{0.3cm}{\ttfamily [static]}}\label{class_grid_ab4c6a5500c2540b48194a7bcdefab235}
+
+
+Definicja w linii 184 pliku grid.\+h.
+
+\hypertarget{class_grid_a6e548ba7ad924ef369c7fc24be04f0b2}{}\index{Grid@{Grid}!\+\_\+ymin@{\+\_\+ymin}}
+\index{\+\_\+ymin@{\+\_\+ymin}!Grid@{Grid}}
+\subsubsection[{\+\_\+ymin}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::\+\_\+ymin = 0\hspace{0.3cm}{\ttfamily [static]}}\label{class_grid_a6e548ba7ad924ef369c7fc24be04f0b2}
+
+
+Definicja w linii 184 pliku grid.\+h.
+
+\hypertarget{class_grid_a557878ff6ca7473b0a0acb3ae9c599cb}{}\index{Grid@{Grid}!empty\+\_\+index@{empty\+\_\+index}}
+\index{empty\+\_\+index@{empty\+\_\+index}!Grid@{Grid}}
+\subsubsection[{empty\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}const int Grid\+::empty\+\_\+index = -\/99999999\hspace{0.3cm}{\ttfamily [static]}}\label{class_grid_a557878ff6ca7473b0a0acb3ae9c599cb}
+
+
+Definicja w linii 181 pliku grid.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{grid_8h}{grid.\+h}\item 
+\hyperlink{grid_8cpp}{grid.\+cpp}\end{DoxyCompactItemize}

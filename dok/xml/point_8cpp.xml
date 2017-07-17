@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="point_8cpp" kind="file" language="C++">
+    <compoundname>point.cpp</compoundname>
+    <includes refid="point_8h" local="yes">point.h</includes>
+    <includes refid="grid_8h" local="yes">grid.h</includes>
+    <incdepgraph>
+      <node id="254">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>point.cpp</label>
+        <link refid="point.cpp"/>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>cmath</label>
+      </node>
+      <node id="256">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>string</label>
+      </node>
+      <node id="247">
+        <label>map</label>
+      </node>
+      <node id="251">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>fstream</label>
+      </node>
+      <node id="248">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>cstdio</label>
+      </node>
+      <node id="246">
+        <label>vector</label>
+      </node>
+      <node id="255">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>time.h</label>
+      </node>
+      <node id="241">
+        <label>cstdlib</label>
+      </node>
+      <node id="244">
+        <label>iostream</label>
+      </node>
+      <node id="253">
+        <label>set</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>point.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="point_8h" kindref="compound">point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="grid_8h" kindref="compound">grid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="12" refid="class_point_1a20b27dff6a871012fa5e7c0d52fd6b98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a20b27dff6a871012fa5e7c0d52fd6b98" kindref="member">Point::print</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Flaga:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_flag&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>x=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_x&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>y=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_y&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>type=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_type</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>valPrev<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_valPrev&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>valCurr<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_valCurr</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_vy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/>map&lt;int,<sp/>Point&gt;<sp/><sp/>*<sp/><ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">Point::_PointMap</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="comment">//int<sp/>Point::empty_index<sp/>=<sp/>-89589599;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//____________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_point_1a6c692685f4895204fb073a7a588dac29" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a6c692685f4895204fb073a7a588dac29" kindref="member">Point::set_near_neighbours</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>this-&gt;<ref refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" kindref="member">get_x</ref>(),<sp/>j<sp/>=<sp/>this-&gt;<ref refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" kindref="member">get_y</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(opt<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.clear();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>_near_neighbours.clear();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>(j+1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i-1,<sp/>j+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>(j+1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);<sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>(j+1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i+!,<sp/>j+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>j;<sp/></highlight><highlight class="comment">//pkt<sp/>(i-1,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>j;<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>j;<sp/></highlight><highlight class="comment">//pkt<sp/>(i+1,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>(j-1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i-1,<sp/>j-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>(j-1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>(j-1);<sp/></highlight><highlight class="comment">//pkt<sp/>(i+1,<sp/>j-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_near_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*//BEGIN<sp/>PERIODYCZNE</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>(j+1);<sp/>//pkt<sp/>(i-1,<sp/>j+1)</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==0){</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>895*10000<sp/>+<sp/>j+1;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//3</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>(j+1);<sp/>//pkt<sp/>(i,<sp/>j+1)</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//1</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);<sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>(j+1);<sp/>//pkt<sp/>(i+!,<sp/>j+1)</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==895)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>0*10000<sp/>+<sp/>j+1;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>j;<sp/>//pkt<sp/>(i-1,<sp/>j)</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==0){</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>895*10000<sp/>+<sp/>j;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//3</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"></highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>j;<sp/>//pkt<sp/>(i,<sp/>j)</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//4</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>j;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==895)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>0*10000<sp/>+<sp/>j;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-1)*10000<sp/>+<sp/>(j-1);<sp/>//pkt<sp/>(i-1,<sp/>j-1)</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==0){</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>895*10000<sp/>+<sp/>j-1;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//3</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>(j-1);<sp/>//pkt<sp/>(i,<sp/>j-1)</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//7</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+1)*10000<sp/>+<sp/>(j-1);<sp/>//pkt<sp/>(i+1,<sp/>j-1)</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/>if(i==895)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;(i,j):&quot;&lt;&lt;i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;j&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>0*10000<sp/>+<sp/>j-1;<sp/>//pkt<sp/>(i+1,<sp/>j)</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(_PointMap-&gt;find(index)!=_PointMap-&gt;end())<sp/>_near_neighbours.push_back(index);<sp/>//5</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>_near_neighbours.push_back(Grid::empty_index);</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/>//END<sp/>PERIODYCZNE*/</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/><sp/>PUNKT:<sp/>(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>najblizsi<sp/>sasiedzi:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;_PointMap-&gt;find(_near_neighbours[0])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[0])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[1])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[1])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[2])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[2])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;_PointMap-&gt;find(_near_neighbours[3])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[3])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[4])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[4])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[5])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[5])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;_PointMap-&gt;find(_near_neighbours[6])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[6])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[7])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[7])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_near_neighbours[8])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_near_neighbours[8])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="164"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="class_point_1aa3c1caf1c115df1bdf3ba45357f072ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1aa3c1caf1c115df1bdf3ba45357f072ea" kindref="member">Point::set_distant_neighbours</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>this-&gt;<ref refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" kindref="member">get_x</ref>(),<sp/>j<sp/>=<sp/>this-&gt;<ref refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" kindref="member">get_y</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(opt<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;&quot;Tworze<sp/>sztucznych<sp/>dalszych<sp/>sasiadow<sp/>dla<sp/>pkt<sp/>-<sp/>opt<sp/>=<sp/>&quot;&lt;&lt;opt&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.clear();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.push_back(index);</highlight><highlight class="comment">//0<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.push_back(index);</highlight><highlight class="comment">//1<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.push_back(index);</highlight><highlight class="comment">//2<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.push_back(index);</highlight><highlight class="comment">//3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.push_back(index);</highlight><highlight class="comment">//4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_distant_neighbours.clear();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>j;<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_distant_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_distant_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i)*10000<sp/>+<sp/>(j+2);<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j+2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_distant_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_distant_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i+2)*10000<sp/>+<sp/>(j);<sp/></highlight><highlight class="comment">//pkt<sp/>(i+2,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_distant_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_distant_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i*10000<sp/>+<sp/>(j-2);<sp/></highlight><highlight class="comment">//pkt<sp/>(i,<sp/>j-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_distant_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_distant_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>(i-2)*10000<sp/>+<sp/>(j);<sp/></highlight><highlight class="comment">//pkt<sp/>(i-2,<sp/>j)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;find(index)!=<ref refid="class_point_1a3384c3194e3d3c3196317013929e40d4" kindref="member">_PointMap</ref>-&gt;end())<sp/>_distant_neighbours.push_back(index);<sp/></highlight><highlight class="comment">//4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_distant_neighbours.push_back(<ref refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" kindref="member">Grid::empty_index</ref>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/>PUNKT:<sp/>(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>dalsi<sp/>sasiedzi:<sp/>&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/>&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[1])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[1])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;_PointMap-&gt;find(_distant_neighbours[4])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[4])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_distant_neighbours[0])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[0])-&gt;second.get_y()&lt;&lt;&quot;<sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;_PointMap-&gt;find(_distant_neighbours[2])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[2])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/>&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[3])-&gt;second.get_x()&lt;&lt;&quot;,&quot;&lt;&lt;_PointMap-&gt;find(_distant_neighbours[3])-&gt;second.get_y()&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="212"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="class_point_1abc3f1cb86556e34771306b46eac6a19a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1abc3f1cb86556e34771306b46eac6a19a" kindref="member">Point::set_Courant_numbers</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt){</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;--&gt;Wyznaczam<sp/>liczby<sp/>Couranta<sp/>dla<sp/>punktu<sp/>&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;print();//_x&lt;&lt;&quot;,&quot;&lt;&lt;_y&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dx<sp/>!=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx<sp/>=<sp/>(_vx<sp/>*<sp/>dt)/dx;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurDx<sp/>=<sp/>(_Dxx<sp/>*<sp/>dt)/(dx<sp/>*<sp/>dx);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>UWAGA!<sp/>Krok<sp/>przestrzenny<sp/>dx<sp/>=<sp/>0!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dy<sp/>!=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAy<sp/>=<sp/>(_vy<sp/>*<sp/>dt)/dy;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurDy<sp/>=<sp/>(_Dyy<sp/>*<sp/>dt)/(dy<sp/>*<sp/>dy);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>UWAGA!<sp/>Krok<sp/>przestrzenny<sp/>dy<sp/>=<sp/>0!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dx<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>dy<sp/>!=<sp/>0)<sp/>_CurDxy<sp/>=<sp/>(_Dxy<sp/>*<sp/>dt)/(4<sp/>*<sp/>dx<sp/>*<sp/>dy);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>UWAGA!<sp/>Kroki<sp/>przestrzenne<sp/>dx<sp/>=<sp/>dy<sp/>=<sp/>0!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/><sp/><sp/>Ax:<sp/>&quot;&lt;&lt;_CurAx&lt;&lt;&quot;<sp/><sp/>Ay:<sp/>&quot;&lt;&lt;_CurAy&lt;&lt;&quot;<sp/><sp/>Dx:<sp/>&quot;&lt;&lt;_CurDx&lt;&lt;&quot;<sp/><sp/>Dxy:<sp/>&quot;&lt;&lt;_CurDxy&lt;&lt;&quot;<sp/><sp/>Dy:<sp/>&quot;&lt;&lt;_CurDy&lt;&lt;endl&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/point.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="netheatflux_8cpp" kind="file" language="C++">
+    <compoundname>netheatflux.cpp</compoundname>
+    <includes refid="netheatflux_8h" local="yes">netheatflux.h</includes>
+    <incdepgraph>
+      <node id="163">
+        <label>netheatflux.cpp</label>
+        <link refid="netheatflux.cpp"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>math.h</label>
+      </node>
+      <node id="166">
+        <label>iostream</label>
+      </node>
+      <node id="164">
+        <label>netheatflux.h</label>
+        <link refid="netheatflux_8h"/>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>***************************************************************************<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>***************************************************************************</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="netheatflux_8h" kindref="compound">netheatflux.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>NetHeatFlux::_sigma<sp/>=<sp/>5.67e-8;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>NetHeatFlux::_kelvin<sp/>=<sp/>273.15;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>NetHeatFlux::_p0<sp/>=<sp/>1013.0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_net_heat_flux_1a31570d0c05e45b2a01a05b3976617ac4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a31570d0c05e45b2a01a05b3976617ac4" kindref="member">NetHeatFlux::ComputeNetHeatFlux</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Tw)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>cout.precision(10);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>cout&lt;&lt;&quot;ComputeNetHeatFlux&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jsn<sp/>=<sp/><ref refid="class_net_heat_flux_1a5bf457660c754e02562840cc90cf00ac" kindref="member">ComputeNetSolar</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Ja<sp/>=<sp/><ref refid="class_net_heat_flux_1a8c35767d0fdf37fd6216e0c2f1e71cc2" kindref="member">ComputeLongWaveAtmosf</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jw<sp/>=<sp/><ref refid="class_net_heat_flux_1a867bd311aaaf67ba057ad24f8e8ba5af" kindref="member">ComputeLongWaveWater</ref>(Tw);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Je<sp/>=<sp/><ref refid="class_net_heat_flux_1a7029244ff808627ebc74a9e74d00abe4" kindref="member">ComputeEvapCondens</ref>(Tw);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jc<sp/>=<sp/><ref refid="class_net_heat_flux_1ab3807fc076b38645302be22d62c70c65" kindref="member">ComputeCondConv</ref>(Tw);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;Jsn&lt;&lt;&quot;<sp/>&quot;&lt;&lt;Ja&lt;&lt;&quot;<sp/>&quot;&lt;&lt;Jw&lt;&lt;&quot;<sp/>&quot;&lt;&lt;Je&lt;&lt;&quot;<sp/>&quot;&lt;&lt;Jc&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>J<sp/>=<sp/>Jsn<sp/>+<sp/>Ja<sp/>-<sp/>Jw<sp/>-<sp/>Je<sp/>-<sp/>Jc;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/>Net<sp/>Heat<sp/>Flux<sp/>=<sp/>&quot;&lt;&lt;J&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>J;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_net_heat_flux_1a5bf457660c754e02562840cc90cf00ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a5bf457660c754e02562840cc90cf00ac" kindref="member">NetHeatFlux::ComputeNetSolar</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{<sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jsn<sp/>=<sp/>_Js*(1.0-_aw);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;NetSolarRadiation:<sp/>&quot;&lt;&lt;Jsn&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Jsn;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_net_heat_flux_1a8c35767d0fdf37fd6216e0c2f1e71cc2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a8c35767d0fdf37fd6216e0c2f1e71cc2" kindref="member">NetHeatFlux::ComputeLongWaveAtmosf</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>emis<sp/>=<sp/><ref refid="class_net_heat_flux_1a87b1a80ed14554fcaf903a3383f25a77" kindref="member">Emissivity_Brunt1932</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Ja<sp/>=<sp/>emis<sp/>*<sp/>_sigma<sp/>*<sp/>pow((_Ta<sp/>+<sp/>_kelvin),<sp/>4)*(1.0<sp/>-<sp/>0.03);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Long<sp/>Wave<sp/>Atmosferic<sp/>Radiation:<sp/>&quot;&lt;&lt;Ja&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Ja;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_net_heat_flux_1a87b1a80ed14554fcaf903a3383f25a77" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a87b1a80ed14554fcaf903a3383f25a77" kindref="member">NetHeatFlux::Emissivity_Brunt1932</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a2)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Emissivity<sp/>=<sp/>a1<sp/>+<sp/>a2<sp/>*<sp/>pow(_ea,0.5);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//return<sp/>0.769578;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;_ea:<sp/>&quot;&lt;&lt;_ea&lt;&lt;&quot;<sp/><sp/>Emissivity<sp/>Brunt<sp/>(1932)&quot;&lt;&lt;Emissivity&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Emissivity;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_net_heat_flux_1ae90ff0b43ec0e41e2f40f28df7c9612d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1ae90ff0b43ec0e41e2f40f28df7c9612d" kindref="member">NetHeatFlux::set_ea</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/>long<sp/>double<sp/>pom1<sp/>=<sp/>b2*_Ta;</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/>cout&lt;&lt;b2&lt;&lt;&quot;*<sp/>_Ta<sp/>=<sp/>&quot;&lt;&lt;pom1&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/>long<sp/>double<sp/>pom2<sp/>=<sp/>_Ta<sp/>+<sp/>b3;</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/>cout&lt;&lt;&quot;_Ta<sp/>+<sp/>&quot;&lt;&lt;b3&lt;&lt;&quot;<sp/>=<sp/>&quot;&lt;&lt;pom2&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/>long<sp/>double<sp/>pom3<sp/>=<sp/>pom1/pom2;</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/>cout&lt;&lt;&quot;(&quot;&lt;&lt;b2&lt;&lt;&quot;*<sp/>_Ta)<sp/>/&quot;&lt;&lt;&quot;(_Ta<sp/>+<sp/>&quot;&lt;&lt;b3&lt;&lt;&quot;)<sp/>=<sp/>&quot;&lt;&lt;pom3&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/>long<sp/>double<sp/>pom4<sp/>=<sp/>exp(pom3);</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/>cout&lt;&lt;&quot;e^(&quot;&lt;&lt;b2&lt;&lt;&quot;*<sp/>_Ta<sp/>/&quot;&lt;&lt;&quot;(_Ta<sp/>+<sp/>&quot;&lt;&lt;b3&lt;&lt;&quot;)<sp/>=<sp/>&quot;&lt;&lt;pom4&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/>long<sp/>double<sp/>esat<sp/>=<sp/>b1*(exp((pom1)/(pom2)));<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>esat<sp/>=<sp/><ref refid="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" kindref="member">e_sat</ref>(_Ta);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>_ea<sp/>=<sp/>esat*(_Rh/100);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;esat:<sp/>&quot;&lt;&lt;esat&lt;&lt;&quot;<sp/><sp/>ea:<sp/>&quot;&lt;&lt;_ea&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" kindref="member">NetHeatFlux::e_sat</ref><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/>b2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b3)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>esat<sp/>=<sp/>b1*(exp((b2*T)/(T+b3)));<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>esat;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};<sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_net_heat_flux_1a867bd311aaaf67ba057ad24f8e8ba5af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a867bd311aaaf67ba057ad24f8e8ba5af" kindref="member">NetHeatFlux::ComputeLongWaveWater</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;Tw)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jw<sp/>=<sp/>_emis_w<sp/>*<sp/>_sigma<sp/>*<sp/>pow((Tw<sp/>+<sp/>_kelvin),4);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Long<sp/>Wave<sp/>Water:<sp/>&quot;&lt;&lt;Jw&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Jw;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_net_heat_flux_1a7029244ff808627ebc74a9e74d00abe4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a7029244ff808627ebc74a9e74d00abe4" kindref="member">NetHeatFlux::ComputeEvapCondens</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>Tw)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>es<sp/>=<sp/><ref refid="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" kindref="member">e_sat</ref>(Tw);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Je<sp/>=<sp/><ref refid="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" kindref="member">WindFunction_Chapra2008</ref>()<sp/>*<sp/>(es<sp/>-<sp/>_ea);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;es:<sp/>&quot;&lt;&lt;es&lt;&lt;endl&lt;&lt;&quot;Evaporation/Condensation:<sp/>&quot;&lt;&lt;Je&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Je;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" kindref="member">NetHeatFlux::WindFunction_Chapra2008</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c2)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;f(u):<sp/>&quot;&lt;&lt;(c1<sp/>+<sp/>(c2<sp/>*<sp/>_u<sp/>*<sp/>_u))&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(c1<sp/>+<sp/>(c2<sp/>*<sp/>_u<sp/>*<sp/>_u));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_net_heat_flux_1ab3807fc076b38645302be22d62c70c65" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_net_heat_flux_1ab3807fc076b38645302be22d62c70c65" kindref="member">NetHeatFlux::ComputeCondConv</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>Tw)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Jc<sp/>=<sp/>_cb<sp/>*<sp/>(_pa/_p0)<sp/>*<sp/><ref refid="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" kindref="member">WindFunction_Chapra2008</ref>()<sp/>*<sp/>(Tw<sp/>-<sp/>_Ta);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Conduation<sp/>and<sp/>Convection:<sp/>&quot;&lt;&lt;Jc&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Jc;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/netheatflux.cpp"/>
+  </compounddef>
+</doxygen>

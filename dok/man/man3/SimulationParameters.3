@@ -1,0 +1,599 @@
+.TH "SimulationParameters" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimulationParameters \- Klasa z parametrami symulacji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <param\&.h>\fP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSimulationParameters\fP (string param)"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "\fB~SimulationParameters\fP (void)"
+.br
+.RI "\fIDestruktor\&. \fP"
+.ti -1c
+.RI "int \fBget_flag\fP () const "
+.br
+.ti -1c
+.RI "int \fBget_n\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_dx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_dy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_dt\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vx\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vy\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vxmax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vymax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vxmin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_vymin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dlong\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dtrans\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxxmax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dyymax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxymax\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxxmin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dyymin\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Dxymin\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_scheme\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_dispersion\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_gridFile\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_pollutant\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_dump\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_area\fP () const "
+.br
+.ti -1c
+.RI "string \fBget_mod\fP () const "
+.br
+.ti -1c
+.RI "\fBDTensor\fP * \fBget_tensor\fP () const "
+.br
+.ti -1c
+.RI "\fBSScheme\fP * \fBget_s_scheme\fP () const "
+.br
+.ti -1c
+.RI "void \fBset_flag\fP (int flag)"
+.br
+.ti -1c
+.RI "void \fBset_n\fP (int n)"
+.br
+.ti -1c
+.RI "void \fBset_dx\fP (double dx)"
+.br
+.ti -1c
+.RI "void \fBset_dy\fP (double dy)"
+.br
+.ti -1c
+.RI "void \fBset_vx\fP (double vx)"
+.br
+.ti -1c
+.RI "void \fBset_vy\fP (double vy)"
+.br
+.ti -1c
+.RI "void \fBset_vxmax\fP (double vxmax)"
+.br
+.ti -1c
+.RI "void \fBset_vymax\fP (double vymax)"
+.br
+.ti -1c
+.RI "void \fBset_vxmin\fP (double vxmin)"
+.br
+.ti -1c
+.RI "void \fBset_vymin\fP (double vymin)"
+.br
+.ti -1c
+.RI "void \fBset_Dlong\fP (double Dlong)"
+.br
+.ti -1c
+.RI "void \fBset_Dtrans\fP (double Dtrans)"
+.br
+.ti -1c
+.RI "void \fBset_dt\fP (double dt)"
+.br
+.ti -1c
+.RI "void \fBset_Dxxmax\fP (double Dxxmax)"
+.br
+.ti -1c
+.RI "void \fBset_Dyymax\fP (double Dyymax)"
+.br
+.ti -1c
+.RI "void \fBset_Dxymax\fP (double Dxymax)"
+.br
+.ti -1c
+.RI "void \fBset_Dxxmin\fP (double Dxxmin)"
+.br
+.ti -1c
+.RI "void \fBset_Dyymin\fP (double Dyymin)"
+.br
+.ti -1c
+.RI "void \fBset_Dxymin\fP (double Dxymin)"
+.br
+.ti -1c
+.RI "void \fBset_scheme\fP (string scheme)"
+.br
+.ti -1c
+.RI "void \fBset_dispersion\fP (string dispersion)"
+.br
+.ti -1c
+.RI "void \fBset_gridFile\fP (string gridFile)"
+.br
+.ti -1c
+.RI "void \fBset_pollutant\fP (string pollutant)"
+.br
+.ti -1c
+.RI "void \fBset_dump\fP (string dump)"
+.br
+.ti -1c
+.RI "void \fBset_area\fP (string area)"
+.br
+.ti -1c
+.RI "void \fBset_mod\fP (string mod)"
+.br
+.ti -1c
+.RI "double \fBComputePecletNumber\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "double \fBComputeCourantNumber\fP ()"
+.br
+.RI "\fIOblicza liczby Cournata\&. \fP"
+.ti -1c
+.RI "void \fBprint\fP () const "
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa z parametrami symulacji\&. 
+
+Zawiera i pozwala modyfikowac informacje na temat parametrow symulacji\&. 
+.PP
+Definicja w linii 26 pliku param\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "SimulationParameters::SimulationParameters (string param)"
+
+.PP
+Konstruktor\&. Tworzy obiekt simuationparameters i ustawaia parametry symulacji\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIparam\fP - nazwa pliku z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 15 pliku param\&.cpp\&.
+.SS "SimulationParameters::~SimulationParameters (void)\fC [inline]\fP"
+
+.PP
+Destruktor\&. Usuwa obiekt \fBSimulation\fP\&. 
+.PP
+Definicja w linii 40 pliku param\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "double SimulationParameters::ComputeCourantNumber ()"
+
+.PP
+Oblicza liczby Cournata\&. Oblicza liczby Cournata dla ekstremalnych wartości zmiennych na siatce: 
+.PD 0
+
+.IP "\(bu" 2
+CrAx - adwekcyjna liczba Couranta w kieruynku x 
+.IP "\(bu" 2
+CrAy - adwekcyjna liczba Couranta w kieruynku y 
+.IP "\(bu" 2
+CrDx - dyfuzyjna liczba Couranta w kieruynku x 
+.IP "\(bu" 2
+Crxy - dyfuzyjna liczba Couranta w kieruynku xy 
+.IP "\(bu" 2
+CrDy - dyfuzyjna liczba Couranta w kieruynku y 
+.PP
+\fBZwraca:\fP
+.RS 4
+maksymalna z obliczonych liczb Couranta 
+.RE
+.PP
+
+.PP
+
+.PP
+Definicja w linii 173 pliku param\&.cpp\&.
+.SS "double SimulationParameters::ComputePecletNumber (map< int, \fBPoint\fP > & PointMap)"
+Oblicza i zwraca Liczbe Pekleta 
+.PP
+Definicja w linii 56 pliku param\&.cpp\&.
+.SS "string SimulationParameters::get_area () const\fC [inline]\fP"
+Zwraca definicje obszaru zrzutu zanieczyszczeń 
+.PP
+\fBZobacz również:\fP
+.RS 4
+\fBset_area\fP (string area) 
+.RE
+.PP
+
+.PP
+Definicja w linii 137 pliku param\&.h\&.
+.SS "string SimulationParameters::get_dispersion () const\fC [inline]\fP"
+Zwraca sposob obliczania dyspersji uzwany do symulacji 
+.PP
+Definicja w linii 119 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dlong () const\fC [inline]\fP"
+Zwaraca wspolczynnik dyspersji podluznej 
+.PP
+Definicja w linii 91 pliku param\&.h\&.
+.SS "double SimulationParameters::get_dt () const\fC [inline]\fP"
+Zwaraca ktok czasowy symulacji 
+.PP
+Definicja w linii 65 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dtrans () const\fC [inline]\fP"
+Zwaraca wspolczynnik dyspersji poprzecznej 
+.PP
+Definicja w linii 94 pliku param\&.h\&.
+.SS "string SimulationParameters::get_dump () const\fC [inline]\fP"
+Zwraca sposób zrzutu zanieczyszczeń (ciągły lub chwilowy) 
+.PP
+\fBZobacz również:\fP
+.RS 4
+\fBset_dump\fP (string dump) 
+.RE
+.PP
+
+.PP
+Definicja w linii 132 pliku param\&.h\&.
+.SS "double SimulationParameters::get_dx () const\fC [inline]\fP"
+Zwaraca ktok przestrzenny symulacji 
+.PP
+Definicja w linii 59 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dxxmax () const\fC [inline]\fP"
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku x 
+.PP
+Definicja w linii 97 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dxxmin () const\fC [inline]\fP"
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku x 
+.PP
+Definicja w linii 106 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dxymax () const\fC [inline]\fP"
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku xy 
+.PP
+Definicja w linii 103 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dxymin () const\fC [inline]\fP"
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku xy 
+.PP
+Definicja w linii 112 pliku param\&.h\&.
+.SS "double SimulationParameters::get_dy () const\fC [inline]\fP"
+Zwaraca ktok przestrzenny symulacji 
+.PP
+Definicja w linii 62 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dyymax () const\fC [inline]\fP"
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku y 
+.PP
+Definicja w linii 100 pliku param\&.h\&.
+.SS "double SimulationParameters::get_Dyymin () const\fC [inline]\fP"
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku y 
+.PP
+Definicja w linii 109 pliku param\&.h\&.
+.SS "int SimulationParameters::get_flag () const\fC [inline]\fP"
+Zwaraca flage z jaka zostala uruchomiona symulacja\&. 
+.PP
+\fBZwraca:\fP
+.RS 4
+
+.PD 0
+
+.IP "\(bu" 2
+0 - stale wartosci predkosci i wspolczynnikow dyspersji poprzecznej i podlyznej; siatka pkt w pkiku \fIgrid\&.txt\fP 
+.IP "\(bu" 2
+1 - stale wartosci wspolczynikow dysersji poprzecznej i podluznej; pole predkosci i siatka pkt w pliku v\&.txt  
+.IP "\(bu" 2
+2 - pole predkosci, tensor dyspersji i siatka w pliku data\&.txt  
+.IP "\(bu" 2
+3 - stale wartosci predkosci; siatka i tensor dyspersji w pliku d\&.txt  
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 53 pliku param\&.h\&.
+.SS "string SimulationParameters::get_gridFile () const\fC [inline]\fP"
+Zwraca sposob nazwę pliku z danymi wejsciowymi - siatką 
+.PP
+Definicja w linii 122 pliku param\&.h\&.
+.SS "string SimulationParameters::get_mod () const\fC [inline]\fP"
+Zwraca spsosób w jaki podawana jest początkowa wartość temperatury/koncentracji w danym punkcie 
+.PP
+\fBZobacz również:\fP
+.RS 4
+\fBset_mod\fP (string mod) 
+.RE
+.PP
+
+.PP
+Definicja w linii 142 pliku param\&.h\&.
+.SS "int SimulationParameters::get_n () const\fC [inline]\fP"
+Zwaraca liczbe krokow symulacji 
+.PP
+Definicja w linii 56 pliku param\&.h\&.
+.SS "string SimulationParameters::get_pollutant () const\fC [inline]\fP"
+Zwraca rodzaj zenieszcyszenia dla ktorego wykonywane są obliczenia 
+.PP
+\fBZobacz również:\fP
+.RS 4
+\fBset_pollutant\fP (string pollutant) 
+.RE
+.PP
+
+.PP
+Definicja w linii 127 pliku param\&.h\&.
+.SS "\fBSScheme\fP* SimulationParameters::get_s_scheme () const\fC [inline]\fP"
+Wskaznik do obiektu scheme, zawierajacego informacje o aktulnie wybranym schemacie numerycznym do obliczen 
+.PP
+Definicja w linii 149 pliku param\&.h\&.
+.SS "string SimulationParameters::get_scheme () const\fC [inline]\fP"
+Zwraca semat uzwany do symulacji 
+.PP
+Definicja w linii 116 pliku param\&.h\&.
+.SS "\fBDTensor\fP* SimulationParameters::get_tensor () const\fC [inline]\fP"
+Wskaznik do obiektu tensor, odpowiedzialnego za wlasciwe obilczania tensora dyspersji 
+.PP
+Definicja w linii 146 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vx () const\fC [inline]\fP"
+Zwaraca maksymalny mozliwy krok czasowy symulacji symulacji
+.PP
+Zwaraca zadana skaldowa x predkosci 
+.PP
+Definicja w linii 72 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vxmax () const\fC [inline]\fP"
+Zwaraca maksymalna skaldowa x predkosci 
+.PP
+Definicja w linii 78 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vxmin () const\fC [inline]\fP"
+Zwaraca minimalna skaldowa x predkosci 
+.PP
+Definicja w linii 84 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vy () const\fC [inline]\fP"
+Zwaraca zadana skaldowa y predkosci 
+.PP
+Definicja w linii 75 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vymax () const\fC [inline]\fP"
+Zwaraca maksymalna skaldowa y predkosci 
+.PP
+Definicja w linii 81 pliku param\&.h\&.
+.SS "double SimulationParameters::get_vymin () const\fC [inline]\fP"
+Zwaraca minimalna skaldowa y predkosci 
+.PP
+Definicja w linii 87 pliku param\&.h\&.
+.SS "void SimulationParameters::print () const"
+Wyswietla informacje na temat parametrow symulacji 
+.PP
+Definicja w linii 24 pliku param\&.cpp\&.
+.SS "void SimulationParameters::set_area (string area)\fC [inline]\fP"
+Definiuje obszar zrzutu zanieczyszczeń 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIarea\fP - obszar zrzutu 
+.PD 0
+
+.IP "\(bu" 2
+\fCpoint\fP - w jednym zdefiniownaym pukcie, 
+.IP "\(bu" 2
+\fCpoints\fP - w kilku zdefiniowanych punktach, 
+.IP "\(bu" 2
+\fCarea\fP - w zdefiniownym obszare 
+.IP "\(bu" 2
+\fCgauss\fP - rokład gauss-a wokół daneg punktu (diagonalny) 
+.IP "\(bu" 2
+\fCgaussnondiag\fP - rozkład gauss-a niediagonalny 
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 257 pliku param\&.h\&.
+.SS "void SimulationParameters::set_dispersion (string dispersion)"
+Ustawia sposob obliczania dyspersji ktory ma byc uzywany do symulacji 
+.PP
+Definicja w linii 31 pliku param\&.cpp\&.
+.SS "void SimulationParameters::set_Dlong (double Dlong)\fC [inline]\fP"
+Ustwia wartosc wspolczynnika dyspersji podluzenej 
+.PP
+Definicja w linii 187 pliku param\&.h\&.
+.SS "void SimulationParameters::set_dt (double dt)\fC [inline]\fP"
+Ustwia wielkosc kroku czsowego symulacji 
+.PP
+Definicja w linii 193 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dtrans (double Dtrans)\fC [inline]\fP"
+Ustwia wartosc wspolczynnika dyspersji poprzecznej 
+.PP
+Definicja w linii 190 pliku param\&.h\&.
+.SS "void SimulationParameters::set_dump (string dump)\fC [inline]\fP"
+Ustawia sposób zrzutu zanieczyszczeń 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdump\fP - sposób zrzutu 
+.PD 0
+
+.IP "\(bu" 2
+\fCinst\fP - zrzut chwilowy (tylko w chwili t = 0) 
+.IP "\(bu" 2
+\fCcont\fP - zrzut ciągły (w każdym kroku czasowym) 
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 245 pliku param\&.h\&.
+.SS "void SimulationParameters::set_dx (double dx)\fC [inline]\fP"
+Ustwia wielkosc kroku przestezennego wzdluz osi x 
+.PP
+Definicja w linii 163 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dxxmax (double Dxxmax)\fC [inline]\fP"
+Ustawia maxymalna mozliwo wartosc kroku czasowego symulacji
+.PP
+Ustawia maksymalalna wartosc wspolczynnika dyspersji w kierunku x 
+.PP
+Definicja w linii 199 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dxxmin (double Dxxmin)\fC [inline]\fP"
+Ustawia minimalna wartosc wspolczynnika dyspersji w kierunku x 
+.PP
+Definicja w linii 208 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dxymax (double Dxymax)\fC [inline]\fP"
+Ustwaia maksymalalna wartosc wspolczynnika dyspersji w kierunku xy 
+.PP
+Definicja w linii 205 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dxymin (double Dxymin)\fC [inline]\fP"
+Ustwaia minimalna wartosc wspolczynnika dyspersji w kierunku xy 
+.PP
+Definicja w linii 214 pliku param\&.h\&.
+.SS "void SimulationParameters::set_dy (double dy)\fC [inline]\fP"
+Ustwia wielkosc kroku przestezennego wzdluz osi y 
+.PP
+Definicja w linii 166 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dyymax (double Dyymax)\fC [inline]\fP"
+Ustawia maksymalalna wartosc wspolczynnika dyspersji w kierunku y 
+.PP
+Definicja w linii 202 pliku param\&.h\&.
+.SS "void SimulationParameters::set_Dyymin (double Dyymin)\fC [inline]\fP"
+Ustawia minimalna wartosc wspolczynnika dyspersji w kierunku y 
+.PP
+Definicja w linii 211 pliku param\&.h\&.
+.SS "void SimulationParameters::set_flag (int flag)\fC [inline]\fP"
+ustawia flaga z jaka uruchomiona zostala symulacja 
+.PP
+\fBZobacz również:\fP
+.RS 4
+\fBget_flag()\fP 
+.RE
+.PP
+
+.PP
+Definicja w linii 157 pliku param\&.h\&.
+.SS "void SimulationParameters::set_gridFile (string gridFile)\fC [inline]\fP"
+Ustawia nazwe pliku wejsciowego zawierającego dane z siatką ktora ma byc uzywana do symulacji 
+.PP
+Definicja w linii 227 pliku param\&.h\&.
+.SS "void SimulationParameters::set_mod (string mod)\fC [inline]\fP"
+Definiuje spsosób w jaki podawana jest początkowa wartość temperatury/koncentracji w danym punkcie 
+.PP
+\fBParametry:\fP
+.RS 4
+\fImod\fP - sposób definiowania wrtości temperatury/koncentracji 
+.PD 0
+
+.IP "\(bu" 2
+\fCval\fP - wartosc nominalan ('oczekiwna') koncentracji/temperatury w danym punkcie -nie uwzglednia kroku przestrzennego siatki obliczeniowej i glebokosci w danym punkcie\&. Na jej podstawie i na podstawie danych o głebokosci w danym pukcie i wartosci natęzenia przepływu zanieczyszcznie wyznaczana jest wartosc efektywna koncentracji/temperatury 
+.IP "\(bu" 2
+\fCval_e\fP - wartosc efektywna koncentracji/temperatury w danym punkcie (powinna uwzgledniac już krok przestrzenny siatki obliczenbiowej, glebokość w danym punkcie zrzutu oraz natezenie zrzutu i natężenie przepywu wody w danym puncie siatki) 
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 268 pliku param\&.h\&.
+.SS "void SimulationParameters::set_n (int n)\fC [inline]\fP"
+Ustawia liczbe krokow symulacju 
+.PP
+Definicja w linii 160 pliku param\&.h\&.
+.SS "void SimulationParameters::set_pollutant (string pollutant)\fC [inline]\fP"
+Ustawia rodzaj zenieszcyszenia dla ktorego wykonywane beda obliczenia 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIpollutant\fP - rodzaj zanieczyszczenia 
+.PD 0
+
+.IP "\(bu" 2
+conc - zanieczyszczenie chemiczne - sybstancja pasywana 
+.IP "\(bu" 2
+temp - zanieczyszczenie teramiczne  
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 237 pliku param\&.h\&.
+.SS "void SimulationParameters::set_scheme (string scheme)"
+Ustawia schemat ktory ma byc uzywany do symulacji 
+.PP
+Definicja w linii 46 pliku param\&.cpp\&.
+.SS "void SimulationParameters::set_vx (double vx)\fC [inline]\fP"
+Ustwia wartosc skladowej x predkosci 
+.PP
+Definicja w linii 169 pliku param\&.h\&.
+.SS "void SimulationParameters::set_vxmax (double vxmax)\fC [inline]\fP"
+Ustwia maksymalna wartosc skladowej x predkosci 
+.PP
+Definicja w linii 175 pliku param\&.h\&.
+.SS "void SimulationParameters::set_vxmin (double vxmin)\fC [inline]\fP"
+Ustwia minimalna wartosc skladowej x predkosci 
+.PP
+Definicja w linii 181 pliku param\&.h\&.
+.SS "void SimulationParameters::set_vy (double vy)\fC [inline]\fP"
+Ustwia wartosc skladowej y predkosci 
+.PP
+Definicja w linii 172 pliku param\&.h\&.
+.SS "void SimulationParameters::set_vymax (double vymax)\fC [inline]\fP"
+Ustwia maksymalna wartosc skladowej y predkosci 
+.PP
+Definicja w linii 178 pliku param\&.h\&.
+.SS "void SimulationParameters::set_vymin (double vymin)\fC [inline]\fP"
+Ustwia minimalna wartosc skladowej y predkosci 
+.PP
+Definicja w linii 184 pliku param\&.h\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

@@ -1,0 +1,299 @@
+.TH "SScheme" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SScheme \- Klasa podstawowa Schematow\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <scheme\&.h>\fP
+.PP
+Dziedziczona przez \fBSADI\fP, \fBSADI2\fP, \fBSCrankNicolson\fP i \fBSUpWind\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSScheme\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "virtual void \fBComputeConcentration\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.RI "\fIOblicza koncentracje\&. \fP"
+.ti -1c
+.RI "void \fBSetFactors\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.RI "\fIUstawia czynniki w rownaniu transportu dla calej siatki\&. \fP"
+.ti -1c
+.RI "virtual void \fBGetFactors\fP (\fBPoint\fP *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector< int > &flag)"
+.br
+.RI "\fIOdpowiedzialna za wyznaczenie czynnikow w row transportu dla danego pkt\&. \fP"
+.ti -1c
+.RI "long double \fBJakobi\fP (\fBPoint\fP *p, map< int, \fBPoint\fP > &PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)"
+.br
+.RI "\fImetoda iteracyjna Jakobiego \fP"
+.ti -1c
+.RI "long double \fBJakobi\fP (map< int, \fBPoint\fP > &PointMap, map< int, long double > &f, vector< string > &a)"
+.br
+.ti -1c
+.RI "long double \fBGauss_Seidel\fP (\fBPoint\fP *p, map< int, \fBPoint\fP > &PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)"
+.br
+.RI "\fImetoda iteracyjna Gaussa Seidela \fP"
+.ti -1c
+.RI "long double \fBGauss_Seidel\fP (map< int, \fBPoint\fP > &PointMap, map< int, long double > &f, vector< string > &a)"
+.br
+.ti -1c
+.RI "long double \fBSOR\fP (\fBPoint\fP *p, map< int, \fBPoint\fP > &PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i, long double omega)"
+.br
+.RI "\fImetoda iteracyjna SOR \fP"
+.ti -1c
+.RI "long double \fBSOR\fP (map< int, \fBPoint\fP > &PointMap, map< int, long double > &f, vector< string > &a, long double omega=1\&.0)"
+.br
+.ti -1c
+.RI "void \fBset_sym_step\fP (int step)"
+.br
+.ti -1c
+.RI "int \fBget_sym_step\fP () const "
+.br
+.ti -1c
+.RI "void \fBset_omega\fP (long double omega)"
+.br
+.ti -1c
+.RI "long double \fBget_omega\fP () const "
+.br
+.ti -1c
+.RI "void \fBset_method\fP (string method)"
+.br
+.ti -1c
+.RI "string \fBget_method\fP () const "
+.br
+.ti -1c
+.RI "float \fBFindBestOmega\fP (map< int, \fBPoint\fP > &PointMap, map< int, long double > &f)"
+.br
+.ti -1c
+.RI "void \fBReadMethod\fP (string scheme)"
+.br
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "vector< int > \fB_i\fP"
+.br
+.ti -1c
+.RI "map< int, double > \fB_w\fP"
+.br
+.ti -1c
+.RI "int \fBpowrot\fP"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa podstawowa Schematow\&. 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu w zaleznosci od wybranego schematu numrycznego uzywna sa metody z tej lub jednej z klas pochodnych\&. 
+.PP
+Definicja w linii 40 pliku scheme\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "SScheme::SScheme ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy schemat do rozwiazywania rownania transportu\&. 
+.PP
+Definicja w linii 47 pliku scheme\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void SScheme::ComputeConcentration (map< int, \fBPoint\fP > & PointMap)\fC [virtual]\fP"
+
+.PP
+Oblicza koncentracje\&. Oblicza koncentracje w daneym kroku uzywajac odpwoiedniej metody w zaeleznosci od wybranego schamtu do rozwiazywanie row transportu 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa punktow 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBSADI2\fP, \fBSADI\fP, \fBSUpWind\fP i \fBSCrankNicolson\fP\&.
+.PP
+Definicja w linii 24 pliku scheme\&.cpp\&.
+.SS "float SScheme::FindBestOmega (map< int, \fBPoint\fP > & PointMap, map< int, long double > & f)"
+
+.PP
+Definicja w linii 233 pliku scheme\&.cpp\&.
+.SS "long double SScheme::Gauss_Seidel (\fBPoint\fP * p, map< int, \fBPoint\fP > & PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)"
+
+.PP
+metoda iteracyjna Gaussa Seidela Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Gaussa Seidela do rozwiazywanai ukladow rownan linowych
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji 
+.br
+\fIPointMap\fP - referencja do mapy punktow siatki 
+.br
+\fIfij\fP - wartosc wyrazu wolnego odpowiedniego dla danego pkt 
+.br
+\fIa,b,c,d,e,f,g,h,i\fP - wspolczynniki ukl rownnan odpowiednie dla danego pkt 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+koncentracje dla danego pkt 
+.RE
+.PP
+
+.PP
+Definicja w linii 143 pliku scheme\&.cpp\&.
+.SS "long double SScheme::Gauss_Seidel (map< int, \fBPoint\fP > & PointMap, map< int, long double > & f, vector< string > & a)"
+
+.PP
+Definicja w linii 160 pliku scheme\&.cpp\&.
+.SS "string SScheme::get_method () const\fC [inline]\fP"
+zwraca wrtosc metody ktora ma byc uzyta do rozwiazywania ukladow rownan 
+.PP
+Definicja w linii 170 pliku scheme\&.h\&.
+.SS "long double SScheme::get_omega () const\fC [inline]\fP"
+zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) 
+.PP
+Definicja w linii 164 pliku scheme\&.h\&.
+.SS "int SScheme::get_sym_step () const\fC [inline]\fP"
+zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) 
+.PP
+Definicja w linii 158 pliku scheme\&.h\&.
+.SS "void SScheme::GetFactors (\fBPoint\fP * p, const double & CAx, const double & CAy, const double & CDx, const double & CDxy, const double & CDy, const vector< int > & flag)\fC [virtual]\fP"
+
+.PP
+Odpowiedzialna za wyznaczenie czynnikow w row transportu dla danego pkt\&. Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja w zaleznosci od schematu jaki wykorzystywany jest do rozwiazania rownania 
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - pkt dla ktorego wyznaczane sa czynniki 
+.br
+\fICAx\fP - adwekcyjna liczba Couranta w kieruynku x 
+.br
+\fICAy\fP - adwekcyjna liczba Couranta w kieruynku y 
+.br
+\fICDx\fP - dyfuzyjna liczba Couranta w kieruynku x 
+.br
+\fICDxy\fP - dyfuzyjna liczba Couranta w kieruynku xy 
+.br
+\fICDy\fP - dyfuzyjna liczba Couranta w kieruynku y 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBSADI2\fP, \fBSADI\fP, \fBSUpWind\fP i \fBSCrankNicolson\fP\&.
+.PP
+Definicja w linii 98 pliku scheme\&.cpp\&.
+.SS "long double SScheme::Jakobi (\fBPoint\fP * p, map< int, \fBPoint\fP > & PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)"
+
+.PP
+metoda iteracyjna Jakobiego Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Jakobiego do rozwiazywanai ukladow rownan linowych
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji 
+.br
+\fIPointMap\fP - referencja do mapy punktow siatki 
+.br
+\fIfij\fP - wartosc wyrazu wolnego odpowiedniego dla danego pkt 
+.br
+\fIa,b,c,d,e,f,g,h,i\fP - wspolczynniki ukl rownnan odpowiednie dla danego pkt 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+koncentracje dla danego pkt 
+.RE
+.PP
+
+.PP
+Definicja w linii 102 pliku scheme\&.cpp\&.
+.SS "long double SScheme::Jakobi (map< int, \fBPoint\fP > & PointMap, map< int, long double > & f, vector< string > & a)"
+
+.PP
+Definicja w linii 117 pliku scheme\&.cpp\&.
+.SS "void SScheme::ReadMethod (string scheme)"
+
+.PP
+Definicja w linii 239 pliku scheme\&.cpp\&.
+.SS "void SScheme::set_method (string method)\fC [inline]\fP"
+ustawia metode ktora ma byc uzyta do rozwiazywania ukladow rownan 
+.PP
+Definicja w linii 167 pliku scheme\&.h\&.
+.SS "void SScheme::set_omega (long double omega)\fC [inline]\fP"
+ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) 
+.PP
+Definicja w linii 161 pliku scheme\&.h\&.
+.SS "void SScheme::set_sym_step (int step)\fC [inline]\fP"
+ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) 
+.PP
+Definicja w linii 155 pliku scheme\&.h\&.
+.SS "void SScheme::SetFactors (map< int, \fBPoint\fP > & PointMap)"
+
+.PP
+Ustawia czynniki w rownaniu transportu dla calej siatki\&. Ustawia czynniki (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rownaniu transportu dla wszytskich pktow
+.PP
+\[ a~c_{i,j}^{n+1} + b~c_{i+1,j}^{n+1} + c~c_{i-1,j}^{n+1} + d~c_{i,j+1}^{n+1} + e~c_{i,j-1}^{n+1} + f~c_{i+1,j+1}^{n+1} + g~c_{i+1,j-1}^{n+1} + h~c_{i-1,j+1}^{n+1} + i~c_{i-1,j-1}^{n+1} \] \[ = fa~c_{i,j}^{n} + fb~c_{i+1,j}^{n} + fc~c_{i-1,j}^{n} + fd~c_{i,j+1}^{n} + fe~c_{i,j-1}^{n} + ff~c_{i+1,j+1}^{n} + fg~c_{i+1,j-1}^{n} + fh~c_{i-1,j+1}^{n} + fi~c_{i-1,j-1}^{n} \]
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa punktow 
+.RE
+.PP
+
+.PP
+Definicja w linii 27 pliku scheme\&.cpp\&.
+.SS "long double SScheme::SOR (\fBPoint\fP * p, map< int, \fBPoint\fP > & PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i, long double omega)"
+
+.PP
+metoda iteracyjna SOR Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne SOR (Saccessive Over Relaksation) do rozwiazywanai ukladow rownan linowych
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji 
+.br
+\fIPointMap\fP - referencja do mapy punktow siatki 
+.br
+\fIfij\fP - wartosc wyrazu wolnego odpowiedniego dla danego pkt 
+.br
+\fIa,b,c,d,e,f,g,h,i\fP - wspolczynniki ukl rownnan odpowiednie dla danego pkt 
+.br
+\fIomega\fP - parametr relaksacji 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+koncentracje dla danego pkt 
+.RE
+.PP
+
+.PP
+Definicja w linii 185 pliku scheme\&.cpp\&.
+.SS "long double SScheme::SOR (map< int, \fBPoint\fP > & PointMap, map< int, long double > & f, vector< string > & a, long double omega = \fC1\&.0\fP)"
+
+.PP
+Definicja w linii 208 pliku scheme\&.cpp\&.
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "vector<int> SScheme::_i"
+
+.PP
+Definicja w linii 177 pliku scheme\&.h\&.
+.SS "map<int,double> SScheme::_w"
+
+.PP
+Definicja w linii 178 pliku scheme\&.h\&.
+.SS "int SScheme::powrot"
+
+.PP
+Definicja w linii 179 pliku scheme\&.h\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

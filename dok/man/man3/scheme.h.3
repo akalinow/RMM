@@ -1,0 +1,73 @@
+.TH "scheme.h" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+scheme.h \- Zawiera definicje kals \fBSScheme\fP, \fBSCrankNicolson\fP, \fBSUpWind\fP, \fBSADI\fP, \fBSADI2\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include 'point\&.h'\fP
+.br
+
+.SS "Komponenty"
+
+.in +1c
+.ti -1c
+.RI "class \fBSScheme\fP"
+.br
+.RI "\fIKlasa podstawowa Schematow\&. \fP"
+.ti -1c
+.RI "class \fBSCrankNicolson\fP"
+.br
+.RI "\fISchemat Cranka Nicolsona\&. \fP"
+.ti -1c
+.RI "class \fBSUpWind\fP"
+.br
+.RI "\fISchemat Pod Prad (UpWind)\&. \fP"
+.ti -1c
+.RI "class \fBSADI\fP"
+.br
+.RI "\fISchemat naprzemiennych kierunkow ADI \&. \fP"
+.ti -1c
+.RI "class \fBSADI2\fP"
+.br
+.RI "\fISchemat naprzemiennych kierunkow ADI \&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Zawiera definicje kals \fBSScheme\fP, \fBSCrankNicolson\fP, \fBSUpWind\fP, \fBSADI\fP, \fBSADI2\fP\&. 
+
+Plik zawiera defincje klas \fBSScheme\fP - podstawowej i pochodnych \fBSCrankNicolson\fP, \fBSUpWind\fP, \fBSADI\fP, \fBSADI2\fP Obiekt jednej z klas pochodnych jest odpowiednikiem wybranego schematu ronicowego uzywanego do rozwiazania rownania trnsportu\&.
+.PP
+\fBAutor:\fP
+.RS 4
+Monika Kalinowska 
+.RE
+.PP
+\fBData:\fP
+.RS 4
+lipiec 2005 
+.RE
+.PP
+\fBWersja:\fP
+.RS 4
+1\&.00\&.02 
+.RE
+.PP
+
+.PP
+Definicja w pliku \fBscheme\&.h\fP\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

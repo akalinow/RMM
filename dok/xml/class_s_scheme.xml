@@ -1,0 +1,827 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_s_scheme" kind="class" language="C++" prot="public">
+    <compoundname>SScheme</compoundname>
+    <derivedcompoundref refid="class_s_a_d_i" prot="public" virt="non-virtual">SADI</derivedcompoundref>
+    <derivedcompoundref refid="class_s_a_d_i2" prot="public" virt="non-virtual">SADI2</derivedcompoundref>
+    <derivedcompoundref refid="class_s_crank_nicolson" prot="public" virt="non-virtual">SCrankNicolson</derivedcompoundref>
+    <derivedcompoundref refid="class_s_up_wind" prot="public" virt="non-virtual">SUpWind</derivedcompoundref>
+    <includes refid="scheme_8h" local="no">scheme.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_scheme_1a875c9280df6dcdbc3a41ef1c148202da" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; SScheme::_i</definition>
+        <argsstring></argsstring>
+        <name>_i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="177" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_scheme_1a7d998bc77fe043ec3dfba082bf7c570a" prot="public" static="no" mutable="no">
+        <type>map&lt; int, double &gt;</type>
+        <definition>map&lt;int,double&gt; SScheme::_w</definition>
+        <argsstring></argsstring>
+        <name>_w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="178" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_scheme_1a6c8e7253815c7ac85996ee8fba438f53" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SScheme::powrot</definition>
+        <argsstring></argsstring>
+        <name>powrot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="179" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_scheme_1a3fa2aa11cc93745bcb2485c4533b001f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SScheme::_sym_step</definition>
+        <argsstring></argsstring>
+        <name>_sym_step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="182" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_scheme_1a0dea5819fc6e6e93f8766268cc006478" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double SScheme::_omega</definition>
+        <argsstring></argsstring>
+        <name>_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="183" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_scheme_1aaea08722fa46235844beaa34c18a3254" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SScheme::_method</definition>
+        <argsstring></argsstring>
+        <name>_method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_scheme_1a007f3a5b981419391f6a57222f7d7da6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SScheme::SScheme</definition>
+        <argsstring>()</argsstring>
+        <name>SScheme</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy schemat do rozwiazywania rownania transportu. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="47" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a1607f2363ea074bde9ad9c585b5a4019" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SScheme::ComputeConcentration</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>ComputeConcentration</name>
+        <reimplementedby refid="class_s_crank_nicolson_1abe37e0a2d5078a17420b3e9d815fc85f">ComputeConcentration</reimplementedby>
+        <reimplementedby refid="class_s_up_wind_1a500de829a9c8da4b43cb411014ff3b35">ComputeConcentration</reimplementedby>
+        <reimplementedby refid="class_s_a_d_i_1aed849c2b3b1a1c5b346edcfb69460457">ComputeConcentration</reimplementedby>
+        <reimplementedby refid="class_s_a_d_i2_1a41903e3b443ba68fe68cbad73fe44970">ComputeConcentration</reimplementedby>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+<para>Oblicza koncentracje. </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza koncentracje w daneym kroku uzywajac odpwoiedniej metody w zaeleznosci od wybranego schamtu do rozwiazywanie row transportu <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="58" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a9f9da388c80058c59123ea58e28f6408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SScheme::SetFactors</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>SetFactors</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+<para>Ustawia czynniki w rownaniu transportu dla calej siatki. </para>        </briefdescription>
+        <detaileddescription>
+<para>Ustawia czynniki (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rownaniu transportu dla wszytskich pktow</para><para><formula id="0">\[ a~c_{i,j}^{n+1} + b~c_{i+1,j}^{n+1} + c~c_{i-1,j}^{n+1} + d~c_{i,j+1}^{n+1} + e~c_{i,j-1}^{n+1} + f~c_{i+1,j+1}^{n+1} + g~c_{i+1,j-1}^{n+1} + h~c_{i-1,j+1}^{n+1} + i~c_{i-1,j-1}^{n+1} \]</formula> <formula id="1">\[ = fa~c_{i,j}^{n} + fb~c_{i+1,j}^{n} + fc~c_{i-1,j}^{n} + fd~c_{i,j+1}^{n} + fe~c_{i,j-1}^{n} + ff~c_{i+1,j+1}^{n} + fg~c_{i+1,j-1}^{n} + fh~c_{i-1,j+1}^{n} + fi~c_{i-1,j-1}^{n} \]</formula></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="80" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="27" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1ae1e554b35ec2d8a902f6fdb30d95ab20" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SScheme::GetFactors</definition>
+        <argsstring>(Point *p, const double &amp;CAx, const double &amp;CAy, const double &amp;CDx, const double &amp;CDxy, const double &amp;CDy, const vector&lt; int &gt; &amp;flag)</argsstring>
+        <name>GetFactors</name>
+        <reimplementedby refid="class_s_crank_nicolson_1a1fd8e8aee2c7fb9f61e6c4b02b74e1b3">GetFactors</reimplementedby>
+        <reimplementedby refid="class_s_up_wind_1a64e2e7d8ce37fd489c375fdd9a99c105">GetFactors</reimplementedby>
+        <reimplementedby refid="class_s_a_d_i_1aec6b8007d89c0c72648b4cad7aba1274">GetFactors</reimplementedby>
+        <reimplementedby refid="class_s_a_d_i2_1afac90c203840a07b31f73418af815063">GetFactors</reimplementedby>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CAx</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CAy</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDx</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDxy</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDy</declname>
+        </param>
+        <param>
+          <type>const vector&lt; int &gt; &amp;</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Odpowiedzialna za wyznaczenie czynnikow w row transportu dla danego pkt. </para>        </briefdescription>
+        <detaileddescription>
+<para>Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja w zaleznosci od schematu jaki wykorzystywany jest do rozwiazania rownania <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pkt dla ktorego wyznaczane sa czynniki </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CAx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adwekcyjna liczba Couranta w kieruynku x </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CAy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adwekcyjna liczba Couranta w kieruynku y </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku x </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku xy </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku y </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="97" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a1b66164d72e54d4b85322fa68f307c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::Jakobi</definition>
+        <argsstring>(Point *p, map&lt; int, Point &gt; &amp;PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)</argsstring>
+        <name>Jakobi</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fij</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>metoda iteracyjna Jakobiego </para>        </briefdescription>
+        <detaileddescription>
+<para>Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Jakobiego do rozwiazywanai ukladow rownan linowych</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do mapy punktow siatki </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fij</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartosc wyrazu wolnego odpowiedniego dla danego pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+<parametername>b</parametername>
+<parametername>c</parametername>
+<parametername>d</parametername>
+<parametername>e</parametername>
+<parametername>f</parametername>
+<parametername>g</parametername>
+<parametername>h</parametername>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczynniki ukl rownnan odpowiednie dla danego pkt </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>koncentracje dla danego pkt </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="112" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="102" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a78c4706ab3f69423302451983ad44022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::Jakobi</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, map&lt; int, long double &gt; &amp;f, vector&lt; string &gt; &amp;a)</argsstring>
+        <name>Jakobi</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>map&lt; int, long double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="115" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="117" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a0dd0343c9bcb4b35849403d8a76f9d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::Gauss_Seidel</definition>
+        <argsstring>(Point *p, map&lt; int, Point &gt; &amp;PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)</argsstring>
+        <name>Gauss_Seidel</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fij</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>metoda iteracyjna Gaussa Seidela </para>        </briefdescription>
+        <detaileddescription>
+<para>Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Gaussa Seidela do rozwiazywanai ukladow rownan linowych</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do mapy punktow siatki </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fij</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartosc wyrazu wolnego odpowiedniego dla danego pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+<parametername>b</parametername>
+<parametername>c</parametername>
+<parametername>d</parametername>
+<parametername>e</parametername>
+<parametername>f</parametername>
+<parametername>g</parametername>
+<parametername>h</parametername>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczynniki ukl rownnan odpowiednie dla danego pkt </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>koncentracje dla danego pkt </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="130" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="143" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a48ee384f6206a5c55931a8e3361f7d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::Gauss_Seidel</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, map&lt; int, long double &gt; &amp;f, vector&lt; string &gt; &amp;a)</argsstring>
+        <name>Gauss_Seidel</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>map&lt; int, long double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="133" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="160" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a48fa493450e8c55967bdaa78e9e1bd7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::SOR</definition>
+        <argsstring>(Point *p, map&lt; int, Point &gt; &amp;PointMap, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i, long double omega)</argsstring>
+        <name>SOR</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fij</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>omega</declname>
+        </param>
+        <briefdescription>
+<para>metoda iteracyjna SOR </para>        </briefdescription>
+        <detaileddescription>
+<para>Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne SOR (Saccessive Over Relaksation) do rozwiazywanai ukladow rownan linowych</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do mapy punktow siatki </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fij</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartosc wyrazu wolnego odpowiedniego dla danego pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+<parametername>b</parametername>
+<parametername>c</parametername>
+<parametername>d</parametername>
+<parametername>e</parametername>
+<parametername>f</parametername>
+<parametername>g</parametername>
+<parametername>h</parametername>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczynniki ukl rownnan odpowiednie dla danego pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- parametr relaksacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>koncentracje dla danego pkt </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="149" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="185" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a4bf15feac00aed3dd724fbf4921a4144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::SOR</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, map&lt; int, long double &gt; &amp;f, vector&lt; string &gt; &amp;a, long double omega=1.0)</argsstring>
+        <name>SOR</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>map&lt; int, long double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>omega</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="152" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="208" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a2032e9d35d0931c17d8f96170d5d843a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SScheme::set_sym_step</definition>
+        <argsstring>(int step)</argsstring>
+        <name>set_sym_step</name>
+        <param>
+          <type>int</type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="155" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1acadf8feab53234c5923990af908c2733" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SScheme::get_sym_step</definition>
+        <argsstring>() const </argsstring>
+        <name>get_sym_step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="158" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a99fefa3de0fa0859be662faa9e21a01b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SScheme::set_omega</definition>
+        <argsstring>(long double omega)</argsstring>
+        <name>set_omega</name>
+        <param>
+          <type>long double</type>
+          <declname>omega</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="161" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a69a8b9ea4d5c04b5def66db3d64c4c22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double SScheme::get_omega</definition>
+        <argsstring>() const </argsstring>
+        <name>get_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do SORa) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="164" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a3749de0c92f9a4a50c10ded4d7713344" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SScheme::set_method</definition>
+        <argsstring>(string method)</argsstring>
+        <name>set_method</name>
+        <param>
+          <type>string</type>
+          <declname>method</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia metode ktora ma byc uzyta do rozwiazywania ukladow rownan </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="167" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a8c73b695beb2beb76079444aa92f7922" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string SScheme::get_method</definition>
+        <argsstring>() const </argsstring>
+        <name>get_method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wrtosc metody ktora ma byc uzyta do rozwiazywania ukladow rownan </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="170" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="170" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1ab5e7404ff79c4c13d12f64e69b284027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SScheme::FindBestOmega</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, map&lt; int, long double &gt; &amp;f)</argsstring>
+        <name>FindBestOmega</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>map&lt; int, long double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="173" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="233" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_scheme_1a04180646227c260880ddc35ee0b563e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SScheme::ReadMethod</definition>
+        <argsstring>(string scheme)</argsstring>
+        <name>ReadMethod</name>
+        <param>
+          <type>string</type>
+          <declname>scheme</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="175" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="239" bodyend="272"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa podstawowa Schematow. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera metody potrzebane do rozwiazania rownania transportu w zaleznosci od wybranego schematu numrycznego uzywna sa metody z tej lub jednej z klas pochodnych. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>SScheme</label>
+        <link refid="class_s_scheme"/>
+      </node>
+      <node id="61">
+        <label>SADI2</label>
+        <link refid="class_s_a_d_i2"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>SADI</label>
+        <link refid="class_s_a_d_i"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>SUpWind</label>
+        <link refid="class_s_up_wind"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>SCrankNicolson</label>
+        <link refid="class_s_crank_nicolson"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/mkalinow/projects/rmmt/scheme.h" line="40" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="40" bodyend="185"/>
+    <listofallmembers>
+      <member refid="class_s_scheme_1a875c9280df6dcdbc3a41ef1c148202da" prot="public" virt="non-virtual"><scope>SScheme</scope><name>_i</name></member>
+      <member refid="class_s_scheme_1aaea08722fa46235844beaa34c18a3254" prot="private" virt="non-virtual"><scope>SScheme</scope><name>_method</name></member>
+      <member refid="class_s_scheme_1a0dea5819fc6e6e93f8766268cc006478" prot="private" virt="non-virtual"><scope>SScheme</scope><name>_omega</name></member>
+      <member refid="class_s_scheme_1a3fa2aa11cc93745bcb2485c4533b001f" prot="private" virt="non-virtual"><scope>SScheme</scope><name>_sym_step</name></member>
+      <member refid="class_s_scheme_1a7d998bc77fe043ec3dfba082bf7c570a" prot="public" virt="non-virtual"><scope>SScheme</scope><name>_w</name></member>
+      <member refid="class_s_scheme_1a1607f2363ea074bde9ad9c585b5a4019" prot="public" virt="virtual"><scope>SScheme</scope><name>ComputeConcentration</name></member>
+      <member refid="class_s_scheme_1ab5e7404ff79c4c13d12f64e69b284027" prot="public" virt="non-virtual"><scope>SScheme</scope><name>FindBestOmega</name></member>
+      <member refid="class_s_scheme_1a0dd0343c9bcb4b35849403d8a76f9d18" prot="public" virt="non-virtual"><scope>SScheme</scope><name>Gauss_Seidel</name></member>
+      <member refid="class_s_scheme_1a48ee384f6206a5c55931a8e3361f7d57" prot="public" virt="non-virtual"><scope>SScheme</scope><name>Gauss_Seidel</name></member>
+      <member refid="class_s_scheme_1a8c73b695beb2beb76079444aa92f7922" prot="public" virt="non-virtual"><scope>SScheme</scope><name>get_method</name></member>
+      <member refid="class_s_scheme_1a69a8b9ea4d5c04b5def66db3d64c4c22" prot="public" virt="non-virtual"><scope>SScheme</scope><name>get_omega</name></member>
+      <member refid="class_s_scheme_1acadf8feab53234c5923990af908c2733" prot="public" virt="non-virtual"><scope>SScheme</scope><name>get_sym_step</name></member>
+      <member refid="class_s_scheme_1ae1e554b35ec2d8a902f6fdb30d95ab20" prot="public" virt="virtual"><scope>SScheme</scope><name>GetFactors</name></member>
+      <member refid="class_s_scheme_1a1b66164d72e54d4b85322fa68f307c30" prot="public" virt="non-virtual"><scope>SScheme</scope><name>Jakobi</name></member>
+      <member refid="class_s_scheme_1a78c4706ab3f69423302451983ad44022" prot="public" virt="non-virtual"><scope>SScheme</scope><name>Jakobi</name></member>
+      <member refid="class_s_scheme_1a6c8e7253815c7ac85996ee8fba438f53" prot="public" virt="non-virtual"><scope>SScheme</scope><name>powrot</name></member>
+      <member refid="class_s_scheme_1a04180646227c260880ddc35ee0b563e7" prot="public" virt="non-virtual"><scope>SScheme</scope><name>ReadMethod</name></member>
+      <member refid="class_s_scheme_1a3749de0c92f9a4a50c10ded4d7713344" prot="public" virt="non-virtual"><scope>SScheme</scope><name>set_method</name></member>
+      <member refid="class_s_scheme_1a99fefa3de0fa0859be662faa9e21a01b" prot="public" virt="non-virtual"><scope>SScheme</scope><name>set_omega</name></member>
+      <member refid="class_s_scheme_1a2032e9d35d0931c17d8f96170d5d843a" prot="public" virt="non-virtual"><scope>SScheme</scope><name>set_sym_step</name></member>
+      <member refid="class_s_scheme_1a9f9da388c80058c59123ea58e28f6408" prot="public" virt="non-virtual"><scope>SScheme</scope><name>SetFactors</name></member>
+      <member refid="class_s_scheme_1a48fa493450e8c55967bdaa78e9e1bd7c" prot="public" virt="non-virtual"><scope>SScheme</scope><name>SOR</name></member>
+      <member refid="class_s_scheme_1a4bf15feac00aed3dd724fbf4921a4144" prot="public" virt="non-virtual"><scope>SScheme</scope><name>SOR</name></member>
+      <member refid="class_s_scheme_1a007f3a5b981419391f6a57222f7d7da6" prot="public" virt="non-virtual"><scope>SScheme</scope><name>SScheme</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

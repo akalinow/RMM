@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_simulation" kind="class" language="C++" prot="public">
+    <compoundname>Simulation</compoundname>
+    <includes refid="simulation_8h" local="no">simulation.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulation_1af11ac395aeac3d0c77b064bb6c196f5a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Simulation::_file_grid</definition>
+        <argsstring></argsstring>
+        <name>_file_grid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="182" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a41fd64efe8acbe3f4acae7a0fc561206" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Simulation::_file_v</definition>
+        <argsstring></argsstring>
+        <name>_file_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="183" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a5d5cb4c151f5782710d9ccb34e229afe" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Simulation::_file_data</definition>
+        <argsstring></argsstring>
+        <name>_file_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a3e205d64078fa7b135fd98c465647aca" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Simulation::_file_d</definition>
+        <argsstring></argsstring>
+        <name>_file_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="185" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a1332bf20e9f03680640f1c577f702984" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Simulation::_file</definition>
+        <argsstring></argsstring>
+        <name>_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="186" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_1a269dae66bcb82b068cfd945c30210724" prot="private" static="no" mutable="no">
+        <type>set&lt; int &gt;</type>
+        <definition>set&lt;int&gt; Simulation::_save</definition>
+        <argsstring></argsstring>
+        <name>_save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="188" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulation_1af6d6faabf99b4147db641658d1fcfc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulation::Simulation</definition>
+        <argsstring>(const string &amp;paramFile, const string &amp;saveFile)</argsstring>
+        <name>Simulation</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>paramFile</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>saveFile</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy obiekt simuation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>paramFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>saveFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku z parametrami zapisu wyników symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="44" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a900ea19845f934638b3e2cf755e14302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::MySimulation</definition>
+        <argsstring>(const string &amp;param_file, const string &amp;save_file)</argsstring>
+        <name>MySimulation</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>param_file</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>save_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Przebieg symulacji od ustawienia parametrow przez uruchominie obiczen po zapis danych i zakonczenie </para>        </detaileddescription>
+        <inbodydescription>
+<para>double val = 2.0; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="48" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="23" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ab76ff3b4cdd23182a21a69535c4b064b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Simulation::SetParam</definition>
+        <argsstring>(SimulationParameters *param, const string &amp;file)</argsstring>
+        <name>SetParam</name>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pobiera i ustawia parametry symulacji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt w ktorym beda zapisane parmetry symulacji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku z param symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="55" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="131" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a7f0f2ce0a990c9823748cee649224bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Simulation::PrepareMap</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param)</argsstring>
+        <name>PrepareMap</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Przygotowuje Mape Punktow (siatke) na ktorej bedize przeprowadona symulacja <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pusta mapa </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="62" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="196" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a01d0cc9ca7a6b8bb20504b0d303c077a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Simulation::SetSaveParameters</definition>
+        <argsstring>(const string &amp;file, int n)</argsstring>
+        <name>SetSaveParameters</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Odczytuje z pliku i ustawia parametry zapisu wyników symulacji. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- plik w który zapsano parametry symulacji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- liczba kroków czasowych symylacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 gdy wszystko poszło OK</para></simplesect>
+<programlisting><codeline><highlight class="normal">format<sp/>pliku<sp/>wejściowego<sp/>&quot;save.txt&quot;<sp/>(domyślnie):<sp/></highlight></codeline>
+</programlisting> <programlisting><codeline><highlight class="normal">range<sp/><sp/><sp/>pattern<sp/></highlight></codeline>
+<codeline><highlight class="normal">step0<sp/><sp/><sp/>step1<sp/><sp/><sp/>...<sp/>stepN<sp/></highlight></codeline>
+</programlisting></para><para><computeroutput>range</computeroutput> - definiuje czy maja zapisywane być wszystkie kroki symulacji czy tylko kroki wybrane możliwe wartości: <itemizedlist>
+<listitem>
+<para><emphasis>steps</emphasis> – zapisuje tylko wybrane kroki symulacji,  </para></listitem>
+<listitem>
+<para><emphasis>all</emphasis> – zapisuje wszystkie kroki symulacji.  </para></listitem>
+</itemizedlist>
+<computeroutput>pattern</computeroutput> - definiuje, co ile kroków czasowych ma się odbywać zapis do pliku, możliwe wartości: <itemizedlist>
+<listitem>
+<para><emphasis>last</emphasis> (wartość domyślna) – zapisuje tylko ostatni krok symulacji, </para></listitem>
+<listitem>
+<para><emphasis>int</emphasis> (zmienna typu int) – dodatnia liczba naturalna określająca, co ile kroków czasowych ma być dokonywany zapis do pliku np. 1, 10, 100, 1000 ... - oznacza odpowiednio zapis, co 1, 10, 100 lub 1000 kroków czasowych. </para></listitem>
+</itemizedlist>
+<computeroutput>step0</computeroutput>, <computeroutput>step1</computeroutput>, ... - opcjonalnie istnieje możliwość zdefiniowania w 2 linii pliku save.txt dodatkowych kroków czasowych, w których ma być dokonywany zapis. Możliwe tylko dodatnie liczby naturalne oddzielone od siebie tabulatorami. Przykład: oprócz zapisu ostatniego kroku (co zdefiniowano w pierwszej linijce pliku save.txt, podając wartości „steps” i „last”), chcemy dokonać zapisu pierwszych 10 kroków czasowych; druga linijka pliku save.txt powinna wyglądać następująco: <programlisting><codeline><highlight class="normal">1<sp/><sp/><sp/>2<sp/><sp/><sp/>3<sp/><sp/><sp/>4<sp/><sp/><sp/>5<sp/><sp/><sp/>6<sp/><sp/><sp/>7<sp/><sp/><sp/>8<sp/><sp/><sp/>9<sp/><sp/><sp/>10</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="102" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="309" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a471316287d132dba2d8dd10fbcc1a192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SaveMap</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, const string &amp;file, const string &amp;opt)</argsstring>
+        <name>SaveMap</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zapisueje Mape Punktow do podanego pliku <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku do ktorego ma byc zapisana mapa punktow </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- opcja wskazujaca co mam byc zapisane <itemizedlist>
+<listitem>
+<para>all - zapisuje wszystkie dostepne wartosci dla kazdego pkt </para></listitem>
+<listitem>
+<para>grid - zapisuje tylko siatke pkt (wpolrzedne x, y pktow i ich flagi)  </para></listitem>
+</itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="114" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="356" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ac9b7432d7f91aaee99100187fac8d73e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetSourceConcentration</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, double &amp;val)</argsstring>
+        <name>SetSourceConcentration</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia w miejscu zrodla odpowiednia wartosc koncentracji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartosc koncentracji zadawanej w punkcie zrodla </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>!!!!! zrobic by bylo to czytane z pliku </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="122" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="443" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ad8c565d908664e7b5d419261af556ae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetSourceConcentrationTemp</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param, double &amp;val)</argsstring>
+        <name>SetSourceConcentrationTemp</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia w miejscu zrodla odpowiednia wartosc koncentracji dla temeratury <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa pkt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartosc koncentracji zadawanej w punkcie zrodla </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>double x0 = 1730/param.get_dx(), y0 = 690/param.get_dy();//dla Wisly - ekspertyza </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="131" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="521" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a9bd641b3fd013d152d03b5b5ea718d73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulation::ComputeEffectiveTemp</definition>
+        <argsstring>(Point &amp;p, double dx, double val, double hz=-9999.99, double Qz=-9999.99)</argsstring>
+        <name>ComputeEffectiveTemp</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>hz</declname>
+          <defval>-9999.99</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Qz</declname>
+          <defval>-9999.99</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="133" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="936" bodyend="948"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a3253bdc42110ee6653d7f02a420b56af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>void Simulation::SetInitialConcentration</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param)</argsstring>
+        <name>SetInitialConcentration</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wczytuje dane z pliku  &quot;ini_cond.txt&quot; dotyczące wartości początkowej koncentracji/temperatury i wywołuje właściwą funckcję zająca wartosci koncentracji/temperatur początkowej na siatce <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pusta mapa </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt z parametrami symulacji <linebreak/>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+format pliku <computeroutput>&quot;ini_cond.txt&quot;</computeroutput> :<linebreak/>
+ --------------------------------------<mdash/> <linebreak/>
+ <ref refid="class_simulation_parameters_1a76420499d58b303411f21c385d82303f" kindref="member">pollutant</ref> <linebreak/>
+ <ref refid="class_simulation_parameters_1a1848a63487254ccce60bc06886d29847" kindref="member">dump</ref> <linebreak/>
+ <ref refid="class_simulation_parameters_1a05862812dec3b947f124886aaea1cb84" kindref="member">area</ref> <linebreak/>
+ <ref refid="class_simulation_parameters_1a16d7b0beff55cf45ca7cf23d99fbbd10" kindref="member">mod</ref> <formula id="3">$x$</formula> <formula id="4">$y$</formula> <formula id="6">$val$</formula> <formula id="2">$h_{z}$</formula> <formula id="5">$Q_{z}$</formula> <linebreak/>
+ <ref refid="class_simulation_parameters_1a16d7b0beff55cf45ca7cf23d99fbbd10" kindref="member">mod</ref> <formula id="3">$x$</formula> <formula id="4">$y$</formula> <formula id="6">$val$</formula> <formula id="2">$h_{z}$</formula> <formula id="5">$Q_{z}$</formula> <linebreak/>
+ ...<linebreak/>
+ <ref refid="class_simulation_parameters_1a16d7b0beff55cf45ca7cf23d99fbbd10" kindref="member">mod</ref> <formula id="3">$x$</formula> <formula id="4">$y$</formula> <formula id="6">$val$</formula> <formula id="2">$h_{z}$</formula> <formula id="5">$Q_{z}$</formula> <linebreak/>
+ --------------------------------------<mdash/> <linebreak/>
+ Kliknij na zmienną aby zoabczyć możliwe wartości<linebreak/>
+ <formula id="3">$x$</formula> <formula id="4">$y$</formula> - współrzędne punktu lokalizacji źródła <linebreak/>
+ jeśli mod == val <formula id="2">$h_{z}$</formula> <formula id="5">$Q_{z}$</formula> - wartości głebokości oraz natężenia przepływu w miejscu źródła <linebreak/>
+ <formula id="6">$val$</formula> - wartość koncentracji/temperatury w miejscu źródła\ Można podać wiele punktów w kolejnych liniach </para>        </detaileddescription>
+        <inbodydescription>
+<para>!!!!! zrobic by bylo to czytane z pliku </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="158" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="950" bodyend="1045"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ae713b7bd19b86d3e426c899785b9ce8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetInitialConcentrationPoint</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param, double x0, double y0, double val)</argsstring>
+        <name>SetInitialConcentrationPoint</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="161" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="676" bodyend="701"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a41155db84b2177e858dfd8274a9a4a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetInitialConcentrationPlaneWave</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>SetInitialConcentrationPlaneWave</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="162" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="889" bodyend="922"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1aed95dfa701b563cbd85421bfeb4f74fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetInitialConcentrationGauss</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param, double x0, double y0, double val, int krok)</argsstring>
+        <name>SetInitialConcentrationGauss</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>krok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="164" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="703" bodyend="766"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a4f95080d3efd1568155f493150ea6a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetInitialConcentrationGaussNonDiag</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, SimulationParameters &amp;param, double x0, double y0, double val, int krok)</argsstring>
+        <name>SetInitialConcentrationGaussNonDiag</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>krok</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>!!! double norm = 4*pi*krok*dt*sqrt(D); </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="165" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="785" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a99e94c6106312a2e741e4a7fbfc17acc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulation::Gaus</definition>
+        <argsstring>(double x, double mean, double sigma, bool norm)</argsstring>
+        <name>Gaus</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mean</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>norm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="167" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="768" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a63da2c122d167f06255071009070f0b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Simulation::SetInitialConcentrationFile</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>SetInitialConcentrationFile</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a404b11e725f52fc7e87986956229fa38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::SetInOutPointValue</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>SetInOutPointValue</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="170" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="1048" bodyend="1089"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1affeb8b328bfd85259dfd4942591a3210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulation::My_Gaus</definition>
+        <argsstring>(double x, double y, double meanX, double meanY, double sigma)</argsstring>
+        <name>My_Gaus</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanX</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanY</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="172" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.cpp" bodystart="925" bodyend="933"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1ac9e2c2d48ff778482992d64ec3d63f60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulation::set_file</definition>
+        <argsstring>(string file)</argsstring>
+        <name>set_file</name>
+        <param>
+          <type>string</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="175" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1af8e26312c6ff919274ca640abe83bca2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Simulation::get_file</definition>
+        <argsstring>() const </argsstring>
+        <name>get_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="176" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_1a7a0437249ae44f92299590cf7fbdb7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Simulation::ComputeEffectiveTemp</definition>
+        <argsstring>(Point pkt, double arg2, double arg3, double val1, double hz, double Qz)</argsstring>
+        <name>ComputeEffectiveTemp</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>hz</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Qz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/simulation.h" line="178" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa odpowiedzialna za symulacje. </para>    </briefdescription>
+    <detaileddescription>
+<para>Odpowiedizlna za przygotowanie danych do symulacji start i przebieg symulacji </para>    </detaileddescription>
+    <location file="/home/mkalinow/projects/rmmt/simulation.h" line="35" column="1" bodyfile="/home/mkalinow/projects/rmmt/simulation.h" bodystart="35" bodyend="190"/>
+    <listofallmembers>
+      <member refid="class_simulation_1a1332bf20e9f03680640f1c577f702984" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_file</name></member>
+      <member refid="class_simulation_1a3e205d64078fa7b135fd98c465647aca" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_file_d</name></member>
+      <member refid="class_simulation_1a5d5cb4c151f5782710d9ccb34e229afe" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_file_data</name></member>
+      <member refid="class_simulation_1af11ac395aeac3d0c77b064bb6c196f5a" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_file_grid</name></member>
+      <member refid="class_simulation_1a41fd64efe8acbe3f4acae7a0fc561206" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_file_v</name></member>
+      <member refid="class_simulation_1a269dae66bcb82b068cfd945c30210724" prot="private" virt="non-virtual"><scope>Simulation</scope><name>_save</name></member>
+      <member refid="class_simulation_1a9bd641b3fd013d152d03b5b5ea718d73" prot="public" virt="non-virtual"><scope>Simulation</scope><name>ComputeEffectiveTemp</name></member>
+      <member refid="class_simulation_1a7a0437249ae44f92299590cf7fbdb7bd" prot="public" virt="non-virtual"><scope>Simulation</scope><name>ComputeEffectiveTemp</name></member>
+      <member refid="class_simulation_1a99e94c6106312a2e741e4a7fbfc17acc" prot="public" virt="non-virtual"><scope>Simulation</scope><name>Gaus</name></member>
+      <member refid="class_simulation_1af8e26312c6ff919274ca640abe83bca2" prot="public" virt="non-virtual"><scope>Simulation</scope><name>get_file</name></member>
+      <member refid="class_simulation_1affeb8b328bfd85259dfd4942591a3210" prot="public" virt="non-virtual"><scope>Simulation</scope><name>My_Gaus</name></member>
+      <member refid="class_simulation_1a900ea19845f934638b3e2cf755e14302" prot="public" virt="non-virtual"><scope>Simulation</scope><name>MySimulation</name></member>
+      <member refid="class_simulation_1a7f0f2ce0a990c9823748cee649224bfc" prot="public" virt="non-virtual"><scope>Simulation</scope><name>PrepareMap</name></member>
+      <member refid="class_simulation_1a471316287d132dba2d8dd10fbcc1a192" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SaveMap</name></member>
+      <member refid="class_simulation_1ac9e2c2d48ff778482992d64ec3d63f60" prot="public" virt="non-virtual"><scope>Simulation</scope><name>set_file</name></member>
+      <member refid="class_simulation_1a3253bdc42110ee6653d7f02a420b56af" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentration</name></member>
+      <member refid="class_simulation_1a63da2c122d167f06255071009070f0b2" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentrationFile</name></member>
+      <member refid="class_simulation_1aed95dfa701b563cbd85421bfeb4f74fd" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentrationGauss</name></member>
+      <member refid="class_simulation_1a4f95080d3efd1568155f493150ea6a5e" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentrationGaussNonDiag</name></member>
+      <member refid="class_simulation_1a41155db84b2177e858dfd8274a9a4a93" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentrationPlaneWave</name></member>
+      <member refid="class_simulation_1ae713b7bd19b86d3e426c899785b9ce8a" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInitialConcentrationPoint</name></member>
+      <member refid="class_simulation_1a404b11e725f52fc7e87986956229fa38" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetInOutPointValue</name></member>
+      <member refid="class_simulation_1ab76ff3b4cdd23182a21a69535c4b064b" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetParam</name></member>
+      <member refid="class_simulation_1a01d0cc9ca7a6b8bb20504b0d303c077a" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetSaveParameters</name></member>
+      <member refid="class_simulation_1ac9b7432d7f91aaee99100187fac8d73e" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetSourceConcentration</name></member>
+      <member refid="class_simulation_1ad8c565d908664e7b5d419261af556ae9" prot="public" virt="non-virtual"><scope>Simulation</scope><name>SetSourceConcentrationTemp</name></member>
+      <member refid="class_simulation_1af6d6faabf99b4147db641658d1fcfc08" prot="public" virt="non-virtual"><scope>Simulation</scope><name>Simulation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

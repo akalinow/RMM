@@ -1,0 +1,756 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_net_heat_flux" kind="class" language="C++" prot="public">
+    <compoundname>NetHeatFlux</compoundname>
+    <includes refid="netheatflux_8h" local="no">netheatflux.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_net_heat_flux_1ab4a1520fb8a617aff127a685c5a1b181" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_Ta</definition>
+        <argsstring></argsstring>
+        <name>_Ta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="221" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1a40fa7f043b4fc94ff706e41d8f936942" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_Rh</definition>
+        <argsstring></argsstring>
+        <name>_Rh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="222" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1aeb5f08d91c39cad4450aabbefde6181f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_pa</definition>
+        <argsstring></argsstring>
+        <name>_pa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="223" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1ac11fdb67ab9d19a162c51c9a35446ecc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_Js</definition>
+        <argsstring></argsstring>
+        <name>_Js</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="224" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1ac2d15d1c009cf4b3c8558030dfeced31" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_u</definition>
+        <argsstring></argsstring>
+        <name>_u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="225" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1acee95490c0eb642f9c0045f5e1d3a194" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_aw</definition>
+        <argsstring></argsstring>
+        <name>_aw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="228" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1aaea1abcee787da00bbf9136c97c1867b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_emis_w</definition>
+        <argsstring></argsstring>
+        <name>_emis_w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="231" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1a4dcfff531fce43cc206a64163f05c0f2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float NetHeatFlux::_cb</definition>
+        <argsstring></argsstring>
+        <name>_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="232" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1a9cd648c2240f6aaac6884765b9fc6f53" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::_ea</definition>
+        <argsstring></argsstring>
+        <name>_ea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="236" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_net_heat_flux_1abaff62eec13bf776e00cfd74ac813d05" prot="private" static="yes" mutable="no">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::_sigma</definition>
+        <argsstring></argsstring>
+        <name>_sigma</name>
+        <initializer>= 5.67e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="229" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1a16ba12bb53ea0ccacd560118563ce4bc" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double NetHeatFlux::_kelvin</definition>
+        <argsstring></argsstring>
+        <name>_kelvin</name>
+        <initializer>= 273.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="230" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_net_heat_flux_1a0a5da052f33f54112320a5afe1bd358e" prot="private" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float NetHeatFlux::_p0</definition>
+        <argsstring></argsstring>
+        <name>_p0</name>
+        <initializer>= 1013.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="233" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_heat_flux_1a6e4c7b7a65cc582fe7f812b10d8dd0ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetHeatFlux::NetHeatFlux</definition>
+        <argsstring>()</argsstring>
+        <name>NetHeatFlux</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy obiekt <ref refid="class_net_heat_flux" kindref="compound">NetHeatFlux</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="31" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a49a9703237a48c6851464376b0892246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetHeatFlux::NetHeatFlux</definition>
+        <argsstring>(double Ta, double Rh, double pa, double Js, double u)</argsstring>
+        <name>NetHeatFlux</name>
+        <param>
+          <type>double</type>
+          <declname>Ta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Rh</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pa</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Js</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="35" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="35" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a31570d0c05e45b2a01a05b3976617ac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeNetHeatFlux</definition>
+        <argsstring>(long double Tw)</argsstring>
+        <name>ComputeNetHeatFlux</name>
+        <param>
+          <type>long double</type>
+          <declname>Tw</declname>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc czlonu zródłowego </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wartosc czlonu zrodlowego dla danej temp wody na podstawie podsnaych danych meteorologicznych</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wartość temperatury wody dla ktorej ma być obliczony czlon zrodlowy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc czlonu zrodlowego dla danej temp </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="53" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="16" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a5bf457660c754e02562840cc90cf00ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeNetSolar</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeNetSolar</name>
+        <briefdescription>
+<para>oblicza wartosc promieniowania słonecznego krotkofalowe </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wartosc promieniowania słonecznego krotkofalowego na podstawie pomiarów promieniowania słonecznego padającego oraz albedo wody</para><para><simplesect kind="return"><para>wartosc promieniowania słonecznego krotkofalowe </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="65" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a8c35767d0fdf37fd6216e0c2f1e71cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeLongWaveAtmosf</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeLongWaveAtmosf</name>
+        <briefdescription>
+<para>oblicza wartosc promieniowania atmosferycznego długofalowego </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>-</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc promieniowania atmosferycznego długofalowego </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="74" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a87b1a80ed14554fcaf903a3383f25a77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::Emissivity_Brunt1932</definition>
+        <argsstring>(double a1=0.55, double a2=0.065)</argsstring>
+        <name>Emissivity_Brunt1932</name>
+        <param>
+          <type>double</type>
+          <declname>a1</declname>
+          <defval>0.55</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a2</declname>
+          <defval>0.065</defval>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coefficient [] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coefficient [hPa^(-1/2)] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc emisyjnosci atmosfery </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="83" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a867bd311aaaf67ba057ad24f8e8ba5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeLongWaveWater</definition>
+        <argsstring>(long double &amp;Tw)</argsstring>
+        <name>ComputeLongWaveWater</name>
+        <param>
+          <type>long double &amp;</type>
+          <declname>Tw</declname>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc promieniowania długofalowego WODY </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wartosc promieniowania długofalowego WODY kożystając z prawa Stefana-Boltzmana <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- temp wody </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc promieniowania długofalowego wody </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="94" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a7029244ff808627ebc74a9e74d00abe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeEvapCondens</definition>
+        <argsstring>(long double &amp;Tw)</argsstring>
+        <name>ComputeEvapCondens</name>
+        <param>
+          <type>long double &amp;</type>
+          <declname>Tw</declname>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc strat ciepła zwiazanego z praowaniem </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wartosc strat ciepła zwiazanego z parowaniem lub dostarcenia ciepła związnego z procesem kondensacji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- temp wody </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="106" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::WindFunction_Chapra2008</definition>
+        <argsstring>(float c1=19.0, float c2=0.95)</argsstring>
+        <name>WindFunction_Chapra2008</name>
+        <param>
+          <type>float</type>
+          <declname>c1</declname>
+          <defval>19.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c2</declname>
+          <defval>0.95</defval>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci waitru wg zależnosci f(u) = c1 + c2 u^2 - domyślnie c1 = 19.0, c2 = 0.95 - Chapra 2008, Edinger et al 1974 </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="115" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ab3807fc076b38645302be22d62c70c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::ComputeCondConv</definition>
+        <argsstring>(long double &amp;Tw)</argsstring>
+        <name>ComputeCondConv</name>
+        <param>
+          <type>long double &amp;</type>
+          <declname>Tw</declname>
+        </param>
+        <briefdescription>
+<para>oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Tw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- temp wody </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wartosc strumienia ciepła w wyniku przewodzenia i konwekscji </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="125" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a495d266066abc2afdfc6f67e73e9f5d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_Ta</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Ta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartość temp powietrza </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="129" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1aaf841691bf132c9b7d26c7ff3a60b798" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_Rh</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Rh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartość wilgotnosci powietrza </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="134" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ab6d1ce8e3f2f4034c256bd32b9285b01" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_pa</definition>
+        <argsstring>() const </argsstring>
+        <name>get_pa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartość ciśnienie atmosferycznego </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="139" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a37bddd6b4413bf9a4265b0e6121dc53a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_Js</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Js</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc promieniowania krotkofalowego </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="144" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ad5d42768c59f90e629dd033a6fd1ac77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_u</definition>
+        <argsstring>() const </argsstring>
+        <name>get_u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc predkosci wiatru </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="149" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a1f7f06ac4ad2d3e71a2c9c7203ffc833" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_aw</definition>
+        <argsstring>() const </argsstring>
+        <name>get_aw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc albedo wody </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="154" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a1a1c94edb55d10722782ac1e76f1c8b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_ea</definition>
+        <argsstring>() const </argsstring>
+        <name>get_ea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="159" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ab48ea591c24a62581348cc291d565076" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double NetHeatFlux::get_emis_w</definition>
+        <argsstring>() const </argsstring>
+        <name>get_emis_w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc ustawionej zdolności emisyjnej wody </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="164" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a9e9700acebfa6481f24b93c2f7d1efd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_Ta</definition>
+        <argsstring>(double Ta)</argsstring>
+        <name>set_Ta</name>
+        <param>
+          <type>double</type>
+          <declname>Ta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartość temp powietrza </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="171" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a870e6db2db832d88f88a0f75516f39d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_Rh</definition>
+        <argsstring>(double Rh)</argsstring>
+        <name>set_Rh</name>
+        <param>
+          <type>double</type>
+          <declname>Rh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartość wilgotnosci powietrza </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="176" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ac4d58893c28e07cd05a7988d098df46b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_pa</definition>
+        <argsstring>(double pa)</argsstring>
+        <name>set_pa</name>
+        <param>
+          <type>double</type>
+          <declname>pa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartość ciśnienie atmosferycznego </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="182" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a4608ba4ec5bade409d066b9e2370a4a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_Js</definition>
+        <argsstring>(double Js)</argsstring>
+        <name>set_Js</name>
+        <param>
+          <type>double</type>
+          <declname>Js</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc promieniowania krotkofalowego </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="187" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ac4c880ee001af382d098191843b4fafb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_u</definition>
+        <argsstring>(double u)</argsstring>
+        <name>set_u</name>
+        <param>
+          <type>double</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc predkosci wiatru </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="192" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a4f17f1801cbea3b76715fdc873be78b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_aw</definition>
+        <argsstring>(double aw=0.06)</argsstring>
+        <name>set_aw</name>
+        <param>
+          <type>double</type>
+          <declname>aw</declname>
+          <defval>0.06</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc albedo dla wody </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="197" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ae90ff0b43ec0e41e2f40f28df7c9612d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_ea</definition>
+        <argsstring>()</argsstring>
+        <name>set_ea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>oblicza i ustawia wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="202" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="58" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double NetHeatFlux::e_sat</definition>
+        <argsstring>(long double T, double b1=6.12, double b2=17.27, double b3=237.3)</argsstring>
+        <name>e_sat</name>
+        <param>
+          <type>long double</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b1</declname>
+          <defval>6.12</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b2</declname>
+          <defval>17.27</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b3</declname>
+          <defval>237.3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>oblicza wartosc prężności (ciśnienia) pary wodnej (defoltowo wg formuly Raudkivi 1979, Chapra 1997: 6.12 exp(17.27*Ta/(Ta+237.3)) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="206" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.cpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ac6c12bccd613d87ffae5a90b4910eaeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_emis_w</definition>
+        <argsstring>(double emis_w=0.97)</argsstring>
+        <name>set_emis_w</name>
+        <param>
+          <type>double</type>
+          <declname>emis_w</declname>
+          <defval>0.97</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc dla zdolności emisyjnej wody </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="209" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_heat_flux_1ae127a9c31f1bd777f40b9034395d4f96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NetHeatFlux::set_cb</definition>
+        <argsstring>(double cb=0.62)</argsstring>
+        <name>set_cb</name>
+        <param>
+          <type>double</type>
+          <declname>cb</declname>
+          <defval>0.62</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc wspolczynnika Bowena - domyślnie )0.62 mb/stC </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="214" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="214" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa do obliczen członu źródłowego wyminay ciepla z atmosfera. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera metody potrzebane do wyznaczenia wratosci wypadkowego strumienia ciepła na granicy woda powietrze </para>    </detaileddescription>
+    <location file="/home/mkalinow/projects/rmmt/netheatflux.h" line="24" column="1" bodyfile="/home/mkalinow/projects/rmmt/netheatflux.h" bodystart="23" bodyend="238"/>
+    <listofallmembers>
+      <member refid="class_net_heat_flux_1acee95490c0eb642f9c0045f5e1d3a194" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_aw</name></member>
+      <member refid="class_net_heat_flux_1a4dcfff531fce43cc206a64163f05c0f2" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_cb</name></member>
+      <member refid="class_net_heat_flux_1a9cd648c2240f6aaac6884765b9fc6f53" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_ea</name></member>
+      <member refid="class_net_heat_flux_1aaea1abcee787da00bbf9136c97c1867b" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_emis_w</name></member>
+      <member refid="class_net_heat_flux_1ac11fdb67ab9d19a162c51c9a35446ecc" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_Js</name></member>
+      <member refid="class_net_heat_flux_1a16ba12bb53ea0ccacd560118563ce4bc" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_kelvin</name></member>
+      <member refid="class_net_heat_flux_1a0a5da052f33f54112320a5afe1bd358e" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_p0</name></member>
+      <member refid="class_net_heat_flux_1aeb5f08d91c39cad4450aabbefde6181f" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_pa</name></member>
+      <member refid="class_net_heat_flux_1a40fa7f043b4fc94ff706e41d8f936942" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_Rh</name></member>
+      <member refid="class_net_heat_flux_1abaff62eec13bf776e00cfd74ac813d05" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_sigma</name></member>
+      <member refid="class_net_heat_flux_1ab4a1520fb8a617aff127a685c5a1b181" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_Ta</name></member>
+      <member refid="class_net_heat_flux_1ac2d15d1c009cf4b3c8558030dfeced31" prot="private" virt="non-virtual"><scope>NetHeatFlux</scope><name>_u</name></member>
+      <member refid="class_net_heat_flux_1ab3807fc076b38645302be22d62c70c65" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeCondConv</name></member>
+      <member refid="class_net_heat_flux_1a7029244ff808627ebc74a9e74d00abe4" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeEvapCondens</name></member>
+      <member refid="class_net_heat_flux_1a8c35767d0fdf37fd6216e0c2f1e71cc2" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeLongWaveAtmosf</name></member>
+      <member refid="class_net_heat_flux_1a867bd311aaaf67ba057ad24f8e8ba5af" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeLongWaveWater</name></member>
+      <member refid="class_net_heat_flux_1a31570d0c05e45b2a01a05b3976617ac4" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeNetHeatFlux</name></member>
+      <member refid="class_net_heat_flux_1a5bf457660c754e02562840cc90cf00ac" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>ComputeNetSolar</name></member>
+      <member refid="class_net_heat_flux_1a3baa4ec5f1504d7e5c01efd21530637f" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>e_sat</name></member>
+      <member refid="class_net_heat_flux_1a87b1a80ed14554fcaf903a3383f25a77" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>Emissivity_Brunt1932</name></member>
+      <member refid="class_net_heat_flux_1a1f7f06ac4ad2d3e71a2c9c7203ffc833" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_aw</name></member>
+      <member refid="class_net_heat_flux_1a1a1c94edb55d10722782ac1e76f1c8b8" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_ea</name></member>
+      <member refid="class_net_heat_flux_1ab48ea591c24a62581348cc291d565076" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_emis_w</name></member>
+      <member refid="class_net_heat_flux_1a37bddd6b4413bf9a4265b0e6121dc53a" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_Js</name></member>
+      <member refid="class_net_heat_flux_1ab6d1ce8e3f2f4034c256bd32b9285b01" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_pa</name></member>
+      <member refid="class_net_heat_flux_1aaf841691bf132c9b7d26c7ff3a60b798" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_Rh</name></member>
+      <member refid="class_net_heat_flux_1a495d266066abc2afdfc6f67e73e9f5d6" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_Ta</name></member>
+      <member refid="class_net_heat_flux_1ad5d42768c59f90e629dd033a6fd1ac77" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>get_u</name></member>
+      <member refid="class_net_heat_flux_1a6e4c7b7a65cc582fe7f812b10d8dd0ae" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>NetHeatFlux</name></member>
+      <member refid="class_net_heat_flux_1a49a9703237a48c6851464376b0892246" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>NetHeatFlux</name></member>
+      <member refid="class_net_heat_flux_1a4f17f1801cbea3b76715fdc873be78b6" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_aw</name></member>
+      <member refid="class_net_heat_flux_1ae127a9c31f1bd777f40b9034395d4f96" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_cb</name></member>
+      <member refid="class_net_heat_flux_1ae90ff0b43ec0e41e2f40f28df7c9612d" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_ea</name></member>
+      <member refid="class_net_heat_flux_1ac6c12bccd613d87ffae5a90b4910eaeb" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_emis_w</name></member>
+      <member refid="class_net_heat_flux_1a4608ba4ec5bade409d066b9e2370a4a0" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_Js</name></member>
+      <member refid="class_net_heat_flux_1ac4d58893c28e07cd05a7988d098df46b" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_pa</name></member>
+      <member refid="class_net_heat_flux_1a870e6db2db832d88f88a0f75516f39d7" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_Rh</name></member>
+      <member refid="class_net_heat_flux_1a9e9700acebfa6481f24b93c2f7d1efd6" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_Ta</name></member>
+      <member refid="class_net_heat_flux_1ac4c880ee001af382d098191843b4fafb" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>set_u</name></member>
+      <member refid="class_net_heat_flux_1a3209796cc63c1b6f1d8040f7bb815053" prot="public" virt="non-virtual"><scope>NetHeatFlux</scope><name>WindFunction_Chapra2008</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

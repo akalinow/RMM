@@ -1,0 +1,87 @@
+\hypertarget{class_grid_velocity}{}\section{Dokumentacja klasy Grid\+Velocity}
+\label{class_grid_velocity}\index{Grid\+Velocity@{Grid\+Velocity}}
+
+
+Klasa Przygotowujaca siatke do symulacji.  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+Diagram dziedziczenia dla Grid\+Velocity\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid_velocity}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_velocity_afdff39055c5fcd27eb8473cca1fee826}{Grid\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_velocity_a00143f2982252ae30ceb725886c11ab6}{Read\+Data} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, const string \&file, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&sym\+\_\+param)
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa Przygotowujaca siatke do symulacji. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa wspolrzedne pktow przeplywu i pole predkosci a wartosci wspolczynnikow dyspersji sa stale na calej siatce. 
+
+Definicja w linii 220 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_grid_velocity_afdff39055c5fcd27eb8473cca1fee826}{}\index{Grid\+Velocity@{Grid\+Velocity}!Grid\+Velocity@{Grid\+Velocity}}
+\index{Grid\+Velocity@{Grid\+Velocity}!Grid\+Velocity@{Grid\+Velocity}}
+\subsubsection[{Grid\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+Velocity\+::\+Grid\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_velocity_afdff39055c5fcd27eb8473cca1fee826}
+
+
+Konstruktor. 
+
+Tworzy obiekt \hyperlink{class_grid}{Grid} Velocity 
+
+Definicja w linii 226 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_grid_velocity_a00143f2982252ae30ceb725886c11ab6}{}\index{Grid\+Velocity@{Grid\+Velocity}!Read\+Data@{Read\+Data}}
+\index{Read\+Data@{Read\+Data}!Grid\+Velocity@{Grid\+Velocity}}
+\subsubsection[{Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+Velocity\+::\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{const string \&}]{file, }
+\item[{{\bf Simulation\+Parameters} \&}]{sym\+\_\+param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_grid_velocity_a00143f2982252ae30ceb725886c11ab6}
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+{\em file} & -\/ nazwa pliku z danymi \\
+\hline
+{\em sym\+\_\+param} & -\/ obiekt z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+obl max weartosci predkosci 
+
+Reimplementowana z \hyperlink{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}{Grid}.
+
+
+
+Definicja w linii 591 pliku grid.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{grid_8h}{grid.\+h}\item 
+\hyperlink{grid_8cpp}{grid.\+cpp}\end{DoxyCompactItemize}

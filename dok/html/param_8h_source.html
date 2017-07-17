@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>RivMix: Plik źródłowy param.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RivMix.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RivMix
+   &#160;<span id="projectnumber">15.1</span>
+   </div>
+   <div id="projectbrief">River Mixing Model</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('param_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">param.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="param_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/***************************************************************************</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *   param.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *   Copyright (C) 2005 by Monika Kalinowska                               *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *   mkalinow@igf.edu.pl                                                   *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *                                                                         *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ***************************************************************************/</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef PARAM_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define PARAM_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tensor_8h.html">tensor.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scheme_8h.html">scheme.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_simulation_parameters.html">SimulationParameters</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_simulation_parameters.html">SimulationParameters</a>(<span class="keywordtype">string</span> param);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//_________________________________________________________________________________</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ae2858173523e3d44efdb5e7cb1c41785">   40</a></span>&#160;    <a class="code" href="class_simulation_parameters.html#ae2858173523e3d44efdb5e7cb1c41785">~SimulationParameters</a>(<span class="keywordtype">void</span>){};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//____________________________________________________________________________________</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a68fcda888ff9c17f3d8cc548ecb2a971">   53</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_simulation_parameters.html#a68fcda888ff9c17f3d8cc548ecb2a971">get_flag</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _flag;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a9966bac3c9484aeed65d4aa4a7c31c17">   56</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_simulation_parameters.html#a9966bac3c9484aeed65d4aa4a7c31c17">get_n</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _n;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a17ece2a3b38e27abe7902345debcc292">   59</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a17ece2a3b38e27abe7902345debcc292">get_dx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _dx;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ab86fb4ed8f1f9fe460e860e1973cba03">   62</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#ab86fb4ed8f1f9fe460e860e1973cba03">get_dy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _dy;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ad939af4a1bd01ab8d28ae089d3443695">   65</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#ad939af4a1bd01ab8d28ae089d3443695">get_dt</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _dt;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//double get_dtmax() const {return _dtmax;};</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a4d5e46cf9fedbbf3f54730dfd3ae8e48">   72</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a4d5e46cf9fedbbf3f54730dfd3ae8e48">get_vx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vx;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#afafb8a1cd0b36e1a44634ef12f63a131">   75</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#afafb8a1cd0b36e1a44634ef12f63a131">get_vy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vy;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a4c1f68d7b6c1171914b14746e72e1aeb">   78</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a4c1f68d7b6c1171914b14746e72e1aeb">get_vxmax</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vxmax;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a7b16803d329c7487313123a4939be4fd">   81</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a7b16803d329c7487313123a4939be4fd">get_vymax</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vymax;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a3fd57d0fbabac8276a67ffe47e187a7a">   84</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a3fd57d0fbabac8276a67ffe47e187a7a">get_vxmin</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vxmin;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a82fdd4554487c44608ec8481e2238a99">   87</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a82fdd4554487c44608ec8481e2238a99">get_vymin</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vymin;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a3b0ff9c4b88fb8c112bc6fbd69a43363">   91</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a3b0ff9c4b88fb8c112bc6fbd69a43363">get_Dlong</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dlong;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ae5fc90d369cbb210e31d6e052bf77a6d">   94</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#ae5fc90d369cbb210e31d6e052bf77a6d">get_Dtrans</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dtrans;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ad3de01622aedae26ca32c92efa82b164">   97</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#ad3de01622aedae26ca32c92efa82b164">get_Dxxmax</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxxmax;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a3f6624fc83d5fd91e8c70cfb3a73e5f4">  100</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a3f6624fc83d5fd91e8c70cfb3a73e5f4">get_Dyymax</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dyymax;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a61cf0e0d8c8713825c38f130fcb64c74">  103</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a61cf0e0d8c8713825c38f130fcb64c74">get_Dxymax</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxymax;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#aab1156e02ae3d3f48dd77e47481ece90">  106</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#aab1156e02ae3d3f48dd77e47481ece90">get_Dxxmin</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxxmin;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a4c66a266c6943fa10afef74b8332002a">  109</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#a4c66a266c6943fa10afef74b8332002a">get_Dyymin</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dyymin;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ab63e1bb54a319885139aace910da678c">  112</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_simulation_parameters.html#ab63e1bb54a319885139aace910da678c">get_Dxymin</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxymin;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#aac4e34a1ab864d4b0c076a45b74fb98d">  116</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#aac4e34a1ab864d4b0c076a45b74fb98d">get_scheme</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _scheme;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a2d8b7ca6c945714efeef2916b2caaeb3">  119</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#a2d8b7ca6c945714efeef2916b2caaeb3">get_dispersion</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _dispersion;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#aee24f2305aca60bc8d4c4182333abce3">  122</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#aee24f2305aca60bc8d4c4182333abce3">get_gridFile</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _gridFile;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a23dc711ac13c3929910efd5c9877e414">  127</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#a23dc711ac13c3929910efd5c9877e414">get_pollutant</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _pollutant;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ab396fcc5b261e17f81760e1846fc1569">  132</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#ab396fcc5b261e17f81760e1846fc1569">get_dump</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _dump;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a3e1410e837506a6d0f4225c5c224d260">  137</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#a3e1410e837506a6d0f4225c5c224d260">get_area</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _area;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#acc53a811c1a21e0996a0fc044a6b7b3d">  142</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_simulation_parameters.html#acc53a811c1a21e0996a0fc044a6b7b3d">get_mod</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _mod;};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#aaaba7d7f4d33a6f6fa13143979360d31">  146</a></span>&#160;    <a class="code" href="class_d_tensor.html">DTensor</a> *<a class="code" href="class_simulation_parameters.html#aaaba7d7f4d33a6f6fa13143979360d31">get_tensor</a>()<span class="keyword"> const </span>{<span class="comment">/*cout&lt;&lt;&quot;biore tensor&quot;&lt;&lt;endl;*/</span> <span class="keywordflow">return</span> _tensor;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a7b49731434f236aff3bf92e1ce4636e6">  149</a></span>&#160;    <a class="code" href="class_s_scheme.html">SScheme</a> *<a class="code" href="class_simulation_parameters.html#a7b49731434f236aff3bf92e1ce4636e6">get_s_scheme</a>()<span class="keyword"> const </span>{<span class="comment">/*cout&lt;&lt;&quot;biore schemat&quot;&lt;&lt;endl*/</span>; <span class="keywordflow">return</span> _s_scheme;};</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">//____________________________________________________________________________________</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a1c90f74ed579065b2785a6dc5d9c7645">  157</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a1c90f74ed579065b2785a6dc5d9c7645">set_flag</a>(<span class="keywordtype">int</span> flag) {_flag = flag;};</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a310374d248e0fdc02c236936538d2f80">  160</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a310374d248e0fdc02c236936538d2f80">set_n</a>(<span class="keywordtype">int</span> n) {_n = n;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ae06426aa1336727b706234b6bf0a9b2f">  163</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#ae06426aa1336727b706234b6bf0a9b2f">set_dx</a>(<span class="keywordtype">double</span> dx) {_dx = dx;};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a4ea672088cfe311f4fff6ef8fce7b4bb">  166</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a4ea672088cfe311f4fff6ef8fce7b4bb">set_dy</a>(<span class="keywordtype">double</span> dy) {_dy = dy;};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a85f6aea7fcbca0436594e6c73845aab8">  169</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a85f6aea7fcbca0436594e6c73845aab8">set_vx</a>(<span class="keywordtype">double</span> vx) {_vx = vx;};</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a569357bd6d6245684770a80501a45ac4">  172</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a569357bd6d6245684770a80501a45ac4">set_vy</a>(<span class="keywordtype">double</span> vy) {_vy = vy;};</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a3d14efe09cd7ca79b44e12ee3fe8761c">  175</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a3d14efe09cd7ca79b44e12ee3fe8761c">set_vxmax</a>(<span class="keywordtype">double</span> vxmax) {_vxmax = vxmax;};</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ad5df52a205d10f457e3500295884ab7e">  178</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#ad5df52a205d10f457e3500295884ab7e">set_vymax</a>(<span class="keywordtype">double</span> vymax) {_vymax = vymax;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a31a365f0f5d131507ed2608acf8b5fd7">  181</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a31a365f0f5d131507ed2608acf8b5fd7">set_vxmin</a>(<span class="keywordtype">double</span> vxmin) {_vxmin = vxmin;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a1e611a9995e5f7a38ad527c5e13507d9">  184</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a1e611a9995e5f7a38ad527c5e13507d9">set_vymin</a>(<span class="keywordtype">double</span> vymin) {_vymin = vymin;};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#acd9d8da9786d6dce5b78ffcaedfe0a74">  187</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#acd9d8da9786d6dce5b78ffcaedfe0a74">set_Dlong</a>(<span class="keywordtype">double</span> Dlong) {_Dlong = Dlong;};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a4cb8bab39bb4ba86b988edde543d97da">  190</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a4cb8bab39bb4ba86b988edde543d97da">set_Dtrans</a>(<span class="keywordtype">double</span> Dtrans) {_Dtrans = Dtrans;};</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ae2c2b65aff97393dbd1b685e598970fe">  193</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#ae2c2b65aff97393dbd1b685e598970fe">set_dt</a>(<span class="keywordtype">double</span> dt) {_dt = dt;};</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">//void set_dtmax(double dtmax) {_dtmax = dtmax;};</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a2c55847f253f98af295b89f32aa4cc1c">  199</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a2c55847f253f98af295b89f32aa4cc1c">set_Dxxmax</a>(<span class="keywordtype">double</span> Dxxmax) {_Dxxmax = Dxxmax;};</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a7337f50ff0f37ac9936f3586016661bf">  202</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a7337f50ff0f37ac9936f3586016661bf">set_Dyymax</a>(<span class="keywordtype">double</span> Dyymax) {_Dyymax = Dyymax;};</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a93877f3fd2e247afa730d63dd338f4c4">  205</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a93877f3fd2e247afa730d63dd338f4c4">set_Dxymax</a>(<span class="keywordtype">double</span> Dxymax) {_Dxymax = Dxymax;};</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a9a213f854271721cf381ef08d03b805b">  208</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a9a213f854271721cf381ef08d03b805b">set_Dxxmin</a>(<span class="keywordtype">double</span> Dxxmin) {_Dxxmin = Dxxmin;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a26a229a4abb16fd60b9904091b56bd48">  211</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a26a229a4abb16fd60b9904091b56bd48">set_Dyymin</a>(<span class="keywordtype">double</span> Dyymin) {_Dyymin = Dyymin;};</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a5f1a3d9b5357192cdea0da48d37330cc">  214</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a5f1a3d9b5357192cdea0da48d37330cc">set_Dxymin</a>(<span class="keywordtype">double</span> Dxymin) {_Dxymin = Dxymin;};</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">//______________________________________________________________________________</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> set_scheme(<span class="keywordtype">string</span> scheme);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> set_dispersion(<span class="keywordtype">string</span> dispersion);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#ab17f56dbd5bfcfadd13b55665b27222f">  227</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#ab17f56dbd5bfcfadd13b55665b27222f">set_gridFile</a>(<span class="keywordtype">string</span> gridFile) {_gridFile = gridFile;};</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a76420499d58b303411f21c385d82303f">  237</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a76420499d58b303411f21c385d82303f">set_pollutant</a> (<span class="keywordtype">string</span> pollutant) {_pollutant = pollutant;};</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a1848a63487254ccce60bc06886d29847">  245</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a1848a63487254ccce60bc06886d29847">set_dump</a> (<span class="keywordtype">string</span> dump) {_dump = dump;};</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a05862812dec3b947f124886aaea1cb84">  257</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a05862812dec3b947f124886aaea1cb84">set_area</a> (<span class="keywordtype">string</span> area) {_area = area;};</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_simulation_parameters.html#a16d7b0beff55cf45ca7cf23d99fbbd10">  268</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_simulation_parameters.html#a16d7b0beff55cf45ca7cf23d99fbbd10">set_mod</a> (<span class="keywordtype">string</span> mod) {_mod = mod;};</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> ComputePecletNumber(map&lt;int, Point&gt; &amp;PointMap);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> ComputeCourantNumber();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">//_____________________________________________________________________________</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">int</span> _flag, _n;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">double</span> _dx, _dy, _dt, _vx, _vy, _Dlong, _Dtrans;<span class="comment">//, _Dxx, _Dxy, _Dyy,</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="comment">//_Dlmax, _Dtmax, </span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">double</span> _Dxxmax, _Dyymax, _Dxymax, _vxmax, _vymax; <span class="comment">//maxsmlane wartosci zmiennych na siatce</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">double</span> _Dxxmin, _Dyymin, _Dxymin, _vxmin, _vymin; <span class="comment">//minimalne wartosci zmiennych na siatce</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">string</span> _param, _scheme, _dispersion, _gridFile;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">string</span> _pollutant;<span class="comment">// rodzaj zenieszcyszenia dra ktorego wykonywane beda obliczenia</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="comment">//&quot;conc&quot; - zanieczyszczenie chemiczne - sybstancja pasywana </span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;             <span class="comment">//&quot;temp&quot; - zanieczyszczenie teramiczne </span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">string</span> _dump; <span class="comment">// sposób zrzutu zanieczyszczen - chwilowy - &quot;inst&quot;,  lub ciągły - &quot;cont&quot;</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">string</span> _area;   <span class="comment">//obszar zrzutu: </span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <span class="comment">//&quot;point&quot; - w jednym pukcie, </span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="comment">//&quot;points&quot; - w kilku zdefiniowanych punktach, </span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="comment">//&quot;area&quot; - na konkretnym obszare</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="comment">//&quot;gaus&quot; - rokład gausa wokół daneg punktu (diagonalny)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="comment">//&quot;gausnondiag&quot; - rozkład gaussa niediagonalny</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">string</span> _mod; <span class="comment">//czy podawana wartosc temperatury/concentracji jest okreslona w danym punkcie jako wartosc zakladana czy efektywana</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="comment">//&quot;val&quot; - wartosc nominalan koncentracji/temperatury jaka chcemy miec w danym punkcie </span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="comment">//- nie uwzglednia kroku przestrzennego na siatce i glebokosci w danym punkcie siatki </span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                <span class="comment">// na jej podstawie i na podstawie danych o głebokosci w danym pukcie i wartosci natęzenia przepływu zanieczyszcznie</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="comment">// wyznaczana jest wartosc efektywna koncentracji/temperatury</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="comment">//&quot;val_e&quot; - wartosc efektywna koncentracji/temperatury w danym punkcie (powinna uwzgledniac juz  juz krok przestrzenny, glebokosc i natezenie zrzutu) </span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="class_d_tensor.html">DTensor</a> *_tensor; <span class="comment">//wskanik do obiektu pod ktorym bedzie odpowiedni sposob liczenia tensora dyspersji</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="class_d_tensor.html">DTensor</a> _t_simple;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <a class="code" href="class_d_fischer.html">DFischer</a> _t_fischer;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="class_d_vector.html">DVector</a> _t_vector;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="class_d_fischer2.html">DFischer2</a> _t_fischer2;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="class_s_scheme.html">SScheme</a> * _s_scheme; <span class="comment">//wskaznik do obiektu pod ktorym bedzie odpowiedni schemat</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="class_s_crank_nicolson.html">SCrankNicolson</a> _s_CN;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="class_s_up_wind.html">SUpWind</a> _s_UP;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="class_s_a_d_i.html">SADI</a> _s_ADI;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <a class="code" href="class_s_a_d_i2.html">SADI2</a> _s_ADI2;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;};</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_simulation_parameters_html_ae2c2b65aff97393dbd1b685e598970fe"><div class="ttname"><a href="class_simulation_parameters.html#ae2c2b65aff97393dbd1b685e598970fe">SimulationParameters::set_dt</a></div><div class="ttdeci">void set_dt(double dt)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00193">param.h:193</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a61cf0e0d8c8713825c38f130fcb64c74"><div class="ttname"><a href="class_simulation_parameters.html#a61cf0e0d8c8713825c38f130fcb64c74">SimulationParameters::get_Dxymax</a></div><div class="ttdeci">double get_Dxymax() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00103">param.h:103</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_aee24f2305aca60bc8d4c4182333abce3"><div class="ttname"><a href="class_simulation_parameters.html#aee24f2305aca60bc8d4c4182333abce3">SimulationParameters::get_gridFile</a></div><div class="ttdeci">string get_gridFile() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00122">param.h:122</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a2d8b7ca6c945714efeef2916b2caaeb3"><div class="ttname"><a href="class_simulation_parameters.html#a2d8b7ca6c945714efeef2916b2caaeb3">SimulationParameters::get_dispersion</a></div><div class="ttdeci">string get_dispersion() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00119">param.h:119</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a4c1f68d7b6c1171914b14746e72e1aeb"><div class="ttname"><a href="class_simulation_parameters.html#a4c1f68d7b6c1171914b14746e72e1aeb">SimulationParameters::get_vxmax</a></div><div class="ttdeci">double get_vxmax() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00078">param.h:78</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a569357bd6d6245684770a80501a45ac4"><div class="ttname"><a href="class_simulation_parameters.html#a569357bd6d6245684770a80501a45ac4">SimulationParameters::set_vy</a></div><div class="ttdeci">void set_vy(double vy)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00172">param.h:172</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a4c66a266c6943fa10afef74b8332002a"><div class="ttname"><a href="class_simulation_parameters.html#a4c66a266c6943fa10afef74b8332002a">SimulationParameters::get_Dyymin</a></div><div class="ttdeci">double get_Dyymin() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00109">param.h:109</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a7337f50ff0f37ac9936f3586016661bf"><div class="ttname"><a href="class_simulation_parameters.html#a7337f50ff0f37ac9936f3586016661bf">SimulationParameters::set_Dyymax</a></div><div class="ttdeci">void set_Dyymax(double Dyymax)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00202">param.h:202</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_aac4e34a1ab864d4b0c076a45b74fb98d"><div class="ttname"><a href="class_simulation_parameters.html#aac4e34a1ab864d4b0c076a45b74fb98d">SimulationParameters::get_scheme</a></div><div class="ttdeci">string get_scheme() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00116">param.h:116</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a68fcda888ff9c17f3d8cc548ecb2a971"><div class="ttname"><a href="class_simulation_parameters.html#a68fcda888ff9c17f3d8cc548ecb2a971">SimulationParameters::get_flag</a></div><div class="ttdeci">int get_flag() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00053">param.h:53</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ab86fb4ed8f1f9fe460e860e1973cba03"><div class="ttname"><a href="class_simulation_parameters.html#ab86fb4ed8f1f9fe460e860e1973cba03">SimulationParameters::get_dy</a></div><div class="ttdeci">double get_dy() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00062">param.h:62</a></div></div>
+<div class="ttc" id="class_s_crank_nicolson_html"><div class="ttname"><a href="class_s_crank_nicolson.html">SCrankNicolson</a></div><div class="ttdoc">Schemat Cranka Nicolsona. </div><div class="ttdef"><b>Definition:</b> <a href="scheme_8h_source.html#l00193">scheme.h:193</a></div></div>
+<div class="ttc" id="class_s_up_wind_html"><div class="ttname"><a href="class_s_up_wind.html">SUpWind</a></div><div class="ttdoc">Schemat Pod Prad (UpWind). </div><div class="ttdef"><b>Definition:</b> <a href="scheme_8h_source.html#l00240">scheme.h:240</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a9966bac3c9484aeed65d4aa4a7c31c17"><div class="ttname"><a href="class_simulation_parameters.html#a9966bac3c9484aeed65d4aa4a7c31c17">SimulationParameters::get_n</a></div><div class="ttdeci">int get_n() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00056">param.h:56</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a93877f3fd2e247afa730d63dd338f4c4"><div class="ttname"><a href="class_simulation_parameters.html#a93877f3fd2e247afa730d63dd338f4c4">SimulationParameters::set_Dxymax</a></div><div class="ttdeci">void set_Dxymax(double Dxymax)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00205">param.h:205</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a16d7b0beff55cf45ca7cf23d99fbbd10"><div class="ttname"><a href="class_simulation_parameters.html#a16d7b0beff55cf45ca7cf23d99fbbd10">SimulationParameters::set_mod</a></div><div class="ttdeci">void set_mod(string mod)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00268">param.h:268</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a7b16803d329c7487313123a4939be4fd"><div class="ttname"><a href="class_simulation_parameters.html#a7b16803d329c7487313123a4939be4fd">SimulationParameters::get_vymax</a></div><div class="ttdeci">double get_vymax() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00081">param.h:81</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a3fd57d0fbabac8276a67ffe47e187a7a"><div class="ttname"><a href="class_simulation_parameters.html#a3fd57d0fbabac8276a67ffe47e187a7a">SimulationParameters::get_vxmin</a></div><div class="ttdeci">double get_vxmin() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00084">param.h:84</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_s_scheme_html"><div class="ttname"><a href="class_s_scheme.html">SScheme</a></div><div class="ttdoc">Klasa podstawowa Schematow. </div><div class="ttdef"><b>Definition:</b> <a href="scheme_8h_source.html#l00040">scheme.h:40</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a3f6624fc83d5fd91e8c70cfb3a73e5f4"><div class="ttname"><a href="class_simulation_parameters.html#a3f6624fc83d5fd91e8c70cfb3a73e5f4">SimulationParameters::get_Dyymax</a></div><div class="ttdeci">double get_Dyymax() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00100">param.h:100</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ad5df52a205d10f457e3500295884ab7e"><div class="ttname"><a href="class_simulation_parameters.html#ad5df52a205d10f457e3500295884ab7e">SimulationParameters::set_vymax</a></div><div class="ttdeci">void set_vymax(double vymax)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00178">param.h:178</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a4ea672088cfe311f4fff6ef8fce7b4bb"><div class="ttname"><a href="class_simulation_parameters.html#a4ea672088cfe311f4fff6ef8fce7b4bb">SimulationParameters::set_dy</a></div><div class="ttdeci">void set_dy(double dy)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00166">param.h:166</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ae5fc90d369cbb210e31d6e052bf77a6d"><div class="ttname"><a href="class_simulation_parameters.html#ae5fc90d369cbb210e31d6e052bf77a6d">SimulationParameters::get_Dtrans</a></div><div class="ttdeci">double get_Dtrans() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00094">param.h:94</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a3e1410e837506a6d0f4225c5c224d260"><div class="ttname"><a href="class_simulation_parameters.html#a3e1410e837506a6d0f4225c5c224d260">SimulationParameters::get_area</a></div><div class="ttdeci">string get_area() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00137">param.h:137</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a4d5e46cf9fedbbf3f54730dfd3ae8e48"><div class="ttname"><a href="class_simulation_parameters.html#a4d5e46cf9fedbbf3f54730dfd3ae8e48">SimulationParameters::get_vx</a></div><div class="ttdeci">double get_vx() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00072">param.h:72</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_acd9d8da9786d6dce5b78ffcaedfe0a74"><div class="ttname"><a href="class_simulation_parameters.html#acd9d8da9786d6dce5b78ffcaedfe0a74">SimulationParameters::set_Dlong</a></div><div class="ttdeci">void set_Dlong(double Dlong)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00187">param.h:187</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a05862812dec3b947f124886aaea1cb84"><div class="ttname"><a href="class_simulation_parameters.html#a05862812dec3b947f124886aaea1cb84">SimulationParameters::set_area</a></div><div class="ttdeci">void set_area(string area)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00257">param.h:257</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ab63e1bb54a319885139aace910da678c"><div class="ttname"><a href="class_simulation_parameters.html#ab63e1bb54a319885139aace910da678c">SimulationParameters::get_Dxymin</a></div><div class="ttdeci">double get_Dxymin() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00112">param.h:112</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a9a213f854271721cf381ef08d03b805b"><div class="ttname"><a href="class_simulation_parameters.html#a9a213f854271721cf381ef08d03b805b">SimulationParameters::set_Dxxmin</a></div><div class="ttdeci">void set_Dxxmin(double Dxxmin)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00208">param.h:208</a></div></div>
+<div class="ttc" id="tensor_8h_html"><div class="ttname"><a href="tensor_8h.html">tensor.h</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a310374d248e0fdc02c236936538d2f80"><div class="ttname"><a href="class_simulation_parameters.html#a310374d248e0fdc02c236936538d2f80">SimulationParameters::set_n</a></div><div class="ttdeci">void set_n(int n)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00160">param.h:160</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a7b49731434f236aff3bf92e1ce4636e6"><div class="ttname"><a href="class_simulation_parameters.html#a7b49731434f236aff3bf92e1ce4636e6">SimulationParameters::get_s_scheme</a></div><div class="ttdeci">SScheme * get_s_scheme() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00149">param.h:149</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a26a229a4abb16fd60b9904091b56bd48"><div class="ttname"><a href="class_simulation_parameters.html#a26a229a4abb16fd60b9904091b56bd48">SimulationParameters::set_Dyymin</a></div><div class="ttdeci">void set_Dyymin(double Dyymin)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00211">param.h:211</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a3d14efe09cd7ca79b44e12ee3fe8761c"><div class="ttname"><a href="class_simulation_parameters.html#a3d14efe09cd7ca79b44e12ee3fe8761c">SimulationParameters::set_vxmax</a></div><div class="ttdeci">void set_vxmax(double vxmax)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00175">param.h:175</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html"><div class="ttname"><a href="class_simulation_parameters.html">SimulationParameters</a></div><div class="ttdoc">Klasa z parametrami symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00026">param.h:26</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ae2858173523e3d44efdb5e7cb1c41785"><div class="ttname"><a href="class_simulation_parameters.html#ae2858173523e3d44efdb5e7cb1c41785">SimulationParameters::~SimulationParameters</a></div><div class="ttdeci">~SimulationParameters(void)</div><div class="ttdoc">Destruktor. </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00040">param.h:40</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a31a365f0f5d131507ed2608acf8b5fd7"><div class="ttname"><a href="class_simulation_parameters.html#a31a365f0f5d131507ed2608acf8b5fd7">SimulationParameters::set_vxmin</a></div><div class="ttdeci">void set_vxmin(double vxmin)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00181">param.h:181</a></div></div>
+<div class="ttc" id="class_d_tensor_html"><div class="ttname"><a href="class_d_tensor.html">DTensor</a></div><div class="ttdoc">Klasa podstawowa tensora dyspersji. </div><div class="ttdef"><b>Definition:</b> <a href="tensor_8h_source.html#l00025">tensor.h:25</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a5f1a3d9b5357192cdea0da48d37330cc"><div class="ttname"><a href="class_simulation_parameters.html#a5f1a3d9b5357192cdea0da48d37330cc">SimulationParameters::set_Dxymin</a></div><div class="ttdeci">void set_Dxymin(double Dxymin)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00214">param.h:214</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a76420499d58b303411f21c385d82303f"><div class="ttname"><a href="class_simulation_parameters.html#a76420499d58b303411f21c385d82303f">SimulationParameters::set_pollutant</a></div><div class="ttdeci">void set_pollutant(string pollutant)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00237">param.h:237</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a1848a63487254ccce60bc06886d29847"><div class="ttname"><a href="class_simulation_parameters.html#a1848a63487254ccce60bc06886d29847">SimulationParameters::set_dump</a></div><div class="ttdeci">void set_dump(string dump)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00245">param.h:245</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a85f6aea7fcbca0436594e6c73845aab8"><div class="ttname"><a href="class_simulation_parameters.html#a85f6aea7fcbca0436594e6c73845aab8">SimulationParameters::set_vx</a></div><div class="ttdeci">void set_vx(double vx)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00169">param.h:169</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a1e611a9995e5f7a38ad527c5e13507d9"><div class="ttname"><a href="class_simulation_parameters.html#a1e611a9995e5f7a38ad527c5e13507d9">SimulationParameters::set_vymin</a></div><div class="ttdeci">void set_vymin(double vymin)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00184">param.h:184</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ab396fcc5b261e17f81760e1846fc1569"><div class="ttname"><a href="class_simulation_parameters.html#ab396fcc5b261e17f81760e1846fc1569">SimulationParameters::get_dump</a></div><div class="ttdeci">string get_dump() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00132">param.h:132</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a4cb8bab39bb4ba86b988edde543d97da"><div class="ttname"><a href="class_simulation_parameters.html#a4cb8bab39bb4ba86b988edde543d97da">SimulationParameters::set_Dtrans</a></div><div class="ttdeci">void set_Dtrans(double Dtrans)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00190">param.h:190</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_aaaba7d7f4d33a6f6fa13143979360d31"><div class="ttname"><a href="class_simulation_parameters.html#aaaba7d7f4d33a6f6fa13143979360d31">SimulationParameters::get_tensor</a></div><div class="ttdeci">DTensor * get_tensor() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00146">param.h:146</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a2c55847f253f98af295b89f32aa4cc1c"><div class="ttname"><a href="class_simulation_parameters.html#a2c55847f253f98af295b89f32aa4cc1c">SimulationParameters::set_Dxxmax</a></div><div class="ttdeci">void set_Dxxmax(double Dxxmax)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00199">param.h:199</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a17ece2a3b38e27abe7902345debcc292"><div class="ttname"><a href="class_simulation_parameters.html#a17ece2a3b38e27abe7902345debcc292">SimulationParameters::get_dx</a></div><div class="ttdeci">double get_dx() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00059">param.h:59</a></div></div>
+<div class="ttc" id="class_d_vector_html"><div class="ttname"><a href="class_d_vector.html">DVector</a></div><div class="ttdoc">Klasa tensora dyspersji. </div><div class="ttdef"><b>Definition:</b> <a href="tensor_8h_source.html#l00088">tensor.h:88</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a1c90f74ed579065b2785a6dc5d9c7645"><div class="ttname"><a href="class_simulation_parameters.html#a1c90f74ed579065b2785a6dc5d9c7645">SimulationParameters::set_flag</a></div><div class="ttdeci">void set_flag(int flag)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00157">param.h:157</a></div></div>
+<div class="ttc" id="class_d_fischer_html"><div class="ttname"><a href="class_d_fischer.html">DFischer</a></div><div class="ttdoc">Klasa tensora dyspersji. </div><div class="ttdef"><b>Definition:</b> <a href="tensor_8h_source.html#l00051">tensor.h:51</a></div></div>
+<div class="ttc" id="class_d_fischer2_html"><div class="ttname"><a href="class_d_fischer2.html">DFischer2</a></div><div class="ttdoc">Klasa tensora dyspersji. </div><div class="ttdef"><b>Definition:</b> <a href="tensor_8h_source.html#l00069">tensor.h:69</a></div></div>
+<div class="ttc" id="class_s_a_d_i2_html"><div class="ttname"><a href="class_s_a_d_i2.html">SADI2</a></div><div class="ttdoc">Schemat naprzemiennych kierunkow ADI . </div><div class="ttdef"><b>Definition:</b> <a href="scheme_8h_source.html#l00331">scheme.h:331</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ad3de01622aedae26ca32c92efa82b164"><div class="ttname"><a href="class_simulation_parameters.html#ad3de01622aedae26ca32c92efa82b164">SimulationParameters::get_Dxxmax</a></div><div class="ttdeci">double get_Dxxmax() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00097">param.h:97</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a3b0ff9c4b88fb8c112bc6fbd69a43363"><div class="ttname"><a href="class_simulation_parameters.html#a3b0ff9c4b88fb8c112bc6fbd69a43363">SimulationParameters::get_Dlong</a></div><div class="ttdeci">double get_Dlong() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00091">param.h:91</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a23dc711ac13c3929910efd5c9877e414"><div class="ttname"><a href="class_simulation_parameters.html#a23dc711ac13c3929910efd5c9877e414">SimulationParameters::get_pollutant</a></div><div class="ttdeci">string get_pollutant() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00127">param.h:127</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ab17f56dbd5bfcfadd13b55665b27222f"><div class="ttname"><a href="class_simulation_parameters.html#ab17f56dbd5bfcfadd13b55665b27222f">SimulationParameters::set_gridFile</a></div><div class="ttdeci">void set_gridFile(string gridFile)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00227">param.h:227</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_ad939af4a1bd01ab8d28ae089d3443695"><div class="ttname"><a href="class_simulation_parameters.html#ad939af4a1bd01ab8d28ae089d3443695">SimulationParameters::get_dt</a></div><div class="ttdeci">double get_dt() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00065">param.h:65</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_aab1156e02ae3d3f48dd77e47481ece90"><div class="ttname"><a href="class_simulation_parameters.html#aab1156e02ae3d3f48dd77e47481ece90">SimulationParameters::get_Dxxmin</a></div><div class="ttdeci">double get_Dxxmin() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00106">param.h:106</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_acc53a811c1a21e0996a0fc044a6b7b3d"><div class="ttname"><a href="class_simulation_parameters.html#acc53a811c1a21e0996a0fc044a6b7b3d">SimulationParameters::get_mod</a></div><div class="ttdeci">string get_mod() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00142">param.h:142</a></div></div>
+<div class="ttc" id="scheme_8h_html"><div class="ttname"><a href="scheme_8h.html">scheme.h</a></div><div class="ttdoc">Zawiera definicje kals SScheme, SCrankNicolson, SUpWind, SADI, SADI2. </div></div>
+<div class="ttc" id="class_simulation_parameters_html_ae06426aa1336727b706234b6bf0a9b2f"><div class="ttname"><a href="class_simulation_parameters.html#ae06426aa1336727b706234b6bf0a9b2f">SimulationParameters::set_dx</a></div><div class="ttdeci">void set_dx(double dx)</div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00163">param.h:163</a></div></div>
+<div class="ttc" id="class_s_a_d_i_html"><div class="ttname"><a href="class_s_a_d_i.html">SADI</a></div><div class="ttdoc">Schemat naprzemiennych kierunkow ADI . </div><div class="ttdef"><b>Definition:</b> <a href="scheme_8h_source.html#l00283">scheme.h:283</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_a82fdd4554487c44608ec8481e2238a99"><div class="ttname"><a href="class_simulation_parameters.html#a82fdd4554487c44608ec8481e2238a99">SimulationParameters::get_vymin</a></div><div class="ttdeci">double get_vymin() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00087">param.h:87</a></div></div>
+<div class="ttc" id="class_simulation_parameters_html_afafb8a1cd0b36e1a44634ef12f63a131"><div class="ttname"><a href="class_simulation_parameters.html#afafb8a1cd0b36e1a44634ef12f63a131">SimulationParameters::get_vy</a></div><div class="ttdeci">double get_vy() const </div><div class="ttdef"><b>Definition:</b> <a href="param_8h_source.html#l00075">param.h:75</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="param_8h.html">param.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

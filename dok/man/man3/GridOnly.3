@@ -1,0 +1,63 @@
+.TH "GridOnly" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GridOnly \- Klasa Przygotowujaca siatke do symulacji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <grid\&.h>\fP
+.PP
+Dziedziczy \fBGrid\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBGridOnly\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "int \fBReadData\fP (map< int, \fBPoint\fP > &PointMap, const string &file, \fBSimulationParameters\fP &sym_param)"
+.br
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Klasa Przygotowujaca siatke do symulacji\&. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa tylko wspolrzedne pktow przeplywu, a wartosci predkosci i wspolczynniki dyspersji sa stale na calej siatce\&. 
+.PP
+Definicja w linii 197 pliku grid\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "GridOnly::GridOnly ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt \fBGrid\fP Only 
+.PP
+Definicja w linii 204 pliku grid\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "int GridOnly::ReadData (map< int, \fBPoint\fP > & PointMap, const string & file, \fBSimulationParameters\fP & sym_param)\fC [virtual]\fP"
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.br
+\fIfile\fP - nazwa pliku z danymi 
+.br
+\fIsym_param\fP - obiekt z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBGrid\fP\&.
+.PP
+Definicja w linii 520 pliku grid\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

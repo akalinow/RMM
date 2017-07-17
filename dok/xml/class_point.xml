@@ -1,0 +1,1257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_point" kind="class" language="C++" prot="public">
+    <compoundname>Point</compoundname>
+    <includes refid="point_8h" local="no">point.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_point_1a3384c3194e3d3c3196317013929e40d4" prot="public" static="yes" mutable="no">
+        <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; *</type>
+        <definition>map&lt; int, Point &gt; * Point::_PointMap</definition>
+        <argsstring></argsstring>
+        <name>_PointMap</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>tylko jedna mapa moze byc </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="228" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_point_1a77b9bd094b57efb7c185fdb3fb781900" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_x</definition>
+        <argsstring></argsstring>
+        <name>_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="236" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1aa8be383c30dee092979999b523373658" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_y</definition>
+        <argsstring></argsstring>
+        <name>_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="236" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a3acfb6021e5746d9cc35ffe91f0047e9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_vx</definition>
+        <argsstring></argsstring>
+        <name>_vx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="237" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a569a1383150dd07eff1a39c8ce05b232" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_vy</definition>
+        <argsstring></argsstring>
+        <name>_vy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="237" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1af8ddd1ccbca9110a2e00874b81d9cecb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_Dxx</definition>
+        <argsstring></argsstring>
+        <name>_Dxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="238" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1adb3bb6ba4907d9616b7d1ef3981cd4a8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_Dyy</definition>
+        <argsstring></argsstring>
+        <name>_Dyy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="238" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1ab9873848f009524ba3ae9e0a4839906e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_Dxy</definition>
+        <argsstring></argsstring>
+        <name>_Dxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="238" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1ab686837dd96c9ce8364fd60f382cafeb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Point::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="239" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a66ab7a382c07b68816d1d8775093b82f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Point::_type1</definition>
+        <argsstring></argsstring>
+        <name>_type1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="239" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a1820ce0863585523011c9bc6885b36b0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Point::_flag</definition>
+        <argsstring></argsstring>
+        <name>_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="239" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a436aea433835f8e2cb9ada422b59a675" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double Point::_valCurr</definition>
+        <argsstring></argsstring>
+        <name>_valCurr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="241" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1adf8615aa5862995569c3a8501d0a17a1" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double Point::_valPrev</definition>
+        <argsstring></argsstring>
+        <name>_valPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="241" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a7121deb5f6c826af5240fc2c12e51a7f" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double Point::_valNext</definition>
+        <argsstring></argsstring>
+        <name>_valNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="241" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1ae6d235014da28eecd487daf0263110ac" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_CurAx</definition>
+        <argsstring></argsstring>
+        <name>_CurAx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="243" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a13808603c04997503a17510fd6ce2661" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_CurAy</definition>
+        <argsstring></argsstring>
+        <name>_CurAy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="243" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a15e30425405c803797374bc8753672c2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_CurDx</definition>
+        <argsstring></argsstring>
+        <name>_CurDx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="244" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a6211e573edcd95a91ffed58285499f0e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_CurDxy</definition>
+        <argsstring></argsstring>
+        <name>_CurDxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="244" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1af9a68d1e21ea9f1e11939ffba970e59e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Point::_CurDy</definition>
+        <argsstring></argsstring>
+        <name>_CurDy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="244" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a9bd32c79e9a03e7747be9d0f7e876591" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_point" kindref="compound">Point</ref> * &gt;</type>
+        <definition>vector&lt;Point *&gt; Point::_near_neighboursPtr</definition>
+        <argsstring></argsstring>
+        <name>_near_neighboursPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="249" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1ac8670d81fb3fa8cb75894ac04264b175" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Point::_near_neighbours</definition>
+        <argsstring></argsstring>
+        <name>_near_neighbours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="250" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1abb316f95882e2a83089674904a9cc638" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_point" kindref="compound">Point</ref> * &gt;</type>
+        <definition>vector&lt;Point *&gt; Point::_distant_neighboursPtr</definition>
+        <argsstring></argsstring>
+        <name>_distant_neighboursPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="257" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1a60682f8dd4000fc7b59c1a04224b284e" prot="private" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; Point::_distant_neighbours</definition>
+        <argsstring></argsstring>
+        <name>_distant_neighbours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="258" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1ac3d39bedff415f96ea0cc5e7ce00f038" prot="private" static="no" mutable="no">
+        <type>map&lt; string, double &gt;</type>
+        <definition>map&lt;string, double&gt; Point::_factors</definition>
+        <argsstring></argsstring>
+        <name>_factors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="265" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_point_1afe8bd12f0dd3eaadfc9e485f18a8c943" prot="private" static="no" mutable="no">
+        <type>map&lt; string, double &gt;</type>
+        <definition>map&lt;string, double&gt; Point::_factors_fij</definition>
+        <argsstring></argsstring>
+        <name>_factors_fij</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="269" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_point_1ac7a42329250c07c3f7e8c688ab1c1fcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(double x, double y, int type, int type1)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type1</declname>
+        </param>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy Punkt <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>-</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nazwa pliku z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="43" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ac77aa12fe810c6a1409fb63c64a70521" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(double x, double y, int flag)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="50" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aa26891d8be99659f996873b6cf3e6a9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(double x, double y, double vx, double vy, int flag)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="57" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ac13d6b1e1fb4aa41b8f17d298afbb15e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(double x, double y, double vx, double vy, double Dxx, double Dyy, double Dxy, int flag)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dxx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dyy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dxy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="64" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a29c1d7d3887b5df5fb43ece80c7ee633" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>(double x, double y, double Dxx, double Dyy, double Dxy, int flag)</argsstring>
+        <name>Point</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dxx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dyy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dxy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="71" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ad92f2337b839a94ce97dcdb439b4325a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Point::Point</definition>
+        <argsstring>()</argsstring>
+        <name>Point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="78" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ae6971f02ce5cf409b2e3dec6f873a9df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Point::get_flag</definition>
+        <argsstring>() const </argsstring>
+        <name>get_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca flage pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="86" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_x</definition>
+        <argsstring>() const </argsstring>
+        <name>get_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wspolrzednza x pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="89" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ac4f7350d9c545e907b0c513a03201c4b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_y</definition>
+        <argsstring>() const </argsstring>
+        <name>get_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wspolrzednza y pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="92" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aaea8d464458b82d80848895b6d828db9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double Point::get_Next</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc nastepna </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="95" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a7a14be44e32b2987324213788b3b0593" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double Point::get_Curr</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Curr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc obecna </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="98" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a7f61780c19bf584c97fcdb432e2d6e08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double Point::get_Prev</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc poprzednia </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="101" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_vx</definition>
+        <argsstring>() const </argsstring>
+        <name>get_vx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc wspolrzednej Vx predkosci w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="104" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a6ed9a9e001af8ca030c648c280a05c69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_vy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_vy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc wspolrzednej Vy predkosci w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="107" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aef2637aabdb8e7dae3b20e67dfdc6e7a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_Dxx</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Dxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc wspolczynnika tensors dyspersji Dxx w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="110" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ad5be3c0b4fd5f65bc00ab3787361329c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_Dxy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Dxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc wspolczynnika tensora dyspersji Dxy w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="113" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a4b4279a85ad655a77d90831c805a59e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_Dyy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_Dyy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca wartosc wspolczynnika dyspersji Dy w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="116" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aecfeb69a6a1ec3001343e9734e2e9746" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_CurAx</definition>
+        <argsstring>() const </argsstring>
+        <name>get_CurAx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwaraca wartosc liczby Couranta dla danego pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="119" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a3fc8a4d0cba11093f4468a52f641c517" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_CurAy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_CurAy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="120" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1af2fef2c2ec81c04fe713f381ca2b2998" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_CurDx</definition>
+        <argsstring>() const </argsstring>
+        <name>get_CurDx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="121" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a6b98226c33a0e7ba2302c13e33e25ea5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_CurDxy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_CurDxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="122" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ab32d6e369d8cfc8beeb1e8c20c2a26bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_CurDy</definition>
+        <argsstring>() const </argsstring>
+        <name>get_CurDy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="123" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a392f5d75605bd50620e2051ee15bc771" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_factor_f</definition>
+        <argsstring>(string f) const </argsstring>
+        <name>get_factor_f</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwaraca wartosc liczb Peclet-a dla danego pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="132" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a0d5dc8de308faf6875fa36074d6fc0f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Point::get_factor</definition>
+        <argsstring>(string f) const </argsstring>
+        <name>get_factor</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="133" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a762956127e312f695530da058488fa22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; *</type>
+        <definition>map&lt;int, Point&gt;* Point::get_map</definition>
+        <argsstring>() const </argsstring>
+        <name>get_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca mape do ktorej pkt nalezy </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="139" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a1cb03d7d73b39c92b7e56240b9184955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Point::get_near_neighbour</definition>
+        <argsstring>(int nr)</argsstring>
+        <name>get_near_neighbour</name>
+        <param>
+          <type>int</type>
+          <declname>nr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca index odpowieniengo sasiada z najblizszych sasiadow </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="142" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a64866cd58b7216bc8cbebe6dc8b46df1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Point::get_distant_neighbours</definition>
+        <argsstring>(int number)</argsstring>
+        <name>get_distant_neighbours</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>zwraca index odpowieniengo sasiada z dalszych sasiadow </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="145" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ac0be2a43c354fed97e018c2b8fbf63b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_flag</definition>
+        <argsstring>(int f)</argsstring>
+        <name>set_flag</name>
+        <param>
+          <type>int</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia flage pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="150" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1adaaf2fe64c78448b3c8d6e121ae3bca0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_x</definition>
+        <argsstring>(double x)</argsstring>
+        <name>set_x</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wspolrzedna x pkt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="153" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a44bf07535f5dd99991a274833462379b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_y</definition>
+        <argsstring>(double y)</argsstring>
+        <name>set_y</name>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wspolrzedna y pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="156" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ab68cfb3cd44fe4624dd89ec5b9275350" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_vx</definition>
+        <argsstring>(double vX)</argsstring>
+        <name>set_vx</name>
+        <param>
+          <type>double</type>
+          <declname>vX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc skladowej x predkosci </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="159" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aae045afff208fbd09dc3e466a0768781" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_vy</definition>
+        <argsstring>(double vY)</argsstring>
+        <name>set_vy</name>
+        <param>
+          <type>double</type>
+          <declname>vY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia wartosc skaldowej y predkosci </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="162" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Dxx</definition>
+        <argsstring>(double Dx)</argsstring>
+        <name>set_Dxx</name>
+        <param>
+          <type>double</type>
+          <declname>Dx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="165" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Dxy</definition>
+        <argsstring>(double Dxy)</argsstring>
+        <name>set_Dxy</name>
+        <param>
+          <type>double</type>
+          <declname>Dxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc wspolczynnika tensora dyspersji Dxx w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="168" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Dyy</definition>
+        <argsstring>(double Dy)</argsstring>
+        <name>set_Dyy</name>
+        <param>
+          <type>double</type>
+          <declname>Dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc wspolczynnika tensora dyspersji Dyy w danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="171" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="171" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a1efdadc2ab2df0ba02ede0b23a3c2b40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Prev</definition>
+        <argsstring>(long double val)</argsstring>
+        <name>set_Prev</name>
+        <param>
+          <type>long double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc poprzednia dla pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="174" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a1f21dc53976e93ad52cfd2eafdb94209" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Curr</definition>
+        <argsstring>(long double val)</argsstring>
+        <name>set_Curr</name>
+        <param>
+          <type>long double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc w pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="177" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a9be4fd3f7363583345023997921895ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Next</definition>
+        <argsstring>(long double val)</argsstring>
+        <name>set_Next</name>
+        <param>
+          <type>long double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustwaia wartosc nastepna dla pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="180" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="180" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1ac25220ccb634802bdebc6de755afc807" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_factor_fij</definition>
+        <argsstring>(string f, double val)</argsstring>
+        <name>set_factor_fij</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="182" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="182" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a9f37bcdde4f274fc2c9ee4e39fad9b22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_factor</definition>
+        <argsstring>(string f, double val)</argsstring>
+        <name>set_factor</name>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="184" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a743e76edf28eaf25c726051b66c2e256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_map</definition>
+        <argsstring>(map&lt; int, Point &gt; *Map)</argsstring>
+        <name>set_map</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; *</type>
+          <declname>Map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ustawia mape dla pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="187" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="187" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a6c692685f4895204fb073a7a588dac29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_near_neighbours</definition>
+        <argsstring>(int opt=1)</argsstring>
+        <name>set_near_neighbours</name>
+        <param>
+          <type>int</type>
+          <declname>opt</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia najblizszych sasiadow danego pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="191" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.cpp" bodystart="23" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1aa3c1caf1c115df1bdf3ba45357f072ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_distant_neighbours</definition>
+        <argsstring>(int opt=1)</argsstring>
+        <name>set_distant_neighbours</name>
+        <param>
+          <type>int</type>
+          <declname>opt</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia dalszych sasiadow danego pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="195" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.cpp" bodystart="169" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1abc3f1cb86556e34771306b46eac6a19a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::set_Courant_numbers</definition>
+        <argsstring>(double dx, double dy, double dt)</argsstring>
+        <name>set_Courant_numbers</name>
+        <param>
+          <type>double</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Oblicza liczby adwekcyjne i dyfuzyjne Couranta dla danego pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="199" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.cpp" bodystart="218" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a20b27dff6a871012fa5e7c0d52fd6b98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Point::print</definition>
+        <argsstring>() const </argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Oblicza liczby Pecleta dla danego pkt</para><para>wypisuje na ekranie informacje o danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="207" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_point_1a0d3c6e86bf5796952b0ac6d6092f7747" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Point::operator&lt;</definition>
+        <argsstring>(const Point &amp;obj) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>porownuje inny pkt z aktualnym </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="220" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="220" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_point_1a63cebd1e00f14bdabf5000aa76174b03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const Point &amp;obj)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>wypisuje informacje o danym pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/point.h" line="211" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="211" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa opisujaca Punkt. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera wszystkie informacje na temat konkretnego Punktu siatki, metody do ich ustawiaenia i dobrania sie do nich </para>    </detaileddescription>
+    <location file="/home/mkalinow/projects/rmmt/point.h" line="34" column="1" bodyfile="/home/mkalinow/projects/rmmt/point.h" bodystart="34" bodyend="270"/>
+    <listofallmembers>
+      <member refid="class_point_1ae6d235014da28eecd487daf0263110ac" prot="private" virt="non-virtual"><scope>Point</scope><name>_CurAx</name></member>
+      <member refid="class_point_1a13808603c04997503a17510fd6ce2661" prot="private" virt="non-virtual"><scope>Point</scope><name>_CurAy</name></member>
+      <member refid="class_point_1a15e30425405c803797374bc8753672c2" prot="private" virt="non-virtual"><scope>Point</scope><name>_CurDx</name></member>
+      <member refid="class_point_1a6211e573edcd95a91ffed58285499f0e" prot="private" virt="non-virtual"><scope>Point</scope><name>_CurDxy</name></member>
+      <member refid="class_point_1af9a68d1e21ea9f1e11939ffba970e59e" prot="private" virt="non-virtual"><scope>Point</scope><name>_CurDy</name></member>
+      <member refid="class_point_1a60682f8dd4000fc7b59c1a04224b284e" prot="private" virt="non-virtual"><scope>Point</scope><name>_distant_neighbours</name></member>
+      <member refid="class_point_1abb316f95882e2a83089674904a9cc638" prot="private" virt="non-virtual"><scope>Point</scope><name>_distant_neighboursPtr</name></member>
+      <member refid="class_point_1af8ddd1ccbca9110a2e00874b81d9cecb" prot="private" virt="non-virtual"><scope>Point</scope><name>_Dxx</name></member>
+      <member refid="class_point_1ab9873848f009524ba3ae9e0a4839906e" prot="private" virt="non-virtual"><scope>Point</scope><name>_Dxy</name></member>
+      <member refid="class_point_1adb3bb6ba4907d9616b7d1ef3981cd4a8" prot="private" virt="non-virtual"><scope>Point</scope><name>_Dyy</name></member>
+      <member refid="class_point_1ac3d39bedff415f96ea0cc5e7ce00f038" prot="private" virt="non-virtual"><scope>Point</scope><name>_factors</name></member>
+      <member refid="class_point_1afe8bd12f0dd3eaadfc9e485f18a8c943" prot="private" virt="non-virtual"><scope>Point</scope><name>_factors_fij</name></member>
+      <member refid="class_point_1a1820ce0863585523011c9bc6885b36b0" prot="private" virt="non-virtual"><scope>Point</scope><name>_flag</name></member>
+      <member refid="class_point_1ac8670d81fb3fa8cb75894ac04264b175" prot="private" virt="non-virtual"><scope>Point</scope><name>_near_neighbours</name></member>
+      <member refid="class_point_1a9bd32c79e9a03e7747be9d0f7e876591" prot="private" virt="non-virtual"><scope>Point</scope><name>_near_neighboursPtr</name></member>
+      <member refid="class_point_1a3384c3194e3d3c3196317013929e40d4" prot="public" virt="non-virtual"><scope>Point</scope><name>_PointMap</name></member>
+      <member refid="class_point_1ab686837dd96c9ce8364fd60f382cafeb" prot="private" virt="non-virtual"><scope>Point</scope><name>_type</name></member>
+      <member refid="class_point_1a66ab7a382c07b68816d1d8775093b82f" prot="private" virt="non-virtual"><scope>Point</scope><name>_type1</name></member>
+      <member refid="class_point_1a436aea433835f8e2cb9ada422b59a675" prot="private" virt="non-virtual"><scope>Point</scope><name>_valCurr</name></member>
+      <member refid="class_point_1a7121deb5f6c826af5240fc2c12e51a7f" prot="private" virt="non-virtual"><scope>Point</scope><name>_valNext</name></member>
+      <member refid="class_point_1adf8615aa5862995569c3a8501d0a17a1" prot="private" virt="non-virtual"><scope>Point</scope><name>_valPrev</name></member>
+      <member refid="class_point_1a3acfb6021e5746d9cc35ffe91f0047e9" prot="private" virt="non-virtual"><scope>Point</scope><name>_vx</name></member>
+      <member refid="class_point_1a569a1383150dd07eff1a39c8ce05b232" prot="private" virt="non-virtual"><scope>Point</scope><name>_vy</name></member>
+      <member refid="class_point_1a77b9bd094b57efb7c185fdb3fb781900" prot="private" virt="non-virtual"><scope>Point</scope><name>_x</name></member>
+      <member refid="class_point_1aa8be383c30dee092979999b523373658" prot="private" virt="non-virtual"><scope>Point</scope><name>_y</name></member>
+      <member refid="class_point_1aecfeb69a6a1ec3001343e9734e2e9746" prot="public" virt="non-virtual"><scope>Point</scope><name>get_CurAx</name></member>
+      <member refid="class_point_1a3fc8a4d0cba11093f4468a52f641c517" prot="public" virt="non-virtual"><scope>Point</scope><name>get_CurAy</name></member>
+      <member refid="class_point_1af2fef2c2ec81c04fe713f381ca2b2998" prot="public" virt="non-virtual"><scope>Point</scope><name>get_CurDx</name></member>
+      <member refid="class_point_1a6b98226c33a0e7ba2302c13e33e25ea5" prot="public" virt="non-virtual"><scope>Point</scope><name>get_CurDxy</name></member>
+      <member refid="class_point_1ab32d6e369d8cfc8beeb1e8c20c2a26bd" prot="public" virt="non-virtual"><scope>Point</scope><name>get_CurDy</name></member>
+      <member refid="class_point_1a7a14be44e32b2987324213788b3b0593" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Curr</name></member>
+      <member refid="class_point_1a64866cd58b7216bc8cbebe6dc8b46df1" prot="public" virt="non-virtual"><scope>Point</scope><name>get_distant_neighbours</name></member>
+      <member refid="class_point_1aef2637aabdb8e7dae3b20e67dfdc6e7a" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Dxx</name></member>
+      <member refid="class_point_1ad5be3c0b4fd5f65bc00ab3787361329c" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Dxy</name></member>
+      <member refid="class_point_1a4b4279a85ad655a77d90831c805a59e6" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Dyy</name></member>
+      <member refid="class_point_1a0d5dc8de308faf6875fa36074d6fc0f0" prot="public" virt="non-virtual"><scope>Point</scope><name>get_factor</name></member>
+      <member refid="class_point_1a392f5d75605bd50620e2051ee15bc771" prot="public" virt="non-virtual"><scope>Point</scope><name>get_factor_f</name></member>
+      <member refid="class_point_1ae6971f02ce5cf409b2e3dec6f873a9df" prot="public" virt="non-virtual"><scope>Point</scope><name>get_flag</name></member>
+      <member refid="class_point_1a762956127e312f695530da058488fa22" prot="public" virt="non-virtual"><scope>Point</scope><name>get_map</name></member>
+      <member refid="class_point_1a1cb03d7d73b39c92b7e56240b9184955" prot="public" virt="non-virtual"><scope>Point</scope><name>get_near_neighbour</name></member>
+      <member refid="class_point_1aaea8d464458b82d80848895b6d828db9" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Next</name></member>
+      <member refid="class_point_1a7f61780c19bf584c97fcdb432e2d6e08" prot="public" virt="non-virtual"><scope>Point</scope><name>get_Prev</name></member>
+      <member refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" prot="public" virt="non-virtual"><scope>Point</scope><name>get_vx</name></member>
+      <member refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" prot="public" virt="non-virtual"><scope>Point</scope><name>get_vy</name></member>
+      <member refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" prot="public" virt="non-virtual"><scope>Point</scope><name>get_x</name></member>
+      <member refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" prot="public" virt="non-virtual"><scope>Point</scope><name>get_y</name></member>
+      <member refid="class_point_1a0d3c6e86bf5796952b0ac6d6092f7747" prot="public" virt="non-virtual"><scope>Point</scope><name>operator&lt;</name></member>
+      <member refid="class_point_1a63cebd1e00f14bdabf5000aa76174b03" prot="public" virt="non-virtual"><scope>Point</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_point_1ac7a42329250c07c3f7e8c688ab1c1fcb" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1ac77aa12fe810c6a1409fb63c64a70521" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1aa26891d8be99659f996873b6cf3e6a9c" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1ac13d6b1e1fb4aa41b8f17d298afbb15e" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1a29c1d7d3887b5df5fb43ece80c7ee633" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1ad92f2337b839a94ce97dcdb439b4325a" prot="public" virt="non-virtual"><scope>Point</scope><name>Point</name></member>
+      <member refid="class_point_1a20b27dff6a871012fa5e7c0d52fd6b98" prot="public" virt="non-virtual"><scope>Point</scope><name>print</name></member>
+      <member refid="class_point_1abc3f1cb86556e34771306b46eac6a19a" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Courant_numbers</name></member>
+      <member refid="class_point_1a1f21dc53976e93ad52cfd2eafdb94209" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Curr</name></member>
+      <member refid="class_point_1aa3c1caf1c115df1bdf3ba45357f072ea" prot="public" virt="non-virtual"><scope>Point</scope><name>set_distant_neighbours</name></member>
+      <member refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Dxx</name></member>
+      <member refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Dxy</name></member>
+      <member refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Dyy</name></member>
+      <member refid="class_point_1a9f37bcdde4f274fc2c9ee4e39fad9b22" prot="public" virt="non-virtual"><scope>Point</scope><name>set_factor</name></member>
+      <member refid="class_point_1ac25220ccb634802bdebc6de755afc807" prot="public" virt="non-virtual"><scope>Point</scope><name>set_factor_fij</name></member>
+      <member refid="class_point_1ac0be2a43c354fed97e018c2b8fbf63b4" prot="public" virt="non-virtual"><scope>Point</scope><name>set_flag</name></member>
+      <member refid="class_point_1a743e76edf28eaf25c726051b66c2e256" prot="public" virt="non-virtual"><scope>Point</scope><name>set_map</name></member>
+      <member refid="class_point_1a6c692685f4895204fb073a7a588dac29" prot="public" virt="non-virtual"><scope>Point</scope><name>set_near_neighbours</name></member>
+      <member refid="class_point_1a9be4fd3f7363583345023997921895ec" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Next</name></member>
+      <member refid="class_point_1a1efdadc2ab2df0ba02ede0b23a3c2b40" prot="public" virt="non-virtual"><scope>Point</scope><name>set_Prev</name></member>
+      <member refid="class_point_1ab68cfb3cd44fe4624dd89ec5b9275350" prot="public" virt="non-virtual"><scope>Point</scope><name>set_vx</name></member>
+      <member refid="class_point_1aae045afff208fbd09dc3e466a0768781" prot="public" virt="non-virtual"><scope>Point</scope><name>set_vy</name></member>
+      <member refid="class_point_1adaaf2fe64c78448b3c8d6e121ae3bca0" prot="public" virt="non-virtual"><scope>Point</scope><name>set_x</name></member>
+      <member refid="class_point_1a44bf07535f5dd99991a274833462379b" prot="public" virt="non-virtual"><scope>Point</scope><name>set_y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

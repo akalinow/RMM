@@ -1,0 +1,69 @@
+.TH "DTensor" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DTensor \- Klasa podstawowa tensora dyspersji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tensor\&.h>\fP
+.PP
+Dziedziczona przez \fBDFischer\fP, \fBDFischer2\fP i \fBDVector\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBDTensor\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBtest\fP (double Dl, double Dt, \fBPoint\fP &p)"
+.br
+.ti -1c
+.RI "virtual void \fBComputeTensor\fP (double Dl, double Dt, \fBPoint\fP &p)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa podstawowa tensora dyspersji\&. 
+
+Zawiera metody potrzebane do wyznaczenia wratosci wspolczynnikow tensora dyspersji, w zaleznosci od wybranego sposobu obliczen jest uzywna ona lub jedna z klas pochodnych\&. 
+.PP
+Definicja w linii 25 pliku tensor\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "DTensor::DTensor ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt Tensora Dyspersji 
+.PP
+Definicja w linii 32 pliku tensor\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void DTensor::ComputeTensor (double Dl, double Dt, \fBPoint\fP & p)\fC [virtual]\fP"
+Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIDl\fP - wspolczyniki dyspersji podluznej 
+.br
+\fIDt\fP - wspolczynnik dyspersji porzecznej 
+.br
+\fIp\fP - punkt dla ktorego obiczany jest tensor 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBDVector\fP, \fBDFischer2\fP i \fBDFischer\fP\&.
+.PP
+Definicja w linii 11 pliku tensor\&.cpp\&.
+.SS "void DTensor::test (double Dl, double Dt, \fBPoint\fP & p)\fC [inline]\fP"
+
+.PP
+Definicja w linii 34 pliku tensor\&.h\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

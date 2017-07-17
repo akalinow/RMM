@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="tensor_8h" kind="file" language="C++">
+    <compoundname>tensor.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="point_8h" local="yes">point.h</includes>
+    <includedby refid="param_8h" local="yes">param.h</includedby>
+    <includedby refid="grid_8h" local="yes">grid.h</includedby>
+    <includedby refid="tensor_8cpp" local="yes">tensor.cpp</includedby>
+    <incdepgraph>
+      <node id="952">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>cmath</label>
+      </node>
+      <node id="950">
+        <label>string</label>
+      </node>
+      <node id="956">
+        <label>map</label>
+      </node>
+      <node id="953">
+        <label>fstream</label>
+      </node>
+      <node id="955">
+        <label>vector</label>
+      </node>
+      <node id="948">
+        <label>tensor.h</label>
+        <link refid="tensor.h"/>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>cstdlib</label>
+      </node>
+      <node id="951">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="988">
+        <label>simulation_SrPkt_t0.cpp</label>
+        <link refid="simulation___sr_pkt__t0_8cpp"/>
+      </node>
+      <node id="958">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="978">
+        <label>simulation_Kodc_1780_90_730_40.cpp</label>
+        <link refid="simulation___kodc__1780__90__730__40_8cpp"/>
+      </node>
+      <node id="971">
+        <label>rmm.cpp</label>
+        <link refid="rmm_8cpp"/>
+      </node>
+      <node id="976">
+        <label>simulation_Dodc.cpp</label>
+        <link refid="simulation___dodc_8cpp"/>
+      </node>
+      <node id="981">
+        <label>simulation_LPkt.cpp</label>
+        <link refid="simulation___l_pkt_8cpp"/>
+      </node>
+      <node id="964">
+        <label>point.cpp</label>
+        <link refid="point_8cpp"/>
+      </node>
+      <node id="965">
+        <label>scheme.cpp</label>
+        <link refid="scheme_8cpp"/>
+      </node>
+      <node id="968">
+        <label>scheme_przed_zmina_09092015.cpp</label>
+        <link refid="scheme__przed__zmina__09092015_8cpp"/>
+      </node>
+      <node id="982">
+        <label>simulation_LPkt_Zapis.cpp</label>
+        <link refid="simulation___l_pkt___zapis_8cpp"/>
+      </node>
+      <node id="967">
+        <label>scheme_new_zQ.cpp</label>
+        <link refid="scheme__new__z_q_8cpp"/>
+      </node>
+      <node id="979">
+        <label>simulation_Kodc_1790_800_740_50.cpp</label>
+        <link refid="simulation___kodc__1790__800__740__50_8cpp"/>
+      </node>
+      <node id="966">
+        <label>scheme_new_bezQ.cpp</label>
+        <link refid="scheme__new__bez_q_8cpp"/>
+      </node>
+      <node id="959">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="960" relation="include">
+        </childnode>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="971" relation="include">
+        </childnode>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+        <childnode refid="975" relation="include">
+        </childnode>
+        <childnode refid="976" relation="include">
+        </childnode>
+        <childnode refid="977" relation="include">
+        </childnode>
+        <childnode refid="978" relation="include">
+        </childnode>
+        <childnode refid="979" relation="include">
+        </childnode>
+        <childnode refid="980" relation="include">
+        </childnode>
+        <childnode refid="981" relation="include">
+        </childnode>
+        <childnode refid="982" relation="include">
+        </childnode>
+        <childnode refid="983" relation="include">
+        </childnode>
+        <childnode refid="984" relation="include">
+        </childnode>
+        <childnode refid="985" relation="include">
+        </childnode>
+        <childnode refid="986" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
+        <childnode refid="988" relation="include">
+        </childnode>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="990" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+      </node>
+      <node id="980">
+        <label>simulation_Kodc_Zapis.cpp</label>
+        <link refid="simulation___kodc___zapis_8cpp"/>
+      </node>
+      <node id="970">
+        <label>param.cpp</label>
+        <link refid="param_8cpp"/>
+      </node>
+      <node id="984">
+        <label>simulation_Pkt_1790_740.cpp</label>
+        <link refid="simulation___pkt__1790__740_8cpp"/>
+      </node>
+      <node id="985">
+        <label>simulation_Pkt_1800_750.cpp</label>
+        <link refid="simulation___pkt__1800__750_8cpp"/>
+      </node>
+      <node id="962">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="963" relation="include">
+        </childnode>
+        <childnode refid="964" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="973">
+        <label>simulation.cpp_kopia.cpp</label>
+        <link refid="simulation_8cpp__kopia_8cpp"/>
+      </node>
+      <node id="977">
+        <label>simulation_Kodc.cpp</label>
+        <link refid="simulation___kodc_8cpp"/>
+      </node>
+      <node id="969">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="990">
+        <label>simulation_SrPkt_t0_plus_f.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus__f_8cpp"/>
+      </node>
+      <node id="960">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="961" relation="include">
+        </childnode>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="962" relation="include">
+        </childnode>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+        <childnode refid="971" relation="include">
+        </childnode>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="986">
+        <label>simulation_SrPkt.cpp</label>
+        <link refid="simulation___sr_pkt_8cpp"/>
+      </node>
+      <node id="975">
+        <label>simulation_2011_03_25.cpp</label>
+        <link refid="simulation__2011__03__25_8cpp"/>
+      </node>
+      <node id="972">
+        <label>simulation.cpp</label>
+        <link refid="simulation_8cpp"/>
+      </node>
+      <node id="957">
+        <label>tensor.h</label>
+        <link refid="tensor.h"/>
+        <childnode refid="958" relation="include">
+        </childnode>
+        <childnode refid="962" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+      </node>
+      <node id="974">
+        <label>simulation_1.cpp</label>
+        <link refid="simulation__1_8cpp"/>
+      </node>
+      <node id="991">
+        <label>simulation_SrPkt_Zapis.cpp</label>
+        <link refid="simulation___sr_pkt___zapis_8cpp"/>
+      </node>
+      <node id="989">
+        <label>simulation_SrPkt_t0_plus.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus_8cpp"/>
+      </node>
+      <node id="992">
+        <label>tensor.cpp</label>
+        <link refid="tensor_8cpp"/>
+      </node>
+      <node id="983">
+        <label>simulation_Pkt_1780_730.cpp</label>
+        <link refid="simulation___pkt__1780__730_8cpp"/>
+      </node>
+      <node id="963">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="961">
+        <label>comments.cpp</label>
+        <link refid="comments_8cpp"/>
+      </node>
+      <node id="987">
+        <label>simulation_SrPkt_5m.cpp</label>
+        <link refid="simulation___sr_pkt__5m_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_d_tensor" prot="public">DTensor</innerclass>
+    <innerclass refid="class_d_fischer" prot="public">DFischer</innerclass>
+    <innerclass refid="class_d_fischer2" prot="public">DFischer2</innerclass>
+    <innerclass refid="class_d_vector" prot="public">DVector</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>tensor.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="point_8h" kindref="compound">point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//***********************************************DTensor******************************************************</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="25" refid="class_d_tensor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_tensor" kindref="compound">DTensor</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"></codeline>
+<codeline lineno="32" refid="class_d_tensor_1ae52ee454318be2245042568f16d5688a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_tensor_1ae52ee454318be2245042568f16d5688a" kindref="member">DTensor</ref>()<sp/>{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;Dtensor&quot;&lt;&lt;endl;*/</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="class_d_tensor_1a341090bb4a7fe3fcb8d21ef27aa84d88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_tensor_1a341090bb4a7fe3fcb8d21ef27aa84d88" kindref="member">test</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p)<sp/>{cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">&lt;&lt;endl;};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ComputeTensor<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//***********************************************DFischer*****************************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"></highlight></codeline>
+<codeline lineno="51" refid="class_d_fischer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_fischer" kindref="compound">DFischer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="58" refid="class_d_fischer_1ae902c6bcee1e0697298aa0ce16063f06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_fischer_1ae902c6bcee1e0697298aa0ce16063f06" kindref="member">DFischer</ref>()<sp/>{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;DFischer&quot;&lt;&lt;endl;*/</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ComputeTensor<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//***********************************************DFischer2*****************************************************</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="69" refid="class_d_fischer2" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_fischer2" kindref="compound">DFischer2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"></codeline>
+<codeline lineno="76" refid="class_d_fischer2_1afa71f15373ca57859ab3f09ec3306bde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_fischer2_1afa71f15373ca57859ab3f09ec3306bde" kindref="member">DFischer2</ref>()<sp/>{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;DFischer2&quot;&lt;&lt;endl;*/</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ComputeTensor<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//***********************************************DVector*****************************************************</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"></highlight></codeline>
+<codeline lineno="88" refid="class_d_vector" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_vector" kindref="compound">DVector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_d_tensor" kindref="compound">DTensor</ref>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"></codeline>
+<codeline lineno="95" refid="class_d_vector_1a8acb7f030a2049c718f79d265da12e62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_vector_1a8acb7f030a2049c718f79d265da12e62" kindref="member">DVector</ref>()<sp/>{</highlight><highlight class="comment">/*cout&lt;&lt;&quot;DVector&quot;&lt;&lt;endl;*/</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ComputeTensor<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/tensor.h"/>
+  </compounddef>
+</doxygen>

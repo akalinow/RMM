@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_d_fischer2" kind="class" language="C++" prot="public">
+    <compoundname>DFischer2</compoundname>
+    <basecompoundref refid="class_d_tensor" prot="public" virt="non-virtual">DTensor</basecompoundref>
+    <includes refid="tensor_8h" local="no">tensor.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_fischer2_1afa71f15373ca57859ab3f09ec3306bde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DFischer2::DFischer2</definition>
+        <argsstring>()</argsstring>
+        <name>DFischer2</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy obiekt Tensora Dyspersji wyznaczanego metoda Fischera z zaniedbaniem wspolczynnikow pozadiagonalnych </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/tensor.h" line="76" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_fischer2_1ae9c984ac693b39d8ea947aaa975cb0d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DFischer2::ComputeTensor</definition>
+        <argsstring>(double Dl, double Dt, Point &amp;p)</argsstring>
+        <name>ComputeTensor</name>
+        <reimplements refid="class_d_tensor_1a0ed66ce3f3ab159c4d7f6a019bfea9da">ComputeTensor</reimplements>
+        <param>
+          <type>double</type>
+          <declname>Dl</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dt</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Dl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczyniki dyspersji podluznej </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczynnik dyspersji porzecznej </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- punkt dla ktorego obiczany jest tensor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/tensor.h" line="78" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.cpp" bodystart="50" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa tensora dyspersji. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, wg Fischer et al 1979 &quot;Mixing in inland and coastal waters&quot;, ale zaniedbujaca pozadiagonalne wspolczynniki. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>DFischer2</label>
+        <link refid="class_d_fischer2"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DTensor</label>
+        <link refid="class_d_tensor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>DFischer2</label>
+        <link refid="class_d_fischer2"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DTensor</label>
+        <link refid="class_d_tensor"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mkalinow/projects/rmmt/tensor.h" line="69" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.h" bodystart="69" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_d_fischer2_1ae9c984ac693b39d8ea947aaa975cb0d7" prot="public" virt="virtual"><scope>DFischer2</scope><name>ComputeTensor</name></member>
+      <member refid="class_d_fischer2_1afa71f15373ca57859ab3f09ec3306bde" prot="public" virt="non-virtual"><scope>DFischer2</scope><name>DFischer2</name></member>
+      <member refid="class_d_tensor_1ae52ee454318be2245042568f16d5688a" prot="public" virt="non-virtual"><scope>DFischer2</scope><name>DTensor</name></member>
+      <member refid="class_d_tensor_1a341090bb4a7fe3fcb8d21ef27aa84d88" prot="public" virt="non-virtual"><scope>DFischer2</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

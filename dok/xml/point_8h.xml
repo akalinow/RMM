@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="point_8h" kind="file" language="C++">
+    <compoundname>point.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includedby refid="tensor_8h" local="yes">tensor.h</includedby>
+    <includedby refid="scheme_8h" local="yes">scheme.h</includedby>
+    <includedby refid="simulation_8h" local="yes">simulation.h</includedby>
+    <includedby refid="grid_8h" local="yes">grid.h</includedby>
+    <includedby refid="point_8cpp" local="yes">point.cpp</includedby>
+    <incdepgraph>
+      <node id="258">
+        <label>point.h</label>
+        <link refid="point.h"/>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>cmath</label>
+      </node>
+      <node id="261">
+        <label>string</label>
+      </node>
+      <node id="265">
+        <label>map</label>
+      </node>
+      <node id="260">
+        <label>fstream</label>
+      </node>
+      <node id="264">
+        <label>vector</label>
+      </node>
+      <node id="259">
+        <label>cstdlib</label>
+      </node>
+      <node id="262">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="298">
+        <label>simulation_SrPkt_t0.cpp</label>
+        <link refid="simulation___sr_pkt__t0_8cpp"/>
+      </node>
+      <node id="268">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>simulation_Kodc_1780_90_730_40.cpp</label>
+        <link refid="simulation___kodc__1780__90__730__40_8cpp"/>
+      </node>
+      <node id="281">
+        <label>rmm.cpp</label>
+        <link refid="rmm_8cpp"/>
+      </node>
+      <node id="286">
+        <label>simulation_Dodc.cpp</label>
+        <link refid="simulation___dodc_8cpp"/>
+      </node>
+      <node id="291">
+        <label>simulation_LPkt.cpp</label>
+        <link refid="simulation___l_pkt_8cpp"/>
+      </node>
+      <node id="266">
+        <label>point.h</label>
+        <link refid="point.h"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="274">
+        <label>point.cpp</label>
+        <link refid="point_8cpp"/>
+      </node>
+      <node id="275">
+        <label>scheme.cpp</label>
+        <link refid="scheme_8cpp"/>
+      </node>
+      <node id="278">
+        <label>scheme_przed_zmina_09092015.cpp</label>
+        <link refid="scheme__przed__zmina__09092015_8cpp"/>
+      </node>
+      <node id="303">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>simulation_LPkt_Zapis.cpp</label>
+        <link refid="simulation___l_pkt___zapis_8cpp"/>
+      </node>
+      <node id="277">
+        <label>scheme_new_zQ.cpp</label>
+        <link refid="scheme__new__z_q_8cpp"/>
+      </node>
+      <node id="289">
+        <label>simulation_Kodc_1790_800_740_50.cpp</label>
+        <link refid="simulation___kodc__1790__800__740__50_8cpp"/>
+      </node>
+      <node id="276">
+        <label>scheme_new_bezQ.cpp</label>
+        <link refid="scheme__new__bez_q_8cpp"/>
+      </node>
+      <node id="269">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>simulation_Kodc_Zapis.cpp</label>
+        <link refid="simulation___kodc___zapis_8cpp"/>
+      </node>
+      <node id="280">
+        <label>param.cpp</label>
+        <link refid="param_8cpp"/>
+      </node>
+      <node id="294">
+        <label>simulation_Pkt_1790_740.cpp</label>
+        <link refid="simulation___pkt__1790__740_8cpp"/>
+      </node>
+      <node id="295">
+        <label>simulation_Pkt_1800_750.cpp</label>
+        <link refid="simulation___pkt__1800__750_8cpp"/>
+      </node>
+      <node id="272">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>simulation.cpp_kopia.cpp</label>
+        <link refid="simulation_8cpp__kopia_8cpp"/>
+      </node>
+      <node id="287">
+        <label>simulation_Kodc.cpp</label>
+        <link refid="simulation___kodc_8cpp"/>
+      </node>
+      <node id="279">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="300">
+        <label>simulation_SrPkt_t0_plus_f.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus__f_8cpp"/>
+      </node>
+      <node id="270">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>simulation_SrPkt.cpp</label>
+        <link refid="simulation___sr_pkt_8cpp"/>
+      </node>
+      <node id="285">
+        <label>simulation_2011_03_25.cpp</label>
+        <link refid="simulation__2011__03__25_8cpp"/>
+      </node>
+      <node id="282">
+        <label>simulation.cpp</label>
+        <link refid="simulation_8cpp"/>
+      </node>
+      <node id="267">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>simulation_1.cpp</label>
+        <link refid="simulation__1_8cpp"/>
+      </node>
+      <node id="301">
+        <label>simulation_SrPkt_Zapis.cpp</label>
+        <link refid="simulation___sr_pkt___zapis_8cpp"/>
+      </node>
+      <node id="299">
+        <label>simulation_SrPkt_t0_plus.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus_8cpp"/>
+      </node>
+      <node id="302">
+        <label>tensor.cpp</label>
+        <link refid="tensor_8cpp"/>
+      </node>
+      <node id="293">
+        <label>simulation_Pkt_1780_730.cpp</label>
+        <link refid="simulation___pkt__1780__730_8cpp"/>
+      </node>
+      <node id="273">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="271">
+        <label>comments.cpp</label>
+        <link refid="comments_8cpp"/>
+      </node>
+      <node id="297">
+        <label>simulation_SrPkt_5m.cpp</label>
+        <link refid="simulation___sr_pkt__5m_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_point" prot="public">Point</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/>point.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PUNKT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUNKT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MY_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//C++<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;grid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//***********************************************DTensor******************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight></codeline>
+<codeline lineno="34" refid="class_point" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_point" kindref="compound">Point</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="43" refid="class_point_1ac7a42329250c07c3f7e8c688ab1c1fcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1ac7a42329250c07c3f7e8c688ab1c1fcb" kindref="member">Point</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type1):</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_x(x),<sp/>_y(y),<sp/>_vx(0),<sp/>_vy(0),<sp/>_Dxx(0),<sp/>_Dyy(0),<sp/>_Dxy(0),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(type),<sp/>_type1(type1),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valCurr(0),<sp/>_valPrev(0),<sp/>_valNext(0),<sp/>_flag(0),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx(0),<sp/>_CurAy(0),<sp/>_CurDx(0),<sp/>_CurDxy(0),<sp/>_CurDy(0)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>1&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_point_1ac77aa12fe810c6a1409fb63c64a70521" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1ac77aa12fe810c6a1409fb63c64a70521" kindref="member">Point</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag):</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_x(x),<sp/>_y(y),<sp/>_flag(flag),<sp/>_vx(0),<sp/>_vy(0),<sp/>_Dxx(0),<sp/>_Dyy(0),<sp/>_Dxy(0),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(0),<sp/>_type1(0),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valCurr(0),<sp/>_valPrev(0),<sp/>_valNext(0),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx(0),<sp/>_CurAy(0),<sp/>_CurDx(0),<sp/>_CurDxy(0),<sp/>_CurDy(0)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>2&quot;&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_point_1aa26891d8be99659f996873b6cf3e6a9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1aa26891d8be99659f996873b6cf3e6a9c" kindref="member">Point</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag):</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_x(x),<sp/>_y(y),<sp/>_flag(flag),<sp/>_vx(vx),<sp/>_vy(vy),<sp/>_Dxx(0),<sp/>_Dyy(0),<sp/>_Dxy(0),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(0),<sp/>_type1(0),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valCurr(0),<sp/>_valPrev(0),<sp/>_valNext(0),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx(0),<sp/>_CurAy(0),<sp/>_CurDx(0),<sp/>_CurDxy(0),<sp/>_CurDy(0)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>3&quot;&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_point_1ac13d6b1e1fb4aa41b8f17d298afbb15e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1ac13d6b1e1fb4aa41b8f17d298afbb15e" kindref="member">Point</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag):</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_x(x),<sp/>_y(y),<sp/>_flag(flag),<sp/>_vx(vx),<sp/>_vy(vy),<sp/>_Dxx(Dxx),<sp/>_Dyy(Dyy),<sp/>_Dxy(Dxy),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(0),<sp/>_type1(0),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valCurr(0),<sp/>_valPrev(0),<sp/>_valNext(0),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx(0),<sp/>_CurAy(0),<sp/>_CurDx(0),<sp/>_CurDxy(0),<sp/>_CurDy(0)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>4&quot;&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_point_1a29c1d7d3887b5df5fb43ece80c7ee633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1a29c1d7d3887b5df5fb43ece80c7ee633" kindref="member">Point</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag):</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_x(x),<sp/>_y(y),<sp/>_flag(flag),<sp/>_vx(0),<sp/>_vy(0),<sp/>_Dxx(Dxx),<sp/>_Dyy(Dyy),<sp/>_Dxy(Dxy),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(0),<sp/>_type1(0),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valCurr(0),<sp/>_valPrev(0),<sp/>_valNext(0),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_CurAx(0),<sp/>_CurAy(0),<sp/>_CurDx(0),<sp/>_CurDxy(0),<sp/>_CurDy(0)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>5&quot;&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);};<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="class_point_1ad92f2337b839a94ce97dcdb439b4325a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_1ad92f2337b839a94ce97dcdb439b4325a" kindref="member">Point</ref>():<sp/>_x(-9999),<sp/>_y(-9999),<sp/>_vx(0),<sp/>_vy(0),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_Dxx(0),<sp/>_Dyy(0),<sp/>_Dxy(0),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_type(0),<sp/>_type1(0),<sp/>_valCurr(0),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_valPrev(0),<sp/>_valNext(0),<sp/>_flag(-9999)<sp/>{<sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Tworze<sp/>pkt<sp/>6&quot;&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;set_near_neighbours(0);<sp/>};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//___________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="86" refid="class_point_1ae6971f02ce5cf409b2e3dec6f873a9df" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_point_1ae6971f02ce5cf409b2e3dec6f873a9df" kindref="member">get_flag</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_flag;};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" kindref="member">get_x</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_x;};<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" kindref="member">get_y</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_y;};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="class_point_1aaea8d464458b82d80848895b6d828db9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1aaea8d464458b82d80848895b6d828db9" kindref="member">get_Next</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_valNext;};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="class_point_1a7a14be44e32b2987324213788b3b0593" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a7a14be44e32b2987324213788b3b0593" kindref="member">get_Curr</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_valCurr;};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="class_point_1a7f61780c19bf584c97fcdb432e2d6e08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a7f61780c19bf584c97fcdb432e2d6e08" kindref="member">get_Prev</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_valPrev;};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" kindref="member">get_vx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vx;};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" kindref="member">get_vy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_vy;};<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="class_point_1aef2637aabdb8e7dae3b20e67dfdc6e7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1aef2637aabdb8e7dae3b20e67dfdc6e7a" kindref="member">get_Dxx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxx;};<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="class_point_1ad5be3c0b4fd5f65bc00ab3787361329c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1ad5be3c0b4fd5f65bc00ab3787361329c" kindref="member">get_Dxy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dxy;};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="class_point_1a4b4279a85ad655a77d90831c805a59e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a4b4279a85ad655a77d90831c805a59e6" kindref="member">get_Dyy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Dyy;};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="class_point_1aecfeb69a6a1ec3001343e9734e2e9746" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1aecfeb69a6a1ec3001343e9734e2e9746" kindref="member">get_CurAx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_CurAx;};</highlight></codeline>
+<codeline lineno="120" refid="class_point_1a3fc8a4d0cba11093f4468a52f641c517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a3fc8a4d0cba11093f4468a52f641c517" kindref="member">get_CurAy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_CurAy;};</highlight></codeline>
+<codeline lineno="121" refid="class_point_1af2fef2c2ec81c04fe713f381ca2b2998" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1af2fef2c2ec81c04fe713f381ca2b2998" kindref="member">get_CurDx</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_CurDx;};</highlight></codeline>
+<codeline lineno="122" refid="class_point_1a6b98226c33a0e7ba2302c13e33e25ea5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a6b98226c33a0e7ba2302c13e33e25ea5" kindref="member">get_CurDxy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_CurDxy;};</highlight></codeline>
+<codeline lineno="123" refid="class_point_1ab32d6e369d8cfc8beeb1e8c20c2a26bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1ab32d6e369d8cfc8beeb1e8c20c2a26bd" kindref="member">get_CurDy</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_CurDy;};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*double<sp/>get_Pex()<sp/>const<sp/>{return<sp/>_Pex;};</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>get_Pey()<sp/>const<sp/>{return<sp/>_Pey;};</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>get_Pexy()<sp/>const<sp/>{return<sp/>_Pexy;};</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>get_PeRes()<sp/>const<sp/>{return<sp/>_PeRes;};</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="class_point_1a392f5d75605bd50620e2051ee15bc771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a392f5d75605bd50620e2051ee15bc771" kindref="member">get_factor_f</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>f)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_factors_fij.find(f)-&gt;second;};</highlight></codeline>
+<codeline lineno="133" refid="class_point_1a0d5dc8de308faf6875fa36074d6fc0f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_point_1a0d5dc8de308faf6875fa36074d6fc0f0" kindref="member">get_factor</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>f)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_factors.find(f)-&gt;second;};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_________________________________________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//____________________________________</highlight></codeline>
+<codeline lineno="139" refid="class_point_1a762956127e312f695530da058488fa22" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>map&lt;int,<sp/>Point&gt;<sp/>*<sp/><ref refid="class_point_1a762956127e312f695530da058488fa22" kindref="member">get_map</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_PointMap;};<sp/></highlight><highlight class="comment">//<sp/>tutaj<sp/>pkt<sp/>naleza<sp/>(musza)<sp/>tylko<sp/>do<sp/>jednej<sp/>mapy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="class_point_1a1cb03d7d73b39c92b7e56240b9184955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_point_1a1cb03d7d73b39c92b7e56240b9184955" kindref="member">get_near_neighbour</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nr)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_near_neighbours[nr];<sp/>};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="class_point_1a64866cd58b7216bc8cbebe6dc8b46df1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_point_1a64866cd58b7216bc8cbebe6dc8b46df1" kindref="member">get_distant_neighbours</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_distant_neighbours[number];};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//__________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="150" refid="class_point_1ac0be2a43c354fed97e018c2b8fbf63b4" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1ac0be2a43c354fed97e018c2b8fbf63b4" kindref="member">set_flag</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f)<sp/>{_flag<sp/>=<sp/>f;};<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="153" refid="class_point_1adaaf2fe64c78448b3c8d6e121ae3bca0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1adaaf2fe64c78448b3c8d6e121ae3bca0" kindref="member">set_x</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)<sp/>{_x<sp/>=<sp/>x;};<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="class_point_1a44bf07535f5dd99991a274833462379b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a44bf07535f5dd99991a274833462379b" kindref="member">set_y</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y)<sp/>{_y<sp/>=<sp/>y;};<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_point_1ab68cfb3cd44fe4624dd89ec5b9275350" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1ab68cfb3cd44fe4624dd89ec5b9275350" kindref="member">set_vx</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vX)<sp/>{_vx<sp/>=<sp/>vX;};<sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="class_point_1aae045afff208fbd09dc3e466a0768781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1aae045afff208fbd09dc3e466a0768781" kindref="member">set_vy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vY)<sp/>{_vy<sp/>=<sp/>vY;};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="165" refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" kindref="member">set_Dxx</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dx)<sp/>{_Dxx<sp/>=<sp/>Dx;};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" kindref="member">set_Dxy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxy)<sp/>{_Dxy<sp/>=<sp/>Dxy;};<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" kindref="member">set_Dyy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dy)<sp/>{_Dyy<sp/>=<sp/>Dy;};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="class_point_1a1efdadc2ab2df0ba02ede0b23a3c2b40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a1efdadc2ab2df0ba02ede0b23a3c2b40" kindref="member">set_Prev</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/>{_valPrev<sp/>=<sp/>val;};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="177" refid="class_point_1a1f21dc53976e93ad52cfd2eafdb94209" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a1f21dc53976e93ad52cfd2eafdb94209" kindref="member">set_Curr</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/>{_valCurr<sp/>=<sp/>val;};</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="180" refid="class_point_1a9be4fd3f7363583345023997921895ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a9be4fd3f7363583345023997921895ec" kindref="member">set_Next</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/>{_valNext<sp/>=<sp/>val;};</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="class_point_1ac25220ccb634802bdebc6de755afc807" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1ac25220ccb634802bdebc6de755afc807" kindref="member">set_factor_fij</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>f,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/>{_factors_fij[f]<sp/>=<sp/>val;};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_point_1a9f37bcdde4f274fc2c9ee4e39fad9b22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a9f37bcdde4f274fc2c9ee4e39fad9b22" kindref="member">set_factor</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>f,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/>{_factors[f]<sp/>=<sp/>val;};</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="class_point_1a743e76edf28eaf25c726051b66c2e256" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_1a743e76edf28eaf25c726051b66c2e256" kindref="member">set_map</ref>(map&lt;int,<sp/>Point&gt;<sp/>*<sp/>Map)<sp/>{_PointMap<sp/>=<sp/>Map;};<sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_near_neighbours(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_distant_neighbours<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_Courant_numbers<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>set_Peclet_numbers<sp/>(double<sp/>dx,<sp/>double<sp/>dy,<sp/>double<sp/>dt);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="211" refid="class_point_1a63cebd1e00f14bdabf5000aa76174b03" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>ostream&amp;<sp/><ref refid="class_point_1a63cebd1e00f14bdabf5000aa76174b03" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>obj){</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Flaga:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1ae6971f02ce5cf409b2e3dec6f873a9df" kindref="member">get_flag</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>x=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" kindref="member">get_x</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>y=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" kindref="member">get_y</ref>()</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>valPrev<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1a7f61780c19bf584c97fcdb432e2d6e08" kindref="member">get_Prev</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>valCurr<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1a7a14be44e32b2987324213788b3b0593" kindref="member">get_Curr</ref>()</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" kindref="member">get_vx</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;obj.<ref refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" kindref="member">get_vy</ref>();</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="220" refid="class_point_1a0d3c6e86bf5796952b0ac6d6092f7747" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_point" kindref="compound">Point</ref>&amp;<sp/>obj)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;get_x()&lt;obj.<ref refid="class_point_1a2018e6c0f7d91b0aab42317de89fdaea" kindref="member">get_x</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;get_y()&lt;obj.<ref refid="class_point_1ac4f7350d9c545e907b0c513a03201c4b" kindref="member">get_y</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224" refid="class_point_1a3384c3194e3d3c3196317013929e40d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>map&lt;int,<sp/>Point&gt;<sp/><sp/>*<sp/>_PointMap;<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/></highlight><highlight class="comment">//static<sp/>map&lt;int,<sp/>Point&gt;<sp/><sp/>*<sp/>Point::_PointMap<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>const<sp/>static<sp/>int<sp/>empty_index;//<sp/>=<sp/>-99999999;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_x,<sp/>_y;<sp/></highlight><highlight class="comment">//wspolrzedne<sp/>pkt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_vx,<sp/>_vy;<sp/></highlight><highlight class="comment">//<sp/>wartosci<sp/>skaldowych<sp/>predkosci</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_Dxx,<sp/>_Dyy,<sp/>_Dxy;<sp/></highlight><highlight class="comment">//<sp/>wartosci<sp/>wspolczynnikow<sp/>dyspersji</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_type,<sp/>_type1,<sp/>_flag;<sp/></highlight><highlight class="comment">//<sp/>okresla<sp/>ktory<sp/>bzreg<sp/>-<sp/>lewy,<sp/>prawy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>okresla<sp/>ktory<sp/>kawalek<sp/>bzregu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_valCurr,<sp/>_valPrev,<sp/>_valNext;<sp/></highlight><highlight class="comment">//<sp/>wartosci<sp/>obliczanych<sp/>funkcji<sp/>w<sp/>roznych<sp/>krokach</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_CurAx,<sp/>_CurAy;<sp/></highlight><highlight class="comment">//Adwekcyjne<sp/>liczby<sp/>kuranta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_CurDx,<sp/>_CurDxy,<sp/>_CurDy;<sp/></highlight><highlight class="comment">//Dyfuzyjne<sp/>liczby<sp/>kuranta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>_Pex,<sp/>_Pey,<sp/>_Pexy,<sp/>_PeRes;<sp/>//Liczby<sp/>Pecleta<sp/>(Pex=<sp/>vx*dx/Dxx,<sp/>Pey=<sp/>vy*dy/Dyy,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Pxy=<sp/>(sqrt(pow((vx/dx),2)<sp/>+<sp/>pow((vy/dy),2)))<sp/>/<sp/>((_Dxx/pow(dx,2))<sp/>+<sp/>(Dyy/pow(dy,2))<sp/>-<sp/>(Dxy/(dx*dy)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Point<sp/>*&gt;<sp/>_near_neighboursPtr;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>_near_neighbours;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>indeksy<sp/>najblizszych<sp/>sasiadow<sp/>danego<sp/>pktu<sp/>:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>*<sp/>*<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>0<sp/>1<sp/>2<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0-&gt;(i-1,j+1)<sp/><sp/><sp/><sp/>1-&gt;(i,j+1)<sp/><sp/>2-&gt;(i+1,j+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>3<sp/>4<sp/>5<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3-&gt;(i-1,j)<sp/><sp/><sp/><sp/><sp/><sp/>4-&gt;(i,j)<sp/><sp/><sp/><sp/>5-&gt;(i+1,j)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>6<sp/>7<sp/>8<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>6-&gt;(i-1,j-1)<sp/><sp/><sp/><sp/>7-&gt;(i,j-1)<sp/><sp/>8-&gt;(i+1,j-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Point<sp/>*&gt;<sp/>_distant_neighboursPtr;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>_distant_neighbours;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>indexy<sp/>dalszych<sp/>sasiadow<sp/>potrzebne<sp/>np<sp/>w<sp/>schemacie<sp/>upwind<sp/>o<sp/>dokladnosci<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>1<sp/>*<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1-&gt;(i,j+2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>*<sp/>*<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>4<sp/>*<sp/>0<sp/>*<sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4-&gt;(i-2,j)<sp/><sp/><sp/><sp/><sp/><sp/>0-&gt;(i,j)<sp/><sp/><sp/><sp/>2-&gt;(i+2,j)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>*<sp/>*<sp/>*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>*<sp/>*<sp/>3<sp/>*<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3-&gt;(i,j-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>map<sp/>&lt;string,<sp/>double&gt;<sp/>_factors;<sp/></highlight><highlight class="comment">//<sp/>wektor<sp/>wspolczynnikow<sp/>do<sp/>obliczania<sp/>koncentracji;<sp/>inne<sp/>dla<sp/>roznych<sp/>schematow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>kolejnosc:<sp/>a<sp/>(przy<sp/>i,j),<sp/>b<sp/>(i+1,j),<sp/>c<sp/>(i-1,j),<sp/>d<sp/>(i,j+1),<sp/>e<sp/>(i,j-1),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>f<sp/>(i+1,j+1),<sp/>g<sp/>(i+1,j-1),<sp/>h<sp/>(i-1,j+1),<sp/>i<sp/>(i-1,j-1),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>j<sp/>(i+2,j),<sp/>k<sp/>(i-2,j),<sp/>l<sp/>(i,j+2),<sp/>m<sp/>(i,j-2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>map<sp/>&lt;string,<sp/>double&gt;<sp/>_factors_fij;<sp/></highlight><highlight class="comment">//<sp/>wektor<sp/>wspolczynikow<sp/>do<sp/>obliczania</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/point.h"/>
+  </compounddef>
+</doxygen>

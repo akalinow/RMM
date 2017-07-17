@@ -1,0 +1,63 @@
+.TH "GridAll" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GridAll \- Klasa Przygotowujaca siatke do symulacji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <grid\&.h>\fP
+.PP
+Dziedziczy \fBGrid\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBGridAll\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "int \fBReadData\fP (map< int, \fBPoint\fP > &PointMap, const string &file, \fBSimulationParameters\fP &sym_param)"
+.br
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Klasa Przygotowujaca siatke do symulacji\&. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa wspolrzedne pktow przeplywu, pole predkosci i tensor dyspersji dla wszytskich pkt przeplywu\&. 
+.PP
+Definicja w linii 239 pliku grid\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "GridAll::GridAll ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt \fBGrid\fP All 
+.PP
+Definicja w linii 245 pliku grid\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "int GridAll::ReadData (map< int, \fBPoint\fP > & PointMap, const string & file, \fBSimulationParameters\fP & sym_param)\fC [virtual]\fP"
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - referencja do Mapy Punktow 
+.br
+\fIfile\fP - nazwa pliku z danymi 
+.br
+\fIsym_param\fP - obiekt z parametrami symulacji 
+.RE
+.PP
+obl max weartosci predkosci 
+.PP
+Reimplementowana z \fBGrid\fP\&.
+.PP
+Definicja w linii 660 pliku grid\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

@@ -1,0 +1,62 @@
+.TH "DFischer2" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DFischer2 \- Klasa tensora dyspersji\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tensor\&.h>\fP
+.PP
+Dziedziczy \fBDTensor\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBDFischer2\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBComputeTensor\fP (double Dl, double Dt, \fBPoint\fP &p)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa tensora dyspersji\&. 
+
+Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, wg Fischer et al 1979 'Mixing in inland and coastal waters', ale zaniedbujaca pozadiagonalne wspolczynniki\&. 
+.PP
+Definicja w linii 69 pliku tensor\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "DFischer2::DFischer2 ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt Tensora Dyspersji wyznaczanego metoda Fischera z zaniedbaniem wspolczynnikow pozadiagonalnych 
+.PP
+Definicja w linii 76 pliku tensor\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void DFischer2::ComputeTensor (double Dl, double Dt, \fBPoint\fP & p)\fC [virtual]\fP"
+Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIDl\fP - wspolczyniki dyspersji podluznej 
+.br
+\fIDt\fP - wspolczynnik dyspersji porzecznej 
+.br
+\fIp\fP - punkt dla ktorego obiczany jest tensor 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBDTensor\fP\&.
+.PP
+Definicja w linii 50 pliku tensor\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="param_8cpp" kind="file" language="C++">
+    <compoundname>param.cpp</compoundname>
+    <includes refid="param_8h" local="yes">param.h</includes>
+    <includes refid="comments_8h" local="yes">comments.h</includes>
+    <includes local="no">algorithm</includes>
+    <incdepgraph>
+      <node id="175">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>cmath</label>
+      </node>
+      <node id="185">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>string</label>
+      </node>
+      <node id="184">
+        <label>map</label>
+      </node>
+      <node id="188">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>param.cpp</label>
+        <link refid="param.cpp"/>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>fstream</label>
+      </node>
+      <node id="191">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>cstdio</label>
+      </node>
+      <node id="183">
+        <label>vector</label>
+      </node>
+      <node id="180">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>time.h</label>
+      </node>
+      <node id="178">
+        <label>cstdlib</label>
+      </node>
+      <node id="177">
+        <label>iostream</label>
+      </node>
+      <node id="190">
+        <label>set</label>
+      </node>
+      <node id="192">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>param.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="param_8h" kindref="compound">param.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="comments_8h" kindref="compound">comments.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;algo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_simulation_parameters_1a8b4b79aaaca9c17cf79f19871f7bc432" refkind="member"><highlight class="normal"><ref refid="class_simulation_parameters_1a8b4b79aaaca9c17cf79f19871f7bc432" kindref="member">SimulationParameters::SimulationParameters</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>param):</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_param(param),<sp/>_flag(-1),<sp/>_n(-1),<sp/>_dx(-1.0),<sp/>_dy(-1.0),<sp/>_dt(-1.0),<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_vx(-9999.0),<sp/>_vy(-9999.0),<sp/>_Dlong(-9999.0),<sp/>_Dtrans(-9999.0),<sp/>_scheme<sp/>(</highlight><highlight class="stringliteral">&quot;nieokreslony&quot;</highlight><highlight class="normal">),<sp/>_gridFile(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;&lt;&lt;<sp/>SimulationParameters<sp/>object<sp/>&gt;&gt;<sp/>&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="comment">//_______________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_simulation_parameters_1a23c2b9bb9465abbbeb2050dbe50d9ef6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a23c2b9bb9465abbbeb2050dbe50d9ef6" kindref="member">SimulationParameters::print</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;flafa:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_flag&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>n=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_n&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>dx=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_dx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>dy=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_dy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>dt=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_dt</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dlong=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dlong&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dtrans=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dtrans</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vx=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vy=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_vy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>schemat=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_scheme&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>plik<sp/>wejsciowy<sp/>z<sp/>siatka&quot;</highlight><highlight class="normal">&lt;&lt;_gridFile;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="class_simulation_parameters_1a19725775b57442ed6b0b07251c26ed5d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a19725775b57442ed6b0b07251c26ed5d" kindref="member">SimulationParameters::set_dispersion</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dispersion)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>_dispersion<sp/>=<sp/>dispersion;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dispersion<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;simple&quot;</highlight><highlight class="normal">)<sp/>_tensor<sp/>=<sp/>&amp;_t_simple;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dispersion<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;fischer&quot;</highlight><highlight class="normal">)<sp/>_tensor<sp/>=<sp/>&amp;_t_fischer;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dispersion<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;fischer2&quot;</highlight><highlight class="normal">)<sp/>_tensor<sp/>=<sp/>&amp;_t_fischer2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dispersion<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;vector&quot;</highlight><highlight class="normal">)<sp/>_tensor<sp/>=<sp/>&amp;_t_vector;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_tensor<sp/>=<sp/>&amp;_t_simple;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_tensor-&gt;ComputeTensor(1,1,p);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_simulation_parameters_1a8e17dae834cc3339bc4b35e1085cb09c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a8e17dae834cc3339bc4b35e1085cb09c" kindref="member">SimulationParameters::set_scheme</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>scheme)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>_scheme<sp/>=<sp/>scheme;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scheme<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;cn&quot;</highlight><highlight class="normal"><sp/>)<sp/>_s_scheme<sp/>=<sp/>&amp;_s_CN;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scheme<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;up&quot;</highlight><highlight class="normal"><sp/>)<sp/>_s_scheme<sp/>=<sp/>&amp;_s_UP;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scheme<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;adi&quot;</highlight><highlight class="normal"><sp/>)<sp/>_s_scheme<sp/>=<sp/>&amp;_s_ADI;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scheme<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;adi2&quot;</highlight><highlight class="normal">)<sp/>_s_scheme<sp/>=<sp/>&amp;_s_ADI2;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>_s_scheme<sp/>=<sp/>&amp;_s_CN;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_simulation_parameters_1a2a4c6b2a5528a18a0181e343be735876" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a2a4c6b2a5528a18a0181e343be735876" kindref="member">SimulationParameters::ComputePecletNumber</ref>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>0,<sp/>vy<sp/>=<sp/>0,<sp/>Dxx<sp/>=<sp/>0,<sp/>Dxy<sp/>=<sp/>0,<sp/>Dyy<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(_vxmax)<sp/>&gt;<sp/>abs(_vxmin))<sp/>vx<sp/>=<sp/>_vxmax;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>_vxmin;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(_vymax)<sp/>&gt;<sp/>abs(_vymin))<sp/>vy<sp/>=<sp/>_vymax;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>vy<sp/>=<sp/>_vymin;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ofstream<sp/>out(</highlight><highlight class="stringliteral">&quot;Info.dat&quot;</highlight><highlight class="normal">,<sp/>ios::app);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;...<sp/>Obliczam<sp/>liczby<sp/>Pecleta<sp/>dla<sp/>ekstemalnych<sp/>wartosci<sp/>...&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------<sp/><sp/><sp/><sp/><sp/>LICZBY<sp/>PECLETA<sp/><sp/><sp/><sp/><sp/><sp/>------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>vx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>vy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;vy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Dxxmax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dxxmax&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dyymax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dyymax&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dxymax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dxymax&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;...<sp/>Obliczam<sp/>liczby<sp/>Pecleta<sp/>dla<sp/>ekstemalnych<sp/>wartosci<sp/>...&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;<sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-----------------------<sp/><sp/><sp/><sp/><sp/>LICZBY<sp/>PECLETA<sp/><sp/><sp/><sp/><sp/><sp/>------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>vx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>vy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;vy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Dxxmax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dxxmax&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dyymax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dyymax&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dxymax<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;_Dxymax&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//liczba<sp/>pekleta<sp/>ze<sp/>wzory<sp/>na<sp/>2D<sp/>peclet<sp/>numeber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Co<sp/>=<sp/>sqrt(pow((vx/_dx),2)<sp/>+<sp/>pow((vy/_dy),2));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nom<sp/>=<sp/>(_Dxxmax/pow(_dx,2))<sp/>+<sp/>(_Dyymax/pow(_dy,2))<sp/>-<sp/>(_Dxymax/(_dx*_dy));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Pex<sp/>=<sp/>(vx<sp/>*<sp/>_dx)<sp/>/<sp/>_Dxxmax;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Pey<sp/>=<sp/>(vy<sp/>*<sp/>_dy)<sp/>/<sp/>_Dyymax;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>Pex<sp/>=<sp/>(vx<sp/>*<sp/>_dx)<sp/>/<sp/>_Dxxmin;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>Pey<sp/>=<sp/>(vy<sp/>*<sp/>_dy)<sp/>/<sp/>_Dyymin;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Pe_wypadk<sp/>=<sp/>sqrt(Pex*Pex<sp/>+<sp/>Pey*Pey);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>Dwuwymiarowa<sp/>Pe<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co/nom&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Pex<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pex&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pey<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pey&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>wypadkowa<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pe_wypadk&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>Dwuwymiarowa<sp/>Pe<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co/nom&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Pex<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pex&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pey<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pey&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>wypadkowa<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pe_wypadk&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(max((Co/nom),max(Pex,Pey))<sp/>&gt;<sp/>2){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Liczba<sp/>Pecleta<sp/>&lt;<sp/>2<sp/><sp/><sp/><sp/>--<sp/>Schemat<sp/>CN<sp/>i<sp/>ADI<sp/>moga<sp/>generowac<sp/>niefizyczne<sp/>oscylcaje&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Liczba<sp/>Pecleta<sp/>&lt;<sp/>2<sp/><sp/><sp/><sp/>--<sp/>Schemat<sp/>CN<sp/>i<sp/>ADI<sp/>moga<sp/>generowac<sp/>niefizyczne<sp/>oscylcaje&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Pexy<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Pex_max<sp/>=<sp/>-9999.99,<sp/>Pey_max<sp/>=<sp/>-9999.00,<sp/>Pexy_max<sp/>=<sp/>-9999.99,<sp/>PeRes_max<sp/>=<sp/>-9999.99;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>map&lt;int,Point&gt;::iterator<sp/>IT;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(IT<sp/>=<sp/>PointMap.begin();<sp/>IT<sp/>!=<sp/>PointMap.end();<sp/>IT++){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IT-&gt;second.get_flag()<sp/>!=<sp/>-9999<sp/>&amp;<sp/>IT-&gt;second.get_flag()<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vx<sp/>=<sp/>IT-&gt;second.get_vx();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vy<sp/>=<sp/>IT-&gt;second.get_vy();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>IT-&gt;second.get_Dxx();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>IT-&gt;second.get_Dyy();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>IT-&gt;second.get_Dxy();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Dxx<sp/>!=<sp/>0.0)<sp/>Pex<sp/>=<sp/>(vx<sp/>*<sp/>_dx)<sp/>/<sp/>Dxx;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Dxx<sp/>rowne<sp/>0<sp/>-<sp/>sprawdz&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;vx=&quot;</highlight><highlight class="normal">&lt;&lt;vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vy=&quot;</highlight><highlight class="normal">&lt;&lt;vy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dxx=&quot;</highlight><highlight class="normal">&lt;&lt;Dxx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dxy=&quot;</highlight><highlight class="normal">&lt;&lt;Dxy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dyy=&quot;</highlight><highlight class="normal">&lt;&lt;Dyy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//IT-&gt;second.set_flag(0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Dyy<sp/>!=<sp/>0.0)<sp/>Pey<sp/>=<sp/>(vy<sp/>*<sp/>_dy)<sp/>/<sp/>Dyy;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Dyy<sp/>rowne<sp/>0<sp/>-<sp/>sprawdz&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IT-&gt;second.set_flag(0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pe_wypadk<sp/>=<sp/>sqrt(Pex*Pex<sp/>+<sp/>Pey*Pey);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//liczba<sp/>pekleta<sp/>ze<sp/>wzory<sp/>na<sp/>2D<sp/>peclet<sp/>numeber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Co<sp/>=<sp/>sqrt(pow((vx/_dx),2)<sp/>+<sp/>pow((vy/_dy),2));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nom<sp/>=<sp/>(Dxx/pow(_dx,2))<sp/>+<sp/>(Dyy/pow(_dy,2))<sp/>-<sp/>(Dxy/(_dx*_dy));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nom<sp/>!=<sp/>0.0<sp/>)Pexy<sp/>=<sp/>Co/nom;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;nom<sp/>rowne<sp/>0<sp/>-<sp/>sprawdz&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;-<sp/>Dwuwymiarowa<sp/>Pe=&quot;&lt;&lt;Co/nom&lt;&lt;&quot;<sp/><sp/>&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;Pex=&quot;&lt;&lt;Pex&lt;&lt;&quot;<sp/><sp/>Pey=&quot;&lt;&lt;Pey&lt;&lt;&quot;<sp/><sp/>wypadkowa=&quot;&lt;&lt;Pe_wypadk&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout&lt;&lt;&quot;--------------------------------------------------------------------&quot;&lt;&lt;endl&lt;&lt;endl;<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pex<sp/>&gt;<sp/>Pex_max)<sp/>{<sp/>Pex_max<sp/>=<sp/>Pex;<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;&quot;,&quot;&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;&quot;<sp/><sp/>Pex_max:&quot;&lt;&lt;Pex_max&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;vx=&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/>vy=&quot;&lt;&lt;vy&lt;&lt;&quot;<sp/>Dxx=&quot;&lt;&lt;Dxx&lt;&lt;&quot;<sp/>Dxy=&quot;&lt;&lt;Dxy&lt;&lt;&quot;<sp/>Dyy=&quot;&lt;&lt;Dyy&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pey<sp/>&gt;<sp/>Pey_max)<sp/>{Pey_max<sp/>=<sp/>Pey;<sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;&quot;,&quot;&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;&quot;<sp/><sp/>Pey_max:&quot;&lt;&lt;Pey_max&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;vx=&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/>vy=&quot;&lt;&lt;vy&lt;&lt;&quot;<sp/>Dxx=&quot;&lt;&lt;Dxx&lt;&lt;&quot;<sp/>Dxy=&quot;&lt;&lt;Dxy&lt;&lt;&quot;<sp/>Dyy=&quot;&lt;&lt;Dyy&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pexy<sp/>&gt;<sp/>Pexy_max)<sp/>{Pexy_max<sp/>=<sp/>Pexy;<sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;&quot;,&quot;&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;&quot;<sp/><sp/>Pexy_max:&quot;&lt;&lt;Pexy_max&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;vx=&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/>vy=&quot;&lt;&lt;vy&lt;&lt;&quot;<sp/>Dxx=&quot;&lt;&lt;Dxx&lt;&lt;&quot;<sp/>Dxy=&quot;&lt;&lt;Dxy&lt;&lt;&quot;<sp/>Dyy=&quot;&lt;&lt;Dyy&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pe_wypadk<sp/>&gt;<sp/>PeRes_max)<sp/>{PeRes_max<sp/>=<sp/>Pe_wypadk;<sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;&quot;,&quot;&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;&quot;<sp/><sp/>PeRes_max:&quot;&lt;&lt;PeRes_max&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;vx=&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/>vy=&quot;&lt;&lt;vy&lt;&lt;&quot;<sp/>Dxx=&quot;&lt;&lt;Dxx&lt;&lt;&quot;<sp/>Dxy=&quot;&lt;&lt;Dxy&lt;&lt;&quot;<sp/>Dyy=&quot;&lt;&lt;Dyy&lt;&lt;endl;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pex<sp/>&gt;<sp/>2<sp/>||<sp/>Pey<sp/>&gt;<sp/>2<sp/>||<sp/>Pexy<sp/>&gt;<sp/>2<sp/>||<sp/>Pe_wypadk<sp/>&gt;<sp/>2){</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;UWAGA!<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;IT-&gt;second.get_x()*_dx&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">&lt;&lt;IT-&gt;second.get_y()*_dy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>-&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Pex:&quot;</highlight><highlight class="normal">&lt;&lt;Pex&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pey:&quot;</highlight><highlight class="normal">&lt;&lt;Pey&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pexy:&quot;</highlight><highlight class="normal">&lt;&lt;Pexy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pe_wypadk:&quot;</highlight><highlight class="normal">&lt;&lt;Pe_wypadk&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">&lt;&lt;</highlight><highlight class="stringliteral">&quot;vx=&quot;</highlight><highlight class="normal">&lt;&lt;vx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>vy=&quot;</highlight><highlight class="normal">&lt;&lt;vy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dxx=&quot;</highlight><highlight class="normal">&lt;&lt;Dxx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dxy=&quot;</highlight><highlight class="normal">&lt;&lt;Dxy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Dyy=&quot;</highlight><highlight class="normal">&lt;&lt;Dyy&lt;&lt;endl;<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Max<sp/>Dwuwymiarowa<sp/>Pe<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co/nom&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Pex_max<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pex_max&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Pey_max<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pey_max&lt;&lt;</highlight><highlight class="stringliteral">&quot;Pexy_max<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Pexy_max&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>wypadkowa<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;PeRes_max&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;<sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>out.close();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max((Co/nom),max(Pex,Pey));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="class_simulation_parameters_1a8b6b920edd7ab4f094ffd735381caddf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_simulation_parameters_1a8b6b920edd7ab4f094ffd735381caddf" kindref="member">SimulationParameters::ComputeCourantNumber</ref>(){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ofstream<sp/>out(</highlight><highlight class="stringliteral">&quot;Info.dat&quot;</highlight><highlight class="normal">,<sp/>ios::app);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;...<sp/>Obliczam<sp/>liczby<sp/>Couranta<sp/>dla<sp/>ekstemalnych<sp/>wartosci<sp/>...&quot;</highlight><highlight class="normal">&lt;&lt;endl;<sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;...<sp/>Obliczam<sp/>liczby<sp/>Couranta<sp/>dla<sp/>ekstemalnych<sp/>wartosci<sp/>...&quot;</highlight><highlight class="normal">&lt;&lt;endl;<sp/><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>0.0,<sp/>vy<sp/>=<sp/>0.0,<sp/>Dxy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(_vxmax)<sp/>&gt;<sp/>abs(_vxmin))<sp/>vx<sp/>=<sp/>_vxmax;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>_vxmin;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(_vymax)<sp/>&gt;<sp/>abs(_vymin))<sp/>vy<sp/>=<sp/>_vymax;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>vy<sp/>=<sp/>_vymin;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(_Dxymax)<sp/>&lt;<sp/>abs(_Dxymin))<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>_Dxymax;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;max:&quot;</highlight><highlight class="normal">&lt;&lt;_Dxymax&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>min:&quot;</highlight><highlight class="normal">&lt;&lt;_Dxymin&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dxy:&quot;</highlight><highlight class="normal">&lt;&lt;Dxy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>Dxy<sp/>=<sp/>_Dxymin;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;vx:<sp/>&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/><sp/>vy:<sp/>&quot;&lt;&lt;vy&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Co<sp/>=<sp/>_dt<sp/>*<sp/>sqrt(pow((vx/_dx),2)<sp/>+<sp/>pow((vy/_dy),2));</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Cox<sp/>=<sp/>(vx*_dt)/_dx;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Coy<sp/>=<sp/>(vy*_dt)/_dy;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Co_wypadk<sp/>=<sp/>sqrt(Cox*Cox<sp/>+<sp/>Coy*Coy);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CDox<sp/>=<sp/>(_Dxxmax<sp/>*<sp/>_dt)<sp/>/<sp/>(_dx<sp/>*_dx);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CDoy<sp/>=<sp/>(_Dyymax<sp/>*<sp/>_dt)<sp/>/<sp/>(_dy<sp/>*_dy);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CDxy<sp/>=<sp/>(Dxy<sp/>*<sp/>_dt)<sp/>/<sp/>(_dx<sp/>*_dy);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-------------------------<sp/>Adwekcyjne<sp/>LICZBY<sp/>COURANTA<sp/>----------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>Dwuwymiarowa<sp/>CrA<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>CrAx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Cox&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>CrAy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Coy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>wypadkowa<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co_wypadk&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------<sp/><sp/>Dyfuzyjne<sp/>LICZBY<sp/>COURANTA<sp/><sp/>----------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>CrDx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDox&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>CrDy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDoy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>CrDxy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDxy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-------------------------<sp/>Adwekcyjne<sp/>LICZBY<sp/>COURANTA<sp/>----------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>Dwuwymiarowa<sp/>CrA<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;CrAx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Cox&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>CrAy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Coy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>wypadkowa<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Co_wypadk&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;---------------------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-------------------------<sp/><sp/>Dyfuzyjne<sp/>LICZBY<sp/>COURANTA<sp/><sp/>---------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-<sp/>CrDx<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDox&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>CrDy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDoy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>CrDxy<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDxy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;---------------------------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Cox<sp/>+<sp/>Coy<sp/>&gt;<sp/>1){</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Suma<sp/>Adwekcyjnych<sp/>Liczb<sp/>Couranta<sp/>&gt;<sp/>1<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Cox+Coy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>--<sp/>Schemat<sp/>UP<sp/>niestabilny&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Suma<sp/>Adwekcyjnych<sp/>Liczb<sp/>Couranta<sp/>&gt;<sp/>1<sp/><sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Cox+Coy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>--<sp/>Schemat<sp/>UP<sp/>niestabilny&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(CDox<sp/>+<sp/>CDoy<sp/>&gt;<sp/>0.5){</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Suma<sp/>Dyfuzyjnych<sp/><sp/>Liczb<sp/>Couranta<sp/>&gt;<sp/>1/2<sp/><sp/><sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDox+CDoy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>--<sp/>Schemat<sp/>UP<sp/>niestabilny&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/><sp/>UWAGA!<sp/><sp/>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Suma<sp/>Dyfuzyjnych<sp/><sp/>Liczb<sp/>Couranta<sp/>&gt;<sp/>1/2<sp/><sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;CDox+CDoy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>--<sp/>Schemat<sp/>UP<sp/>niestabilny&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>out.close();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max(Co,max(Cox,Coy));</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/param.cpp"/>
+  </compounddef>
+</doxygen>

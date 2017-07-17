@@ -1,0 +1,90 @@
+.TH "SUpWind" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SUpWind \- Schemat Pod Prad (UpWind)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <scheme\&.h>\fP
+.PP
+Dziedziczy \fBSScheme\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSUpWind\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBComputeConcentration\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.RI "\fIOblicza koncentracje uzywajac schamatu UpWind\&. \fP"
+.ti -1c
+.RI "void \fBGetFactors\fP (\fBPoint\fP *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector< int > &flag)"
+.br
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Schemat Pod Prad (UpWind)\&. 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu metoda Pod Prad\&. 
+.PP
+Definicja w linii 240 pliku scheme\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "SUpWind::SUpWind ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy schemat do rozwiazywania rownania transporu metoda UpWind 
+.PP
+Definicja w linii 248 pliku scheme\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void SUpWind::ComputeConcentration (map< int, \fBPoint\fP > & PointMap)\fC [virtual]\fP"
+
+.PP
+Oblicza koncentracje uzywajac schamatu UpWind\&. Oblicza koncentracje w daneym kroku uzywajac metody UpWind 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa punktow 
+.RE
+.PP
+10\&.06\&.2015 - dodajemy czlon zrodluwy
+.PP
+10\&.06\&.2015 - dodajemy czlon zrodluwy 
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 809 pliku scheme\&.cpp\&.
+.SS "void SUpWind::GetFactors (\fBPoint\fP * p, const double & CAx, const double & CAy, const double & CDx, const double & CDxy, const double & CDy, const vector< int > & flag)\fC [virtual]\fP"
+Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja dla schemtau UpWind
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - pkt dla ktorego wyznaczane sa czynniki 
+.br
+\fICAx\fP - adwekcyjna liczba Couranta w kieruynku x 
+.br
+\fICAy\fP - adwekcyjna liczba Couranta w kieruynku y 
+.br
+\fICDx\fP - dyfuzyjna liczba Couranta w kieruynku x 
+.br
+\fICDxy\fP - dyfuzyjna liczba Couranta w kieruynku xy 
+.br
+\fICDy\fP - dyfuzyjna liczba Couranta w kieruynku y 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 863 pliku scheme\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

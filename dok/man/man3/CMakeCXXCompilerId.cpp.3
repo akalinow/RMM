@@ -1,0 +1,114 @@
+.TH "build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Definicje"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCOMPILER_ID\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBPLATFORM_ID\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBARCHITECTURE_ID\fP   ''"
+.br
+.ti -1c
+.RI "#define \fBDEC\fP(n)"
+.br
+.ti -1c
+.RI "#define \fBHEX\fP(n)"
+.br
+.in -1c
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SS "Zmienne"
+
+.in +1c
+.ti -1c
+.RI "char const * \fBinfo_compiler\fP = 'INFO' ':' 'compiler[' COMPILER_ID ']'"
+.br
+.ti -1c
+.RI "char const * \fBinfo_platform\fP = 'INFO' ':' 'platform[' PLATFORM_ID ']'"
+.br
+.ti -1c
+.RI "char const * \fBinfo_arch\fP = 'INFO' ':' 'arch[' ARCHITECTURE_ID ']'"
+.br
+.in -1c
+.SH "Dokumentacja definicji"
+.PP 
+.SS "#define ARCHITECTURE_ID   ''"
+
+.PP
+Definicja w linii 341 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "#define COMPILER_ID   ''"
+
+.PP
+Definicja w linii 214 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "#define DEC(n)"
+\fBWartość:\fP
+.PP
+.nf
+('0' + (((n) / 10000000)%10)), \
+  ('0' + (((n) / 1000000)%10)),  \
+  ('0' + (((n) / 100000)%10)),   \
+  ('0' + (((n) / 10000)%10)),    \
+  ('0' + (((n) / 1000)%10)),     \
+  ('0' + (((n) / 100)%10)),      \
+  ('0' + (((n) / 10)%10)),       \
+  ('0' +  ((n) % 10))
+.fi
+.PP
+Definicja w linii 345 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "#define HEX(n)"
+\fBWartość:\fP
+.PP
+.nf
+('0' + ((n)>>28 & 0xF)), \
+  ('0' + ((n)>>24 & 0xF)), \
+  ('0' + ((n)>>20 & 0xF)), \
+  ('0' + ((n)>>16 & 0xF)), \
+  ('0' + ((n)>>12 & 0xF)), \
+  ('0' + ((n)>>8  & 0xF)), \
+  ('0' + ((n)>>4  & 0xF)), \
+  ('0' + ((n)     & 0xF))
+.fi
+.PP
+Definicja w linii 356 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "#define PLATFORM_ID   ''"
+
+.PP
+Definicja w linii 308 pliku CMakeCXXCompilerId\&.cpp\&.
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Definicja w linii 414 pliku CMakeCXXCompilerId\&.cpp\&.
+.SH "Dokumentacja zmiennych"
+.PP 
+.SS "char const* info_arch = 'INFO' ':' 'arch[' ARCHITECTURE_ID ']'"
+
+.PP
+Definicja w linii 407 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "char const* info_compiler = 'INFO' ':' 'compiler[' COMPILER_ID ']'"
+
+.PP
+Definicja w linii 222 pliku CMakeCXXCompilerId\&.cpp\&.
+.SS "char const* info_platform = 'INFO' ':' 'platform[' PLATFORM_ID ']'"
+
+.PP
+Definicja w linii 406 pliku CMakeCXXCompilerId\&.cpp\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

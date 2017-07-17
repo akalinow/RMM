@@ -1,0 +1,7 @@
+\form#0:\[ a~c_{i,j}^{n+1} + b~c_{i+1,j}^{n+1} + c~c_{i-1,j}^{n+1} + d~c_{i,j+1}^{n+1} + e~c_{i,j-1}^{n+1} + f~c_{i+1,j+1}^{n+1} + g~c_{i+1,j-1}^{n+1} + h~c_{i-1,j+1}^{n+1} + i~c_{i-1,j-1}^{n+1} \]
+\form#1:\[ = fa~c_{i,j}^{n} + fb~c_{i+1,j}^{n} + fc~c_{i-1,j}^{n} + fd~c_{i,j+1}^{n} + fe~c_{i,j-1}^{n} + ff~c_{i+1,j+1}^{n} + fg~c_{i+1,j-1}^{n} + fh~c_{i-1,j+1}^{n} + fi~c_{i-1,j-1}^{n} \]
+\form#2:$h_{z}$
+\form#3:$x$
+\form#4:$y$
+\form#5:$Q_{z}$
+\form#6:$val$

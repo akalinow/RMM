@@ -1,0 +1,87 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Program Rivwer Mixing Model - RIVMIX- rmm (rmmt - wersja dla temperatury)	//
+// autor: Monika Kalinowska emali: mkalinow@igf.edu.pl 				//
+// plik z wszelkimi informacjami dotyczacymi kodu, probleamami i planami 	//
+// poczawszy od 20 X 2010							//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+-> 20.10.2010
+/////////////////////////////////////////////////////////////////////////////////
+Wersja programu skopiowana z uzywanej ostatnio (pierwsza polowa 2010) do przygotowania ekspertyzy dla hydroprojektu
+
+Zmiana nazwy z rrm na rmmt, ze wzgledu na fakt, ze dalszy rozwuj na tym etapie bedzie prowadzony dla zanieczyszczen termicznych (tempertury)
+
+UWAGA: 
+  w schamacie ADI 
+  plik: scheme.cpp 
+  funkcja void SADI::GetFactors
+  zakomentowanao część odpowiedzialną za obliczanie wrunków brzegowych 
+    co jest jdnoznacze (powinno byc - nie spradzono dokldanie) z przyjęciem warunku 
+    że temperatura na brzegu wynosi 0 czyli jest rowna temperaturze poczatkowej wody w rzece 
+    z tym że rzeka nie może grzać brzegu i wpływać na temperature brzegu (na brzegu temp zawsze =0)
+    brzeg natomiast może chłodzić wodę w rzece (wypływa na jej temperaturę 
+    SPRAWDZIC TO
+    
+TO DO:
+  1. sprobowac dodac prosty człon źródłowy - poobserwowac zachowanie sie programu i poszczegolnych scchematów numerycznych,
+						a) w obecnej nie zienionej sytuacji (czyli wariantu z ekspertyzy z długim odcinkiem)
+						b) bez zadnego dodatkowego zrodl - wplyw na sama temperture wody w rzecze
+						  (przy okzaji wplyw brzegow ...)
+						  
+  2. sprawdzic obecny warunek brzegowy 
+    - lepeij zaimplementowac obecna sytuacje
+    - zaimplementowac rozne sposoby zadawania warunkow brzegowych
+    - testy warunkow brzegowych - porownanie rozwiazan - wplyw na wyniki
+    
+  3. poprawic i uzupelnic dokumentacje
+  4. oczyscic kod ze zbednych fragmentow kodu i komentarzy
+  
+  
+//////////////////////////////////////////////////////////////////////////////////
+-> 29.10.2010
+/////////////////////////////////////////////////////////////////////////////////
+probujemy dodac czlon zrodlowy postac K*T + L, gdzie K i L - liczby wyznaczone wczesniej na podstawie pewnych zaleznosci,
+najpierw proba w schmecia UP(najlatwiej)
+Kroki:
+1. puscicic ostatni symulacje dla schematu UP,
+2. obejzec wyniki,
+3. prawdopodobnie trzeba zmienic warunki brzegowe na takie w ktorych temp brzegu ma zawsze temperature poczatkowa wody
+  czyli w przypadku skali wzglednej 0st 
+  jest to rownowazne zakomentowaniu luczenia "warunkow brzegowych" czyli get factors dla pewnych punktow
+4. zobaczyc wyniki czy ok
+5. jezeli ze stabilnosci itp jest wszytsko ok, to prubujemy dodac czlon zreodlowy
+  - czyli zminiec w fonkcji get factors w schmacie upwind sposob liczenia wspolcxzynnika przy C[i,j] - dodac obliczone K 
+  - dodac do wszystkiego wyraz wolny L
+6. zobaczyc czy to ma sens 
+7. porownac wyniki
+
+ 
+ 
+//////////////////////////////////////////////////////////////////////////////////
+-> 21.02.2011
+/////////////////////////////////////////////////////////////////////////////////
+
+Prwdopodobnie blad w metodzie Thomasa w schamcie ADI (void SADI::DirectSolveSetOfEquation1 i void SADI::DirectSolveSetOfEquation2)
+pojawiaja sie w wynikach dodatkowe zrodla (wycieki) na brzegach obszaru obliczeniowego (przeplywu)
+w  przypadku uzycia metody SOR zamiast metody Thomasa zez schematem ADI lub metody SOR ze chameatem CN tego typu problemow nie ma
+
+_________________
+PROBA ZNALEZIENIA BLEDU:
+
+1. 
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  

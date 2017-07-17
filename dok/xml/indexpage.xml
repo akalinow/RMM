@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>River Mixing Model</title>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Monika Kalinowska</para></simplesect>
+A two - dimensional River Mixing Model (RMM) has been created for simulating rivers mixing. The model uses finite difference numerical methods for solving 2D advection - diffusion transport equation. <simplesect kind="see"><para><ulink url="http://www.igf.edu.pl/~mkalinow/Monika/model.php">more information</ulink> </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

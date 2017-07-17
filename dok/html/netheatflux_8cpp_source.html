@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>RivMix: Plik źródłowy netheatflux.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RivMix.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RivMix
+   &#160;<span id="projectnumber">15.1</span>
+   </div>
+   <div id="projectbrief">River Mixing Model</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('netheatflux_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">netheatflux.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="netheatflux_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * ***************************************************************************      </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  *   Copyright (C) by Monika Kalinowska                               *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  *   mkalinow@igf.edu.pl                                                   *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  *                                                                         *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  ***************************************************************************</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="netheatflux_8h.html">netheatflux.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> NetHeatFlux::_sigma = 5.67e-8;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">double</span> NetHeatFlux::_kelvin = 273.15;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">float</span> NetHeatFlux::_p0 = 1013.0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a31570d0c05e45b2a01a05b3976617ac4">   16</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a31570d0c05e45b2a01a05b3976617ac4">NetHeatFlux::ComputeNetHeatFlux</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span> Tw)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{ </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  cout.precision(10);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="comment">// cout&lt;&lt;&quot;ComputeNetHeatFlux&quot;&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jsn = <a class="code" href="class_net_heat_flux.html#a5bf457660c754e02562840cc90cf00ac">ComputeNetSolar</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Ja = <a class="code" href="class_net_heat_flux.html#a8c35767d0fdf37fd6216e0c2f1e71cc2">ComputeLongWaveAtmosf</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jw = <a class="code" href="class_net_heat_flux.html#a867bd311aaaf67ba057ad24f8e8ba5af">ComputeLongWaveWater</a>(Tw);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Je = <a class="code" href="class_net_heat_flux.html#a7029244ff808627ebc74a9e74d00abe4">ComputeEvapCondens</a>(Tw);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jc = <a class="code" href="class_net_heat_flux.html#ab3807fc076b38645302be22d62c70c65">ComputeCondConv</a>(Tw);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">//cout&lt;&lt;Jsn&lt;&lt;&quot; &quot;&lt;&lt;Ja&lt;&lt;&quot; &quot;&lt;&lt;Jw&lt;&lt;&quot; &quot;&lt;&lt;Je&lt;&lt;&quot; &quot;&lt;&lt;Jc&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> J = Jsn + Ja - Jw - Je - Jc;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Net Heat Flux = &quot;&lt;&lt;J&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> J;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a5bf457660c754e02562840cc90cf00ac">   32</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a5bf457660c754e02562840cc90cf00ac">NetHeatFlux::ComputeNetSolar</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jsn = _Js*(1.0-_aw);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;NetSolarRadiation: &quot;&lt;&lt;Jsn&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> Jsn;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a8c35767d0fdf37fd6216e0c2f1e71cc2">   40</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a8c35767d0fdf37fd6216e0c2f1e71cc2">NetHeatFlux::ComputeLongWaveAtmosf</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> emis = <a class="code" href="class_net_heat_flux.html#a87b1a80ed14554fcaf903a3383f25a77">Emissivity_Brunt1932</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Ja = emis * _sigma * pow((_Ta + _kelvin), 4)*(1.0 - 0.03);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Long Wave Atmosferic Radiation: &quot;&lt;&lt;Ja&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> Ja;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a87b1a80ed14554fcaf903a3383f25a77">   49</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a87b1a80ed14554fcaf903a3383f25a77">NetHeatFlux::Emissivity_Brunt1932</a>(<span class="keywordtype">double</span> a1, <span class="keywordtype">double</span> a2)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Emissivity = a1 + a2 * pow(_ea,0.5);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//return 0.769578;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;_ea: &quot;&lt;&lt;_ea&lt;&lt;&quot;  Emissivity Brunt (1932)&quot;&lt;&lt;Emissivity&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">return</span> Emissivity;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#ae90ff0b43ec0e41e2f40f28df7c9612d">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_net_heat_flux.html#ae90ff0b43ec0e41e2f40f28df7c9612d">NetHeatFlux::set_ea</a>()</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">  long double pom1 = b2*_Ta;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">  cout&lt;&lt;b2&lt;&lt;&quot;* _Ta = &quot;&lt;&lt;pom1&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">  long double pom2 = _Ta + b3;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">  cout&lt;&lt;&quot;_Ta + &quot;&lt;&lt;b3&lt;&lt;&quot; = &quot;&lt;&lt;pom2&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">  long double pom3 = pom1/pom2;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">  cout&lt;&lt;&quot;(&quot;&lt;&lt;b2&lt;&lt;&quot;* _Ta) /&quot;&lt;&lt;&quot;(_Ta + &quot;&lt;&lt;b3&lt;&lt;&quot;) = &quot;&lt;&lt;pom3&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">  long double pom4 = exp(pom3);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">  cout&lt;&lt;&quot;e^(&quot;&lt;&lt;b2&lt;&lt;&quot;* _Ta /&quot;&lt;&lt;&quot;(_Ta + &quot;&lt;&lt;b3&lt;&lt;&quot;) = &quot;&lt;&lt;pom4&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  long double esat = b1*(exp((pom1)/(pom2))); </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> esat = <a class="code" href="class_net_heat_flux.html#a3baa4ec5f1504d7e5c01efd21530637f">e_sat</a>(_Ta);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  _ea = esat*(_Rh/100);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;esat: &quot;&lt;&lt;esat&lt;&lt;&quot;  ea: &quot;&lt;&lt;_ea&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a3baa4ec5f1504d7e5c01efd21530637f">   77</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a3baa4ec5f1504d7e5c01efd21530637f">NetHeatFlux::e_sat</a> (<span class="keywordtype">long</span> <span class="keywordtype">double</span> T, <span class="keywordtype">double</span> b1, <span class="keywordtype">double</span>  b2, <span class="keywordtype">double</span> b3)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> esat = b1*(exp((b2*T)/(T+b3))); </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> esat;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};  </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a867bd311aaaf67ba057ad24f8e8ba5af">   83</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a867bd311aaaf67ba057ad24f8e8ba5af">NetHeatFlux::ComputeLongWaveWater</a>( <span class="keywordtype">long</span> <span class="keywordtype">double</span> &amp;Tw)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jw = _emis_w * _sigma * pow((Tw + _kelvin),4);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Long Wave Water: &quot;&lt;&lt;Jw&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> Jw;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a7029244ff808627ebc74a9e74d00abe4">   91</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a7029244ff808627ebc74a9e74d00abe4">NetHeatFlux::ComputeEvapCondens</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span>&amp; Tw)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> es = <a class="code" href="class_net_heat_flux.html#a3baa4ec5f1504d7e5c01efd21530637f">e_sat</a>(Tw); </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Je = <a class="code" href="class_net_heat_flux.html#a3209796cc63c1b6f1d8040f7bb815053">WindFunction_Chapra2008</a>() * (es - _ea);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;es: &quot;&lt;&lt;es&lt;&lt;endl&lt;&lt;&quot;Evaporation/Condensation: &quot;&lt;&lt;Je&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> Je;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#a3209796cc63c1b6f1d8040f7bb815053">  100</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#a3209796cc63c1b6f1d8040f7bb815053">NetHeatFlux::WindFunction_Chapra2008</a>(<span class="keywordtype">float</span> c1, <span class="keywordtype">float</span> c2)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;f(u): &quot;&lt;&lt;(c1 + (c2 * _u * _u))&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">return</span> (c1 + (c2 * _u * _u));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_net_heat_flux.html#ab3807fc076b38645302be22d62c70c65">  106</a></span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_net_heat_flux.html#ab3807fc076b38645302be22d62c70c65">NetHeatFlux::ComputeCondConv</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span>&amp; Tw)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> Jc = _cb * (_pa/_p0) * <a class="code" href="class_net_heat_flux.html#a3209796cc63c1b6f1d8040f7bb815053">WindFunction_Chapra2008</a>() * (Tw - _Ta);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Conduation and Convection: &quot;&lt;&lt;Jc&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> Jc;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="class_net_heat_flux_html_a5bf457660c754e02562840cc90cf00ac"><div class="ttname"><a href="class_net_heat_flux.html#a5bf457660c754e02562840cc90cf00ac">NetHeatFlux::ComputeNetSolar</a></div><div class="ttdeci">long double ComputeNetSolar()</div><div class="ttdoc">oblicza wartosc promieniowania słonecznego krotkofalowe </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00032">netheatflux.cpp:32</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a87b1a80ed14554fcaf903a3383f25a77"><div class="ttname"><a href="class_net_heat_flux.html#a87b1a80ed14554fcaf903a3383f25a77">NetHeatFlux::Emissivity_Brunt1932</a></div><div class="ttdeci">long double Emissivity_Brunt1932(double a1=0.55, double a2=0.065)</div><div class="ttdoc">oblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00049">netheatflux.cpp:49</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a31570d0c05e45b2a01a05b3976617ac4"><div class="ttname"><a href="class_net_heat_flux.html#a31570d0c05e45b2a01a05b3976617ac4">NetHeatFlux::ComputeNetHeatFlux</a></div><div class="ttdeci">long double ComputeNetHeatFlux(long double Tw)</div><div class="ttdoc">oblicza wartosc czlonu zródłowego </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00016">netheatflux.cpp:16</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_ab3807fc076b38645302be22d62c70c65"><div class="ttname"><a href="class_net_heat_flux.html#ab3807fc076b38645302be22d62c70c65">NetHeatFlux::ComputeCondConv</a></div><div class="ttdeci">long double ComputeCondConv(long double &amp;Tw)</div><div class="ttdoc">oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00106">netheatflux.cpp:106</a></div></div>
+<div class="ttc" id="netheatflux_8h_html"><div class="ttname"><a href="netheatflux_8h.html">netheatflux.h</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a3209796cc63c1b6f1d8040f7bb815053"><div class="ttname"><a href="class_net_heat_flux.html#a3209796cc63c1b6f1d8040f7bb815053">NetHeatFlux::WindFunction_Chapra2008</a></div><div class="ttdeci">long double WindFunction_Chapra2008(float c1=19.0, float c2=0.95)</div><div class="ttdoc">oblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci wa...</div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00100">netheatflux.cpp:100</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a867bd311aaaf67ba057ad24f8e8ba5af"><div class="ttname"><a href="class_net_heat_flux.html#a867bd311aaaf67ba057ad24f8e8ba5af">NetHeatFlux::ComputeLongWaveWater</a></div><div class="ttdeci">long double ComputeLongWaveWater(long double &amp;Tw)</div><div class="ttdoc">oblicza wartosc promieniowania długofalowego WODY </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00083">netheatflux.cpp:83</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a8c35767d0fdf37fd6216e0c2f1e71cc2"><div class="ttname"><a href="class_net_heat_flux.html#a8c35767d0fdf37fd6216e0c2f1e71cc2">NetHeatFlux::ComputeLongWaveAtmosf</a></div><div class="ttdeci">long double ComputeLongWaveAtmosf()</div><div class="ttdoc">oblicza wartosc promieniowania atmosferycznego długofalowego </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00040">netheatflux.cpp:40</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_ae90ff0b43ec0e41e2f40f28df7c9612d"><div class="ttname"><a href="class_net_heat_flux.html#ae90ff0b43ec0e41e2f40f28df7c9612d">NetHeatFlux::set_ea</a></div><div class="ttdeci">void set_ea()</div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00058">netheatflux.cpp:58</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a3baa4ec5f1504d7e5c01efd21530637f"><div class="ttname"><a href="class_net_heat_flux.html#a3baa4ec5f1504d7e5c01efd21530637f">NetHeatFlux::e_sat</a></div><div class="ttdeci">long double e_sat(long double T, double b1=6.12, double b2=17.27, double b3=237.3)</div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00077">netheatflux.cpp:77</a></div></div>
+<div class="ttc" id="class_net_heat_flux_html_a7029244ff808627ebc74a9e74d00abe4"><div class="ttname"><a href="class_net_heat_flux.html#a7029244ff808627ebc74a9e74d00abe4">NetHeatFlux::ComputeEvapCondens</a></div><div class="ttdeci">long double ComputeEvapCondens(long double &amp;Tw)</div><div class="ttdoc">oblicza wartosc strat ciepła zwiazanego z praowaniem </div><div class="ttdef"><b>Definition:</b> <a href="netheatflux_8cpp_source.html#l00091">netheatflux.cpp:91</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="netheatflux_8cpp.html">netheatflux.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

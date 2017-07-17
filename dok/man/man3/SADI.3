@@ -1,0 +1,94 @@
+.TH "SADI" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SADI \- Schemat naprzemiennych kierunkow ADI \&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <scheme\&.h>\fP
+.PP
+Dziedziczy \fBSScheme\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSADI\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBComputeConcentration\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.RI "\fIOblicza koncentracje uzywajac schamatu ADI\&. \fP"
+.ti -1c
+.RI "void \fBGetFactors\fP (\fBPoint\fP *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector< int > &flag)"
+.br
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Schemat naprzemiennych kierunkow ADI \&. 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu metoda ADI\&. 
+.PP
+Definicja w linii 283 pliku scheme\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "SADI::SADI ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy schemat do rozwiazywania rownania transporu metoda ADI 
+.PP
+Definicja w linii 291 pliku scheme\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void SADI::ComputeConcentration (map< int, \fBPoint\fP > & PointMap)\fC [virtual]\fP"
+
+.PP
+Oblicza koncentracje uzywajac schamatu ADI\&. Oblicza koncentracje w daneym kroku uzywajac metody ADI 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa punktow 
+.RE
+.PP
+------------10\&.06\&.2015 - dodajemy czlon zrodluwy
+.PP
+------------10\&.06\&.2015 - dodajemy czlon zrodluwy
+.PP
+----------LICZENIE HEAT FLUX --------------------//
+.PP
+----------LICZENIE HEAT FLUX --------------------// 
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 1261 pliku scheme\&.cpp\&.
+.SS "void SADI::GetFactors (\fBPoint\fP * p, const double & CAx, const double & CAy, const double & CDx, const double & CDxy, const double & CDy, const vector< int > & flag)\fC [virtual]\fP"
+Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja dla schemtu ADI
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - pkt dla ktorego wyznaczane sa czynniki 
+.br
+\fICAx\fP - adwekcyjna liczba Couranta w kieruynku x 
+.br
+\fICAy\fP - adwekcyjna liczba Couranta w kieruynku y 
+.br
+\fICDx\fP - dyfuzyjna liczba Couranta w kieruynku x 
+.br
+\fICDxy\fP - dyfuzyjna liczba Couranta w kieruynku xy 
+.br
+\fICDy\fP - dyfuzyjna liczba Couranta w kieruynku y 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 1387 pliku scheme\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

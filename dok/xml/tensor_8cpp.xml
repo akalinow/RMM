@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="tensor_8cpp" kind="file" language="C++">
+    <compoundname>tensor.cpp</compoundname>
+    <includes refid="tensor_8h" local="yes">tensor.h</includes>
+    <incdepgraph>
+      <node id="942">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+      </node>
+      <node id="944">
+        <label>cmath</label>
+      </node>
+      <node id="940">
+        <label>string</label>
+      </node>
+      <node id="946">
+        <label>map</label>
+      </node>
+      <node id="943">
+        <label>fstream</label>
+      </node>
+      <node id="945">
+        <label>vector</label>
+      </node>
+      <node id="938">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+      </node>
+      <node id="939">
+        <label>cstdlib</label>
+      </node>
+      <node id="941">
+        <label>iostream</label>
+      </node>
+      <node id="937">
+        <label>tensor.cpp</label>
+        <link refid="tensor.cpp"/>
+        <childnode refid="938" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>tensor.cpp</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="tensor_8h" kindref="compound">tensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="11" refid="class_d_tensor_1a0ed66ce3f3ab159c4d7f6a019bfea9da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_tensor_1a0ed66ce3f3ab159c4d7f6a019bfea9da" kindref="member">DTensor::ComputeTensor</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Ustawiam<sp/>wartosci<sp/>wspolczyn<sp/>tensora<sp/>metoda<sp/>simple&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" kindref="member">set_Dxx</ref>(Dl);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" kindref="member">set_Dxy</ref>(0.0);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" kindref="member">set_Dyy</ref>(Dt);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_d_fischer_1a683862f1095c7b1c7331621d79360e40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_fischer_1a683862f1095c7b1c7331621d79360e40" kindref="member">DFischer::ComputeTensor</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Dl:<sp/>&quot;&lt;&lt;Dl&lt;&lt;&quot;<sp/><sp/>Dt:<sp/>&quot;&lt;&lt;Dt&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>p.<ref refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" kindref="member">get_vx</ref>(),<sp/>vy<sp/>=<sp/>p.<ref refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" kindref="member">get_vy</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>sqrt((vx*vx)<sp/>+(vy*vy));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxx<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxy<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>D<sp/>=<sp/>Dl<sp/>-<sp/>Dt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>Dt<sp/>+<sp/>(D*((vx*vx)/(v*v)));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>(D*((vx*vy)/(v*v)));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dt<sp/>+<sp/>(D*((vy*vy)/(v*v)));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;!!!<sp/>UWAGA<sp/>!!!<sp/>Predkosc<sp/>wypadkowa<sp/>rowna<sp/>zero;<sp/>Nie<sp/>ma<sp/>sensu<sp/>pojecie<sp/>dyspersji!&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;przyjmuje:<sp/>Dxx<sp/>=<sp/>Dyy<sp/>=<sp/>Dt;<sp/>Dxy<sp/>=<sp/>0&quot;</highlight><highlight class="normal">&lt;&lt;endl;<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" kindref="member">set_Dxx</ref>(Dxx);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" kindref="member">set_Dxy</ref>(Dxy);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" kindref="member">set_Dyy</ref>(Dyy);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Ustawiam<sp/>wartosci<sp/>wspolczyn<sp/>tensora<sp/>metoda<sp/>fischer&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_d_fischer2_1ae9c984ac693b39d8ea947aaa975cb0d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_fischer2_1ae9c984ac693b39d8ea947aaa975cb0d7" kindref="member">DFischer2::ComputeTensor</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Dl:<sp/>&quot;&lt;&lt;Dl&lt;&lt;&quot;<sp/><sp/>Dt:<sp/>&quot;&lt;&lt;Dt&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>p.<ref refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" kindref="member">get_vx</ref>(),<sp/>vy<sp/>=<sp/>p.<ref refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" kindref="member">get_vy</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>sqrt((vx*vx)<sp/>+(vy*vy));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxx<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//long<sp/>double<sp/>Dxy<sp/>=<sp/>-9999;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy<sp/>=<sp/>-9999;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>D<sp/>=<sp/>Dl<sp/>-<sp/>Dt;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>Dt<sp/>+<sp/>(D*((vx*vx)/(v*v)));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Dxy<sp/>=<sp/>(D*((vx*vy)/(v*v)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dt<sp/>+<sp/>(D*((vy*vy)/(v*v)));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;!!!<sp/>UWAGA<sp/>!!!<sp/>Predkosc<sp/>wypadkowa<sp/>rowna<sp/>zero;<sp/>Nie<sp/>ma<sp/>sensu<sp/>pojecie<sp/>dyspersji!&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;przyjmuje:<sp/>Dxx<sp/>=<sp/>Dyy<sp/>=<sp/>Dt;<sp/>Dxy<sp/>=<sp/>0&quot;</highlight><highlight class="normal">&lt;&lt;endl;<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Dxy<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" kindref="member">set_Dxx</ref>(Dxx);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" kindref="member">set_Dxy</ref>(0.0);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" kindref="member">set_Dyy</ref>(Dyy);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Ustawiam<sp/>wartosci<sp/>wspolczyn<sp/>tensora<sp/>metoda<sp/>fischer&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_d_vector_1a2069ef34d3db2a9965f07e27f17e12dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_vector_1a2069ef34d3db2a9965f07e27f17e12dd" kindref="member">DVector::ComputeTensor</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dt,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;p){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Dl:<sp/>&quot;&lt;&lt;Dl&lt;&lt;&quot;<sp/><sp/>Dt:<sp/>&quot;&lt;&lt;Dt&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vx<sp/>=<sp/>p.<ref refid="class_point_1ad0f0083a12b3ff699e7edcd7adc90c81" kindref="member">get_vx</ref>(),<sp/>vy<sp/>=<sp/>p.<ref refid="class_point_1a6ed9a9e001af8ca030c648c280a05c69" kindref="member">get_vy</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>sqrt((vx*vx)<sp/>+(vy*vy));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;v:<sp/>&quot;&lt;&lt;v&lt;&lt;&quot;<sp/><sp/>vx:<sp/>&quot;&lt;&lt;vx&lt;&lt;&quot;<sp/><sp/>vy:<sp/>&quot;&lt;&lt;vy&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxx<sp/>=<sp/>-9999.99;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dxy<sp/>=<sp/>-9999.99;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy<sp/>=<sp/>-9999.99;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>abs(Dl<sp/>*<sp/>(vx/v)<sp/>+<sp/>Dt<sp/>*<sp/>(vy/v));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dl<sp/>*<sp/>(vy/v)<sp/>+<sp/>Dt<sp/>*<sp/>(vx/v);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Obliczone<sp/>wartosci:<sp/><sp/>Dxx:&quot;</highlight><highlight class="normal">&lt;&lt;Dxx&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dxy:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Dxy&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/><sp/>Dyy:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Dyy&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;!!!<sp/>UWAGA<sp/>!!!<sp/>Predkosc<sp/>wypadkowa<sp/>rowna<sp/>zero;<sp/>Nie<sp/>ma<sp/>sensu<sp/>pojecie<sp/>dyspersji!&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;przyjmuje:<sp/>Dxx<sp/>=<sp/>Dyy<sp/>=<sp/>Dt;<sp/>Dxy<sp/>=<sp/>0&quot;</highlight><highlight class="normal">&lt;&lt;endl;<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxx<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dxy<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dyy<sp/>=<sp/>Dt;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Dxx:<sp/>&quot;&lt;&lt;Dxx&lt;&lt;&quot;<sp/><sp/><sp/><sp/>Dyy:<sp/>&quot;&lt;&lt;Dyy&lt;&lt;&quot;<sp/><sp/>Dxy:<sp/>&quot;&lt;&lt;Dxy&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a9c89304540fc3a2f9b7a6720f5bad95b" kindref="member">set_Dxx</ref>(Dxx);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1a0bf3e2831a50b62754eefb0cab6c3bbd" kindref="member">set_Dxy</ref>(Dxy);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="class_point_1adc5e03973821b3dee14d6b1c0a8e43ea" kindref="member">set_Dyy</ref>(Dyy);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout&lt;&lt;&quot;<sp/>Ustawiam<sp/>wartosci<sp/>wspolczyn<sp/>tensora<sp/>metoda<sp/>fischer&quot;&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/tensor.cpp"/>
+  </compounddef>
+</doxygen>

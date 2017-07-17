@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_s_crank_nicolson" kind="class" language="C++" prot="public">
+    <compoundname>SCrankNicolson</compoundname>
+    <basecompoundref refid="class_s_scheme" prot="public" virt="non-virtual">SScheme</basecompoundref>
+    <includes refid="scheme_8h" local="no">scheme.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_crank_nicolson_1a914a9f8786b91fd4ceae1a9f0e99cff8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCrankNicolson::SCrankNicolson</definition>
+        <argsstring>()</argsstring>
+        <name>SCrankNicolson</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy schemat do rozwiazywania rownania transporu metoda Cranka Nicolsona </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="201" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="201" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_crank_nicolson_1abe37e0a2d5078a17420b3e9d815fc85f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SCrankNicolson::ComputeConcentration</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>ComputeConcentration</name>
+        <reimplements refid="class_s_scheme_1a1607f2363ea074bde9ad9c585b5a4019">ComputeConcentration</reimplements>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+<para>Oblicza koncentracje uzywajac schamatu Cranka Nicolsona. </para>        </briefdescription>
+        <detaileddescription>
+<para>Oblicza koncentracje w daneym kroku uzywajac metody Cranka Nicolsona <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- mapa punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="210" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="382" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_crank_nicolson_1a1fd8e8aee2c7fb9f61e6c4b02b74e1b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SCrankNicolson::GetFactors</definition>
+        <argsstring>(Point *p, const double &amp;CAx, const double &amp;CAy, const double &amp;CDx, const double &amp;CDxy, const double &amp;CDy, const vector&lt; int &gt; &amp;flag)</argsstring>
+        <name>GetFactors</name>
+        <reimplements refid="class_s_scheme_1ae1e554b35ec2d8a902f6fdb30d95ab20">GetFactors</reimplements>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CAx</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CAy</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDx</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDxy</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>CDy</declname>
+        </param>
+        <param>
+          <type>const vector&lt; int &gt; &amp;</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja dla schemtau Cranka Nicolsona</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pkt dla ktorego wyznaczane sa czynniki </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CAx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adwekcyjna liczba Couranta w kieruynku x </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CAy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adwekcyjna liczba Couranta w kieruynku y </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku x </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku xy </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CDy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- dyfuzyjna liczba Couranta w kieruynku y </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="225" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="426" bodyend="802"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_crank_nicolson_1ab98c08fdf19664247e4abfcaf37ae293" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SCrankNicolson::IterativeSolveSetOfEquations</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, map&lt; int, long double &gt; &amp;f)</argsstring>
+        <name>IterativeSolveSetOfEquations</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>map&lt; int, long double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/scheme.h" line="229" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.cpp" bodystart="276" bodyend="379"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Schemat Cranka Nicolsona. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera metody potrzebane do rozwiazania rownania transportu metoda Crnka Nicolsona. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>SScheme</label>
+        <link refid="class_s_scheme"/>
+      </node>
+      <node id="51">
+        <label>SCrankNicolson</label>
+        <link refid="class_s_crank_nicolson"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>SScheme</label>
+        <link refid="class_s_scheme"/>
+      </node>
+      <node id="53">
+        <label>SCrankNicolson</label>
+        <link refid="class_s_crank_nicolson"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mkalinow/projects/rmmt/scheme.h" line="193" column="1" bodyfile="/home/mkalinow/projects/rmmt/scheme.h" bodystart="193" bodyend="232"/>
+    <listofallmembers>
+      <member refid="class_s_scheme_1a875c9280df6dcdbc3a41ef1c148202da" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>_i</name></member>
+      <member refid="class_s_scheme_1a7d998bc77fe043ec3dfba082bf7c570a" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>_w</name></member>
+      <member refid="class_s_crank_nicolson_1abe37e0a2d5078a17420b3e9d815fc85f" prot="public" virt="virtual"><scope>SCrankNicolson</scope><name>ComputeConcentration</name></member>
+      <member refid="class_s_scheme_1ab5e7404ff79c4c13d12f64e69b284027" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>FindBestOmega</name></member>
+      <member refid="class_s_scheme_1a0dd0343c9bcb4b35849403d8a76f9d18" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>Gauss_Seidel</name></member>
+      <member refid="class_s_scheme_1a48ee384f6206a5c55931a8e3361f7d57" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>Gauss_Seidel</name></member>
+      <member refid="class_s_scheme_1a8c73b695beb2beb76079444aa92f7922" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>get_method</name></member>
+      <member refid="class_s_scheme_1a69a8b9ea4d5c04b5def66db3d64c4c22" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>get_omega</name></member>
+      <member refid="class_s_scheme_1acadf8feab53234c5923990af908c2733" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>get_sym_step</name></member>
+      <member refid="class_s_crank_nicolson_1a1fd8e8aee2c7fb9f61e6c4b02b74e1b3" prot="public" virt="virtual"><scope>SCrankNicolson</scope><name>GetFactors</name></member>
+      <member refid="class_s_crank_nicolson_1ab98c08fdf19664247e4abfcaf37ae293" prot="private" virt="non-virtual"><scope>SCrankNicolson</scope><name>IterativeSolveSetOfEquations</name></member>
+      <member refid="class_s_scheme_1a1b66164d72e54d4b85322fa68f307c30" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>Jakobi</name></member>
+      <member refid="class_s_scheme_1a78c4706ab3f69423302451983ad44022" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>Jakobi</name></member>
+      <member refid="class_s_scheme_1a6c8e7253815c7ac85996ee8fba438f53" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>powrot</name></member>
+      <member refid="class_s_scheme_1a04180646227c260880ddc35ee0b563e7" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>ReadMethod</name></member>
+      <member refid="class_s_crank_nicolson_1a914a9f8786b91fd4ceae1a9f0e99cff8" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>SCrankNicolson</name></member>
+      <member refid="class_s_scheme_1a3749de0c92f9a4a50c10ded4d7713344" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>set_method</name></member>
+      <member refid="class_s_scheme_1a99fefa3de0fa0859be662faa9e21a01b" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>set_omega</name></member>
+      <member refid="class_s_scheme_1a2032e9d35d0931c17d8f96170d5d843a" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>set_sym_step</name></member>
+      <member refid="class_s_scheme_1a9f9da388c80058c59123ea58e28f6408" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>SetFactors</name></member>
+      <member refid="class_s_scheme_1a48fa493450e8c55967bdaa78e9e1bd7c" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>SOR</name></member>
+      <member refid="class_s_scheme_1a4bf15feac00aed3dd724fbf4921a4144" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>SOR</name></member>
+      <member refid="class_s_scheme_1a007f3a5b981419391f6a57222f7d7da6" prot="public" virt="non-virtual"><scope>SCrankNicolson</scope><name>SScheme</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

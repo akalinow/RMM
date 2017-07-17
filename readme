@@ -1,0 +1,1454 @@
+-------------------------------------------------------------------------------------
+Monika Kalinowska - program RIVMIX - 2015-09-09 - rozpoczynam nowe prace nad modelem
+Uwaga - zmina sysytemu zapisu dla pliku redeme - najnowsze informacje na gorze
+-------------------------------------------------------------------------------------\
+
+w poniedzilek dokonczyc funkcje: 
+int Simulation::SetSaveParameters(const string &file, int n){
+
+____________________________________________________________________________________________________
+2015-12-04
+TODO
+1. ujednolicic w przyszlosci nawy plikow, parametrow itp
+2. nie potrzebne przesylanie do funkcji w klasie simulation prametru z nazwa pliku - jest ona dostepna w zmiennych prywatnych klasy 
+pytanie - czy jest potrzebna ta zmienna kiedy istota jest tylko na pocztaku??? 
+
+
+____________________________________________________________________________________________________
+2015-12-02
+
+1.napisac nowa funkcje ustwaijaca zapis do pliku
+2. nazwy plikow wejsciowych ustawiac nie w kodzie tylko w innym miejscu 
+
+
+____________________________________________________________________________________________________
+
+
+void Simulation::SetInitialConcentrationGaussNonDiag (map<int, Point> &PointMap, SimulationParameters &param, double x0, double y0, double val, int krok){
+	
+	ofstream out("Info.dat", ios::app);
+	out<<endl<<"... Ustawiam Poczatkowe wartosci koncentracji - GAUSSNonDiag ..."<<endl;
+	cout<<endl<<"... Ustawiam Poczatkowe wartosci koncentracji - GAUSSNonDiag ..."<<endl;
+	
+	//int krok = 100;
+	int i = -9999, j = -9999, flag = -9999;
+
+	double c0 = 0.0;  
+	double gx = 0.0, gy = 0.0, gxy = 0.0; 
+	double sigmaX = 0.0, sigmaY = 0.0, sigmaXY = 0.0, meanX = 0.0, meanY = 0.0;
+	double dx = param.get_dx(), dy = param.get_dy(), dt = param.get_dt();
+	double vx, vy, Dxx, Dyy, Dxy; 
+	double pi =  3.14159265358979323846;
+	double total = 0; //calkowita zadna na siatce koncentracja
+     
+	int index = x0/dx*10000 + y0/dy;
+	vx = PointMap[index].get_vx();
+	vy = PointMap[index].get_vy();
+	Dxx = PointMap[index].get_Dxx();
+	Dxy = PointMap[index].get_Dxy();
+	Dyy = PointMap[index].get_Dyy();
+	
+   	double D = (Dxx*Dyy - Dxy*Dxy);
+	cout<<"GuassNonDiag parametry: "<<"vx = "<<vx<<"  vy = "<<vy<<"  Dxx = "<<Dxx<<"  Dyy = "<<Dyy<<"  Dxy = "<<Dxy<<"  D = "<<D<<endl;;	
+
+	//sigmaX=sqrt((D/Dyy)*2.0*krok*dt);
+	//sigmaY=sqrt((D/Dxx)*2.0*krok*dt); 
+	//sigmaXY = sqrt(fabs((D/Dxy)*krok*dt));
+	//sigmaXY = sqrt(fabs((D/Dxy)*krok*dt));
+	
+	sigmaX=sqrt((D/Dyy)*2*krok*dt/(dx*dx));
+	sigmaY=sqrt((D/Dxx)*2*krok*dt/(dy*dy)); 
+	sigmaXY = sqrt(fabs((D/Dxy)*krok*dt/(dx*dy)));
+	//meanX = x0+(vx*krok*dt/dx);
+	//meanY = y0+(vy*krok*dt/dy);
+			
+	//meanX = (x0/dx+(vx*krok*dt));
+	//meanY = (y0/dy+(vy*krok*dt));
+	meanX = (x0/dx+(vx*krok*dt/dx));
+	meanY = (y0/dy+(vy*krok*dt/dy));
+
+	cout<<"                        "<<"sigmaX = "<<sigmaX<<"  sigmaY = "<<sigmaY<<"  sigmaXY = "<<sigmaXY<<"  meanX = "<<meanX<<"  meanY = "<<meanY<<endl;	
+
+	
+	//Double_t norm = 2*2.50662827463100024*sqrt(D*krok*dt);
+//   	double norm = 2*pi*sqrt(D*krok*dt);
+   	double norm = 4*pi*krok*dt*sqrt(D)/(dx*dy);
+//   	double norm = 2*pi*krok*dt*sqrt(D);
+	//double norm = 2*3.141*sqrt(4*krok*dt*dt*krok*D);
+
+	double argX=0.0, argY=0.0, argXY=0.0;
+	//Wyczysc wartosci.
+	map<int,Point>::iterator IT;
+	int tmp = 0;
+	for(IT = PointMap.begin(); IT != PointMap.end(); IT++){
+		IT->second.set_Prev(0);
+		IT->second.set_Curr(0);
+		IT->second.set_Next(0);
+		flag = IT->second.get_flag();
+		if (flag == 1){
+			//IT->second.print();
+			i = IT->second.get_x();
+			j = IT->second.get_y();
+		
+			/*vx = IT->second.get_vx();
+			vy = IT->second.get_vy();
+			Dxx = IT->second.get_Dxx();
+			Dyy = IT->second.get_Dyy();
+			Dxy = IT->second.get_Dxy();
+			//Dyx = IT->second.get_Dxx();
+
+			D = (Dxx*Dyy - Dxy*Dxy);
+			*/
+			
+			//gx = Gaus(i, meanX, sigmaX, false);
+			//gy = Gaus(j, meanY, sigmaY, false);
+			//gxy = My_Gaus(i, j, meanX, meanY, sigmaXY);
+			
+			//if (sigma == 0)	
+   			argX = (i-meanX)/sigmaX;
+			argY = (j-meanY)/sigmaY;
+			
+			argXY = -(i-meanX)*(j-meanY)/(sigmaXY*sigmaXY);
+			
+			
+   			c0 = exp((-0.5*argX*argX)+(-0.5*argY*argY)+(-0.5*argXY) ); //musze zminic ze zwraca arg a nie re
+			c0= (val*c0)/norm; // zeby bylo dobrze musialm przemnozyc przez krok czasowy i przestrzenyy - sparwdzic dlaczego
+			
+			IT->second.set_Curr(c0);
+			total = total + c0;//}
+		}
+	} 
+	cout.precision(10);
+	cout<<"                 3SigmaX: "<<3*sigmaX<<"   3SigmaY: "<<3*sigmaY<<endl;
+  	cout<<"Zadano koncentracje ->" 
+		<<" Calkowita zadana koncentracja "<<" total = "<<total<<endl;	
+	out.close();
+	
+}
+____________________________________________________________________________________________________
+2015-11-03
+
+
+			c0= (val*c0*dx*dy)/norm; // zeby bylo dobrze musialm przemnozyc przez krok czasowy i przestrzenyy - sparwdzic dlaczego
+wyglada na to ze kroki p[rzesterzenne w gausie nie byly wcale potrzeben bo wszytskei jednostki sie skaracaja we wzorze
+trzeba tylko uwzglednic odpwiedni krok przestrzenny definiujac x0 i y0 oraz w indeksach mapy
+____________________________________________________________________________________________________
+2015-11-02
+
+
+			c0= (val*c0*dx*dy)/norm; // zeby bylo dobrze musialm przemnozyc przez krok czasowy i przestrzenyy - sparwdzic dlaczego
+
+____________________________________________________________________________________________________
+2015-10-29
+guss poprawiony
+1. bylo iniepotrzebne mnozenie przez pi w sigma - wynikajace z bledy w phd i ksiazce
+2. trzeba pamietac zeby stosunek t=krok*dt / dx nie byl zbyt maly = problemy
+	dla krok = 100 i dt miedzy 0.1 a 1, dx miedzy 1 a 10 jest ok
+
+	
+DEBUG UJEMNYCH WARTOSCI - schamt adi2
+wnioski:
+1. sparwdzic dokladnie warunki brzegowe - czy o przypadkiem nie ich wina? 
+	nawet jesli nei to cos dziwnego sie dzieje - schamt zachowuje sie jakby warunki brzegowe byly periodyczne ???
+	SPRAWDZIC
+2. przy przesunieciu zrodla dalej od brzegowy - podobnie - mozna powiedzie bez zmiana
+3. przy zaniedbywaniu b. malych wartosci < e20 - efekt wystepuje dopiero po wiekszej liczbie krokow - ale wynik jest p[raktycznie ten sam ...
+4. ujemne paski sa niezalezne od schematu numerycznego
+5. nie zapisywanie ujemnych wartosci w kolejnych krokach zmienia wynik ...
+____________________________________________________________________________________________________
+2015-10-28
+cos nei ta z funkcja rysujaca gausa - sparwdzic
+
+
+____________________________________________________________________________________________________
+2015-10-23
+
+
+zminilam kilka funkcji:
+
+w poniedzilek:
+
+SetInitialConcentration
+SetInitialConcentrationPoint
+SetInitialConcentrationGauss
+ComputeEffectiveTemp
+
+sprawdzic i popisac
+zrobic testy
+
+przed zmianami
+void Simulation::SetInitialConcentrationGauss (map<int, Point> &PointMap, SimulationParameters &param){
+	
+	ofstream out("Info.dat", ios::app);
+ 	
+	out<<"Ustawiam Poczatkowe wartosci koncentracji - GAUSS"<<endl;
+	
+	//double x0 = 500/param.get_dx(), y0 = 500/param.get_dy();
+	//double x0 = 800/param.get_dx(), y0 = 700/param.get_dy();
+	//double x0 = 680/param.get_dx(), y0 = 60/param.get_dy();
+	//double x0 = 1000/param.get_dx(), y0 = 700/param.get_dy();//dla Mississipi (poczatek kanalu)
+	//double x0 = 1200/param.get_dx(), y0 = 500/param.get_dy();//dla Wisly - ekspertyza 
+	double x0 = 1850/param.get_dx(), y0 = 800/param.get_dy();//dla Wisly - ekspertyza 
+	
+	int krok = 1, i = -9999, j = -9999, flag = -9999;
+	//double val = 10; // wartosc koncentracji
+	double val = 4.317;
+	double c0 = 0;
+	double gx = 0, gy = 0; 
+	double sigmaX, sigmaY, meanX, meanY;
+	double dx = param.get_dx(), dy = param.get_dy(), dt = param.get_dt();
+	double vx, vy, Dxx, Dyy; 
+	double pi =  3.141592654;
+	double total = 0; //calkowita zadna na siatce koncentracja
+	//Wyczysc wartosci.
+	map<int,Point>::iterator IT;
+	for(IT = PointMap.begin(); IT != PointMap.end(); IT++){
+	  //AK IT->second.set_Prev(0);
+	  //AK IT->second.set_Curr(0);
+	  //AK IT->second.set_Next(0);
+		flag = IT->second.get_flag();
+		if (flag == 1){
+			//IT->second.print();
+			i = IT->second.get_x();
+			j = IT->second.get_y();
+		
+			//vx = IT->second.get_vx();
+			//vy = IT->second.get_vy();
+			//Dxx = IT->second.get_Dxx();
+			//Dyy = IT->second.get_Dyy();
+			vx = 0.15;
+			vy = 0.0;
+			Dxx = 0.016;
+			Dyy = 0.016;
+			vx = 0.01;
+			vy = 1.5;
+			Dxx = 34.0;
+			Dyy = 34.0;
+		//cout<<"vx: "<<vx<<"  vy: "<<vy<<"  Dxx: "<<Dxx<<"  Dyy: "<<Dyy<<endl;	
+			sigmaX=sqrt(Dxx*2.0*krok*dt/dx/dx);
+			sigmaY=sqrt(Dyy*2.0*krok*dt/dy/dy);
+			//sigmaX=sqrt(1.0);
+			//sigmaY=sqrt(1.0);
+   			meanX = (x0+vx*krok*dt/dx);
+			meanY = (y0+vy*krok*dt/dy);
+			//	cout<<" SigmaX: "<<sigmaX<<endl;
+			//	cout<<" SigmaY: "<<sigmaY<<endl;
+			//	cout<<" meanX: "<<meanX<<endl;
+			//	cout<<" meanY: "<<meanY<<endl;
+				//cout<<" norm: "<<norm<<endl;
+			//	cout<<endl;
+			//gx = exp(  ( - pow((i-meanX),2)  /  (2*pow(sigmaX,2)))  ) / (sqrt(2*pi)*sigmaX);
+			//if (sigmaY == 0) gy = 1;
+			//else gy = exp(  ( - pow((j-meanY),2)  /  (2*pow(sigmaY,2)))  ) / (sqrt(2*pi)*sigmaY);
+			//sigmaX = 1.0;
+			//sigmaY = 1.0;
+			//val = 1.0;
+			gx = Gaus(i, meanX, sigmaX, true);
+			gy = Gaus(j, meanY, sigmaY, true);
+			
+			c0 = val * gx * gy;
+			//if (c0 > 1e-2){
+			//cout<<"gx: "<<gx<<"  gy: "<<gy<<endl;
+			//cout<<"		zadaje, index: "<<i<<", "<<j<<"  wartosc: "<<c0<<endl;
+			//}
+                        double tmp = IT->second.get_Curr();
+			IT->second.set_Curr(c0+tmp);
+			total = total + c0;//}
+		}
+	} 
+    cout.precision(10);
+	cout<<"3SigmaX: "<<3*sigmaX<<"   3SigmaY: "<<3*sigmaY<<endl;
+  	cout<<"Zadano koncentracje" 
+		<<" Calkowita koncentracja = "<<sqrt(total)<<" "<<total<<endl;
+	
+	out.close();
+	
+}
+
+
+PLAN:
+	0. kopia zapasowa
+	1. sparwdzic wszystkie mozliwe warianty z roznymi kierunkami predkosci i kontem 
+		- ?? wniosek do spr - aby zminimalizowac bledy os x/y najlepei w kierunku przeplywu
+	2. testy różnego warunku poczatkowego
+		- dorobic gausa i gausa niediag - wczytywanie z pliku
+		- testy na zmiennym polu predkosci
+	3. wartosci ujemne w przypadku obecnosci pozadiagonalnych skaldowych 
+		- analiza - kiedy
+		- sposob minimalizacji
+			* warunek poczatkowy??
+			* kroki, czasowe, przestrzena???
+	4. warunki brzegowe:
+		- dla temperatury tj brak warunkow przegowych czy w kazda strone dobrze?
+		- dla koncentracji - czy ok,
+			*wszytskei testy we wszytskei strony
+			*ewentualna poprawa i testy
+	5. opcje zapisu -> ustawiane w pilku wejsciowym - zmiana kodu
+		-> testy
+	6. czlon zrodlowy
+		-> plik wejsciowy
+		-> analiza czy teraz dobrze uwgledniony
+		-> earianty uwzgledniania
+			- zawsze ten sam 
+			- zmiany temperatury poczatkowej rzeki
+		
+	7. nowy schemat numeryczny ADI3 - z czlonem zrodlowym zaimplementowanym - testy jaki sposob uwzgledniania czlonu zrodlowego jest lepszy
+	
+
+____________________________________________________________________________________________________
+2015-10-22
+
+jednak ok, powtorzylam wyniki prezentowane w ksiazce i phd, 
+sprawdzic i poprawic tylko warunki brzegowe
+
+sparwdzic skad ujemne wartosci ....
+
+____________________________________________________________________________________________________
+2015-10-21
+
+cos jest nei tak - pytanie co- 
+sprobowac uzyskac wynik jak do ksiazki ...???
+
+____________________________________________________________________________________________________
+2015-10-20
+
+TODO - W PRZYSZLOSCI: powinno sie podawac nie relatywna temperature zrzutu tj np 7 st C (róznica miedzy temperaturą naturalna rzeki a temperaturą zrzutu)
+			tylko temperature wody - reszta powinna byc przeliczna w programie ...
+
+
+
+kontynuowac
+void Simulation::SetInitialConcentrationPoint (
+przemyslec jak zadaawac ten warunek poczatkowych
+moze na razie tylko wartosc efektywana???
+
+____________________________________________________________________________________________________
+2015-10-07
+
+to do - kontynuowac 
+
+ponizej funkcja 
+void Simulation::SetInitialConcentrationPoint
+przed moimi dzisiejszymi zmianami
+
+void Simulation::SetInitialConcentrationPoint (map<int, Point> &PointMap, SimulationParameters &param){
+	ofstream out("Info.dat", ios::app);
+	out<<"Ustawiam Poczatkowe wartosci koncentracji DELTA"<<endl;
+
+//	double x0 = 1400/param.get_dx(), y0 = 250/param.get_dy();//dla Wisly - ekspertyza 
+//	double x0 = 1400/param.get_dx(), y0 = 300/param.get_dy();//dla Wisly - ekspertyza 
+//	double x0 = 1350/param.get_dx(), y0 = 200/param.get_dy();//dla Wisly - ekspertyza 
+//	double x0 = 1500/param.get_dx(), y0 = 400/param.get_dy();//dla Wisly - ekspertyza 
+//	double x0 = 1550/param.get_dx(), y0 = 350/param.get_dy();//dla Wisly - ekspertyza 
+
+//nowa siatak
+//	double x0 = 700/param.get_dx(), y0 = 200/param.get_dy();//dla Wisly - ekspertyza 
+//	double x0 = 600/param.get_dx(), y0 = 100/param.get_dy();//dla Wisly - ekspertyza 
+
+//ostat siatak
+	//double x0 = 2700/param.get_dx(), y0 = 250/param.get_dy();//dla Wisly - ekspertyza 
+
+	//zrodlo punktowe na srodku kanalu
+	//double x0 = 1850/param.get_dx(), y0 = 775/param.get_dy();//dla Wisly - ekspertyza 
+	double x0 = 1850/param.get_dx(), y0 = 800/param.get_dy();//dla Wisly - ekspertyza 
+
+	//double x0 = 50/param.get_dx(), y0 = 50/param.get_dy();//testy sztucznego zrodla grid14 
+
+
+	//zrodlo punktowe na lewym brzegu
+	//double x0 = 1700/param.get_dx(), y0 = 670/param.get_dy();//dla Wisly - ekspertyza 
+	//double x0 = 1710/param.get_dx(), y0 = 680/param.get_dy();//dla Wisly - ekspertyza 
+	//double x0 = 1710/param.get_dx(), y0 = 670/param.get_dy();//dla Wisly - ekspertyza -wariant przesuniety wzdluz rurociagu
+	//double x0 = 1720/param.get_dx(), y0 = 680/param.get_dy();//dla Wisly - ekspertyza -wariant przesuniety wzdluz rurociagu
+
+
+	//krotki odcinek 14m 
+	//!double x0 = 1730/param.get_dx(), y0 = 690/param.get_dy();//dla Wisly - ekspertyza 
+	//double x0 = 1710/param.get_dx(), y0 = 680/param.get_dy();//dla Wisly - ekspertyza - poczatek odcinka przesunety
+
+	//dlugi odcinek 28m - poczatek
+	//double x0 = 1780/param.get_dx(), y0 = 730/param.get_dy();//dla Wisly - ekspertyza - poczatek odcinka przesunety
+
+	////////double x0 = 14300/param.get_dx(), y0 = 1200/param.get_dy();//dla Wisly - ekspertyza 
+
+// zrobic by bylo to czytane z pliku
+	int i1,i2,j1,j2;
+	//i1 = 100;// poczatek obszaru wsp x
+	//i2 = 100;// koniec obszaru wsp x
+	//j1 = 100;// poczatkek obszaru wsp y
+	//j2 = 100;// koniec obszaru wsp y
+	
+	//i1 = 99;// poczatek obszaru wsp x
+	//i2 = 101;// koniec obszaru wsp x
+	//j1 = 99;// poczatkek obszaru wsp y
+	//j2 = 101;// koniec obszaru wsp y
+	
+//	i1 = 98;// poczatek obszaru wsp x
+//	i2 = 102;// koniec obszaru wsp x
+//	j1 = 98;// poczatkek obszaru wsp y
+//	j2 = 102;// koniec obszaru wsp y
+	
+/*	i1 = 298;// poczatek obszaru wsp x
+	i2 = 302;// koniec obszaru wsp x
+	j1 = 48;// poczatkek obszaru wsp y
+	j2 = 52;// koniec obszaru wsp y
+*/
+	i1 = x0-2;// poczatek obszaru wsp x
+	i2 = x0+2;// koniec obszaru wsp x
+	j1 = y0-2; // poczatkek obszaru wsp y
+	j2 = y0+2; // koniec obszaru wsp y
+
+	//////double val = 10;//test
+	//double val = 7.0; //wisla, ekspertyza 
+	
+	
+	//srpdek
+	//double val = 4.3; //wisla, ekspertyza dla kroku dx =10
+	//double val = 2.7; //wisla, ekspertyza dla kroku dx =25
+	//double val = 5.3; //wisla, ekspertyza dla kroku dx =5
+	//double val = 5.32; //wisla, ekspertyza dla kroku dx =5
+	double val = 4.317; //wisla, ekspertyza dla kroku dx =10; po przesunieciu zrodla
+
+	//lewy brzeg
+	//double val = 4.785; //wisla, ekspertyza dla kroku dx =5 lewy b
+	//double val = 4.567; //wisla, ekspertyza dla kroku dx =5 lewy b wersja II
+	//double val = 3.635; //wisla, ekspertyza dla kroku dx =10 lewy b
+//	double val = 3.389; //wisla, ekspertyza dla kroku dx =10 lewy b wersja II
+	//double val = 1.910; //wisla, ekspertyza dla kroku dx =25 lewy b wersja II
+	//double val = 3.458; //wisla, ekspertyza dla kroku dx =10 lewy brzeg pkt: 1710,670
+	//double val = 3.274; //wisla, ekspertyza dla kroku dx =10 lewy brzeg pkt: 1710,670
+
+	
+
+	//krotki odcinek 14 m
+	//!double val = 2.0; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku
+	//po przesunieciu poczatku odcinka do pkt w ktorym jest zrodlo na lewym brzegu
+	//double val = 2.235; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku
+
+	//dlugi odcinek 28 m, poczatek,
+	//double val = 1.636; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku
+
+	//Wyczysc wartosci.
+	map<int,Point>::iterator IT;
+	for(IT = PointMap.begin(); IT != PointMap.end(); IT++){
+		IT->second.set_Prev(0);
+		IT->second.set_Curr(0);
+		IT->second.set_Next(0);
+	}
+	
+	int index;
+	double total = 0; //calkowita zadna na siatce koncentracja
+	//Zadaj koncentacje w wybranym obszarze.
+	for(int i = i1; i < i2+1; i++){
+		for(int j = j1; j < j2+1; j++){
+			index = i*10000 + j;
+			if(PointMap.find(index) == PointMap.end()){
+				out<<"Nie znany index = "<<index<<endl;
+				continue;
+			}
+			if(PointMap[index].get_flag() == 0){
+				out<<"Zadaje poza obszarem przeplywu!"<<endl
+				<<PointMap[index]<<endl;
+			}
+			else {
+      				if (i==i1+2 && j==j1+2) PointMap[index].set_Curr(val);
+			//	else if ((i==i1+1 && (j==j1+1 || j==j1+2 || j==j2-1)) || (i==i1+2 && (j==j1+1 || j==j2-1)) 
+			//			|| (i==i2-1 && (j==j1+1 || j==j1+2 || j==j2-1)) )
+				//PointMap[index].set_Curr(0.5);
+			//	PointMap[index].set_Curr(3.0);
+				//else PointMap[index].set_Curr(0.3125);
+		//		else PointMap[index].set_Curr(1.1875);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+/*			else {
+      				if (i==100 & j == 100) PointMap[index].set_Curr(val);
+				else if ((i==99 && (j==99 || j==100 || j==101)) || (i==100 && (j==99 || j==101)) 
+						|| (i==101 && (j==99 || j==100 || j==101)))
+				PointMap[index].set_Curr(0.5);
+				else PointMap[index].set_Curr(0.3125);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+*/
+    		}
+	}
+
+/*
+	//krotki odcinek 14m 
+	x0 = 1740/param.get_dx(), y0 = 700/param.get_dy();//dla Wisly - ekspertyza 
+	//x0 = 1720/param.get_dx(), y0 = 690/param.get_dy();//dla Wisly - ekspertyza - koniec odcinka przesunety
+	//val = 2.107;
+
+	//dlugi odcinek 28m - srodrk
+	//x0 = 1790/param.get_dx(), y0 = 740/param.get_dy();//dla Wisly - ekspertyza - poczatek odcinka przesunety
+	//val = 1.819;
+
+	i1 = x0-2;// poczatek obszaru wsp x
+	i2 = x0+2;// koniec obszaru wsp x
+	j1 = y0-2; // poczatkek obszaru wsp y
+	j2 = y0+2; // koniec obszaru wsp y
+	for(int i = i1; i < i2+1; i++){
+		for(int j = j1; j < j2+1; j++){
+			index = i*10000 + j;
+			if(PointMap.find(index) == PointMap.end()){
+				out<<"Nie znany index = "<<index<<endl;
+				continue;
+			}
+			if(PointMap[index].get_flag() == 0){
+				out<<"Zadaje poza obszarem przeplywu!"<<endl
+				<<PointMap[index]<<endl;
+			}
+			else {
+      				if (i==i1+2 && j==j1+2) PointMap[index].set_Curr(val);
+			//	else if ((i==i1+1 && (j==j1+1 || j==j1+2 || j==j2-1)) || (i==i1+2 && (j==j1+1 || j==j2-1)) 
+			//			|| (i==i2-1 && (j==j1+1 || j==j1+2 || j==j2-1)) )
+				//PointMap[index].set_Curr(0.5);
+			//	PointMap[index].set_Curr(3.0);
+				//else PointMap[index].set_Curr(0.3125);
+		//		else PointMap[index].set_Curr(1.1875);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+/*			else {
+      				if (i==100 & j == 100) PointMap[index].set_Curr(val);
+				else if ((i==99 && (j==99 || j==100 || j==101)) || (i==100 && (j==99 || j==101)) 
+						|| (i==101 && (j==99 || j==100 || j==101)))
+				PointMap[index].set_Curr(0.5);
+				else PointMap[index].set_Curr(0.3125);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+*/
+/*!    		}
+	}
+!*/
+/*
+	//dlugi odcinek 28m - koniec
+	x0 = 1800/param.get_dx(), y0 = 750/param.get_dy();//dla Wisly - ekspertyza - poczatek odcinka przesunety
+	val = 1.987;
+
+	i1 = x0-2;// poczatek obszaru wsp x
+	i2 = x0+2;// koniec obszaru wsp x
+	j1 = y0-2; // poczatkek obszaru wsp y
+	j2 = y0+2; // koniec obszaru wsp y
+	for(int i = i1; i < i2+1; i++){
+		for(int j = j1; j < j2+1; j++){
+			index = i*10000 + j;
+			if(PointMap.find(index) == PointMap.end()){
+				out<<"Nie znany index = "<<index<<endl;
+				continue;
+			}
+			if(PointMap[index].get_flag() == 0){
+				out<<"Zadaje poza obszarem przeplywu!"<<endl
+				<<PointMap[index]<<endl;
+			}
+			else {
+      				if (i==i1+2 && j==j1+2) PointMap[index].set_Curr(val);
+			//	else if ((i==i1+1 && (j==j1+1 || j==j1+2 || j==j2-1)) || (i==i1+2 && (j==j1+1 || j==j2-1)) 
+			//			|| (i==i2-1 && (j==j1+1 || j==j1+2 || j==j2-1)) )
+				//PointMap[index].set_Curr(0.5);
+			//	PointMap[index].set_Curr(3.0);
+				//else PointMap[index].set_Cur//testy 2015 09 03
+	i1 = 50;// poczatek obszaru wsp xNaciśnij mnie
+	i2 = 50;// koniec obszaru wsp x
+	j1 = 50;// poczatkek obszaru wsp y
+	j2 = 50;// koniec obszaru wsp y
+//testy 2015 09 03r(0.3125);
+		//		else PointMap[index].set_Curr(1.1875);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+/*			else {
+      				if (i==100 & j == 100) PointMap[index].set_Curr(val);
+				else if ((i==99 && (j==99 || j==100 || j==101)) || (i==100 && (j==99 || j==101)) 
+						|| (i==101 && (j==99 || j==100 || j==101)))
+				PointMap[index].set_Curr(0.5);
+				else PointMap[index].set_Curr(0.3125);
+      				total+=val;
+				cout<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+				out<<"		zadaje, index: "<<index<<"  wartosc: "<<PointMap[index].get_Curr()<<endl;
+      			}
+*/
+/*    		}
+	}
+*/
+	out.close();
+}
+
+
+____________________________________________________________________________________________________
+2015-09-29
+
+rozpoczelam "wyciaganie" do plikow tekstowych informacji potrzebnyhc do zadawania koncentracji poczatkowej
+
+tworze jedna funkcje SetInitialConcentration() w ktorej zostana wczytan dane z pliku wejsciowego ini_cond.txt
+a nastepnie z uzyciem juz tych danych zostanei wywlaan odpwiednia funkcja do usatwiania koncentracji poczatkowej
+
+....
+
+to do na czwartek
+
+____________________________________________________________________________________________________
+
+
+poprawic punkty z flaga 101 nie moze tak byc powduje w tym miescu deyspersje = 0 
+sparwdzic punkty z duzymi liczbami pekleta
+spardzic nowy kod la siaki dx = 5 
+
+
+____________________________________________________________________________________________________
+2015-09-21
+
+dodałam w point.h w private:
+	double _Pex, _Pey, _Pexy; //Liczby Pecleta (Pex= vx*dx/Dxx, Pey= vy*dy/Dyy, Pxy= (sqrt(pow((vx/dx),2) + pow((vy/dy),2))) / ((_Dxx/pow(dx,2)) + (Dyy/pow(dy,2)) - (Dxy/(dx*dy)))
+ - jednak nie dodaje tych zmiennych - za duzo zmiennych niepotrzebnych trzymanych w pamieci
+ - obliczam i szukam max w funkcji :
+ double SimulationParameters::ComputePecletNumber(map<int, Point> &PointMap){
+   
+   - funkcja ta zostala znacznei zmodyfikowana i nadal wymaga pracy
+   - problem z kilkoma punktami - pytanei dl;aczego???
+   
+   
+   - zauwazylam problem na etapie tworzenia siatki - czesc punktow nie powinna w ogole byc w obszrze przeplywu i sie liczy bo glebokosc tam jet = 0 
+      - sparwdzic o co chodzi ....
+	
+	
+
+------------------------
+testy na wszleki esposoby i nie pozbywam sie oscylacji ale znajduje mnustwo niedociagneic i bledow
+
+1. liczenie liczby pekleta - zele- zamist dzielic przez wartosc max na siatce poiwnnam przez wartosc minimalna
+tu uwaga na zera i -9999 a tak naprawde powinnam liczyc dla kazdego punktu liczbe pekleta odzielnie i potem dopiero szukac wartosci najmniejszej i najwiekszej 
+
+2. analogicznie sparwdic liczby couranta
+
+3. zadawanie wrtsoci pocztakowej koncentracja 
+zrozumeic poprawic usparwnic ...
+
+zabdac wplyw
+
+
+____________________________________________________________________________________________________
+2015-09-18
+
+debaguje problem z pojawiajacymi sie na brzegach "sztucznymi" zrodlami, wstepnie wydaje sie ze problem zniknal 
+
+    wracam do zestawu w ktorym problem dla schematu ADI z metoda Thomasa jest widoczny po ok 7000 krokach:
+      /home/mkalinow/workdir/Testy/testy_nowgo_RmmT_Wloc/adi/06_11_bez_czlonu
+
+      - puszczam "nowa" czytaj osattnia wersje kodu dla tego zestawy zeby spoarwdzic cyz problem dalej istanieje ...
+	w dwoch wersja z i bez poprwy siatki
+
+    dodatkow wracam do wczoraj puszczonych zestawow, ktore policzyly sie bez bledow i sparwdzam czy to nie przypadek 
+      zwiazany z zerowaniem sie wartosci w penych punktach dla ktrory teraz ustawione sa inne falgi 
+      
+	zakomentowałam odpwiedzialny za to kawalek kodu w scheme.cpp void SADI::ComputeConcentration (map <int, Point> & PointMap){ :
+      			/* begin zakomentowano 18.09.2015 - po ustawieniu nowych falg dla punktow jest to bledne - prawdopodobnie do usuniecie
+			//TEST 8 03 2010 - uwzgledninie warunkow brzegowych
+			if (IT->second.get_flag() > 600 && IT->second.get_flag() < 900){
+				IT->second.set_Curr(0);
+				cout<<"flaga pkt: "<<IT->second.get_flag()<<"ustawiono wartosc zero dla pkt: "<<IT->second.get_x()<<","<<IT->second.get_y()<<endl; 
+			}
+			END zakomentowano 18.09.2015 - po ustawieniu nowych falg dla punktow jest to bledne - prawdopodobnie do usuniecie
+			*/
+	
+
+TO DO
+
+1. void SScheme::SetFactors(map <int, Point> & PointMap){ - sparwdzic i usunac zbedny kod z liczbami couranta (pod warunkiem, ze falgi rzeczywiscie tu sa potzrebne i do niego nei wrocimy)
+  
+2.void SADI::GetFactors(Point *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector<int> &flag){
+  sprawdzic ktora opcja rzeczyiwscie jets wlasciwa: 
+  
+	//---------opcja II ze wspolczynnikami przy Dxy dodatkowow pomnozylam----//
+	p->set_factor_fij("ff", 2*CDxy);//ff przy i+1,j+1
+	p->set_factor_fij("fg", -2*CDxy);//fg przy i+1,j-1
+	p->set_factor_fij("fh", -2*CDxy);//fh przy i-1,j+1
+	p->set_factor_fij("fi", 2*CDxy);//fi przy i-1,j-1
+	//-----------------------------------------------//
+	
+	//---------opcja I ze wspolczynnikami przy Dxy----//
+	/*p->set_factor_fij("ff", CDxy);//ff przy i+1,j+1
+	p->set_factor_fij("fg", -CDxy);//fg przy i+1,j-1
+	p->set_factor_fij("fh", -CDxy);//fh przy i-1,j+1
+	p->set_factor_fij("fi", CDxy);//fi przy i-1,j-1*/
+	//-----------------------------------------------//
+	
+	teraz mamy opcje II i prawdopodobnie tak jest ok
+	
+3. poprawić void SADI::GetFactors(Point *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector<int> &flag){
+    dla punktow brzegowych - dla tempertury powinno byc ok tak jak jest, dla konc nie 
+  	gdy pkt znajduje sie w przeplywie dla temp powinno byc ok, dla koncentracji nie - trzeba zrobic zeby scianki byly nie przepuszczlene - odpwiedni warunki na pochodna ...
+	
+4. zdebagowac o co chodzi z tym bledem przy zerwoniu wartosci
+5. sparwdzic mneijszy krok przestzrenny ewentualnei dla mniejszej siatki
+
+__________________________________________________________________________________________________
+2015-09-17
+TO DO
+zadawaie koncentracji pocztakowej z pliku
+dodac opcje - dodatkowy plik wej + poprawa obecnych dostepnych funkcji
+
+
+____________________________________________________________________________________________________
+2015-09-15
+zle oznaczane punkty brzegowe, pomijane byly rozne warianty ktore nie maialy znaczenia dla saitrki kwadrtowej
+wykryte na "prawdziwych" siatkach generowanych dla wisly 
+
+w celu wstepnego poprawienia siatki i weliminowania pojednyczych probleamtycznych punktow dopisalam do klasy Grid dodatkowa funkcje:
+//_____________________________________________________________________________________________________
+	/*! Po oznaczeniu najblizszych sasiadow kazdego pktu 
+		koryguje siatkę (korzysta z flag pkt onaczonych jako  przeplyw i poz przeplywem);
+		Ustawia flagi 0 (poza przepływem) dla "dziwnych" punktow dla których punkty obok są poza przepływem
+		(nie ma sensu liczyc w tych punktach - generowaloby to tylko bledy nyumeryczne): 
+		\param PointMap - referencja do Mapy Punktow
+	*/	
+	void CorrectGrid (map<int, Point> &PointMap);
+	
+	
+natomiast funkcja: 
+
+	//_____________________________________________________________________________________________________
+	/*! Po oznaczeniu najblizszych sasiadow kazdego pktu i ewentulanie korekcji siatki 
+		wyznacza brzeg obszaru przeplywu (korzysta z flag pkt onaczonych jako  przeplyw i poz przeplywem);
+		Ustawia odpowiednie flagi punktow w zaleznosci od rodzaju brzegu do ktorego pktr nalezy: 
+		\param PointMap - referencja do Mapy Punktow
+	*/	
+	void MarkBorderPoints (map<int, Point> &PointMap);
+	
+  została poprawiona. 
+  powinny byc juz oanzcane wszelkie warianty punktow, a w sytuacji nei prewidzianej w algorytmie powinien zosatc wyswietlony odpowiedni komunikat
+
+TO DO:
+funkcje : //onaczamy pkt przy brzegach nadajac im odpowienidnie flagi	
+	MarkNearBorderPoints(PointMap);
+	MarkInOutPoints(PointMap);
+	
+	do poprawy w przyszlosci
+
+	  teraz wylaczam
+	  
+	  
+______________________________________________________________________________________________________________
+2015-09-14
+kontynuje sprawdzanie programu
+
+
+
+______________________________________________________________________________________________________________
+2015-09-11
+
+rozpoczynam przegladanie i porzadkowanie kodu od pocztaku
+
+TODO:
+1. kwestja nazwy pliku z ktorego czytana jest siataka - czytanei z pliku
+
+
+______________________________________________________________________________________________________________
+2015-09-09
+
+rozpoczynam dlasze prace nad programem RIVMIX
+
+1. trzaba usunąć problemy z warunkami brzegowymi - na poczatku w przypadku schematu ADI - dla temperatury
+  a)sprawdzenie
+  b)testy
+  c)wnioski
+  d)implementacja nowych
+  
+2. prace przygotowawcze do stworzenia graficznego inetrfejsu użytkonika
+  *wyciagniecie rzeczy ustawinych recznie w kodzie do odpowiednich plikow tekstowych
+  
+3. dalsze prace nad czlonem zrodlowym - wymiana ciepla z atmosfera - temperatura
+  * dalsze testy z czlonem zrodlowym 
+  * dodanie mozliwosci uwzgledniania czlonu zrodlowego
+
+  
+12:37
+ad 1.
+a) wracam do warunkow brzegowych dla SOR Thomasa - dla koncentracji (odkomentowuje odpowiednie linijki w kodzie) - sparwdzam dla malej siatki czy ok
+
+
+
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+______________________________________________________________________________________________________________
+
+
+/////////////////////////////
+||||	7 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Nowa wersja River Mixing Model rozpoczeta,
+przepisuje poprzedni kod odpowiednio go modyfikujac do nowych potrzeb, dodajac dokumentacje
+
+
+13:35
+	->skopiowalm pliki Simulation.h i simulation.cpp z old_rmm zawierajace parametry symulacji
+	
+	to do:
+		* sprawdzic poprawnosc
+		* sprawdzic komentarze
+		* dodac potrzebne zmienne i funkicje
+		
+		----------------------------------------
+		
+16:15
+	->dopislam nowe konstruktory w pliku simulation.h
+	
+	to do: 
+		* przemyslec sprawe konstruktorow, jak i ile powinno ich byc, 
+		* przemyslec jak beda czytane dane i w jaki sposob wprowadane do programu - czy wszytsko z pliku czy tez z lini polecen
+		(chyba lepeij z pliku bediz euniwersalen jesli chodzi o rozne systemy)		
+	
+______________________________________________________________________________________________________________
+///////////////////////////////////
+|||| 10 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+10:55
+	idea:
+		- defoltowo program popbiera parametry symulacji z pliku, gdy pliku nie znajduje pyta o parametry symulacji
+		- dane poczatkowe tez w pliku
+
+_________________________________________________________________________________________________________________
+
+////////////////////////////////////
+|||| 11 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+10:09
+	idea:
+		- difoltowo program uruchamiany bez parametrow, paramerty tylko gdyby nazwy plikow z prametrami symulacji 
+		czy tez danymi mialy inne nazwy, analogicznieg jesli chodzi o pliki wyjsciowe
+		
+			rmm plik_z param_sym.txt plik_z_danymi_wej.txt plik_danymi_wyj.dat
+		
+		- defoltowe nazwy plikow:
+				
+				parm.txt - paremetry symulacji
+				
+				grid.txt - siatka (plik z danymi pkt siatki)
+				
+				v.txt - pole predkosci
+				
+				d.txt - "pole" dyspersji
+				
+				data.txt - wszytskie dnae - o siatce, polu predkosci i wspolczynikach dyspersji w kazdym pkt
+		
+		- uruchamianie programu z roznymi flagami (pierwsza zmienna w param.txt) 
+		w zaleznosci od tego jakie dane beda wczystywane w plikow, 
+		a jakie zadawene jako stale wartosci na siadce
+		
+				0 - wczytywane tylko parametry symulacji (param.txt) i siatka z pliku grid.txt
+						pozostale wartosci predkosci i wspolczynnikow dyspersji podl i poprzecznej (Dl, Dt)sa stale 
+						i znajduja sie w pliku param.txt; wspolczynniki tensora dyspersji w kierunku x, y 
+						(Dx, Dy, Dxy)- obliczne
+				
+				1 - wczytywane parametry symulacji (param.txt) i siata z polem predkosci czyli v.txt
+						wspolczynnikow dyspersji podl i poprzecznej (Dl, Dt) sa stale 
+						i znajduja sie w pliku param.txt; wspolczynniki tensora dyspersji w kierunku x, y 
+						(Dx, Dy, Dxy)- obliczne
+
+				2 - wczytywae parmetry symulacji (param.txt) i wszytskie dnne o siadce, polu predkosci
+						i wspolczynnikach tensora dyspersji (Dx, Dy, Dxy) w kazdym pkt (data.txt)
+						
+				3 - wczytywae parmetry symulacji (param.txt) i siatka ze wspolczynnikami tensora dyspersji 
+						(Dx, Dy, Dxy) - d.txt; wartosci predkosci stale i podane w pliku param.txt		
+						 
+						
+		- nazwy plikow mozna bedzie modyfikowac potem czy dodawac nowe "flagi" jesli chodzi o sposob i rodzaj 
+			wczystwanych damych poczatkowych				
+
+		--------------------------------
+		to do:
+			* napisac kalse symulacja biorac pod uwage powyzesz idee z najbarzdiej potrzebnymi opcjami tj
+			uruchamianie prog z parametrami dorobi sie pozniej; 
+			flaki 2 i 3 tez;
+			  
+		---------------------------------------------------------------------------------------
+
+11:05 
+	-> dodalam pliki comments.h i comments.cpp w ktorych beda zawierac sie wszelkie wyswietlane komunikaty
+	-> stworzylam plik param.txt w ktorym maja znajdwoac sie parametry symulacji
+	
+	to do:
+		* zajac sie param.txt - formatem i sposobem odczytywnia danych 
+		
+	idea:
+		- stworzyc kalse wj - wyj lub osobny plik z funkcjami do wczytywania i zapisywania do pliku
+	
+		--------------------------------------------------------------------------------------------
+11:41
+	-> format param.txt:
+	
+			int_flaga
+			n	dx	dy	dt 
+			schemat
+			vx	vy (lub Dl Dt gdy nie ma vx i vy)
+			Dl	Dt	
+	-> stworzylam przykladowy plik
+	
+	--------------------------------------------------------------------------------------------
+16:14
+	-> dodalam pliki param.cpp i param.h w ktorych znajduje sie klas SimualtionParameters
+	-> w Klasie SimulationParamiters konstruktor i funkcja SetParam
+	-> w comments dodatkowe funkcje:
+				void CheckFile(int opt, string file);
+				string FileWithParameters(string file);
+				char * GetTime();
+				void End();
+	-> w main dodane komentarz na poczatku i na koncu z czasem rozpoczecia i zakonczenia symulacji
+	i to chyba tyle oc tam powinno byc
+	
+	idea:
+		- moze uda sie jakos wypisywac tez czas CPU
+		
+	todo:
+		*rozwijamy klasy SimulationParmeters, na poczatek funkcje SetParam
+		
+	------------------------------------------------------------------------------------------
+17:15
+	->problemy z kdevelop i z budowaniem projektu - pociwiczyc na jakims test programie
+	
+__________________________________________________________________________________________________
+
+//////////////////////////////////////
+|||| 12 stycznia
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+09:41
+	->reorganizuje klase Simulation i simulationParameters
+
+16:57
+	->odczytywanie z pliku parametrow symulacji i ustawianie icgh gotowe
+	
+	todo
+		*nastepny krok stworzenie klasy punkt i odpowiednich plikow z danymi wejsciowymi;
+		* przygotowniae siatki do Symulacji - zaladowanie wrtosci poczatkowych
+		
+_____________________________________________________________________________________________________
+
+//////////////////////////////////////
+|||| 13 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+13:36
+	-> poprawilam kilka agumentow funkcji z string file na const string* fila
+	
+	idea:
+		- plik z siaka pukntow grid.txt czy tez inne z ktorych jest sczytywana siatka 
+			i wartosci zmiennych musi zawierac wszystkie punkt ktore leza w obszarze przeplywu
+		- pkt poza obszarem przeplywu i brzegowe beda odpowiednio oznavczone w programie;
+		
+	to do:
+		* wczytujemy z pliku pkt (ew z odpowiednimi wartosciami predkosci czy wsp syspersji) 
+			te w ktore sa w obszarze przeplywu 
+		* kazdy wczystany pkt dostaje odpow flage 1 ktora ozn ze zostal sczytanay z pliku 
+			a tym samym jest w obszarze przeplywu 
+		* szukamy min i max wartosci x i y 
+		* na podstawie max i min wartosci usatlami zakres siatki
+		* pkt ktore nie zostaly w zakresie siatki jeszcze zainicjalizowane czyli nie 
+			poisadaj flagi 1 oznaczamy flaga 1 i sa one poaza przeplywem ozn falag 0
+		* robimy petele po wszytski pkt siatki
+			te z pkt przeplywu (z flaga 1)ktore wokol siebie maj pkt poza przeplywem (z flaga 0)
+			w zaleznosci od liczby i umiejscowenie w okol nich pkt z flaga 0 ozn jako brzegowe
+			odpowiednio jako brzeg gorny, dlolny itp.... przypisujac im odpowiednie flagi
+		* potem obliczenia wykonywan sa w zaleznosci od flag
+		* w jakis sposob (jeszcze nei wiem jaki) oznaczamy wejscia
+		* jesli wartosci predkosci i wsppolczynnikow tensora dyspesrji nie zostaly sczytane z pliku 
+			bierzemy zadane dla nich satale wartosci z parametrow_symulacji
+		* w przypadku wspolczynikow dyspersji nalezy je w odpowiedni sposob przeliczyc
+			na tensor dyspersji (tutaj stworzyc do tego nowa klase - bedzie w przyszlosci 
+			sporo mozliwosci)
+		* tak przgotowana mape pktow z oznaczonymi flagami (czyli czy pkt jest w obszarze przeplywu czy na brzegu)
+			z ustwionymi wartosciami predkosci i tensora dyspersji przekazujemy do dalszych obiliczen!!! 
+		
+__________________________________________________________________________________________________________________
+///////////////////////
+|||| 14 stycznia 2005 
+\\\\\\\\\\\\\\\\\\\\\\\
+
+dodtalam nowa funkcej w klasie symulacja odpowiedzialna za przygotowanie mapy punktow do symulacji PreapareMap
+
+__________________________________________________________________________________________________________________
+/////////////////////////
+|||| 17 stycznia
+\\\\\\\\\\\\\\\\\\\\\\\\\
+
+12:35
+	->stworzylam nowa klase Grid i jej klasy pochodne, beda one potzreben do przygotowania siadki (mapy plikow) 
+		klasy pochodne rozne w zaleznosci od tego jakie wartosci sczytywane sa z pliku czyli
+		wlasciwie  flagi z jaka uruchomiono symulacje;
+		
+	todo:
+		*zastanowic sie jak poradzic sobie i jak wykorzystac te nowe klasy i funkcje prepare map; 
+		co z otwieranie pliku - gdzie go otwierac i gdzie z niego czytac;
+		zeby sie to za bradzo nei nagmatwalo;
+		
+_____________________________________________________________________________________________________________________
+		
+18 stycznia
+
+	-> problemy z klasa grid 
+	 		
+___________________________________________________________________________________________________________________
+
+21 stycznie
+	-> zrobilam porzadek z kalsa grid; pelne wykorzytstanie polimorfizmu! funkcja wirualna;
+		
+	to do
+	* doprowadzic do porzadku klasy grid;
+	
+___________________________________________________________________________________________________________________
+
+24 stycznia 
+_________________________________________________________________________________________________________________-
+
+26 stycznia
+
+	-> zrobiony porzadek z klasa grid
+	-> wczystywanie plikow za danymi zalatwione
+	
+	to do
+	* stworzyc klsase dyspersion, gdzie beda zaimplementowane "sposoby" obilczania, wyznaczania czy cokolwiek dyspersji
+	
+_________________________________
+
+27 stycznia
+
+szlag trafil moja wczorajsza i dizsiejsza robote;
+skasowalam sobie!!!!
+
+let's start again!! (wbrew pozorom wcale i nei jste wesolo)
+
+-> dodalam nowa zmienna do klasy Simualtion Parameters; 
+	zmienna mowi jaki sposob obliczani dyspersji bedzie uzywany w symulacji;
+	
+-> w zwiazku z dodaneniej nowej zmiennej zminilam plik wejsciowy param.txt czyli i jego formata na:
+			
+			int_flaga
+			n	dx	dy	dt 
+			schemat sposob_obli_dyspersji
+			vx	vy (lub Dl Dt gdy nie ma vx i vy)
+			Dl	Dt
+	
+			po schemacie znajduje sie jeszcze string ktory opisuje sposob obliczania dyspersji
+			mozliwosci:
+				simple
+				fischer
+			inne zostana dodane pozniej;
+			
+-> w zwiazku z doadnaiem nowej zmiennem pojawily sie tez w klasie SimulationParameters 
+	funkcje pozwalajace ja usatwic i sie od neij dobrac, 
+	
+	funkcja set_dispersion od razu ustwaia wskaznik DTensor *tensor, 
+	ktory bedzie wskazywal na wlasciwy obiekt w zaleznosci od tego jakim
+	sposobem ma byc obliczana dyspersja (tensor dyspersji na podstawie wspolczynnikow Dlong i Dtrans)
+	
+	moze on w tym momecie wskazywac na obiekt DTensor (klasa glowana) 
+	lub DFischer (klasa pochodan)
+	obiektow tych poetem bedize wiecej
+	
+-> obiekty powyzesz zaimplementowane zostaly w pliku tensor.h i tensor.cpp 
+	i defoltowo jesli nei wybrano zadnego sposobu obliczania 
+	wskaznik wskazuje na obiekt kalsy podstawowej i obliczenia beda sie odbywaly 
+	w najprostszy sposob
+
+
+todo:
+	* dokonczyc implementacje konstruktorow klas DTensor i DFischer i napisac dokumentacje
+	* napisac virtualna funkcje dla nich odpowiedizalna za obiczanie dyspersji
+	* zastanowic sie w ktorym miejscu i jak ta dysp bedize obiczana, zaimpementowac to odpowiednio w Grid 
+		lub moze w simulation??
+	* napisac funkcje zwracajaca DTensor *tensor z obiektu z parametrami symualcji
+	* po zakonczeniu ladownia pkt do mapy, po zaldowniu potzrebnych tam wartosci
+		wraz z tensorem dyspesji wrocic do dlaszych idei patrz wyzej
+		
+___________________________________________________________________________________________
+
+28 stycznia
+	10:45
+		-> dodalam funkcje ktora dopbiera sie do mojego tensora w klasie z parametrami symulacji 
+			i zrobilam dokumentacje do napisanych juz kla Tensor
+			
+	16:30
+		-> funkcje wirtulane odpowiedizlane za obl dyspersji napisane
+		->zaimplementownae tylko dla Grid Only
+		-> sparawa z  wskannikami do odpowienich obiektow w Dtensor zalatwiona
+	
+	to do
+		* zastanowic sie w ktorym miejscu i jak ta dysp bedize obiczana, zaimpementowac to odpowiednio w Grid 
+		lub moze w simulation??
+		* po zakonczeniu ladownia pkt do mapy, po zaldowniu potzrebnych tam wartosci
+		wraz z tensorem dyspesji wrocic do dlaszych idei patrz wyzej
+________________________________________________________________________________________________________			 
+
+31 stycznia
+	->zakonczylam implementacje oliczania wspolczynikow dyspersji i maxymalnych wartosci roznych
+		spolczynnikow w GridOnly::ReadData
+		
+	to do
+		zabietram sie za nastepne GridVelocity ...
+_________________________________________________________________________________________________________-
+
+3 luty
+
+	-> uzupelnione pozostale funkcje ReadData w rzonych klasach gris; 
+	
+	to do
+		sprawdzic czy sie nei pomylilam z tym co wczytywane a co liczone i ktore max ewartosci - dopisac minimalne;
+
+_____________________________________________________________________________________________________________________
+
+15 luty
+	
+	-> zajmuje sie pkt granicznymi - zle wysnaczane (nie sa to wcael graniczne pkt, a tylko z odpowiednimi wart x i y najm i najw)
+		trzeba to zmienic;
+		
+_________________________________________________________________________________________________________________________
+
+18 luty
+
+	-> dopisalm troche funkcji do kalsy Point
+	-> oznaczylam wszystkie pkt siadki tj te w obszarze przeplywu i poza;
+	-> w katalogu /kod znajduje sie program do rysownaia siatki w roocie;
+	-> zaczelam szukac sasiadow pkt
+	
+	to do
+		1 zastanowic sie jak ladowac sasiadow do vektora - jakie powinny miec nr poszczegolne pkt;
+		2 sprawdzic dlaczego nie moge korzystac z mampy puktow w amej klasie przez obiekt this lub jakos inaczej
+		3 poprawic powyzsze jesli sie da
+		4 ustawic sasiadow
+		5 oznaczyc flagami odpowiedni pkt brzegowe
+		6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+		7 zastanowic sie jak ozn wej i wyj
+		8 zajac sie implementacja schematow
+______________________________________________________________________________________________________________________________
+
+21 luty 
+	-> nowe funkcje w klasie point odpowiedizalne za ustawiania najblizszych i dalszych sasiadow
+	-> i za dobierania sie do odpowiednich sasiadow 
+			set i get odpowiedni _near_neighbours i _distant_neighbours
+	-> ustawianie wskanikow do sasiadow dla kazdego z pkt zalatwione			
+	-> zaczelam oznaczanie brzegow
+	-> czyli pkt od 1 do 4
+	
+	to do
+	 	5 oznaczyc flagami odpowiedni pkt brzegowe
+		6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+		7 zastanowic sie jak ozn wej i wyj
+		8 zajac sie implementacja schematow
+	5 rozpoczete
+
+____________________________________________________________________________________________________________________________
+
+22 luty
+ 
+	-> 5 oznaczyc flagami odpowiedni pkt brzegowe
+
+	to do:
+		a) zrobic porzadek w funkcji Simulation::PrepareMap tj rzobic na poszczegolne funkcje w odpowidnich klasach
+		b) oznaczyc flagami pukt "przy brzegach"
+		c) cd czyli
+			6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+			7 zastanowic sie jak ozn wej i wyj
+			8 zajac sie implementacja schematow
+		d) pomyzlec dokladnie nad nazwami plikow
+			- wyzucic nazwy plikow z kodu sprobowac je skas czytac...
+
+16.08
+
+	jedna funkcja zrobiona (Grid::CopleteOutsideFlow )
+	i zminiony sposob zapisywania wyznaczonych pkt brzegowych z wykorzystaniem pair<int,int> i map
+	
+	przenosze dzilania do odmu		
+__________________________________________________________________________________________________________________________	
+
+23 luty
+
+	-> pkt brzegowe oznaczone (oprocz tych oddalonych od brzegow)
+	-> zrobiony porzadek w Simulation::PrepareMap, kolejna nowa funkcja Grid:MarkBorderPoints 
+		oznaczajaca flagami odpowiendnio punkty brzegowe
+
+	to do
+		b) oznaczyc flagami pukt "przy brzegach"
+		c) cd czyli
+			6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+			7 zastanowic sie jak ozn wej i wyj
+			8 zajac sie implementacja schematow
+		d) pomyzlec dokladnie nad nazwami plikow
+			- wyzucic nazwy plikow z kodu sprobowac je skas czytac...
+______________________________________________________________________________________________________________________________
+24 luty
+
+	-> pkt brzegowe i przy brzegach oznaczone;
+	
+	musze zmienis sposob ustawiania sasiadow, bede przechowywac indexy pktow zamiast wskaznikow do pkt;
+	
+	-> najblizsis sasiedzi ustwaiani sa teraz w funkcji Point::set_n_n;
+	-> dopisalam do symulacji 4 zmienne prywatne w ktorych mialby sie znalezc nazwy plikow
+		to do: 
+			1. zrobic porzadek z ustawianiem sasiadow, wyzucic niepotrzebne funkcje, napisac nowy spopsob dla dalszych sasiadow
+			2. pomyslec nad nazwami plikow i zrobic z tym porzadek w programie !!
+			3. przetestowac wszytskie stworzone siatki
+			4. zastanowic sie jak ozn wej i wyj
+			5. zajac sie implementacja schematow
+	ide spacko!!!!
+___________________________________________________________________________________________________________________________
+25 lutego 
+
+	->dolozylam nowe zmienne prywatne do klasy symulacja w ktoirych przetrzymywane
+		 sa defoltowe nazwy plikow z ktorych moga byc sczytywane dane (inicjalizowane w konstruktorze)
+	-> jest tam tez _file ustwiany w zaleznosci od opcji z jaka zostal uruchomiony program
+		z tego pliku dane sa sczytywane
+		
+		to do: zastanowic sie pjeszcze nad tym - powinno to byc jakos lepeij zrobione!!!!
+
+	PROBLEM - z dodtakowymi pustymi punktami w mapie - trzeba jej jakosc wyrzucac inaczej roboia sie problemy
+	np z indexami sasiadow, nei sa ustawione dla pustych pktow dodanych po ustawieniu	
+
+_____________________________________________________________________________________________________________________
+28 luty
+
+	-> zrobiony porzadek z ustawianiem sasiadow - rozwizany problem z 25 lutego;
+
+IDEA: zoastawic wyznaczanie brzegow zabrac se za implementacje schamatow!!!!!
+
+	wrocic pozniej do brzegow: 
+		-> zle wyznaczaj sie pkt przy brzegach w siatkach nei kwadratowych!!!
+		-> zrobic porzadek z kodem
+							dokumentacja
+							plikami wejsciowymi i wyjsciowymi
+							
+NOW:
+	to do:
+		-> rzowiazac problem z dodtakowymi dziwnymi pkt na "rogach" 
+		-> oznaczyc wejscia i wyjscia - na razie tymczsowo do testow;
+		-> implemaentacja schematow
+
+		
+	15.00
+		NOWA FUNKCJA W gRID 	MarkInOutPoints
+		dokonczyc
+
+_________________________________________________________________________________________________________________________
+2 marca
+
+	funkcja MarkInOutPoints dokonczona;
+	dla obszaru prostkotnego oznaczenie flagami odpowiednich pkt zakonczone;
+	
+	DO POPRAWY I SPRADENIE W PRZYSZLOSCI
+	
+	
+	zabieram sie za implementacje schemtow
+	
+16:40
+	nalezy poprawic :
+		1. MarkBorderPoints - pkt bedace jednoczesnie brzegiem goornym, dolnym i np prawym oi inne kombinacje
+		2. MarkNearBorderPoints - zle oznaczaja sie pkt w szczegolnch sytuacjach
+			 - zmienic sposob oznaczania korzystajac tylo z flag 1 i 0 - powinno byc prosciej
+		3. problemy z wejsciami i wejsciami - zmienic gdy wej i wyj nei jest || do ktorejs z osi 
+		
+	zabieram sie za tworzenie nowej kalsy Scheme i pochodnych schematow
+	
+________________________________________________________________________________________________________________________
+3 marca
+
+	->problemy z indexem do pustego pkt mapy - zwiekszylam go do -99999999; 
+		zalatwiam to teraz zmienna Grid::empty_index
+		
+	to do:
+		* poprawic analogicznie 10000 jako liczbe przy indeksowaniu mapy (jest x*10000 +y)
+	
+		
+______________________________________________________________________________________________________________
+4 marca
+
+	->poprawiona funkcja Grid::MarkInOutPoints tak aby dobrze ustawiac wej i wyj tez dla skosnej siatki;
+	 	TRZEBA TO BEDIZE POZNIEJ JESZCZE DOPRACOWAC
+	->napisna funkcja Simulation::SetInitialConcentration
+		DO DOPRACOWANIA
+	
+17:40
+	- rozwijaja klasy Schematow
+
+22:20
+	-> przygotowalam klasy schematow
+	-> dodalam dodatkowe zmieny odpwoeidzialne za usatwienie wskanika na odpowiedni schemat w parametrach symulacji
+	-> dopisalm odpwienie funkcje do powyzszego SimualtionParameter::set i get _s_schemat
+	-> _s_schemat jest wskanikem do odpowiedniego obiektu innego w zaleznosci od schamatu, a schemat stringiem
+		w ktorym przechowywana jest nazwa odpwoiadajac wybranemu schematowi zapisana w pliku z parameterami wejsciowymi
+	-> dopislam odpowiednik kawlaek w Simualtion:MySimulation;
+
+	to do:
+		* kontynuowac  kawlaek w Simualtion:MySimulation;
+		* dodadc odpowiednie funkcje do Klas Schematow
+______________________________________________________________________________________________________________
+
+7 marca
+
+dopisaam nowa wirtualna funkcej do Schematow - tera trzaba ja uzupelnic;
+
+dopisalm nowa opcje jesli chodzi o zapisayanie do pliku - zpisywanie koncentracjio - ulepszy c tak aj bediz epotrzeba
+
+_____________________________________________________________________________________________________
+
+9 marca 
+
+napisane funkcje zadajace odpowiednie wspolczynniki ukladu rownaan w przy[pdaku roznych schamatow
+dobrze zrobione tylko dla Cranka Nicolsona;  nie zrobione brzegi...
+
+_________________________________________________________________________________________________________
+
+1 kwietnia;
+
+dla diagonalnego tensora - sparwdzone - wszytko ok
+dla niediagonalnego adi poprawiona, sparwdzic adi2; poprawic cn
+	w adi trzeba bylo wspolczynniki przy pozadiagonalnych pomnozyc przez 2, (ocja II w programie)
+	opcja 
+
+
+____________________________________________________________________________________________________________
+
+4 maja
+
+przygotowania do szkloy hydrauliki
+
+przygotowuje do symulacji pokazujacej wzanosc poza diagonalnych wspolczynnikow dyspersji!
+
+________________________________________________________________________________________________________________
+
+13 MAJA 
+zminiam sposob zapisaywanie - z mniejsza dokladnosci
+__________________________________________________________________
+
+20 maja
+
+przygotowuje do uruchamiania symulacji z PSI 
+zapisawynie inf do pliku
+
+nazwa pliku z siadko = grid.txt
+
+czezsc zrobion tymczasowo - kawalki dpo dopracowania w przyszlosci oznaczono przez //INFO
+
+________________________________________________________________________________________________________________
+1 lipca 2005
+
+rozijam funkcje double SimulationParameters::ComputePecletNumber() i double SimulationParameters::ComputeCourantNumber(){
+
+- doadaje inne sposoby "normalne" liczenialiczby Pekleta - zapisuje do pliku
+- funkcje zamiast zwraca jak przedtem 2D liczby Couranta i Pekleta teraz zwracaja najwieksza z 2D i liczonych w kierunku x i y
+
+________________________________________________________________________________________________________________
+6 lipca 2005
+
+zaimplementowny algorytm Thomsona dal macierzy trojdiagonalnych blokowych w przypadku schematu ADI dla pierwszego ukladu 
+rowanan;
+
+wygflada na to ze dizla duzo szybciej niz SOR!!!
+
+
+to do:
+	zrobic porzadek z roznymi metodami rozwiazywania ukl rownan;
+	 dodac rozwiazywanie metoda Thomcsona dla ADi drugiego ukladu row
+
+________________________________________________________________________________________________________________
+14 lipca 2005
+
+	-dopisana brakujaca dokuumentcaja  do pliku scheme.h
+	- robie porzadek w pliku scheme.cpp
+		* dodana nowa funkcja do kalsy z krankiem nikolsonem odpowiedzialna
+		za rozwiazywanie ukladu rownan
+		
+		
+________________________________________________________________________________________________________________
+15 lipca 2005
+	
+	- zreorganizowalam i dopisal rozwiazywanie ukladow rownani
+	- do konca zrobiony w przypadku CN
+to do:		dorobic dla ADI
+	- dopisana metoda znajdowania najlepszego omega dal SOR;
+to do: poprawci bo nie dizla - miejsce wyanczania nowego przedzialuy dla w
+
+________________________________________________________________________________________________________________
+18 lipca 2005
+
+	-	napisana metoda do znajdownai najlepszego omega - parametru relaksacji dla schematu CN
+!!!!!!!! sprawdzic w przyszlosci czy nie mozna by lepiej tego zrobic:
+			1. czy zeczywiscie to jest najlepsze omega
+			2. jak konczyc dobieranie po wybraniu juz i kiedu zmiana omegi juz nie ma sensu a tylko zminia sie tam i sporotem
+			3. indexowanie w mapie w - moze da sie to jakos inaczej (teraz jelsi jet ta smama liczba ieteracji dla roznych krokow
+				to sie nadpisuje)
+
+	zabieram sie za porzdek w ADI i nastepnie przygotownie do testwo na czas symulcji itp
+	
+16:41
+
+porzadkowanie adi
+
+	- w trakcie okazlao sie ze wychodza inne wyniki gdy zamiast dopiero w miejscu wywolywani saora przy druggim rownaniu
+		dodaje watrstoc wyliczona z pierwszego - robie to przed obliczeniem drugiego ukl rownwn uzywajac iteratora po f1;
+		
+		sprawdzic dlaczego i czy to neisistotny bla - czy nie
+		
+		(moze liczba pkt jest inna niz liczba f1???)
+		
+16:51
+	wyglada ze nei ejst to kwestia f1 i dopisywania wyniku pierwszefo rownnia wczesniej; 
+	
+17:04 JEST BLAD
+		znow wywolywalam SOR z tymi samimi wspolczynnikami dla obu ukladow rownan!!! oczywiscie zle!
+		musze napisac osobne funkcje dla obu rownan jak wprzypadku metod neiiteracyjnyuch - nei ma wtedy problemu z wektorem f1 i nei trzeba go zminaic
+		
+17:52 JEST OK
+					
+________________________________________________________________________________________________________________
+4 sierpnia 2005
+13:50
+
+Dodalam 2 kalsy pochodne do klasy DTensor : 
+	- DVector - traktujaca tensor dyspersji jako wektor 
+	- DFischer2 - wyznaczajca wspolczyniki dyspesri wg Fischera ale pomijaca wspolczynniki poza diagonalne w obliczeniach
+	
+pozatym zmainy w kometarzach 
+
+________________________________________________________________________________________________________________
+2 listopada 2005
+12:10
+
+	trzeba bylo zminic sopsob zadawania koncentracji poczatkowej gausem neidiagonalnym, rozdzilone na trzy wywolania 
+	funkcji gx*gy*gxy trzeba bylo zrrobic za jdenym zamaczem bo byl problem z liczeim eksponenty i wychodzeniem poz zakres:
+	root [0] exp(-0.5*-1417.09)
+(double)5.21415191375389469e+307
+root [1] exp(-0.5*-1424.74)
+Error: exp param[0]=712.37 up:709 low:-inf out of range FILE:(tmpfile) LINE:1
+*** Interpreter error recovered ***
+root [2] 
+
+rozeiazannie: Jak masz np. e^x w kilku miejscach to uprosc to do e^{a+b+c}
+
+
+________________________________________________________________________________________________________________
+24 pazdziernik 2006
+16:24
+
+BRAK flag dla neiktorych skaplikowanych warunkow brzegowych;
+w przypadku uzywnai pkt typu i+1,i-1  jak w ADI potrzeba inaczej oznaczyc kanty niz flaga 1
+pracuje nad dodaniem odpowiednich rzeczy w pliku grid.cpp w klasie Make_Bordes_Point
+
+________________________________________________________________________________________________________________
+25 pazdziernik 2006
+12:07
+
+BLAD - glupoty gdy zly format pliku wej param.txt
+zapomnialm wpisac metody oblicznai tensora dypersji i w ten sposob robily si glupoty
+bo zamiast sposobu sczytylwal wartosc DL; tym sposobem DT bylo rowne -9999 i wyglaodalo jakby schamat byl neistabilny...
+
+nie ma ostrzezenia ze zle wisano sposob zadawnai tensora dyspersji 

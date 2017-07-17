@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>RivMix: Plik źródłowy point.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RivMix.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RivMix
+   &#160;<span id="projectnumber">15.1</span>
+   </div>
+   <div id="projectbrief">River Mixing Model</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('point_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">point.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="point_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *   point.h                               *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *   Copyright (C) 2005 by Monika Kalinowska                               *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *   mkalinow@igf.edu.pl                                                   *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                         *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> ***************************************************************************/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef PUNKT_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define PUNKT_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//#define MY_DEBUG</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//C++ headers</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//#include &quot;grid.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//***********************************************DTensor******************************************************</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_point.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_point.html">Point</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_point.html#ac7a42329250c07c3f7e8c688ab1c1fcb">   43</a></span>&#160;    <a class="code" href="class_point.html#ac7a42329250c07c3f7e8c688ab1c1fcb">Point</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> type1):</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        _x(x), _y(y), _vx(0), _vy(0), _Dxx(0), _Dyy(0), _Dxy(0),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        _type(type), _type1(type1),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        _valCurr(0), _valPrev(0), _valNext(0), _flag(0),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        _CurAx(0), _CurAy(0), _CurDx(0), _CurDxy(0), _CurDy(0) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 1&quot;&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        this-&gt;set_near_neighbours(0);};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_point.html#ac77aa12fe810c6a1409fb63c64a70521">   50</a></span>&#160;    <a class="code" href="class_point.html#ac77aa12fe810c6a1409fb63c64a70521">Point</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">int</span> flag):</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        _x(x), _y(y), _flag(flag), _vx(0), _vy(0), _Dxx(0), _Dyy(0), _Dxy(0),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        _type(0), _type1(0),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        _valCurr(0), _valPrev(0), _valNext(0),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        _CurAx(0), _CurAy(0), _CurDx(0), _CurDxy(0), _CurDy(0) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 2&quot;&lt;&lt;endl; </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        this-&gt;set_near_neighbours(0);};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_point.html#aa26891d8be99659f996873b6cf3e6a9c">   57</a></span>&#160;    <a class="code" href="class_point.html#aa26891d8be99659f996873b6cf3e6a9c">Point</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> vx, <span class="keywordtype">double</span> vy, <span class="keywordtype">int</span> flag):</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        _x(x), _y(y), _flag(flag), _vx(vx), _vy(vy), _Dxx(0), _Dyy(0), _Dxy(0),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        _type(0), _type1(0),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        _valCurr(0), _valPrev(0), _valNext(0),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        _CurAx(0), _CurAy(0), _CurDx(0), _CurDxy(0), _CurDy(0) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 3&quot;&lt;&lt;endl; </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        this-&gt;set_near_neighbours(0);};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_point.html#ac13d6b1e1fb4aa41b8f17d298afbb15e">   64</a></span>&#160;    <a class="code" href="class_point.html#ac13d6b1e1fb4aa41b8f17d298afbb15e">Point</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> vx, <span class="keywordtype">double</span> vy, <span class="keywordtype">double</span> Dxx, <span class="keywordtype">double</span> Dyy, <span class="keywordtype">double</span> Dxy, <span class="keywordtype">int</span> flag):</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        _x(x), _y(y), _flag(flag), _vx(vx), _vy(vy), _Dxx(Dxx), _Dyy(Dyy), _Dxy(Dxy),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        _type(0), _type1(0),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        _valCurr(0), _valPrev(0), _valNext(0),</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        _CurAx(0), _CurAy(0), _CurDx(0), _CurDxy(0), _CurDy(0) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 4&quot;&lt;&lt;endl; </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        this-&gt;set_near_neighbours(0);};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_point.html#a29c1d7d3887b5df5fb43ece80c7ee633">   71</a></span>&#160;    <a class="code" href="class_point.html#a29c1d7d3887b5df5fb43ece80c7ee633">Point</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> Dxx, <span class="keywordtype">double</span> Dyy, <span class="keywordtype">double</span> Dxy, <span class="keywordtype">int</span> flag):</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        _x(x), _y(y), _flag(flag), _vx(0), _vy(0), _Dxx(Dxx), _Dyy(Dyy), _Dxy(Dxy),</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        _type(0), _type1(0),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        _valCurr(0), _valPrev(0), _valNext(0),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _CurAx(0), _CurAy(0), _CurDx(0), _CurDxy(0), _CurDy(0) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 5&quot;&lt;&lt;endl; </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        this-&gt;set_near_neighbours(0);}; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">   78</a></span>&#160;    <a class="code" href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a>(): _x(-9999), _y(-9999), _vx(0), _vy(0),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        _Dxx(0), _Dyy(0), _Dxy(0),</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        _type(0), _type1(0), _valCurr(0),</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        _valPrev(0), _valNext(0), _flag(-9999) { <span class="comment">//cout&lt;&lt;&quot;Tworze pkt 6&quot;&lt;&lt;endl; </span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        this-&gt;set_near_neighbours(0); };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//___________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_point.html#ae6971f02ce5cf409b2e3dec6f873a9df">   86</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="class_point.html#ae6971f02ce5cf409b2e3dec6f873a9df">get_flag</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _flag;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_point.html#a2018e6c0f7d91b0aab42317de89fdaea">   89</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a2018e6c0f7d91b0aab42317de89fdaea">get_x</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _x;}; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_point.html#ac4f7350d9c545e907b0c513a03201c4b">   92</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#ac4f7350d9c545e907b0c513a03201c4b">get_y</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _y;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_point.html#aaea8d464458b82d80848895b6d828db9">   95</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_point.html#aaea8d464458b82d80848895b6d828db9">get_Next</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _valNext;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_point.html#a7a14be44e32b2987324213788b3b0593">   98</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_point.html#a7a14be44e32b2987324213788b3b0593">get_Curr</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _valCurr;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_point.html#a7f61780c19bf584c97fcdb432e2d6e08">  101</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="class_point.html#a7f61780c19bf584c97fcdb432e2d6e08">get_Prev</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _valPrev;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_point.html#ad0f0083a12b3ff699e7edcd7adc90c81">  104</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#ad0f0083a12b3ff699e7edcd7adc90c81">get_vx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vx;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_point.html#a6ed9a9e001af8ca030c648c280a05c69">  107</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a6ed9a9e001af8ca030c648c280a05c69">get_vy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _vy;}; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_point.html#aef2637aabdb8e7dae3b20e67dfdc6e7a">  110</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#aef2637aabdb8e7dae3b20e67dfdc6e7a">get_Dxx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxx;}; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_point.html#ad5be3c0b4fd5f65bc00ab3787361329c">  113</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#ad5be3c0b4fd5f65bc00ab3787361329c">get_Dxy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dxy;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_point.html#a4b4279a85ad655a77d90831c805a59e6">  116</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a4b4279a85ad655a77d90831c805a59e6">get_Dyy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _Dyy;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_point.html#aecfeb69a6a1ec3001343e9734e2e9746">  119</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#aecfeb69a6a1ec3001343e9734e2e9746">get_CurAx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _CurAx;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_point.html#a3fc8a4d0cba11093f4468a52f641c517">  120</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a3fc8a4d0cba11093f4468a52f641c517">get_CurAy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _CurAy;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_point.html#af2fef2c2ec81c04fe713f381ca2b2998">  121</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#af2fef2c2ec81c04fe713f381ca2b2998">get_CurDx</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _CurDx;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_point.html#a6b98226c33a0e7ba2302c13e33e25ea5">  122</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a6b98226c33a0e7ba2302c13e33e25ea5">get_CurDxy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _CurDxy;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_point.html#ab32d6e369d8cfc8beeb1e8c20c2a26bd">  123</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#ab32d6e369d8cfc8beeb1e8c20c2a26bd">get_CurDy</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _CurDy;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">/*double get_Pex() const {return _Pex;};</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    double get_Pey() const {return _Pey;};</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">    double get_Pexy() const {return _Pexy;};</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    double get_PeRes() const {return _PeRes;};</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_point.html#a392f5d75605bd50620e2051ee15bc771">  132</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a392f5d75605bd50620e2051ee15bc771">get_factor_f</a>(<span class="keywordtype">string</span> f)<span class="keyword"> const </span>{<span class="keywordflow">return</span> _factors_fij.find(f)-&gt;second;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_point.html#a0d5dc8de308faf6875fa36074d6fc0f0">  133</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_point.html#a0d5dc8de308faf6875fa36074d6fc0f0">get_factor</a>(<span class="keywordtype">string</span> f)<span class="keyword"> const </span>{<span class="keywordflow">return</span> _factors.find(f)-&gt;second;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">//_________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//____________________________________</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_point.html#a762956127e312f695530da058488fa22">  139</a></span>&#160;<span class="comment"></span>    map&lt;int, Point&gt; * <a class="code" href="class_point.html#a762956127e312f695530da058488fa22">get_map</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _PointMap;}; <span class="comment">// tutaj pkt naleza (musza) tylko do jednej mapy</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_point.html#a1cb03d7d73b39c92b7e56240b9184955">  142</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_point.html#a1cb03d7d73b39c92b7e56240b9184955">get_near_neighbour</a>(<span class="keywordtype">int</span> nr) { <span class="keywordflow">return</span> _near_neighbours[nr]; };</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_point.html#a64866cd58b7216bc8cbebe6dc8b46df1">  145</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_point.html#a64866cd58b7216bc8cbebe6dc8b46df1">get_distant_neighbours</a>(<span class="keywordtype">int</span> number) {<span class="keywordflow">return</span> _distant_neighbours[number];};</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">//__________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_point.html#ac0be2a43c354fed97e018c2b8fbf63b4">  150</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_point.html#ac0be2a43c354fed97e018c2b8fbf63b4">set_flag</a>(<span class="keywordtype">int</span> f) {_flag = f;}; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_point.html#adaaf2fe64c78448b3c8d6e121ae3bca0">  153</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#adaaf2fe64c78448b3c8d6e121ae3bca0">set_x</a>(<span class="keywordtype">double</span> x) {_x = x;}; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_point.html#a44bf07535f5dd99991a274833462379b">  156</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a44bf07535f5dd99991a274833462379b">set_y</a>(<span class="keywordtype">double</span> y) {_y = y;}; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_point.html#ab68cfb3cd44fe4624dd89ec5b9275350">  159</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#ab68cfb3cd44fe4624dd89ec5b9275350">set_vx</a>(<span class="keywordtype">double</span> vX) {_vx = vX;}; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_point.html#aae045afff208fbd09dc3e466a0768781">  162</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#aae045afff208fbd09dc3e466a0768781">set_vy</a>(<span class="keywordtype">double</span> vY) {_vy = vY;};</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_point.html#a9c89304540fc3a2f9b7a6720f5bad95b">  165</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a9c89304540fc3a2f9b7a6720f5bad95b">set_Dxx</a>(<span class="keywordtype">double</span> Dx) {_Dxx = Dx;};</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_point.html#a0bf3e2831a50b62754eefb0cab6c3bbd">  168</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a0bf3e2831a50b62754eefb0cab6c3bbd">set_Dxy</a>(<span class="keywordtype">double</span> Dxy) {_Dxy = Dxy;}; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_point.html#adc5e03973821b3dee14d6b1c0a8e43ea">  171</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#adc5e03973821b3dee14d6b1c0a8e43ea">set_Dyy</a>(<span class="keywordtype">double</span> Dy) {_Dyy = Dy;};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  </div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="class_point.html#a1efdadc2ab2df0ba02ede0b23a3c2b40">  174</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a1efdadc2ab2df0ba02ede0b23a3c2b40">set_Prev</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span> val) {_valPrev = val;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_point.html#a1f21dc53976e93ad52cfd2eafdb94209">  177</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a1f21dc53976e93ad52cfd2eafdb94209">set_Curr</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span> val) {_valCurr = val;};</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="class_point.html#a9be4fd3f7363583345023997921895ec">  180</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a9be4fd3f7363583345023997921895ec">set_Next</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span> val) {_valNext = val;};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_point.html#ac25220ccb634802bdebc6de755afc807">  182</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#ac25220ccb634802bdebc6de755afc807">set_factor_fij</a>(<span class="keywordtype">string</span> f, <span class="keywordtype">double</span> val) {_factors_fij[f] = val;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_point.html#a9f37bcdde4f274fc2c9ee4e39fad9b22">  184</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a9f37bcdde4f274fc2c9ee4e39fad9b22">set_factor</a>(<span class="keywordtype">string</span> f, <span class="keywordtype">double</span> val) {_factors[f] = val;};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_point.html#a743e76edf28eaf25c726051b66c2e256">  187</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_point.html#a743e76edf28eaf25c726051b66c2e256">set_map</a>(map&lt;int, Point&gt; * Map) {_PointMap = Map;}; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> set_near_neighbours(<span class="keywordtype">int</span> opt = 1);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> set_distant_neighbours (<span class="keywordtype">int</span> opt = 1);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> set_Courant_numbers (<span class="keywordtype">double</span> dx, <span class="keywordtype">double</span> dy, <span class="keywordtype">double</span> dt);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"></span>    <span class="comment">//void set_Peclet_numbers (double dx, double dy, double dt);</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> print() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="class_point.html#a63cebd1e00f14bdabf5000aa76174b03">  211</a></span>&#160;<span class="comment"></span>    <span class="keyword">friend</span> ostream&amp; <a class="code" href="class_point.html#a63cebd1e00f14bdabf5000aa76174b03">operator&lt;&lt;</a>(ostream&amp; out, <span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; obj){</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        out&lt;&lt;<span class="stringliteral">&quot;Flaga: &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#ae6971f02ce5cf409b2e3dec6f873a9df">get_flag</a>()&lt;&lt;<span class="stringliteral">&quot;  x= &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#a2018e6c0f7d91b0aab42317de89fdaea">get_x</a>()&lt;&lt;<span class="stringliteral">&quot; y= &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#ac4f7350d9c545e907b0c513a03201c4b">get_y</a>()</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; valPrev = &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#a7f61780c19bf584c97fcdb432e2d6e08">get_Prev</a>()&lt;&lt;<span class="stringliteral">&quot; valCurr = &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#a7a14be44e32b2987324213788b3b0593">get_Curr</a>()</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; vx = &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#ad0f0083a12b3ff699e7edcd7adc90c81">get_vx</a>()&lt;&lt;<span class="stringliteral">&quot; vy = &quot;</span>&lt;&lt;obj.<a class="code" href="class_point.html#a6ed9a9e001af8ca030c648c280a05c69">get_vy</a>();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    };</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_point.html#a0d3c6e86bf5796952b0ac6d6092f7747">  220</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> operator&lt; (<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; obj)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span>(this-&gt;get_x()&lt;obj.<a class="code" href="class_point.html#a2018e6c0f7d91b0aab42317de89fdaea">get_x</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span>(this-&gt;get_y()&lt;obj.<a class="code" href="class_point.html#ac4f7350d9c545e907b0c513a03201c4b">get_y</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="class_point.html#a3384c3194e3d3c3196317013929e40d4">  224</a></span>&#160;    };</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">//_____________________________________________________________________________________________________________</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment"></span>    <span class="keyword">static</span> map&lt;int, Point&gt;  * _PointMap; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; <span class="comment">//static map&lt;int, Point&gt;  * Point::_PointMap = 0;</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; <span class="comment">// const static int empty_index;// = -99999999;</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;     </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">double</span> _x, _y; <span class="comment">//wspolrzedne pkt</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">double</span> _vx, _vy; <span class="comment">// wartosci skaldowych predkosci</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">double</span> _Dxx, _Dyy, _Dxy; <span class="comment">// wartosci wspolczynnikow dyspersji</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">int</span> _type, _type1, _flag; <span class="comment">// okresla ktory bzreg - lewy, prawy</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    <span class="comment">// okresla ktory kawalek bzregu</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> _valCurr, _valPrev, _valNext; <span class="comment">// wartosci obliczanych funkcji w roznych krokach</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">double</span> _CurAx, _CurAy; <span class="comment">//Adwekcyjne liczby kuranta</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">double</span> _CurDx, _CurDxy, _CurDy; <span class="comment">//Dyfuzyjne liczby kuranta</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//double _Pex, _Pey, _Pexy, _PeRes; //Liczby Pecleta (Pex= vx*dx/Dxx, Pey= vy*dy/Dyy, </span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                      <span class="comment">//Pxy= (sqrt(pow((vx/dx),2) + pow((vy/dy),2))) / ((_Dxx/pow(dx,2)) + (Dyy/pow(dy,2)) - (Dxy/(dx*dy)))</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                     </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                      </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    vector&lt;Point *&gt; _near_neighboursPtr;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    vector&lt;int&gt; _near_neighbours;   <span class="comment">// indeksy najblizszych sasiadow danego pktu :</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                    <span class="comment">//  * * * * *</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                    <span class="comment">//  * 0 1 2 *       0-&gt;(i-1,j+1)    1-&gt;(i,j+1)  2-&gt;(i+1,j+1)</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                    <span class="comment">//  * 3 4 5 *       3-&gt;(i-1,j)      4-&gt;(i,j)    5-&gt;(i+1,j) </span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                    <span class="comment">//  * 6 7 8 *       6-&gt;(i-1,j-1)    7-&gt;(i,j-1)  8-&gt;(i+1,j-1)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                    <span class="comment">//  * * * * *       </span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    vector&lt;Point *&gt; _distant_neighboursPtr;                         </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    vector&lt;int&gt; _distant_neighbours;    <span class="comment">// indexy dalszych sasiadow potrzebne np w schemacie upwind o dokladnosci 2</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                                        <span class="comment">//  * * 1 * *       1-&gt;(i,j+2)</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                                        <span class="comment">//  * * * * *</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                        <span class="comment">//  4 * 0 * 2       4-&gt;(i-2,j)      0-&gt;(i,j)    2-&gt;(i+2,j) </span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                        <span class="comment">//  * * * * *</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                        <span class="comment">//  * * 3 * *       3-&gt;(i,j-2)</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                        <span class="comment">//</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    map &lt;string, double&gt; _factors; <span class="comment">// wektor wspolczynnikow do obliczania koncentracji; inne dla roznych schematow</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                            <span class="comment">// kolejnosc: a (przy i,j), b (i+1,j), c (i-1,j), d (i,j+1), e (i,j-1),</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                            <span class="comment">// f (i+1,j+1), g (i+1,j-1), h (i-1,j+1), i (i-1,j-1),</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            <span class="comment">// j (i+2,j), k (i-2,j), l (i,j+2), m (i,j-2);</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    map &lt;string, double&gt; _factors_fij; <span class="comment">// wektor wspolczynikow do obliczania</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;};</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_point_html_ac13d6b1e1fb4aa41b8f17d298afbb15e"><div class="ttname"><a href="class_point.html#ac13d6b1e1fb4aa41b8f17d298afbb15e">Point::Point</a></div><div class="ttdeci">Point(double x, double y, double vx, double vy, double Dxx, double Dyy, double Dxy, int flag)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00064">point.h:64</a></div></div>
+<div class="ttc" id="class_point_html_ac0be2a43c354fed97e018c2b8fbf63b4"><div class="ttname"><a href="class_point.html#ac0be2a43c354fed97e018c2b8fbf63b4">Point::set_flag</a></div><div class="ttdeci">void set_flag(int f)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00150">point.h:150</a></div></div>
+<div class="ttc" id="class_point_html_ad5be3c0b4fd5f65bc00ab3787361329c"><div class="ttname"><a href="class_point.html#ad5be3c0b4fd5f65bc00ab3787361329c">Point::get_Dxy</a></div><div class="ttdeci">double get_Dxy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00113">point.h:113</a></div></div>
+<div class="ttc" id="class_point_html_ab32d6e369d8cfc8beeb1e8c20c2a26bd"><div class="ttname"><a href="class_point.html#ab32d6e369d8cfc8beeb1e8c20c2a26bd">Point::get_CurDy</a></div><div class="ttdeci">double get_CurDy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00123">point.h:123</a></div></div>
+<div class="ttc" id="class_point_html_a9c89304540fc3a2f9b7a6720f5bad95b"><div class="ttname"><a href="class_point.html#a9c89304540fc3a2f9b7a6720f5bad95b">Point::set_Dxx</a></div><div class="ttdeci">void set_Dxx(double Dx)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00165">point.h:165</a></div></div>
+<div class="ttc" id="class_point_html_a392f5d75605bd50620e2051ee15bc771"><div class="ttname"><a href="class_point.html#a392f5d75605bd50620e2051ee15bc771">Point::get_factor_f</a></div><div class="ttdeci">double get_factor_f(string f) const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00132">point.h:132</a></div></div>
+<div class="ttc" id="class_point_html_a1efdadc2ab2df0ba02ede0b23a3c2b40"><div class="ttname"><a href="class_point.html#a1efdadc2ab2df0ba02ede0b23a3c2b40">Point::set_Prev</a></div><div class="ttdeci">void set_Prev(long double val)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00174">point.h:174</a></div></div>
+<div class="ttc" id="class_point_html_aaea8d464458b82d80848895b6d828db9"><div class="ttname"><a href="class_point.html#aaea8d464458b82d80848895b6d828db9">Point::get_Next</a></div><div class="ttdeci">long double get_Next() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00095">point.h:95</a></div></div>
+<div class="ttc" id="class_point_html_ac7a42329250c07c3f7e8c688ab1c1fcb"><div class="ttname"><a href="class_point.html#ac7a42329250c07c3f7e8c688ab1c1fcb">Point::Point</a></div><div class="ttdeci">Point(double x, double y, int type, int type1)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00043">point.h:43</a></div></div>
+<div class="ttc" id="class_point_html_adc5e03973821b3dee14d6b1c0a8e43ea"><div class="ttname"><a href="class_point.html#adc5e03973821b3dee14d6b1c0a8e43ea">Point::set_Dyy</a></div><div class="ttdeci">void set_Dyy(double Dy)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00171">point.h:171</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_point_html_adaaf2fe64c78448b3c8d6e121ae3bca0"><div class="ttname"><a href="class_point.html#adaaf2fe64c78448b3c8d6e121ae3bca0">Point::set_x</a></div><div class="ttdeci">void set_x(double x)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00153">point.h:153</a></div></div>
+<div class="ttc" id="class_point_html_a64866cd58b7216bc8cbebe6dc8b46df1"><div class="ttname"><a href="class_point.html#a64866cd58b7216bc8cbebe6dc8b46df1">Point::get_distant_neighbours</a></div><div class="ttdeci">int get_distant_neighbours(int number)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00145">point.h:145</a></div></div>
+<div class="ttc" id="class_point_html_a0d5dc8de308faf6875fa36074d6fc0f0"><div class="ttname"><a href="class_point.html#a0d5dc8de308faf6875fa36074d6fc0f0">Point::get_factor</a></div><div class="ttdeci">double get_factor(string f) const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00133">point.h:133</a></div></div>
+<div class="ttc" id="class_point_html_aae045afff208fbd09dc3e466a0768781"><div class="ttname"><a href="class_point.html#aae045afff208fbd09dc3e466a0768781">Point::set_vy</a></div><div class="ttdeci">void set_vy(double vY)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00162">point.h:162</a></div></div>
+<div class="ttc" id="class_point_html_a2018e6c0f7d91b0aab42317de89fdaea"><div class="ttname"><a href="class_point.html#a2018e6c0f7d91b0aab42317de89fdaea">Point::get_x</a></div><div class="ttdeci">double get_x() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00089">point.h:89</a></div></div>
+<div class="ttc" id="class_point_html_ac4f7350d9c545e907b0c513a03201c4b"><div class="ttname"><a href="class_point.html#ac4f7350d9c545e907b0c513a03201c4b">Point::get_y</a></div><div class="ttdeci">double get_y() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00092">point.h:92</a></div></div>
+<div class="ttc" id="class_point_html_ad0f0083a12b3ff699e7edcd7adc90c81"><div class="ttname"><a href="class_point.html#ad0f0083a12b3ff699e7edcd7adc90c81">Point::get_vx</a></div><div class="ttdeci">double get_vx() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00104">point.h:104</a></div></div>
+<div class="ttc" id="class_point_html_af2fef2c2ec81c04fe713f381ca2b2998"><div class="ttname"><a href="class_point.html#af2fef2c2ec81c04fe713f381ca2b2998">Point::get_CurDx</a></div><div class="ttdeci">double get_CurDx() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00121">point.h:121</a></div></div>
+<div class="ttc" id="class_point_html_a7f61780c19bf584c97fcdb432e2d6e08"><div class="ttname"><a href="class_point.html#a7f61780c19bf584c97fcdb432e2d6e08">Point::get_Prev</a></div><div class="ttdeci">long double get_Prev() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00101">point.h:101</a></div></div>
+<div class="ttc" id="class_point_html_a7a14be44e32b2987324213788b3b0593"><div class="ttname"><a href="class_point.html#a7a14be44e32b2987324213788b3b0593">Point::get_Curr</a></div><div class="ttdeci">long double get_Curr() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00098">point.h:98</a></div></div>
+<div class="ttc" id="class_point_html_a743e76edf28eaf25c726051b66c2e256"><div class="ttname"><a href="class_point.html#a743e76edf28eaf25c726051b66c2e256">Point::set_map</a></div><div class="ttdeci">void set_map(map&lt; int, Point &gt; *Map)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00187">point.h:187</a></div></div>
+<div class="ttc" id="class_point_html_a762956127e312f695530da058488fa22"><div class="ttname"><a href="class_point.html#a762956127e312f695530da058488fa22">Point::get_map</a></div><div class="ttdeci">map&lt; int, Point &gt; * get_map() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00139">point.h:139</a></div></div>
+<div class="ttc" id="class_point_html_a3fc8a4d0cba11093f4468a52f641c517"><div class="ttname"><a href="class_point.html#a3fc8a4d0cba11093f4468a52f641c517">Point::get_CurAy</a></div><div class="ttdeci">double get_CurAy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00120">point.h:120</a></div></div>
+<div class="ttc" id="class_point_html_a4b4279a85ad655a77d90831c805a59e6"><div class="ttname"><a href="class_point.html#a4b4279a85ad655a77d90831c805a59e6">Point::get_Dyy</a></div><div class="ttdeci">double get_Dyy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00116">point.h:116</a></div></div>
+<div class="ttc" id="class_point_html_a6ed9a9e001af8ca030c648c280a05c69"><div class="ttname"><a href="class_point.html#a6ed9a9e001af8ca030c648c280a05c69">Point::get_vy</a></div><div class="ttdeci">double get_vy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00107">point.h:107</a></div></div>
+<div class="ttc" id="class_point_html_aecfeb69a6a1ec3001343e9734e2e9746"><div class="ttname"><a href="class_point.html#aecfeb69a6a1ec3001343e9734e2e9746">Point::get_CurAx</a></div><div class="ttdeci">double get_CurAx() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00119">point.h:119</a></div></div>
+<div class="ttc" id="class_point_html_ae6971f02ce5cf409b2e3dec6f873a9df"><div class="ttname"><a href="class_point.html#ae6971f02ce5cf409b2e3dec6f873a9df">Point::get_flag</a></div><div class="ttdeci">int get_flag() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00086">point.h:86</a></div></div>
+<div class="ttc" id="class_point_html_a44bf07535f5dd99991a274833462379b"><div class="ttname"><a href="class_point.html#a44bf07535f5dd99991a274833462379b">Point::set_y</a></div><div class="ttdeci">void set_y(double y)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00156">point.h:156</a></div></div>
+<div class="ttc" id="class_point_html_ac77aa12fe810c6a1409fb63c64a70521"><div class="ttname"><a href="class_point.html#ac77aa12fe810c6a1409fb63c64a70521">Point::Point</a></div><div class="ttdeci">Point(double x, double y, int flag)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00050">point.h:50</a></div></div>
+<div class="ttc" id="class_point_html_a9f37bcdde4f274fc2c9ee4e39fad9b22"><div class="ttname"><a href="class_point.html#a9f37bcdde4f274fc2c9ee4e39fad9b22">Point::set_factor</a></div><div class="ttdeci">void set_factor(string f, double val)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00184">point.h:184</a></div></div>
+<div class="ttc" id="class_point_html_ac25220ccb634802bdebc6de755afc807"><div class="ttname"><a href="class_point.html#ac25220ccb634802bdebc6de755afc807">Point::set_factor_fij</a></div><div class="ttdeci">void set_factor_fij(string f, double val)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00182">point.h:182</a></div></div>
+<div class="ttc" id="class_point_html_a29c1d7d3887b5df5fb43ece80c7ee633"><div class="ttname"><a href="class_point.html#a29c1d7d3887b5df5fb43ece80c7ee633">Point::Point</a></div><div class="ttdeci">Point(double x, double y, double Dxx, double Dyy, double Dxy, int flag)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00071">point.h:71</a></div></div>
+<div class="ttc" id="class_point_html_ad92f2337b839a94ce97dcdb439b4325a"><div class="ttname"><a href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point::Point</a></div><div class="ttdeci">Point()</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00078">point.h:78</a></div></div>
+<div class="ttc" id="class_point_html_a1cb03d7d73b39c92b7e56240b9184955"><div class="ttname"><a href="class_point.html#a1cb03d7d73b39c92b7e56240b9184955">Point::get_near_neighbour</a></div><div class="ttdeci">int get_near_neighbour(int nr)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00142">point.h:142</a></div></div>
+<div class="ttc" id="class_point_html_a1f21dc53976e93ad52cfd2eafdb94209"><div class="ttname"><a href="class_point.html#a1f21dc53976e93ad52cfd2eafdb94209">Point::set_Curr</a></div><div class="ttdeci">void set_Curr(long double val)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00177">point.h:177</a></div></div>
+<div class="ttc" id="class_point_html_a9be4fd3f7363583345023997921895ec"><div class="ttname"><a href="class_point.html#a9be4fd3f7363583345023997921895ec">Point::set_Next</a></div><div class="ttdeci">void set_Next(long double val)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00180">point.h:180</a></div></div>
+<div class="ttc" id="class_point_html_a0bf3e2831a50b62754eefb0cab6c3bbd"><div class="ttname"><a href="class_point.html#a0bf3e2831a50b62754eefb0cab6c3bbd">Point::set_Dxy</a></div><div class="ttdeci">void set_Dxy(double Dxy)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00168">point.h:168</a></div></div>
+<div class="ttc" id="class_point_html_aef2637aabdb8e7dae3b20e67dfdc6e7a"><div class="ttname"><a href="class_point.html#aef2637aabdb8e7dae3b20e67dfdc6e7a">Point::get_Dxx</a></div><div class="ttdeci">double get_Dxx() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00110">point.h:110</a></div></div>
+<div class="ttc" id="class_point_html_ab68cfb3cd44fe4624dd89ec5b9275350"><div class="ttname"><a href="class_point.html#ab68cfb3cd44fe4624dd89ec5b9275350">Point::set_vx</a></div><div class="ttdeci">void set_vx(double vX)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00159">point.h:159</a></div></div>
+<div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdoc">Klasa opisujaca Punkt. </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00034">point.h:34</a></div></div>
+<div class="ttc" id="class_point_html_aa26891d8be99659f996873b6cf3e6a9c"><div class="ttname"><a href="class_point.html#aa26891d8be99659f996873b6cf3e6a9c">Point::Point</a></div><div class="ttdeci">Point(double x, double y, double vx, double vy, int flag)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00057">point.h:57</a></div></div>
+<div class="ttc" id="class_point_html_a6b98226c33a0e7ba2302c13e33e25ea5"><div class="ttname"><a href="class_point.html#a6b98226c33a0e7ba2302c13e33e25ea5">Point::get_CurDxy</a></div><div class="ttdeci">double get_CurDxy() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00122">point.h:122</a></div></div>
+<div class="ttc" id="class_point_html_a63cebd1e00f14bdabf5000aa76174b03"><div class="ttname"><a href="class_point.html#a63cebd1e00f14bdabf5000aa76174b03">Point::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;out, const Point &amp;obj)</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00211">point.h:211</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="point_8h.html">point.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

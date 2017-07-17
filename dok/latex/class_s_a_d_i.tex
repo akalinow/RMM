@@ -1,0 +1,134 @@
+\hypertarget{class_s_a_d_i}{}\section{Dokumentacja klasy S\+A\+D\+I}
+\label{class_s_a_d_i}\index{S\+A\+D\+I@{S\+A\+D\+I}}
+
+
+Schemat naprzemiennych kierunkow A\+D\+I .  
+
+
+
+
+{\ttfamily \#include $<$scheme.\+h$>$}
+
+Diagram dziedziczenia dla S\+A\+D\+I\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_a_d_i}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_a_d_i_a77c5520329e29fff358d98b9c7f323a7}{S\+A\+D\+I} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_a_d_i_aed849c2b3b1a1c5b346edcfb69460457}{Compute\+Concentration} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\begin{DoxyCompactList}\small\item\em Oblicza koncentracje uzywajac schamatu A\+D\+I. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_a_d_i_aec6b8007d89c0c72648b4cad7aba1274}{Get\+Factors} (\hyperlink{class_point}{Point} $\ast$p, const double \&C\+Ax, const double \&C\+Ay, const double \&C\+Dx, const double \&C\+Dxy, const double \&C\+Dy, const vector$<$ int $>$ \&flag)
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Schemat naprzemiennych kierunkow A\+D\+I . 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu metoda A\+D\+I. 
+
+Definicja w linii 283 pliku scheme.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_s_a_d_i_a77c5520329e29fff358d98b9c7f323a7}{}\index{S\+A\+D\+I@{S\+A\+D\+I}!S\+A\+D\+I@{S\+A\+D\+I}}
+\index{S\+A\+D\+I@{S\+A\+D\+I}!S\+A\+D\+I@{S\+A\+D\+I}}
+\subsubsection[{S\+A\+D\+I}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+D\+I\+::\+S\+A\+D\+I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_a_d_i_a77c5520329e29fff358d98b9c7f323a7}
+
+
+Konstruktor. 
+
+Tworzy schemat do rozwiazywania rownania transporu metoda A\+D\+I 
+
+Definicja w linii 291 pliku scheme.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_s_a_d_i_aed849c2b3b1a1c5b346edcfb69460457}{}\index{S\+A\+D\+I@{S\+A\+D\+I}!Compute\+Concentration@{Compute\+Concentration}}
+\index{Compute\+Concentration@{Compute\+Concentration}!S\+A\+D\+I@{S\+A\+D\+I}}
+\subsubsection[{Compute\+Concentration}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+D\+I\+::\+Compute\+Concentration (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_d_i_aed849c2b3b1a1c5b346edcfb69460457}
+
+
+Oblicza koncentracje uzywajac schamatu A\+D\+I. 
+
+Oblicza koncentracje w daneym kroku uzywajac metody A\+D\+I 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa punktow \\
+\hline
+\end{DoxyParams}
+------------10.\+06.\+2015 -\/ dodajemy czlon zrodluwy
+
+-\/-\/-\/---------10.\+06.\+2015 -\/ dodajemy czlon zrodluwy
+
+-\/-\/-\/-\/------L\+I\+C\+Z\+E\+N\+I\+E H\+E\+A\+T F\+L\+U\+X -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------//
+
+-\/-\/-\/-\/-\/-\/-\/---L\+I\+C\+Z\+E\+N\+I\+E H\+E\+A\+T F\+L\+U\+X -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---// 
+
+Reimplementowana z \hyperlink{class_s_scheme_a1607f2363ea074bde9ad9c585b5a4019}{S\+Scheme}.
+
+
+
+Definicja w linii 1261 pliku scheme.\+cpp.
+
+\hypertarget{class_s_a_d_i_aec6b8007d89c0c72648b4cad7aba1274}{}\index{S\+A\+D\+I@{S\+A\+D\+I}!Get\+Factors@{Get\+Factors}}
+\index{Get\+Factors@{Get\+Factors}!S\+A\+D\+I@{S\+A\+D\+I}}
+\subsubsection[{Get\+Factors}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+D\+I\+::\+Get\+Factors (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{p, }
+\item[{const double \&}]{C\+Ax, }
+\item[{const double \&}]{C\+Ay, }
+\item[{const double \&}]{C\+Dx, }
+\item[{const double \&}]{C\+Dxy, }
+\item[{const double \&}]{C\+Dy, }
+\item[{const vector$<$ int $>$ \&}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_d_i_aec6b8007d89c0c72648b4cad7aba1274}
+Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja dla schemtu A\+D\+I
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$p} & -\/ pkt dla ktorego wyznaczane sa czynniki \\
+\hline
+{\em C\+Ax} & -\/ adwekcyjna liczba Couranta w kieruynku x \\
+\hline
+{\em C\+Ay} & -\/ adwekcyjna liczba Couranta w kieruynku y \\
+\hline
+{\em C\+Dx} & -\/ dyfuzyjna liczba Couranta w kieruynku x \\
+\hline
+{\em C\+Dxy} & -\/ dyfuzyjna liczba Couranta w kieruynku xy \\
+\hline
+{\em C\+Dy} & -\/ dyfuzyjna liczba Couranta w kieruynku y \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \hyperlink{class_s_scheme_ae1e554b35ec2d8a902f6fdb30d95ab20}{S\+Scheme}.
+
+
+
+Definicja w linii 1387 pliku scheme.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{scheme_8h}{scheme.\+h}\item 
+\hyperlink{scheme_8cpp}{scheme.\+cpp}\item 
+\hyperlink{scheme__new__bez_q_8cpp}{scheme\+\_\+new\+\_\+bez\+Q.\+cpp}\item 
+\hyperlink{scheme__new__z_q_8cpp}{scheme\+\_\+new\+\_\+z\+Q.\+cpp}\item 
+\hyperlink{scheme__przed__zmina__09092015_8cpp}{scheme\+\_\+przed\+\_\+zmina\+\_\+09092015.\+cpp}\end{DoxyCompactItemize}

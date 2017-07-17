@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="comments_8h" kind="file" language="C++">
+    <compoundname>comments.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="simulation_8h" local="yes">simulation.h</includes>
+    <includedby refid="comments_8cpp" local="yes">comments.cpp</includedby>
+    <includedby refid="simulation_8h" local="yes">simulation.h</includedby>
+    <includedby refid="grid_8h" local="yes">grid.h</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="param_8cpp" local="yes">param.cpp</includedby>
+    <includedby refid="rmm_8cpp" local="yes">rmm.cpp</includedby>
+    <includedby refid="scheme_8cpp" local="yes">scheme.cpp</includedby>
+    <includedby refid="scheme__new__bez_q_8cpp" local="yes">scheme_new_bezQ.cpp</includedby>
+    <includedby refid="scheme__new__z_q_8cpp" local="yes">scheme_new_zQ.cpp</includedby>
+    <includedby refid="scheme__przed__zmina__09092015_8cpp" local="yes">scheme_przed_zmina_09092015.cpp</includedby>
+    <incdepgraph>
+      <node id="35">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>cmath</label>
+      </node>
+      <node id="38">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>string</label>
+      </node>
+      <node id="32">
+        <label>map</label>
+      </node>
+      <node id="27">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>fstream</label>
+      </node>
+      <node id="39">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>comments.h</label>
+        <link refid="comments.h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>cstdio</label>
+      </node>
+      <node id="31">
+        <label>vector</label>
+      </node>
+      <node id="36">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>time.h</label>
+      </node>
+      <node id="24">
+        <label>cstdlib</label>
+      </node>
+      <node id="28">
+        <label>iostream</label>
+      </node>
+      <node id="34">
+        <label>set</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="61">
+        <label>simulation_SrPkt_t0.cpp</label>
+        <link refid="simulation___sr_pkt__t0_8cpp"/>
+      </node>
+      <node id="51">
+        <label>simulation_Kodc_1780_90_730_40.cpp</label>
+        <link refid="simulation___kodc__1780__90__730__40_8cpp"/>
+      </node>
+      <node id="44">
+        <label>rmm.cpp</label>
+        <link refid="rmm_8cpp"/>
+      </node>
+      <node id="49">
+        <label>simulation_Dodc.cpp</label>
+        <link refid="simulation___dodc_8cpp"/>
+      </node>
+      <node id="54">
+        <label>simulation_LPkt.cpp</label>
+        <link refid="simulation___l_pkt_8cpp"/>
+      </node>
+      <node id="67">
+        <label>point.cpp</label>
+        <link refid="point_8cpp"/>
+      </node>
+      <node id="68">
+        <label>scheme.cpp</label>
+        <link refid="scheme_8cpp"/>
+      </node>
+      <node id="71">
+        <label>scheme_przed_zmina_09092015.cpp</label>
+        <link refid="scheme__przed__zmina__09092015_8cpp"/>
+      </node>
+      <node id="55">
+        <label>simulation_LPkt_Zapis.cpp</label>
+        <link refid="simulation___l_pkt___zapis_8cpp"/>
+      </node>
+      <node id="70">
+        <label>scheme_new_zQ.cpp</label>
+        <link refid="scheme__new__z_q_8cpp"/>
+      </node>
+      <node id="52">
+        <label>simulation_Kodc_1790_800_740_50.cpp</label>
+        <link refid="simulation___kodc__1790__800__740__50_8cpp"/>
+      </node>
+      <node id="69">
+        <label>scheme_new_bezQ.cpp</label>
+        <link refid="scheme__new__bez_q_8cpp"/>
+      </node>
+      <node id="42">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>simulation_Kodc_Zapis.cpp</label>
+        <link refid="simulation___kodc___zapis_8cpp"/>
+      </node>
+      <node id="72">
+        <label>param.cpp</label>
+        <link refid="param_8cpp"/>
+      </node>
+      <node id="57">
+        <label>simulation_Pkt_1790_740.cpp</label>
+        <link refid="simulation___pkt__1790__740_8cpp"/>
+      </node>
+      <node id="58">
+        <label>simulation_Pkt_1800_750.cpp</label>
+        <link refid="simulation___pkt__1800__750_8cpp"/>
+      </node>
+      <node id="65">
+        <label>grid.h</label>
+        <link refid="grid_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>simulation.cpp_kopia.cpp</label>
+        <link refid="simulation_8cpp__kopia_8cpp"/>
+      </node>
+      <node id="50">
+        <label>simulation_Kodc.cpp</label>
+        <link refid="simulation___kodc_8cpp"/>
+      </node>
+      <node id="43">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="63">
+        <label>simulation_SrPkt_t0_plus_f.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus__f_8cpp"/>
+      </node>
+      <node id="40">
+        <label>comments.h</label>
+        <link refid="comments.h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>simulation_SrPkt.cpp</label>
+        <link refid="simulation___sr_pkt_8cpp"/>
+      </node>
+      <node id="48">
+        <label>simulation_2011_03_25.cpp</label>
+        <link refid="simulation__2011__03__25_8cpp"/>
+      </node>
+      <node id="45">
+        <label>simulation.cpp</label>
+        <link refid="simulation_8cpp"/>
+      </node>
+      <node id="47">
+        <label>simulation_1.cpp</label>
+        <link refid="simulation__1_8cpp"/>
+      </node>
+      <node id="64">
+        <label>simulation_SrPkt_Zapis.cpp</label>
+        <link refid="simulation___sr_pkt___zapis_8cpp"/>
+      </node>
+      <node id="62">
+        <label>simulation_SrPkt_t0_plus.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus_8cpp"/>
+      </node>
+      <node id="56">
+        <label>simulation_Pkt_1780_730.cpp</label>
+        <link refid="simulation___pkt__1780__730_8cpp"/>
+      </node>
+      <node id="66">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="41">
+        <label>comments.cpp</label>
+        <link refid="comments_8cpp"/>
+      </node>
+      <node id="60">
+        <label>simulation_SrPkt_5m.cpp</label>
+        <link refid="simulation___sr_pkt__5m_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="comments_8h_1afe3033c9603c8baeac7123656fb822d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* GetTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwraca aktulany czas w odpowiednim formacie. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/comments.h" line="27" column="1" bodyfile="/home/mkalinow/projects/rmmt/comments.cpp" bodystart="13" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="comments_8h_1adfc96c48a4992ed58a90873f921c0eb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Helloo</definition>
+        <argsstring>(const string &amp;opt=&quot;screan&quot;)</argsstring>
+        <name>Helloo</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>opt</declname>
+          <defval>&quot;screan&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wyswietla komunikat powitalny. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/comments.h" line="32" column="1" bodyfile="/home/mkalinow/projects/rmmt/comments.cpp" bodystart="22" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="comments_8h_1aee73cfc60f025d884861789299a4b121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void End</definition>
+        <argsstring>(const string &amp;opt=&quot;screan&quot;)</argsstring>
+        <name>End</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>opt</declname>
+          <defval>&quot;screan&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wyswietla komunikat koncowy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/comments.h" line="37" column="1" bodyfile="/home/mkalinow/projects/rmmt/comments.cpp" bodystart="48" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="comments_8h_1aebb57f43007178387a51e34512903da3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileWithParameters</definition>
+        <argsstring>(const string &amp;file, const string &amp;opt=&quot;screan&quot;)</argsstring>
+        <name>FileWithParameters</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>opt</declname>
+          <defval>&quot;screan&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wypisuje informacje z jakiego pliku czytane sa parmetry symulacji. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/comments.h" line="42" column="1" bodyfile="/home/mkalinow/projects/rmmt/comments.cpp" bodystart="66" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="comments_8h_1a74adf3f898b68fc4a57c8a88ddadb3ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckFile</definition>
+        <argsstring>(int opt, const string &amp;file)</argsstring>
+        <name>CheckFile</name>
+        <param>
+          <type>int</type>
+          <declname>opt</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprawdza czy plik z ktorego chcemy czytac istnieje i w zaleznosci od wyniku wypisuje stosowny komentarz </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/comments.h" line="48" column="1" bodyfile="/home/mkalinow/projects/rmmt/comments.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Help and coments. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera kometarze i opisy wyswietla na ekran podczas dzilania programu. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>comments.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMMENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMMENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simulation_8h" kindref="compound">simulation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="comments_8h_1afe3033c9603c8baeac7123656fb822d8" kindref="member">GetTime</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//_______________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="comments_8h_1adfc96c48a4992ed58a90873f921c0eb8" kindref="member">Helloo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;opt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;screan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//_______________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="comments_8h_1aee73cfc60f025d884861789299a4b121" kindref="member">End</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;opt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;screan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//_______________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="comments_8h_1aebb57f43007178387a51e34512903da3" kindref="member">FileWithParameters</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;opt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;screan&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="comments_8h_1a74adf3f898b68fc4a57c8a88ddadb3ba" kindref="member">CheckFile</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;file);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//__________________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/comments.h"/>
+  </compounddef>
+</doxygen>

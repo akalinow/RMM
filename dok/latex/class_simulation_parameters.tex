@@ -1,0 +1,882 @@
+\hypertarget{class_simulation_parameters}{}\section{Dokumentacja klasy Simulation\+Parameters}
+\label{class_simulation_parameters}\index{Simulation\+Parameters@{Simulation\+Parameters}}
+
+
+Klasa z parametrami symulacji.  
+
+
+
+
+{\ttfamily \#include $<$param.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulation_parameters_a8b4b79aaaca9c17cf79f19871f7bc432}{Simulation\+Parameters} (string param)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_simulation_parameters_ae2858173523e3d44efdb5e7cb1c41785}{$\sim$\+Simulation\+Parameters} (void)
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+int \hyperlink{class_simulation_parameters_a68fcda888ff9c17f3d8cc548ecb2a971}{get\+\_\+flag} () const 
+\item 
+int \hyperlink{class_simulation_parameters_a9966bac3c9484aeed65d4aa4a7c31c17}{get\+\_\+n} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a17ece2a3b38e27abe7902345debcc292}{get\+\_\+dx} () const 
+\item 
+double \hyperlink{class_simulation_parameters_ab86fb4ed8f1f9fe460e860e1973cba03}{get\+\_\+dy} () const 
+\item 
+double \hyperlink{class_simulation_parameters_ad939af4a1bd01ab8d28ae089d3443695}{get\+\_\+dt} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a4d5e46cf9fedbbf3f54730dfd3ae8e48}{get\+\_\+vx} () const 
+\item 
+double \hyperlink{class_simulation_parameters_afafb8a1cd0b36e1a44634ef12f63a131}{get\+\_\+vy} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a4c1f68d7b6c1171914b14746e72e1aeb}{get\+\_\+vxmax} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a7b16803d329c7487313123a4939be4fd}{get\+\_\+vymax} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a3fd57d0fbabac8276a67ffe47e187a7a}{get\+\_\+vxmin} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a82fdd4554487c44608ec8481e2238a99}{get\+\_\+vymin} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a3b0ff9c4b88fb8c112bc6fbd69a43363}{get\+\_\+\+Dlong} () const 
+\item 
+double \hyperlink{class_simulation_parameters_ae5fc90d369cbb210e31d6e052bf77a6d}{get\+\_\+\+Dtrans} () const 
+\item 
+double \hyperlink{class_simulation_parameters_ad3de01622aedae26ca32c92efa82b164}{get\+\_\+\+Dxxmax} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a3f6624fc83d5fd91e8c70cfb3a73e5f4}{get\+\_\+\+Dyymax} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a61cf0e0d8c8713825c38f130fcb64c74}{get\+\_\+\+Dxymax} () const 
+\item 
+double \hyperlink{class_simulation_parameters_aab1156e02ae3d3f48dd77e47481ece90}{get\+\_\+\+Dxxmin} () const 
+\item 
+double \hyperlink{class_simulation_parameters_a4c66a266c6943fa10afef74b8332002a}{get\+\_\+\+Dyymin} () const 
+\item 
+double \hyperlink{class_simulation_parameters_ab63e1bb54a319885139aace910da678c}{get\+\_\+\+Dxymin} () const 
+\item 
+string \hyperlink{class_simulation_parameters_aac4e34a1ab864d4b0c076a45b74fb98d}{get\+\_\+scheme} () const 
+\item 
+string \hyperlink{class_simulation_parameters_a2d8b7ca6c945714efeef2916b2caaeb3}{get\+\_\+dispersion} () const 
+\item 
+string \hyperlink{class_simulation_parameters_aee24f2305aca60bc8d4c4182333abce3}{get\+\_\+grid\+File} () const 
+\item 
+string \hyperlink{class_simulation_parameters_a23dc711ac13c3929910efd5c9877e414}{get\+\_\+pollutant} () const 
+\item 
+string \hyperlink{class_simulation_parameters_ab396fcc5b261e17f81760e1846fc1569}{get\+\_\+dump} () const 
+\item 
+string \hyperlink{class_simulation_parameters_a3e1410e837506a6d0f4225c5c224d260}{get\+\_\+area} () const 
+\item 
+string \hyperlink{class_simulation_parameters_acc53a811c1a21e0996a0fc044a6b7b3d}{get\+\_\+mod} () const 
+\item 
+\hyperlink{class_d_tensor}{D\+Tensor} $\ast$ \hyperlink{class_simulation_parameters_aaaba7d7f4d33a6f6fa13143979360d31}{get\+\_\+tensor} () const 
+\item 
+\hyperlink{class_s_scheme}{S\+Scheme} $\ast$ \hyperlink{class_simulation_parameters_a7b49731434f236aff3bf92e1ce4636e6}{get\+\_\+s\+\_\+scheme} () const 
+\item 
+void \hyperlink{class_simulation_parameters_a1c90f74ed579065b2785a6dc5d9c7645}{set\+\_\+flag} (int flag)
+\item 
+void \hyperlink{class_simulation_parameters_a310374d248e0fdc02c236936538d2f80}{set\+\_\+n} (int n)
+\item 
+void \hyperlink{class_simulation_parameters_ae06426aa1336727b706234b6bf0a9b2f}{set\+\_\+dx} (double dx)
+\item 
+void \hyperlink{class_simulation_parameters_a4ea672088cfe311f4fff6ef8fce7b4bb}{set\+\_\+dy} (double dy)
+\item 
+void \hyperlink{class_simulation_parameters_a85f6aea7fcbca0436594e6c73845aab8}{set\+\_\+vx} (double vx)
+\item 
+void \hyperlink{class_simulation_parameters_a569357bd6d6245684770a80501a45ac4}{set\+\_\+vy} (double vy)
+\item 
+void \hyperlink{class_simulation_parameters_a3d14efe09cd7ca79b44e12ee3fe8761c}{set\+\_\+vxmax} (double vxmax)
+\item 
+void \hyperlink{class_simulation_parameters_ad5df52a205d10f457e3500295884ab7e}{set\+\_\+vymax} (double vymax)
+\item 
+void \hyperlink{class_simulation_parameters_a31a365f0f5d131507ed2608acf8b5fd7}{set\+\_\+vxmin} (double vxmin)
+\item 
+void \hyperlink{class_simulation_parameters_a1e611a9995e5f7a38ad527c5e13507d9}{set\+\_\+vymin} (double vymin)
+\item 
+void \hyperlink{class_simulation_parameters_acd9d8da9786d6dce5b78ffcaedfe0a74}{set\+\_\+\+Dlong} (double Dlong)
+\item 
+void \hyperlink{class_simulation_parameters_a4cb8bab39bb4ba86b988edde543d97da}{set\+\_\+\+Dtrans} (double Dtrans)
+\item 
+void \hyperlink{class_simulation_parameters_ae2c2b65aff97393dbd1b685e598970fe}{set\+\_\+dt} (double dt)
+\item 
+void \hyperlink{class_simulation_parameters_a2c55847f253f98af295b89f32aa4cc1c}{set\+\_\+\+Dxxmax} (double Dxxmax)
+\item 
+void \hyperlink{class_simulation_parameters_a7337f50ff0f37ac9936f3586016661bf}{set\+\_\+\+Dyymax} (double Dyymax)
+\item 
+void \hyperlink{class_simulation_parameters_a93877f3fd2e247afa730d63dd338f4c4}{set\+\_\+\+Dxymax} (double Dxymax)
+\item 
+void \hyperlink{class_simulation_parameters_a9a213f854271721cf381ef08d03b805b}{set\+\_\+\+Dxxmin} (double Dxxmin)
+\item 
+void \hyperlink{class_simulation_parameters_a26a229a4abb16fd60b9904091b56bd48}{set\+\_\+\+Dyymin} (double Dyymin)
+\item 
+void \hyperlink{class_simulation_parameters_a5f1a3d9b5357192cdea0da48d37330cc}{set\+\_\+\+Dxymin} (double Dxymin)
+\item 
+void \hyperlink{class_simulation_parameters_a8e17dae834cc3339bc4b35e1085cb09c}{set\+\_\+scheme} (string scheme)
+\item 
+void \hyperlink{class_simulation_parameters_a19725775b57442ed6b0b07251c26ed5d}{set\+\_\+dispersion} (string dispersion)
+\item 
+void \hyperlink{class_simulation_parameters_ab17f56dbd5bfcfadd13b55665b27222f}{set\+\_\+grid\+File} (string grid\+File)
+\item 
+void \hyperlink{class_simulation_parameters_a76420499d58b303411f21c385d82303f}{set\+\_\+pollutant} (string pollutant)
+\item 
+void \hyperlink{class_simulation_parameters_a1848a63487254ccce60bc06886d29847}{set\+\_\+dump} (string dump)
+\item 
+void \hyperlink{class_simulation_parameters_a05862812dec3b947f124886aaea1cb84}{set\+\_\+area} (string area)
+\item 
+void \hyperlink{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{set\+\_\+mod} (string mod)
+\item 
+double \hyperlink{class_simulation_parameters_a2a4c6b2a5528a18a0181e343be735876}{Compute\+Peclet\+Number} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\item 
+double \hyperlink{class_simulation_parameters_a8b6b920edd7ab4f094ffd735381caddf}{Compute\+Courant\+Number} ()
+\begin{DoxyCompactList}\small\item\em Oblicza liczby Cournata. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulation_parameters_a23c2b9bb9465abbbeb2050dbe50d9ef6}{print} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa z parametrami symulacji. 
+
+Zawiera i pozwala modyfikowac informacje na temat parametrow symulacji. 
+
+Definicja w linii 26 pliku param.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_simulation_parameters_a8b4b79aaaca9c17cf79f19871f7bc432}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!Simulation\+Parameters@{Simulation\+Parameters}}
+\index{Simulation\+Parameters@{Simulation\+Parameters}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{Simulation\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}Simulation\+Parameters\+::\+Simulation\+Parameters (
+\begin{DoxyParamCaption}
+\item[{string}]{param}
+\end{DoxyParamCaption}
+)}\label{class_simulation_parameters_a8b4b79aaaca9c17cf79f19871f7bc432}
+
+
+Konstruktor. 
+
+Tworzy obiekt simuationparameters i ustawaia parametry symulacji. 
+\begin{DoxyParams}{Parametry}
+{\em param} & -\/ nazwa pliku z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 15 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_ae2858173523e3d44efdb5e7cb1c41785}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!````~Simulation\+Parameters@{$\sim$\+Simulation\+Parameters}}
+\index{````~Simulation\+Parameters@{$\sim$\+Simulation\+Parameters}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{$\sim$\+Simulation\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}Simulation\+Parameters\+::$\sim$\+Simulation\+Parameters (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ae2858173523e3d44efdb5e7cb1c41785}
+
+
+Destruktor. 
+
+Usuwa obiekt \hyperlink{class_simulation}{Simulation}. 
+
+Definicja w linii 40 pliku param.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_simulation_parameters_a8b6b920edd7ab4f094ffd735381caddf}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!Compute\+Courant\+Number@{Compute\+Courant\+Number}}
+\index{Compute\+Courant\+Number@{Compute\+Courant\+Number}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{Compute\+Courant\+Number}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::\+Compute\+Courant\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simulation_parameters_a8b6b920edd7ab4f094ffd735381caddf}
+
+
+Oblicza liczby Cournata. 
+
+Oblicza liczby Cournata dla ekstremalnych wartości zmiennych na siatce\+: \begin{DoxyItemize}
+\item Cr\+Ax -\/ adwekcyjna liczba Couranta w kieruynku x \item Cr\+Ay -\/ adwekcyjna liczba Couranta w kieruynku y \item Cr\+Dx -\/ dyfuzyjna liczba Couranta w kieruynku x \item Crxy -\/ dyfuzyjna liczba Couranta w kieruynku xy \item Cr\+Dy -\/ dyfuzyjna liczba Couranta w kieruynku y \begin{DoxyReturn}{Zwraca}
+maksymalna z obliczonych liczb Couranta 
+\end{DoxyReturn}
+\end{DoxyItemize}
+
+
+Definicja w linii 173 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_a2a4c6b2a5528a18a0181e343be735876}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!Compute\+Peclet\+Number@{Compute\+Peclet\+Number}}
+\index{Compute\+Peclet\+Number@{Compute\+Peclet\+Number}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{Compute\+Peclet\+Number}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::\+Compute\+Peclet\+Number (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_simulation_parameters_a2a4c6b2a5528a18a0181e343be735876}
+Oblicza i zwraca Liczbe Pekleta 
+
+Definicja w linii 56 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_a3e1410e837506a6d0f4225c5c224d260}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+area@{get\+\_\+area}}
+\index{get\+\_\+area@{get\+\_\+area}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+area}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a3e1410e837506a6d0f4225c5c224d260}
+Zwraca definicje obszaru zrzutu zanieczyszczeń \begin{DoxySeeAlso}{Zobacz również}
+\hyperlink{class_simulation_parameters_a05862812dec3b947f124886aaea1cb84}{set\+\_\+area} (string area) 
+\end{DoxySeeAlso}
+
+
+Definicja w linii 137 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a2d8b7ca6c945714efeef2916b2caaeb3}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+dispersion@{get\+\_\+dispersion}}
+\index{get\+\_\+dispersion@{get\+\_\+dispersion}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+dispersion}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+dispersion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a2d8b7ca6c945714efeef2916b2caaeb3}
+Zwraca sposob obliczania dyspersji uzwany do symulacji 
+
+Definicja w linii 119 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a3b0ff9c4b88fb8c112bc6fbd69a43363}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dlong@{get\+\_\+\+Dlong}}
+\index{get\+\_\+\+Dlong@{get\+\_\+\+Dlong}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dlong}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dlong (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a3b0ff9c4b88fb8c112bc6fbd69a43363}
+Zwaraca wspolczynnik dyspersji podluznej 
+
+Definicja w linii 91 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ad939af4a1bd01ab8d28ae089d3443695}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+dt@{get\+\_\+dt}}
+\index{get\+\_\+dt@{get\+\_\+dt}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+dt}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+dt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ad939af4a1bd01ab8d28ae089d3443695}
+Zwaraca ktok czasowy symulacji 
+
+Definicja w linii 65 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ae5fc90d369cbb210e31d6e052bf77a6d}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dtrans@{get\+\_\+\+Dtrans}}
+\index{get\+\_\+\+Dtrans@{get\+\_\+\+Dtrans}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dtrans}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dtrans (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ae5fc90d369cbb210e31d6e052bf77a6d}
+Zwaraca wspolczynnik dyspersji poprzecznej 
+
+Definicja w linii 94 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ab396fcc5b261e17f81760e1846fc1569}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+dump@{get\+\_\+dump}}
+\index{get\+\_\+dump@{get\+\_\+dump}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+dump}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ab396fcc5b261e17f81760e1846fc1569}
+Zwraca sposób zrzutu zanieczyszczeń (ciągły lub chwilowy) \begin{DoxySeeAlso}{Zobacz również}
+\hyperlink{class_simulation_parameters_a1848a63487254ccce60bc06886d29847}{set\+\_\+dump} (string dump) 
+\end{DoxySeeAlso}
+
+
+Definicja w linii 132 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a17ece2a3b38e27abe7902345debcc292}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+dx@{get\+\_\+dx}}
+\index{get\+\_\+dx@{get\+\_\+dx}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+dx}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+dx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a17ece2a3b38e27abe7902345debcc292}
+Zwaraca ktok przestrzenny symulacji 
+
+Definicja w linii 59 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ad3de01622aedae26ca32c92efa82b164}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dxxmax@{get\+\_\+\+Dxxmax}}
+\index{get\+\_\+\+Dxxmax@{get\+\_\+\+Dxxmax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dxxmax}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dxxmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ad3de01622aedae26ca32c92efa82b164}
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku x 
+
+Definicja w linii 97 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_aab1156e02ae3d3f48dd77e47481ece90}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dxxmin@{get\+\_\+\+Dxxmin}}
+\index{get\+\_\+\+Dxxmin@{get\+\_\+\+Dxxmin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dxxmin}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dxxmin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_aab1156e02ae3d3f48dd77e47481ece90}
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku x 
+
+Definicja w linii 106 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a61cf0e0d8c8713825c38f130fcb64c74}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dxymax@{get\+\_\+\+Dxymax}}
+\index{get\+\_\+\+Dxymax@{get\+\_\+\+Dxymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dxymax}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dxymax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a61cf0e0d8c8713825c38f130fcb64c74}
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku xy 
+
+Definicja w linii 103 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ab63e1bb54a319885139aace910da678c}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dxymin@{get\+\_\+\+Dxymin}}
+\index{get\+\_\+\+Dxymin@{get\+\_\+\+Dxymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dxymin}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dxymin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ab63e1bb54a319885139aace910da678c}
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku xy 
+
+Definicja w linii 112 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ab86fb4ed8f1f9fe460e860e1973cba03}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+dy@{get\+\_\+dy}}
+\index{get\+\_\+dy@{get\+\_\+dy}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+dy}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+dy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ab86fb4ed8f1f9fe460e860e1973cba03}
+Zwaraca ktok przestrzenny symulacji 
+
+Definicja w linii 62 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a3f6624fc83d5fd91e8c70cfb3a73e5f4}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dyymax@{get\+\_\+\+Dyymax}}
+\index{get\+\_\+\+Dyymax@{get\+\_\+\+Dyymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dyymax}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dyymax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a3f6624fc83d5fd91e8c70cfb3a73e5f4}
+Zwraca maksymalalna wartosc wspolczynnika dyspersji w kierunku y 
+
+Definicja w linii 100 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a4c66a266c6943fa10afef74b8332002a}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+\+Dyymin@{get\+\_\+\+Dyymin}}
+\index{get\+\_\+\+Dyymin@{get\+\_\+\+Dyymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+\+Dyymin}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+\+Dyymin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a4c66a266c6943fa10afef74b8332002a}
+Zwraca minimalna wartosc wspolczynnika dyspersji w kierunku y 
+
+Definicja w linii 109 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a68fcda888ff9c17f3d8cc548ecb2a971}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+flag@{get\+\_\+flag}}
+\index{get\+\_\+flag@{get\+\_\+flag}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+Parameters\+::get\+\_\+flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a68fcda888ff9c17f3d8cc548ecb2a971}
+Zwaraca flage z jaka zostala uruchomiona symulacja. \begin{DoxyReturn}{Zwraca}
+
+\begin{DoxyItemize}
+\item 0 -\/ stale wartosci predkosci i wspolczynnikow dyspersji poprzecznej i podlyznej; siatka pkt w pkiku {\itshape grid.\+txt} 
+\item 1 -\/ stale wartosci wspolczynikow dysersji poprzecznej i podluznej; pole predkosci i siatka pkt w pliku v.\+txt  
+\item 2 -\/ pole predkosci, tensor dyspersji i siatka w pliku data.\+txt  
+\item 3 -\/ stale wartosci predkosci; siatka i tensor dyspersji w pliku d.\+txt  
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definicja w linii 53 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_aee24f2305aca60bc8d4c4182333abce3}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+grid\+File@{get\+\_\+grid\+File}}
+\index{get\+\_\+grid\+File@{get\+\_\+grid\+File}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+grid\+File}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+grid\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_aee24f2305aca60bc8d4c4182333abce3}
+Zwraca sposob nazwę pliku z danymi wejsciowymi -\/ siatką 
+
+Definicja w linii 122 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_acc53a811c1a21e0996a0fc044a6b7b3d}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+mod@{get\+\_\+mod}}
+\index{get\+\_\+mod@{get\+\_\+mod}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+mod}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+mod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_acc53a811c1a21e0996a0fc044a6b7b3d}
+Zwraca spsosób w jaki podawana jest początkowa wartość temperatury/koncentracji w danym punkcie \begin{DoxySeeAlso}{Zobacz również}
+\hyperlink{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{set\+\_\+mod} (string mod) 
+\end{DoxySeeAlso}
+
+
+Definicja w linii 142 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a9966bac3c9484aeed65d4aa4a7c31c17}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+n@{get\+\_\+n}}
+\index{get\+\_\+n@{get\+\_\+n}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+n}]{\setlength{\rightskip}{0pt plus 5cm}int Simulation\+Parameters\+::get\+\_\+n (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a9966bac3c9484aeed65d4aa4a7c31c17}
+Zwaraca liczbe krokow symulacji 
+
+Definicja w linii 56 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a23dc711ac13c3929910efd5c9877e414}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+pollutant@{get\+\_\+pollutant}}
+\index{get\+\_\+pollutant@{get\+\_\+pollutant}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+pollutant}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+pollutant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a23dc711ac13c3929910efd5c9877e414}
+Zwraca rodzaj zenieszcyszenia dla ktorego wykonywane są obliczenia \begin{DoxySeeAlso}{Zobacz również}
+\hyperlink{class_simulation_parameters_a76420499d58b303411f21c385d82303f}{set\+\_\+pollutant} (string pollutant) 
+\end{DoxySeeAlso}
+
+
+Definicja w linii 127 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a7b49731434f236aff3bf92e1ce4636e6}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+s\+\_\+scheme@{get\+\_\+s\+\_\+scheme}}
+\index{get\+\_\+s\+\_\+scheme@{get\+\_\+s\+\_\+scheme}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+s\+\_\+scheme}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Scheme}$\ast$ Simulation\+Parameters\+::get\+\_\+s\+\_\+scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a7b49731434f236aff3bf92e1ce4636e6}
+Wskaznik do obiektu scheme, zawierajacego informacje o aktulnie wybranym schemacie numerycznym do obliczen 
+
+Definicja w linii 149 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_aac4e34a1ab864d4b0c076a45b74fb98d}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+scheme@{get\+\_\+scheme}}
+\index{get\+\_\+scheme@{get\+\_\+scheme}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+scheme}]{\setlength{\rightskip}{0pt plus 5cm}string Simulation\+Parameters\+::get\+\_\+scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_aac4e34a1ab864d4b0c076a45b74fb98d}
+Zwraca semat uzwany do symulacji 
+
+Definicja w linii 116 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_aaaba7d7f4d33a6f6fa13143979360d31}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+tensor@{get\+\_\+tensor}}
+\index{get\+\_\+tensor@{get\+\_\+tensor}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+tensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+Tensor}$\ast$ Simulation\+Parameters\+::get\+\_\+tensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_aaaba7d7f4d33a6f6fa13143979360d31}
+Wskaznik do obiektu tensor, odpowiedzialnego za wlasciwe obilczania tensora dyspersji 
+
+Definicja w linii 146 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a4d5e46cf9fedbbf3f54730dfd3ae8e48}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vx@{get\+\_\+vx}}
+\index{get\+\_\+vx@{get\+\_\+vx}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vx}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a4d5e46cf9fedbbf3f54730dfd3ae8e48}
+Zwaraca maksymalny mozliwy krok czasowy symulacji symulacji
+
+Zwaraca zadana skaldowa x predkosci 
+
+Definicja w linii 72 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a4c1f68d7b6c1171914b14746e72e1aeb}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vxmax@{get\+\_\+vxmax}}
+\index{get\+\_\+vxmax@{get\+\_\+vxmax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vxmax}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vxmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a4c1f68d7b6c1171914b14746e72e1aeb}
+Zwaraca maksymalna skaldowa x predkosci 
+
+Definicja w linii 78 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a3fd57d0fbabac8276a67ffe47e187a7a}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vxmin@{get\+\_\+vxmin}}
+\index{get\+\_\+vxmin@{get\+\_\+vxmin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vxmin}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vxmin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a3fd57d0fbabac8276a67ffe47e187a7a}
+Zwaraca minimalna skaldowa x predkosci 
+
+Definicja w linii 84 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_afafb8a1cd0b36e1a44634ef12f63a131}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vy@{get\+\_\+vy}}
+\index{get\+\_\+vy@{get\+\_\+vy}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vy}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_afafb8a1cd0b36e1a44634ef12f63a131}
+Zwaraca zadana skaldowa y predkosci 
+
+Definicja w linii 75 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a7b16803d329c7487313123a4939be4fd}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vymax@{get\+\_\+vymax}}
+\index{get\+\_\+vymax@{get\+\_\+vymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vymax}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vymax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a7b16803d329c7487313123a4939be4fd}
+Zwaraca maksymalna skaldowa y predkosci 
+
+Definicja w linii 81 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a82fdd4554487c44608ec8481e2238a99}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!get\+\_\+vymin@{get\+\_\+vymin}}
+\index{get\+\_\+vymin@{get\+\_\+vymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{get\+\_\+vymin}]{\setlength{\rightskip}{0pt plus 5cm}double Simulation\+Parameters\+::get\+\_\+vymin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a82fdd4554487c44608ec8481e2238a99}
+Zwaraca minimalna skaldowa y predkosci 
+
+Definicja w linii 87 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a23c2b9bb9465abbbeb2050dbe50d9ef6}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!print@{print}}
+\index{print@{print}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_simulation_parameters_a23c2b9bb9465abbbeb2050dbe50d9ef6}
+Wyswietla informacje na temat parametrow symulacji 
+
+Definicja w linii 24 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_a05862812dec3b947f124886aaea1cb84}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+area@{set\+\_\+area}}
+\index{set\+\_\+area@{set\+\_\+area}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+area}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+area (
+\begin{DoxyParamCaption}
+\item[{string}]{area}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a05862812dec3b947f124886aaea1cb84}
+Definiuje obszar zrzutu zanieczyszczeń 
+\begin{DoxyParams}{Parametry}
+{\em area} & -\/ obszar zrzutu \begin{DoxyItemize}
+\item {\ttfamily point} -\/ w jednym zdefiniownaym pukcie, \item {\ttfamily points} -\/ w kilku zdefiniowanych punktach, \item {\ttfamily area} -\/ w zdefiniownym obszare \item {\ttfamily gauss} -\/ rokład gauss-\/a wokół daneg punktu (diagonalny) \item {\ttfamily gaussnondiag} -\/ rozkład gauss-\/a niediagonalny \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 257 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a19725775b57442ed6b0b07251c26ed5d}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+dispersion@{set\+\_\+dispersion}}
+\index{set\+\_\+dispersion@{set\+\_\+dispersion}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+dispersion}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+dispersion (
+\begin{DoxyParamCaption}
+\item[{string}]{dispersion}
+\end{DoxyParamCaption}
+)}\label{class_simulation_parameters_a19725775b57442ed6b0b07251c26ed5d}
+Ustawia sposob obliczania dyspersji ktory ma byc uzywany do symulacji 
+
+Definicja w linii 31 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_acd9d8da9786d6dce5b78ffcaedfe0a74}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dlong@{set\+\_\+\+Dlong}}
+\index{set\+\_\+\+Dlong@{set\+\_\+\+Dlong}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dlong}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dlong (
+\begin{DoxyParamCaption}
+\item[{double}]{Dlong}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_acd9d8da9786d6dce5b78ffcaedfe0a74}
+Ustwia wartosc wspolczynnika dyspersji podluzenej 
+
+Definicja w linii 187 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ae2c2b65aff97393dbd1b685e598970fe}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+dt@{set\+\_\+dt}}
+\index{set\+\_\+dt@{set\+\_\+dt}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+dt}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+dt (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ae2c2b65aff97393dbd1b685e598970fe}
+Ustwia wielkosc kroku czsowego symulacji 
+
+Definicja w linii 193 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a4cb8bab39bb4ba86b988edde543d97da}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dtrans@{set\+\_\+\+Dtrans}}
+\index{set\+\_\+\+Dtrans@{set\+\_\+\+Dtrans}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dtrans}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dtrans (
+\begin{DoxyParamCaption}
+\item[{double}]{Dtrans}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a4cb8bab39bb4ba86b988edde543d97da}
+Ustwia wartosc wspolczynnika dyspersji poprzecznej 
+
+Definicja w linii 190 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a1848a63487254ccce60bc06886d29847}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+dump@{set\+\_\+dump}}
+\index{set\+\_\+dump@{set\+\_\+dump}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+dump}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+dump (
+\begin{DoxyParamCaption}
+\item[{string}]{dump}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a1848a63487254ccce60bc06886d29847}
+Ustawia sposób zrzutu zanieczyszczeń 
+\begin{DoxyParams}{Parametry}
+{\em dump} & -\/ sposób zrzutu \begin{DoxyItemize}
+\item {\ttfamily inst} -\/ zrzut chwilowy (tylko w chwili t = 0) \item {\ttfamily cont} -\/ zrzut ciągły (w każdym kroku czasowym) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 245 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ae06426aa1336727b706234b6bf0a9b2f}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+dx@{set\+\_\+dx}}
+\index{set\+\_\+dx@{set\+\_\+dx}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+dx}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+dx (
+\begin{DoxyParamCaption}
+\item[{double}]{dx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ae06426aa1336727b706234b6bf0a9b2f}
+Ustwia wielkosc kroku przestezennego wzdluz osi x 
+
+Definicja w linii 163 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a2c55847f253f98af295b89f32aa4cc1c}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dxxmax@{set\+\_\+\+Dxxmax}}
+\index{set\+\_\+\+Dxxmax@{set\+\_\+\+Dxxmax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dxxmax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dxxmax (
+\begin{DoxyParamCaption}
+\item[{double}]{Dxxmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a2c55847f253f98af295b89f32aa4cc1c}
+Ustawia maxymalna mozliwo wartosc kroku czasowego symulacji
+
+Ustawia maksymalalna wartosc wspolczynnika dyspersji w kierunku x 
+
+Definicja w linii 199 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a9a213f854271721cf381ef08d03b805b}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dxxmin@{set\+\_\+\+Dxxmin}}
+\index{set\+\_\+\+Dxxmin@{set\+\_\+\+Dxxmin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dxxmin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dxxmin (
+\begin{DoxyParamCaption}
+\item[{double}]{Dxxmin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a9a213f854271721cf381ef08d03b805b}
+Ustawia minimalna wartosc wspolczynnika dyspersji w kierunku x 
+
+Definicja w linii 208 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a93877f3fd2e247afa730d63dd338f4c4}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dxymax@{set\+\_\+\+Dxymax}}
+\index{set\+\_\+\+Dxymax@{set\+\_\+\+Dxymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dxymax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dxymax (
+\begin{DoxyParamCaption}
+\item[{double}]{Dxymax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a93877f3fd2e247afa730d63dd338f4c4}
+Ustwaia maksymalalna wartosc wspolczynnika dyspersji w kierunku xy 
+
+Definicja w linii 205 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a5f1a3d9b5357192cdea0da48d37330cc}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dxymin@{set\+\_\+\+Dxymin}}
+\index{set\+\_\+\+Dxymin@{set\+\_\+\+Dxymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dxymin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dxymin (
+\begin{DoxyParamCaption}
+\item[{double}]{Dxymin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a5f1a3d9b5357192cdea0da48d37330cc}
+Ustwaia minimalna wartosc wspolczynnika dyspersji w kierunku xy 
+
+Definicja w linii 214 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a4ea672088cfe311f4fff6ef8fce7b4bb}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+dy@{set\+\_\+dy}}
+\index{set\+\_\+dy@{set\+\_\+dy}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+dy}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+dy (
+\begin{DoxyParamCaption}
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a4ea672088cfe311f4fff6ef8fce7b4bb}
+Ustwia wielkosc kroku przestezennego wzdluz osi y 
+
+Definicja w linii 166 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a7337f50ff0f37ac9936f3586016661bf}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dyymax@{set\+\_\+\+Dyymax}}
+\index{set\+\_\+\+Dyymax@{set\+\_\+\+Dyymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dyymax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dyymax (
+\begin{DoxyParamCaption}
+\item[{double}]{Dyymax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a7337f50ff0f37ac9936f3586016661bf}
+Ustawia maksymalalna wartosc wspolczynnika dyspersji w kierunku y 
+
+Definicja w linii 202 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a26a229a4abb16fd60b9904091b56bd48}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+\+Dyymin@{set\+\_\+\+Dyymin}}
+\index{set\+\_\+\+Dyymin@{set\+\_\+\+Dyymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+\+Dyymin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+\+Dyymin (
+\begin{DoxyParamCaption}
+\item[{double}]{Dyymin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a26a229a4abb16fd60b9904091b56bd48}
+Ustawia minimalna wartosc wspolczynnika dyspersji w kierunku y 
+
+Definicja w linii 211 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a1c90f74ed579065b2785a6dc5d9c7645}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+flag@{set\+\_\+flag}}
+\index{set\+\_\+flag@{set\+\_\+flag}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a1c90f74ed579065b2785a6dc5d9c7645}
+ustawia flaga z jaka uruchomiona zostala symulacja \begin{DoxySeeAlso}{Zobacz również}
+\hyperlink{class_simulation_parameters_a68fcda888ff9c17f3d8cc548ecb2a971}{get\+\_\+flag()} 
+\end{DoxySeeAlso}
+
+
+Definicja w linii 157 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ab17f56dbd5bfcfadd13b55665b27222f}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+grid\+File@{set\+\_\+grid\+File}}
+\index{set\+\_\+grid\+File@{set\+\_\+grid\+File}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+grid\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+grid\+File (
+\begin{DoxyParamCaption}
+\item[{string}]{grid\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ab17f56dbd5bfcfadd13b55665b27222f}
+Ustawia nazwe pliku wejsciowego zawierającego dane z siatką ktora ma byc uzywana do symulacji 
+
+Definicja w linii 227 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+mod@{set\+\_\+mod}}
+\index{set\+\_\+mod@{set\+\_\+mod}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+mod}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+mod (
+\begin{DoxyParamCaption}
+\item[{string}]{mod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a16d7b0beff55cf45ca7cf23d99fbbd10}
+Definiuje spsosób w jaki podawana jest początkowa wartość temperatury/koncentracji w danym punkcie 
+\begin{DoxyParams}{Parametry}
+{\em mod} & -\/ sposób definiowania wrtości temperatury/koncentracji \begin{DoxyItemize}
+\item {\ttfamily val} -\/ wartosc nominalan (\char`\"{}oczekiwna\char`\"{}) koncentracji/temperatury w danym punkcie -\/nie uwzglednia kroku przestrzennego siatki obliczeniowej i glebokosci w danym punkcie. Na jej podstawie i na podstawie danych o głebokosci w danym pukcie i wartosci natęzenia przepływu zanieczyszcznie wyznaczana jest wartosc efektywna koncentracji/temperatury \item {\ttfamily val\+\_\+e} -\/ wartosc efektywna koncentracji/temperatury w danym punkcie (powinna uwzgledniac już krok przestrzenny siatki obliczenbiowej, glebokość w danym punkcie zrzutu oraz natezenie zrzutu i natężenie przepywu wody w danym puncie siatki) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 268 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a310374d248e0fdc02c236936538d2f80}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+n@{set\+\_\+n}}
+\index{set\+\_\+n@{set\+\_\+n}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+n}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+n (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a310374d248e0fdc02c236936538d2f80}
+Ustawia liczbe krokow symulacju 
+
+Definicja w linii 160 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a76420499d58b303411f21c385d82303f}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+pollutant@{set\+\_\+pollutant}}
+\index{set\+\_\+pollutant@{set\+\_\+pollutant}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+pollutant}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+pollutant (
+\begin{DoxyParamCaption}
+\item[{string}]{pollutant}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a76420499d58b303411f21c385d82303f}
+Ustawia rodzaj zenieszcyszenia dla ktorego wykonywane beda obliczenia 
+\begin{DoxyParams}{Parametry}
+{\em pollutant} & -\/ rodzaj zanieczyszczenia 
+\begin{DoxyItemize}
+\item conc -\/ zanieczyszczenie chemiczne -\/ sybstancja pasywana 
+\item temp -\/ zanieczyszczenie teramiczne  
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 237 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a8e17dae834cc3339bc4b35e1085cb09c}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+scheme@{set\+\_\+scheme}}
+\index{set\+\_\+scheme@{set\+\_\+scheme}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+scheme}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+scheme (
+\begin{DoxyParamCaption}
+\item[{string}]{scheme}
+\end{DoxyParamCaption}
+)}\label{class_simulation_parameters_a8e17dae834cc3339bc4b35e1085cb09c}
+Ustawia schemat ktory ma byc uzywany do symulacji 
+
+Definicja w linii 46 pliku param.\+cpp.
+
+\hypertarget{class_simulation_parameters_a85f6aea7fcbca0436594e6c73845aab8}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vx@{set\+\_\+vx}}
+\index{set\+\_\+vx@{set\+\_\+vx}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vx}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vx (
+\begin{DoxyParamCaption}
+\item[{double}]{vx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a85f6aea7fcbca0436594e6c73845aab8}
+Ustwia wartosc skladowej x predkosci 
+
+Definicja w linii 169 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a3d14efe09cd7ca79b44e12ee3fe8761c}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vxmax@{set\+\_\+vxmax}}
+\index{set\+\_\+vxmax@{set\+\_\+vxmax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vxmax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vxmax (
+\begin{DoxyParamCaption}
+\item[{double}]{vxmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a3d14efe09cd7ca79b44e12ee3fe8761c}
+Ustwia maksymalna wartosc skladowej x predkosci 
+
+Definicja w linii 175 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a31a365f0f5d131507ed2608acf8b5fd7}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vxmin@{set\+\_\+vxmin}}
+\index{set\+\_\+vxmin@{set\+\_\+vxmin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vxmin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vxmin (
+\begin{DoxyParamCaption}
+\item[{double}]{vxmin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a31a365f0f5d131507ed2608acf8b5fd7}
+Ustwia minimalna wartosc skladowej x predkosci 
+
+Definicja w linii 181 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a569357bd6d6245684770a80501a45ac4}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vy@{set\+\_\+vy}}
+\index{set\+\_\+vy@{set\+\_\+vy}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vy}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vy (
+\begin{DoxyParamCaption}
+\item[{double}]{vy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a569357bd6d6245684770a80501a45ac4}
+Ustwia wartosc skladowej y predkosci 
+
+Definicja w linii 172 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_ad5df52a205d10f457e3500295884ab7e}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vymax@{set\+\_\+vymax}}
+\index{set\+\_\+vymax@{set\+\_\+vymax}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vymax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vymax (
+\begin{DoxyParamCaption}
+\item[{double}]{vymax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_ad5df52a205d10f457e3500295884ab7e}
+Ustwia maksymalna wartosc skladowej y predkosci 
+
+Definicja w linii 178 pliku param.\+h.
+
+\hypertarget{class_simulation_parameters_a1e611a9995e5f7a38ad527c5e13507d9}{}\index{Simulation\+Parameters@{Simulation\+Parameters}!set\+\_\+vymin@{set\+\_\+vymin}}
+\index{set\+\_\+vymin@{set\+\_\+vymin}!Simulation\+Parameters@{Simulation\+Parameters}}
+\subsubsection[{set\+\_\+vymin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+Parameters\+::set\+\_\+vymin (
+\begin{DoxyParamCaption}
+\item[{double}]{vymin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_simulation_parameters_a1e611a9995e5f7a38ad527c5e13507d9}
+Ustwia minimalna wartosc skladowej y predkosci 
+
+Definicja w linii 184 pliku param.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{param_8h}{param.\+h}\item 
+\hyperlink{param_8cpp}{param.\+cpp}\end{DoxyCompactItemize}

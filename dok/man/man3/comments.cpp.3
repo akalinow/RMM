@@ -1,0 +1,59 @@
+.TH "comments.cpp" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+comments.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'comments\&.h'\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <fstream>\fP
+.br
+
+.SS "Funkcje"
+
+.in +1c
+.ti -1c
+.RI "char * \fBGetTime\fP ()"
+.br
+.ti -1c
+.RI "void \fBHelloo\fP (const string &opt)"
+.br
+.ti -1c
+.RI "void \fBEnd\fP (const string &opt)"
+.br
+.ti -1c
+.RI "void \fBFileWithParameters\fP (const string &file, const string &opt)"
+.br
+.ti -1c
+.RI "void \fBCheckFile\fP (int opt, const string &file)"
+.br
+.in -1c
+.SH "Dokumentacja funkcji"
+.PP 
+.SS "void CheckFile (int opt, const string & file)"
+Sprawdza czy plik z ktorego chcemy czytac istnieje i w zaleznosci od wyniku wypisuje stosowny komentarz 
+.PP
+Definicja w linii 82 pliku comments\&.cpp\&.
+.SS "void End (const string & opt = \fC'screan'\fP)"
+Wyswietla komunikat koncowy\&. 
+.PP
+Definicja w linii 48 pliku comments\&.cpp\&.
+.SS "void FileWithParameters (const string & file, const string & opt = \fC'screan'\fP)"
+Wypisuje informacje z jakiego pliku czytane sa parmetry symulacji\&. 
+.PP
+Definicja w linii 66 pliku comments\&.cpp\&.
+.SS "char* GetTime ()"
+Zwraca aktulany czas w odpowiednim formacie\&. 
+.PP
+Definicja w linii 13 pliku comments\&.cpp\&.
+.SS "void Helloo (const string & opt = \fC'screan'\fP)"
+Wyswietla komunikat powitalny\&. 
+.PP
+Definicja w linii 22 pliku comments\&.cpp\&.
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

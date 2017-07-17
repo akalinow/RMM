@@ -1,0 +1,341 @@
+.TH "NetHeatFlux" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NetHeatFlux \- Klasa do obliczen członu źródłowego wyminay ciepla z atmosfera\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <netheatflux\&.h>\fP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBNetHeatFlux\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "\fBNetHeatFlux\fP (double Ta, double Rh, double pa, double Js, double u)"
+.br
+.ti -1c
+.RI "long double \fBComputeNetHeatFlux\fP (long double Tw)"
+.br
+.RI "\fIoblicza wartosc czlonu zródłowego \fP"
+.ti -1c
+.RI "long double \fBComputeNetSolar\fP ()"
+.br
+.RI "\fIoblicza wartosc promieniowania słonecznego krotkofalowe \fP"
+.ti -1c
+.RI "long double \fBComputeLongWaveAtmosf\fP ()"
+.br
+.RI "\fIoblicza wartosc promieniowania atmosferycznego długofalowego \fP"
+.ti -1c
+.RI "long double \fBEmissivity_Brunt1932\fP (double a1=0\&.55, double a2=0\&.065)"
+.br
+.RI "\fIoblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) \fP"
+.ti -1c
+.RI "long double \fBComputeLongWaveWater\fP (long double &Tw)"
+.br
+.RI "\fIoblicza wartosc promieniowania długofalowego WODY \fP"
+.ti -1c
+.RI "long double \fBComputeEvapCondens\fP (long double &Tw)"
+.br
+.RI "\fIoblicza wartosc strat ciepła zwiazanego z praowaniem \fP"
+.ti -1c
+.RI "long double \fBWindFunction_Chapra2008\fP (float c1=19\&.0, float c2=0\&.95)"
+.br
+.RI "\fIoblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci waitru wg zależnosci f(u) = c1 + c2 u^2 - domyślnie c1 = 19\&.0, c2 = 0\&.95 - Chapra 2008, Edinger et al 1974 \fP"
+.ti -1c
+.RI "long double \fBComputeCondConv\fP (long double &Tw)"
+.br
+.RI "\fIoblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji \fP"
+.ti -1c
+.RI "double \fBget_Ta\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Rh\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_pa\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_Js\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_u\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_aw\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_ea\fP () const "
+.br
+.ti -1c
+.RI "double \fBget_emis_w\fP () const "
+.br
+.ti -1c
+.RI "void \fBset_Ta\fP (double Ta)"
+.br
+.ti -1c
+.RI "void \fBset_Rh\fP (double Rh)"
+.br
+.ti -1c
+.RI "void \fBset_pa\fP (double pa)"
+.br
+.ti -1c
+.RI "void \fBset_Js\fP (double Js)"
+.br
+.ti -1c
+.RI "void \fBset_u\fP (double u)"
+.br
+.ti -1c
+.RI "void \fBset_aw\fP (double aw=0\&.06)"
+.br
+.ti -1c
+.RI "void \fBset_ea\fP ()"
+.br
+.ti -1c
+.RI "long double \fBe_sat\fP (long double T, double b1=6\&.12, double b2=17\&.27, double b3=237\&.3)"
+.br
+.ti -1c
+.RI "void \fBset_emis_w\fP (double emis_w=0\&.97)"
+.br
+.ti -1c
+.RI "void \fBset_cb\fP (double cb=0\&.62)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa do obliczen członu źródłowego wyminay ciepla z atmosfera\&. 
+
+Zawiera metody potrzebane do wyznaczenia wratosci wypadkowego strumienia ciepła na granicy woda powietrze 
+.PP
+Definicja w linii 23 pliku netheatflux\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "NetHeatFlux::NetHeatFlux ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy obiekt \fBNetHeatFlux\fP 
+.PP
+Definicja w linii 31 pliku netheatflux\&.h\&.
+.SS "NetHeatFlux::NetHeatFlux (double Ta, double Rh, double pa, double Js, double u)\fC [inline]\fP"
+
+.PP
+Definicja w linii 35 pliku netheatflux\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "long double NetHeatFlux::ComputeCondConv (long double & Tw)"
+
+.PP
+oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji Oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fITw\fP - temp wody 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc strumienia ciepła w wyniku przewodzenia i konwekscji 
+.RE
+.PP
+
+.PP
+Definicja w linii 106 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::ComputeEvapCondens (long double & Tw)"
+
+.PP
+oblicza wartosc strat ciepła zwiazanego z praowaniem Oblicza wartosc strat ciepła zwiazanego z parowaniem lub dostarcenia ciepła związnego z procesem kondensacji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fITw\fP - temp wody 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej 
+.RE
+.PP
+
+.PP
+Definicja w linii 91 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::ComputeLongWaveAtmosf ()"
+
+.PP
+oblicza wartosc promieniowania atmosferycznego długofalowego 
+.PP
+\fBParametry:\fP
+.RS 4
+\fI-\fP 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc promieniowania atmosferycznego długofalowego 
+.RE
+.PP
+
+.PP
+Definicja w linii 40 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::ComputeLongWaveWater (long double & Tw)"
+
+.PP
+oblicza wartosc promieniowania długofalowego WODY Oblicza wartosc promieniowania długofalowego WODY kożystając z prawa Stefana-Boltzmana 
+.PP
+\fBParametry:\fP
+.RS 4
+\fITw\fP - temp wody 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc promieniowania długofalowego wody 
+.RE
+.PP
+
+.PP
+Definicja w linii 83 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::ComputeNetHeatFlux (long double Tw)"
+
+.PP
+oblicza wartosc czlonu zródłowego Oblicza wartosc czlonu zrodlowego dla danej temp wody na podstawie podsnaych danych meteorologicznych
+.PP
+\fBParametry:\fP
+.RS 4
+\fITw\fP - wartość temperatury wody dla ktorej ma być obliczony czlon zrodlowy 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc czlonu zrodlowego dla danej temp 
+.RE
+.PP
+
+.PP
+Definicja w linii 16 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::ComputeNetSolar ()"
+
+.PP
+oblicza wartosc promieniowania słonecznego krotkofalowe Oblicza wartosc promieniowania słonecznego krotkofalowego na podstawie pomiarów promieniowania słonecznego padającego oraz albedo wody
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc promieniowania słonecznego krotkofalowe 
+.RE
+.PP
+
+.PP
+Definicja w linii 32 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::e_sat (long double T, double b1 = \fC6\&.12\fP, double b2 = \fC17\&.27\fP, double b3 = \fC237\&.3\fP)"
+oblicza wartosc prężności (ciśnienia) pary wodnej (defoltowo wg formuly Raudkivi 1979, Chapra 1997: 6\&.12 exp(17\&.27*Ta/(Ta+237\&.3)) 
+.PP
+Definicja w linii 77 pliku netheatflux\&.cpp\&.
+.SS "long double NetHeatFlux::Emissivity_Brunt1932 (double a1 = \fC0\&.55\fP, double a2 = \fC0\&.065\fP)"
+
+.PP
+oblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIa1\fP - coefficient [] 
+.br
+\fIa2\fP - coefficient [hPa^(-1/2)] 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc emisyjnosci atmosfery 
+.RE
+.PP
+
+.PP
+Definicja w linii 49 pliku netheatflux\&.cpp\&.
+.SS "double NetHeatFlux::get_aw () const\fC [inline]\fP"
+zwraca wartosc albedo wody 
+.PP
+Definicja w linii 154 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_ea () const\fC [inline]\fP"
+zwraca wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu 
+.PP
+Definicja w linii 159 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_emis_w () const\fC [inline]\fP"
+zwraca wartosc ustawionej zdolności emisyjnej wody 
+.PP
+Definicja w linii 164 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_Js () const\fC [inline]\fP"
+zwraca wartosc promieniowania krotkofalowego 
+.PP
+Definicja w linii 144 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_pa () const\fC [inline]\fP"
+zwraca wartość ciśnienie atmosferycznego 
+.PP
+Definicja w linii 139 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_Rh () const\fC [inline]\fP"
+zwraca wartość wilgotnosci powietrza 
+.PP
+Definicja w linii 134 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_Ta () const\fC [inline]\fP"
+zwraca wartość temp powietrza 
+.PP
+Definicja w linii 129 pliku netheatflux\&.h\&.
+.SS "double NetHeatFlux::get_u () const\fC [inline]\fP"
+zwraca wartosc predkosci wiatru 
+.PP
+Definicja w linii 149 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_aw (double aw = \fC0\&.06\fP)\fC [inline]\fP"
+ustawia wartosc albedo dla wody 
+.PP
+Definicja w linii 197 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_cb (double cb = \fC0\&.62\fP)\fC [inline]\fP"
+ustawia wartosc wspolczynnika Bowena - domyślnie )0\&.62 mb/stC 
+.PP
+Definicja w linii 214 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_ea ()"
+oblicza i ustawia wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu 
+.PP
+Definicja w linii 58 pliku netheatflux\&.cpp\&.
+.SS "void NetHeatFlux::set_emis_w (double emis_w = \fC0\&.97\fP)\fC [inline]\fP"
+ustawia wartosc dla zdolności emisyjnej wody 
+.PP
+Definicja w linii 209 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_Js (double Js)\fC [inline]\fP"
+ustawia wartosc promieniowania krotkofalowego 
+.PP
+Definicja w linii 187 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_pa (double pa)\fC [inline]\fP"
+ustawia wartość ciśnienie atmosferycznego 
+.PP
+Definicja w linii 182 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_Rh (double Rh)\fC [inline]\fP"
+ustawia wartość wilgotnosci powietrza 
+.PP
+Definicja w linii 176 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_Ta (double Ta)\fC [inline]\fP"
+ustawia wartość temp powietrza 
+.PP
+Definicja w linii 171 pliku netheatflux\&.h\&.
+.SS "void NetHeatFlux::set_u (double u)\fC [inline]\fP"
+ustawia wartosc predkosci wiatru 
+.PP
+Definicja w linii 192 pliku netheatflux\&.h\&.
+.SS "long double NetHeatFlux::WindFunction_Chapra2008 (float c1 = \fC19\&.0\fP, float c2 = \fC0\&.95\fP)"
+
+.PP
+oblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci waitru wg zależnosci f(u) = c1 + c2 u^2 - domyślnie c1 = 19\&.0, c2 = 0\&.95 - Chapra 2008, Edinger et al 1974 
+.PP
+\fBZwraca:\fP
+.RS 4
+wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej 
+.RE
+.PP
+
+.PP
+Definicja w linii 100 pliku netheatflux\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

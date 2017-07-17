@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="grid_8h" kind="file" language="C++">
+    <compoundname>grid.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes refid="point_8h" local="yes">point.h</includes>
+    <includes refid="comments_8h" local="yes">comments.h</includes>
+    <includes refid="tensor_8h" local="yes">tensor.h</includes>
+    <includedby refid="simulation_8h" local="yes">simulation.h</includedby>
+    <includedby refid="grid_8cpp" local="yes">grid.cpp</includedby>
+    <includedby refid="point_8cpp" local="yes">point.cpp</includedby>
+    <includedby refid="scheme_8cpp" local="yes">scheme.cpp</includedby>
+    <includedby refid="scheme__new__bez_q_8cpp" local="yes">scheme_new_bezQ.cpp</includedby>
+    <includedby refid="scheme__new__z_q_8cpp" local="yes">scheme_new_zQ.cpp</includedby>
+    <includedby refid="scheme__przed__zmina__09092015_8cpp" local="yes">scheme_przed_zmina_09092015.cpp</includedby>
+    <incdepgraph>
+      <node id="106">
+        <label>param.h</label>
+        <link refid="param_8h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>point.h</label>
+        <link refid="point_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>cmath</label>
+      </node>
+      <node id="108">
+        <label>scheme.h</label>
+        <link refid="scheme_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>string</label>
+      </node>
+      <node id="95">
+        <label>map</label>
+      </node>
+      <node id="103">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>fstream</label>
+      </node>
+      <node id="92">
+        <label>grid.h</label>
+        <link refid="grid.h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>cstdio</label>
+      </node>
+      <node id="96">
+        <label>vector</label>
+      </node>
+      <node id="107">
+        <label>tensor.h</label>
+        <link refid="tensor_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>time.h</label>
+      </node>
+      <node id="93">
+        <label>cstdlib</label>
+      </node>
+      <node id="99">
+        <label>iostream</label>
+      </node>
+      <node id="105">
+        <label>set</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="136">
+        <label>simulation_SrPkt_t0.cpp</label>
+        <link refid="simulation___sr_pkt__t0_8cpp"/>
+      </node>
+      <node id="126">
+        <label>simulation_Kodc_1780_90_730_40.cpp</label>
+        <link refid="simulation___kodc__1780__90__730__40_8cpp"/>
+      </node>
+      <node id="115">
+        <label>rmm.cpp</label>
+        <link refid="rmm_8cpp"/>
+      </node>
+      <node id="124">
+        <label>simulation_Dodc.cpp</label>
+        <link refid="simulation___dodc_8cpp"/>
+      </node>
+      <node id="129">
+        <label>simulation_LPkt.cpp</label>
+        <link refid="simulation___l_pkt_8cpp"/>
+      </node>
+      <node id="141">
+        <label>point.cpp</label>
+        <link refid="point_8cpp"/>
+      </node>
+      <node id="116">
+        <label>scheme.cpp</label>
+        <link refid="scheme_8cpp"/>
+      </node>
+      <node id="119">
+        <label>scheme_przed_zmina_09092015.cpp</label>
+        <link refid="scheme__przed__zmina__09092015_8cpp"/>
+      </node>
+      <node id="130">
+        <label>simulation_LPkt_Zapis.cpp</label>
+        <link refid="simulation___l_pkt___zapis_8cpp"/>
+      </node>
+      <node id="118">
+        <label>scheme_new_zQ.cpp</label>
+        <link refid="scheme__new__z_q_8cpp"/>
+      </node>
+      <node id="127">
+        <label>simulation_Kodc_1790_800_740_50.cpp</label>
+        <link refid="simulation___kodc__1790__800__740__50_8cpp"/>
+      </node>
+      <node id="117">
+        <label>scheme_new_bezQ.cpp</label>
+        <link refid="scheme__new__bez_q_8cpp"/>
+      </node>
+      <node id="110">
+        <label>simulation.h</label>
+        <link refid="simulation_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>simulation_Kodc_Zapis.cpp</label>
+        <link refid="simulation___kodc___zapis_8cpp"/>
+      </node>
+      <node id="114">
+        <label>param.cpp</label>
+        <link refid="param_8cpp"/>
+      </node>
+      <node id="132">
+        <label>simulation_Pkt_1790_740.cpp</label>
+        <link refid="simulation___pkt__1790__740_8cpp"/>
+      </node>
+      <node id="133">
+        <label>simulation_Pkt_1800_750.cpp</label>
+        <link refid="simulation___pkt__1800__750_8cpp"/>
+      </node>
+      <node id="109">
+        <label>grid.h</label>
+        <link refid="grid.h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>simulation.cpp_kopia.cpp</label>
+        <link refid="simulation_8cpp__kopia_8cpp"/>
+      </node>
+      <node id="125">
+        <label>simulation_Kodc.cpp</label>
+        <link refid="simulation___kodc_8cpp"/>
+      </node>
+      <node id="113">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="138">
+        <label>simulation_SrPkt_t0_plus_f.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus__f_8cpp"/>
+      </node>
+      <node id="111">
+        <label>comments.h</label>
+        <link refid="comments_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>simulation_SrPkt.cpp</label>
+        <link refid="simulation___sr_pkt_8cpp"/>
+      </node>
+      <node id="123">
+        <label>simulation_2011_03_25.cpp</label>
+        <link refid="simulation__2011__03__25_8cpp"/>
+      </node>
+      <node id="120">
+        <label>simulation.cpp</label>
+        <link refid="simulation_8cpp"/>
+      </node>
+      <node id="122">
+        <label>simulation_1.cpp</label>
+        <link refid="simulation__1_8cpp"/>
+      </node>
+      <node id="139">
+        <label>simulation_SrPkt_Zapis.cpp</label>
+        <link refid="simulation___sr_pkt___zapis_8cpp"/>
+      </node>
+      <node id="137">
+        <label>simulation_SrPkt_t0_plus.cpp</label>
+        <link refid="simulation___sr_pkt__t0__plus_8cpp"/>
+      </node>
+      <node id="131">
+        <label>simulation_Pkt_1780_730.cpp</label>
+        <link refid="simulation___pkt__1780__730_8cpp"/>
+      </node>
+      <node id="140">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="112">
+        <label>comments.cpp</label>
+        <link refid="comments_8cpp"/>
+      </node>
+      <node id="135">
+        <label>simulation_SrPkt_5m.cpp</label>
+        <link refid="simulation___sr_pkt__5m_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_grid" prot="public">Grid</innerclass>
+    <innerclass refid="class_grid_only" prot="public">GridOnly</innerclass>
+    <innerclass refid="class_grid_velocity" prot="public">GridVelocity</innerclass>
+    <innerclass refid="class_grid_all" prot="public">GridAll</innerclass>
+    <innerclass refid="class_grid_dispersion" prot="public">GridDispersion</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>grid.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2005<sp/>by<sp/>Monika<sp/>Kalinowska<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>mkalinow@igf.edu.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRID_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="point_8h" kindref="compound">point.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="comments_8h" kindref="compound">comments.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tensor_8h" kindref="compound">tensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//***********************************************GRID******************************************************</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26" refid="class_grid" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="class_grid_1ac0cf78c28206fd44fba21c5a91d0a0e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_grid_1ac0cf78c28206fd44fba21c5a91d0a0e0" kindref="member">ReadData</ref><sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>file,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;<sp/>sym_param)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetMaxValues(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;vx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;vy,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;Dxx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;Dxy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;param);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetMinValues(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;vx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;vy,<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;Dxx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;Dxy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dyy,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;param);<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetExtremeValues<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;xmax,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;xmin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;ymax,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;ymin);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetExtremePoints<sp/>(<ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;pxmax,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;pxmin,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;pymax,<sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>&amp;pymin);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CompleteOutsideFlow<sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CorrectGrid<sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MarkBorderPoints<sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MarkNearBorderPoints<sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//_____________________________________________________________________________________________________</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MarkInOutPoints<sp/>(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="class_grid_1acdec1d78fe3ead312d1098837325d113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_1acdec1d78fe3ead312d1098837325d113" kindref="member">set_pxmax</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>pkt)<sp/>{_pxmax<sp/>=<sp/>pkt;};<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="148" refid="class_grid_1a51aaeb13d9c299ebc07e1e9d3b9fe47f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a51aaeb13d9c299ebc07e1e9d3b9fe47f" kindref="member">set_pymax</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>pkt)<sp/>{_pymax<sp/>=<sp/>pkt;};<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="class_grid_1ab01ea11cdb5d87a4d8cddb51b40dd52c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_1ab01ea11cdb5d87a4d8cddb51b40dd52c" kindref="member">set_pxmin</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>pkt)<sp/>{_pxmin<sp/>=<sp/>pkt;};<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="class_grid_1a666541ca159aebd16470f1fa7b2d16c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a666541ca159aebd16470f1fa7b2d16c2" kindref="member">set_pymin</ref>(<ref refid="class_point" kindref="compound">Point</ref><sp/>pkt)<sp/>{_pymin<sp/>=<sp/>pkt;};<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//__________________________________________________________________</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159" refid="class_grid_1ae90bb3028aa13b363d61e6617f4dbd89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_grid_1ae90bb3028aa13b363d61e6617f4dbd89" kindref="member">get_pxmax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pxmax;};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="class_grid_1ab45d29e63d5a92a97d2a8bc034e96234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_grid_1ab45d29e63d5a92a97d2a8bc034e96234" kindref="member">get_pymax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pymax;};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165" refid="class_grid_1aa52105935ef29936395898215bcf40a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_grid_1aa52105935ef29936395898215bcf40a7" kindref="member">get_pxmin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pxmin;};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_grid_1a9865c790dde45934add338c055247a4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/><ref refid="class_grid_1a9865c790dde45934add338c055247a4c" kindref="member">get_pymin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_pymin;};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="class_grid_1a2646150f8d14820de6c40a296d2eba17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a2646150f8d14820de6c40a296d2eba17" kindref="member">get_xmax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xmax;};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="175" refid="class_grid_1a385b11b22ff42896d522400d9ddd7e97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a385b11b22ff42896d522400d9ddd7e97" kindref="member">get_ymax</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ymax;};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="class_grid_1a1ff74bf0898894452d67ccda6e3dc266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_grid_1a1ff74bf0898894452d67ccda6e3dc266" kindref="member">get_xmin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xmin;};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="class_grid_1ae776aec819443b168ebe15a52632ad77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_grid_1ae776aec819443b168ebe15a52632ad77" kindref="member">get_ymin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ymin;};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>empty_index;</highlight><highlight class="comment">//<sp/>=<sp/>Point::empty_index;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="class_grid_1a6e548ba7ad924ef369c7fc24be04f0b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_xmax,<sp/>_xmin,<sp/>_ymax,<sp/><ref refid="class_grid_1a6e548ba7ad924ef369c7fc24be04f0b2" kindref="member">_ymin</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point" kindref="compound">Point</ref><sp/>_pxmax,<sp/>_pymax,<sp/>_pxmin,<sp/>_pymin;<sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>_xmax,<sp/>_xmin,<sp/>_ymax;//,<sp/>_ymin;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">//*******************************************GridOnly******************************************************</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"></highlight></codeline>
+<codeline lineno="197" refid="class_grid_only" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid_only" kindref="compound">GridOnly</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"></codeline>
+<codeline lineno="204" refid="class_grid_only_1a71437d24648d7d4db8836eefbda7a360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_grid_only_1a71437d24648d7d4db8836eefbda7a360" kindref="member">GridOnly</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ReadData(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>file,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;<sp/>sym_param);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>map&lt;int,<sp/>Point&gt;<sp/>_PointMap;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>_file;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//****************************************GridVelocity******************************************************</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"></highlight></codeline>
+<codeline lineno="220" refid="class_grid_velocity" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid_velocity" kindref="compound">GridVelocity</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="223"></codeline>
+<codeline lineno="226" refid="class_grid_velocity_1afdff39055c5fcd27eb8473cca1fee826" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_grid_velocity_1afdff39055c5fcd27eb8473cca1fee826" kindref="member">GridVelocity</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ReadData(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>file,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;<sp/>sym_param);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">//*********************************************GridAll*****************************************************</highlight></codeline>
+<codeline lineno="235"><highlight class="comment"></highlight></codeline>
+<codeline lineno="239" refid="class_grid_all" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid_all" kindref="compound">GridAll</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="242"></codeline>
+<codeline lineno="245" refid="class_grid_all_1a88d71f62359e7cd339f74a1a37e4b95f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_grid_all_1a88d71f62359e7cd339f74a1a37e4b95f" kindref="member">GridAll</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ReadData(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>file,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;<sp/>sym_param);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//****************************************GridDispoersion***************************************************</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"></highlight></codeline>
+<codeline lineno="258" refid="class_grid_dispersion" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid_dispersion" kindref="compound">GridDispersion</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_grid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="261"></codeline>
+<codeline lineno="264" refid="class_grid_dispersion_1aa91ae00919a4f12049f9415e3b584b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_grid_dispersion_1aa91ae00919a4f12049f9415e3b584b31" kindref="member">GridDispersion</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ReadData(map&lt;int,<sp/>Point&gt;<sp/>&amp;PointMap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>file,<sp/><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref><sp/>&amp;<sp/>sym_param);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/mkalinow/projects/rmmt/grid.h"/>
+  </compounddef>
+</doxygen>

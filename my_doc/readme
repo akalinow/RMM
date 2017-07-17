@@ -1,0 +1,671 @@
+/////////////////////////////
+||||	7 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Nowa wersja River Mixing Model rozpoczeta,
+przepisuje poprzedni kod odpowiednio go modyfikujac do nowych potrzeb, dodajac dokumentacje
+
+
+13:35
+	->skopiowalm pliki Simulation.h i simulation.cpp z old_rmm zawierajace parametry symulacji
+	
+	to do:
+		* sprawdzic poprawnosc
+		* sprawdzic komentarze
+		* dodac potrzebne zmienne i funkicje
+		
+		----------------------------------------
+		
+16:15
+	->dopislam nowe konstruktory w pliku simulation.h
+	
+	to do: 
+		* przemyslec sprawe konstruktorow, jak i ile powinno ich byc, 
+		* przemyslec jak beda czytane dane i w jaki sposob wprowadane do programu - czy wszytsko z pliku czy tez z lini polecen
+		(chyba lepeij z pliku bediz euniwersalen jesli chodzi o rozne systemy)		
+	
+______________________________________________________________________________________________________________
+///////////////////////////////////
+|||| 10 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+10:55
+	idea:
+		- defoltowo program popbiera parametry symulacji z pliku, gdy pliku nie znajduje pyta o parametry symulacji
+		- dane poczatkowe tez w pliku
+
+_________________________________________________________________________________________________________________
+
+////////////////////////////////////
+|||| 11 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+10:09
+	idea:
+		- difoltowo program uruchamiany bez parametrow, paramerty tylko gdyby nazwy plikow z prametrami symulacji 
+		czy tez danymi mialy inne nazwy, analogicznieg jesli chodzi o pliki wyjsciowe
+		
+			rmm plik_z param_sym.txt plik_z_danymi_wej.txt plik_danymi_wyj.dat
+		
+		- defoltowe nazwy plikow:
+				
+				parm.txt - paremetry symulacji
+				
+				grid.txt - siatka (plik z danymi pkt siatki)
+				
+				v.txt - pole predkosci
+				
+				d.txt - "pole" dyspersji
+				
+				data.txt - wszytskie dnae - o siatce, polu predkosci i wspolczynikach dyspersji w kazdym pkt
+		
+		- uruchamianie programu z roznymi flagami (pierwsza zmienna w param.txt) 
+		w zaleznosci od tego jakie dane beda wczystywane w plikow, 
+		a jakie zadawene jako stale wartosci na siadce
+		
+				0 - wczytywane tylko parametry symulacji (param.txt) i siatka z pliku grid.txt
+						pozostale wartosci predkosci i wspolczynnikow dyspersji podl i poprzecznej (Dl, Dt)sa stale 
+						i znajduja sie w pliku param.txt; wspolczynniki tensora dyspersji w kierunku x, y 
+						(Dx, Dy, Dxy)- obliczne
+				
+				1 - wczytywane parametry symulacji (param.txt) i siata z polem predkosci czyli v.txt
+						wspolczynnikow dyspersji podl i poprzecznej (Dl, Dt) sa stale 
+						i znajduja sie w pliku param.txt; wspolczynniki tensora dyspersji w kierunku x, y 
+						(Dx, Dy, Dxy)- obliczne
+
+				2 - wczytywae parmetry symulacji (param.txt) i wszytskie dnne o siadce, polu predkosci
+						i wspolczynnikach tensora dyspersji (Dx, Dy, Dxy) w kazdym pkt (data.txt)
+						
+				3 - wczytywae parmetry symulacji (param.txt) i siatka ze wspolczynnikami tensora dyspersji 
+						(Dx, Dy, Dxy) - d.txt; wartosci predkosci stale i podane w pliku param.txt		
+						 
+						
+		- nazwy plikow mozna bedzie modyfikowac potem czy dodawac nowe "flagi" jesli chodzi o sposob i rodzaj 
+			wczystwanych damych poczatkowych				
+
+		--------------------------------
+		to do:
+			* napisac kalse symulacja biorac pod uwage powyzesz idee z najbarzdiej potrzebnymi opcjami tj
+			uruchamianie prog z parametrami dorobi sie pozniej; 
+			flaki 2 i 3 tez;
+			  
+		---------------------------------------------------------------------------------------
+
+11:05 
+	-> dodalam pliki comments.h i comments.cpp w ktorych beda zawierac sie wszelkie wyswietlane komunikaty
+	-> stworzylam plik param.txt w ktorym maja znajdwoac sie parametry symulacji
+	
+	to do:
+		* zajac sie param.txt - formatem i sposobem odczytywnia danych 
+		
+	idea:
+		- stworzyc kalse wj - wyj lub osobny plik z funkcjami do wczytywania i zapisywania do pliku
+	
+		--------------------------------------------------------------------------------------------
+11:41
+	-> format param.txt:
+	
+			int_flaga
+			n	dx	dy	dt 
+			schemat
+			vx	vy (lub Dl Dt gdy nie ma vx i vy)
+			Dl	Dt	
+	-> stworzylam przykladowy plik
+	
+	--------------------------------------------------------------------------------------------
+16:14
+	-> dodalam pliki param.cpp i param.h w ktorych znajduje sie klas SimualtionParameters
+	-> w Klasie SimulationParamiters konstruktor i funkcja SetParam
+	-> w comments dodatkowe funkcje:
+				void CheckFile(int opt, string file);
+				string FileWithParameters(string file);
+				char * GetTime();
+				void End();
+	-> w main dodane komentarz na poczatku i na koncu z czasem rozpoczecia i zakonczenia symulacji
+	i to chyba tyle oc tam powinno byc
+	
+	idea:
+		- moze uda sie jakos wypisywac tez czas CPU
+		
+	todo:
+		*rozwijamy klasy SimulationParmeters, na poczatek funkcje SetParam
+		
+	------------------------------------------------------------------------------------------
+17:15
+	->problemy z kdevelop i z budowaniem projektu - pociwiczyc na jakims test programie
+	
+__________________________________________________________________________________________________
+
+//////////////////////////////////////
+|||| 12 stycznia
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+09:41
+	->reorganizuje klase Simulation i simulationParameters
+
+16:57
+	->odczytywanie z pliku parametrow symulacji i ustawianie icgh gotowe
+	
+	todo
+		*nastepny krok stworzenie klasy punkt i odpowiednich plikow z danymi wejsciowymi;
+		* przygotowniae siatki do Symulacji - zaladowanie wrtosci poczatkowych
+		
+_____________________________________________________________________________________________________
+
+//////////////////////////////////////
+|||| 13 stycznia 2005
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+13:36
+	-> poprawilam kilka agumentow funkcji z string file na const string* fila
+	
+	idea:
+		- plik z siaka pukntow grid.txt czy tez inne z ktorych jest sczytywana siatka 
+			i wartosci zmiennych musi zawierac wszystkie punkt ktore leza w obszarze przeplywu
+		- pkt poza obszarem przeplywu i brzegowe beda odpowiednio oznavczone w programie;
+		
+	to do:
+		* wczytujemy z pliku pkt (ew z odpowiednimi wartosciami predkosci czy wsp syspersji) 
+			te w ktore sa w obszarze przeplywu 
+		* kazdy wczystany pkt dostaje odpow flage 1 ktora ozn ze zostal sczytanay z pliku 
+			a tym samym jest w obszarze przeplywu 
+		* szukamy min i max wartosci x i y 
+		* na podstawie max i min wartosci usatlami zakres siatki
+		* pkt ktore nie zostaly w zakresie siatki jeszcze zainicjalizowane czyli nie 
+			poisadaj flagi 1 oznaczamy flaga 1 i sa one poaza przeplywem ozn falag 0
+		* robimy petele po wszytski pkt siatki
+			te z pkt przeplywu (z flaga 1)ktore wokol siebie maj pkt poza przeplywem (z flaga 0)
+			w zaleznosci od liczby i umiejscowenie w okol nich pkt z flaga 0 ozn jako brzegowe
+			odpowiednio jako brzeg gorny, dlolny itp.... przypisujac im odpowiednie flagi
+		* potem obliczenia wykonywan sa w zaleznosci od flag
+		* w jakis sposob (jeszcze nei wiem jaki) oznaczamy wejscia
+		* jesli wartosci predkosci i wsppolczynnikow tensora dyspesrji nie zostaly sczytane z pliku 
+			bierzemy zadane dla nich satale wartosci z parametrow_symulacji
+		* w przypadku wspolczynikow dyspersji nalezy je w odpowiedni sposob przeliczyc
+			na tensor dyspersji (tutaj stworzyc do tego nowa klase - bedzie w przyszlosci 
+			sporo mozliwosci)
+		* tak przgotowana mape pktow z oznaczonymi flagami (czyli czy pkt jest w obszarze przeplywu czy na brzegu)
+			z ustwionymi wartosciami predkosci i tensora dyspersji przekazujemy do dalszych obiliczen!!! 
+		
+__________________________________________________________________________________________________________________
+///////////////////////
+|||| 14 stycznia 2005 
+\\\\\\\\\\\\\\\\\\\\\\\
+
+dodtalam nowa funkcej w klasie symulacja odpowiedzialna za przygotowanie mapy punktow do symulacji PreapareMap
+
+__________________________________________________________________________________________________________________
+/////////////////////////
+|||| 17 stycznia
+\\\\\\\\\\\\\\\\\\\\\\\\\
+
+12:35
+	->stworzylam nowa klase Grid i jej klasy pochodne, beda one potzreben do przygotowania siadki (mapy plikow) 
+		klasy pochodne rozne w zaleznosci od tego jakie wartosci sczytywane sa z pliku czyli
+		wlasciwie  flagi z jaka uruchomiono symulacje;
+		
+	todo:
+		*zastanowic sie jak poradzic sobie i jak wykorzystac te nowe klasy i funkcje prepare map; 
+		co z otwieranie pliku - gdzie go otwierac i gdzie z niego czytac;
+		zeby sie to za bradzo nei nagmatwalo;
+		
+_____________________________________________________________________________________________________________________
+		
+18 stycznia
+
+	-> problemy z klasa grid 
+	 		
+___________________________________________________________________________________________________________________
+
+21 stycznie
+	-> zrobilam porzadek z kalsa grid; pelne wykorzytstanie polimorfizmu! funkcja wirualna;
+		
+	to do
+	* doprowadzic do porzadku klasy grid;
+	
+___________________________________________________________________________________________________________________
+
+24 stycznia 
+_________________________________________________________________________________________________________________-
+
+26 stycznia
+
+	-> zrobiony porzadek z klasa grid
+	-> wczystywanie plikow za danymi zalatwione
+	
+	to do
+	* stworzyc klsase dyspersion, gdzie beda zaimplementowane "sposoby" obilczania, wyznaczania czy cokolwiek dyspersji
+	
+_________________________________
+
+27 stycznia
+
+szlag trafil moja wczorajsza i dizsiejsza robote;
+skasowalam sobie!!!!
+
+let's start again!! (wbrew pozorom wcale i nei jste wesolo)
+
+-> dodalam nowa zmienna do klasy Simualtion Parameters; 
+	zmienna mowi jaki sposob obliczani dyspersji bedzie uzywany w symulacji;
+	
+-> w zwiazku z dodaneniej nowej zmiennej zminilam plik wejsciowy param.txt czyli i jego formata na:
+			
+			int_flaga
+			n	dx	dy	dt 
+			schemat sposob_obli_dyspersji
+			vx	vy (lub Dl Dt gdy nie ma vx i vy)
+			Dl	Dt
+	
+			po schemacie znajduje sie jeszcze string ktory opisuje sposob obliczania dyspersji
+			mozliwosci:
+				simple
+				fischer
+			inne zostana dodane pozniej;
+			
+-> w zwiazku z doadnaiem nowej zmiennem pojawily sie tez w klasie SimulationParameters 
+	funkcje pozwalajace ja usatwic i sie od neij dobrac, 
+	
+	funkcja set_dispersion od razu ustwaia wskaznik DTensor *tensor, 
+	ktory bedzie wskazywal na wlasciwy obiekt w zaleznosci od tego jakim
+	sposobem ma byc obliczana dyspersja (tensor dyspersji na podstawie wspolczynnikow Dlong i Dtrans)
+	
+	moze on w tym momecie wskazywac na obiekt DTensor (klasa glowana) 
+	lub DFischer (klasa pochodan)
+	obiektow tych poetem bedize wiecej
+	
+-> obiekty powyzesz zaimplementowane zostaly w pliku tensor.h i tensor.cpp 
+	i defoltowo jesli nei wybrano zadnego sposobu obliczania 
+	wskaznik wskazuje na obiekt kalsy podstawowej i obliczenia beda sie odbywaly 
+	w najprostszy sposob
+
+
+todo:
+	* dokonczyc implementacje konstruktorow klas DTensor i DFischer i napisac dokumentacje
+	* napisac virtualna funkcje dla nich odpowiedizalna za obiczanie dyspersji
+	* zastanowic sie w ktorym miejscu i jak ta dysp bedize obiczana, zaimpementowac to odpowiednio w Grid 
+		lub moze w simulation??
+	* napisac funkcje zwracajaca DTensor *tensor z obiektu z parametrami symualcji
+	* po zakonczeniu ladownia pkt do mapy, po zaldowniu potzrebnych tam wartosci
+		wraz z tensorem dyspesji wrocic do dlaszych idei patrz wyzej
+		
+___________________________________________________________________________________________
+
+28 stycznia
+	10:45
+		-> dodalam funkcje ktora dopbiera sie do mojego tensora w klasie z parametrami symulacji 
+			i zrobilam dokumentacje do napisanych juz kla Tensor
+			
+	16:30
+		-> funkcje wirtulane odpowiedizlane za obl dyspersji napisane
+		->zaimplementownae tylko dla Grid Only
+		-> sparawa z  wskannikami do odpowienich obiektow w Dtensor zalatwiona
+	
+	to do
+		* zastanowic sie w ktorym miejscu i jak ta dysp bedize obiczana, zaimpementowac to odpowiednio w Grid 
+		lub moze w simulation??
+		* po zakonczeniu ladownia pkt do mapy, po zaldowniu potzrebnych tam wartosci
+		wraz z tensorem dyspesji wrocic do dlaszych idei patrz wyzej
+________________________________________________________________________________________________________			 
+
+31 stycznia
+	->zakonczylam implementacje oliczania wspolczynikow dyspersji i maxymalnych wartosci roznych
+		spolczynnikow w GridOnly::ReadData
+		
+	to do
+		zabietram sie za nastepne GridVelocity ...
+_________________________________________________________________________________________________________-
+
+3 luty
+
+	-> uzupelnione pozostale funkcje ReadData w rzonych klasach gris; 
+	
+	to do
+		sprawdzic czy sie nei pomylilam z tym co wczytywane a co liczone i ktore max ewartosci - dopisac minimalne;
+
+_____________________________________________________________________________________________________________________
+
+15 luty
+	
+	-> zajmuje sie pkt granicznymi - zle wysnaczane (nie sa to wcael graniczne pkt, a tylko z odpowiednimi wart x i y najm i najw)
+		trzeba to zmienic;
+		
+_________________________________________________________________________________________________________________________
+
+18 luty
+
+	-> dopisalm troche funkcji do kalsy Point
+	-> oznaczylam wszystkie pkt siadki tj te w obszarze przeplywu i poza;
+	-> w katalogu /kod znajduje sie program do rysownaia siatki w roocie;
+	-> zaczelam szukac sasiadow pkt
+	
+	to do
+		1 zastanowic sie jak ladowac sasiadow do vektora - jakie powinny miec nr poszczegolne pkt;
+		2 sprawdzic dlaczego nie moge korzystac z mampy puktow w amej klasie przez obiekt this lub jakos inaczej
+		3 poprawic powyzsze jesli sie da
+		4 ustawic sasiadow
+		5 oznaczyc flagami odpowiedni pkt brzegowe
+		6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+		7 zastanowic sie jak ozn wej i wyj
+		8 zajac sie implementacja schematow
+______________________________________________________________________________________________________________________________
+
+21 luty 
+	-> nowe funkcje w klasie point odpowiedizalne za ustawiania najblizszych i dalszych sasiadow
+	-> i za dobierania sie do odpowiednich sasiadow 
+			set i get odpowiedni _near_neighbours i _distant_neighbours
+	-> ustawianie wskanikow do sasiadow dla kazdego z pkt zalatwione			
+	-> zaczelam oznaczanie brzegow
+	-> czyli pkt od 1 do 4
+	
+	to do
+	 	5 oznaczyc flagami odpowiedni pkt brzegowe
+		6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+		7 zastanowic sie jak ozn wej i wyj
+		8 zajac sie implementacja schematow
+	5 rozpoczete
+
+____________________________________________________________________________________________________________________________
+
+22 luty
+ 
+	-> 5 oznaczyc flagami odpowiedni pkt brzegowe
+
+	to do:
+		a) zrobic porzadek w funkcji Simulation::PrepareMap tj rzobic na poszczegolne funkcje w odpowidnich klasach
+		b) oznaczyc flagami pukt "przy brzegach"
+		c) cd czyli
+			6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+			7 zastanowic sie jak ozn wej i wyj
+			8 zajac sie implementacja schematow
+		d) pomyzlec dokladnie nad nazwami plikow
+			- wyzucic nazwy plikow z kodu sprobowac je skas czytac...
+
+16.08
+
+	jedna funkcja zrobiona (Grid::CopleteOutsideFlow )
+	i zminiony sposob zapisywania wyznaczonych pkt brzegowych z wykorzystaniem pair<int,int> i map
+	
+	przenosze dzilania do odmu		
+__________________________________________________________________________________________________________________________	
+
+23 luty
+
+	-> pkt brzegowe oznaczone (oprocz tych oddalonych od brzegow)
+	-> zrobiony porzadek w Simulation::PrepareMap, kolejna nowa funkcja Grid:MarkBorderPoints 
+		oznaczajaca flagami odpowiendnio punkty brzegowe
+
+	to do
+		b) oznaczyc flagami pukt "przy brzegach"
+		c) cd czyli
+			6 zapisac siatke i posprawdzac rozne mozliwosci  czy wszsytko liczy sie dobrze
+			7 zastanowic sie jak ozn wej i wyj
+			8 zajac sie implementacja schematow
+		d) pomyzlec dokladnie nad nazwami plikow
+			- wyzucic nazwy plikow z kodu sprobowac je skas czytac...
+______________________________________________________________________________________________________________________________
+24 luty
+
+	-> pkt brzegowe i przy brzegach oznaczone;
+	
+	musze zmienis sposob ustawiania sasiadow, bede przechowywac indexy pktow zamiast wskaznikow do pkt;
+	
+	-> najblizsis sasiedzi ustwaiani sa teraz w funkcji Point::set_n_n;
+	-> dopisalam do symulacji 4 zmienne prywatne w ktorych mialby sie znalezc nazwy plikow
+		to do: 
+			1. zrobic porzadek z ustawianiem sasiadow, wyzucic niepotrzebne funkcje, napisac nowy spopsob dla dalszych sasiadow
+			2. pomyslec nad nazwami plikow i zrobic z tym porzadek w programie !!
+			3. przetestowac wszytskie stworzone siatki
+			4. zastanowic sie jak ozn wej i wyj
+			5. zajac sie implementacja schematow
+	ide spacko!!!!
+___________________________________________________________________________________________________________________________
+25 lutego 
+
+	->dolozylam nowe zmienne prywatne do klasy symulacja w ktoirych przetrzymywane
+		 sa defoltowe nazwy plikow z ktorych moga byc sczytywane dane (inicjalizowane w konstruktorze)
+	-> jest tam tez _file ustwiany w zaleznosci od opcji z jaka zostal uruchomiony program
+		z tego pliku dane sa sczytywane
+		
+		to do: zastanowic sie pjeszcze nad tym - powinno to byc jakos lepeij zrobione!!!!
+
+	PROBLEM - z dodtakowymi pustymi punktami w mapie - trzeba jej jakosc wyrzucac inaczej roboia sie problemy
+	np z indexami sasiadow, nei sa ustawione dla pustych pktow dodanych po ustawieniu	
+
+_____________________________________________________________________________________________________________________
+28 luty
+
+	-> zrobiony porzadek z ustawianiem sasiadow - rozwizany problem z 25 lutego;
+
+IDEA: zoastawic wyznaczanie brzegow zabrac se za implementacje schamatow!!!!!
+
+	wrocic pozniej do brzegow: 
+		-> zle wyznaczaj sie pkt przy brzegach w siatkach nei kwadratowych!!!
+		-> zrobic porzadek z kodem
+							dokumentacja
+							plikami wejsciowymi i wyjsciowymi
+							
+NOW:
+	to do:
+		-> rzowiazac problem z dodtakowymi dziwnymi pkt na "rogach" 
+		-> oznaczyc wejscia i wyjscia - na razie tymczsowo do testow;
+		-> implemaentacja schematow
+
+		
+	15.00
+		NOWA FUNKCJA W gRID 	MarkInOutPoints
+		dokonczyc
+
+_________________________________________________________________________________________________________________________
+2 marca
+
+	funkcja MarkInOutPoints dokonczona;
+	dla obszaru prostkotnego oznaczenie flagami odpowiednich pkt zakonczone;
+	
+	DO POPRAWY I SPRADENIE W PRZYSZLOSCI
+	
+	
+	zabieram sie za implementacje schemtow
+	
+16:40
+	nalezy poprawic :
+		1. MarkBorderPoints - pkt bedace jednoczesnie brzegiem goornym, dolnym i np prawym oi inne kombinacje
+		2. MarkNearBorderPoints - zle oznaczaja sie pkt w szczegolnch sytuacjach
+			 - zmienic sposob oznaczania korzystajac tylo z flag 1 i 0 - powinno byc prosciej
+		3. problemy z wejsciami i wejsciami - zmienic gdy wej i wyj nei jest || do ktorejs z osi 
+		
+	zabieram sie za tworzenie nowej kalsy Scheme i pochodnych schematow
+	
+________________________________________________________________________________________________________________________
+3 marca
+
+	->problemy z indexem do pustego pkt mapy - zwiekszylam go do -99999999; 
+		zalatwiam to teraz zmienna Grid::empty_index
+		
+	to do:
+		* poprawic analogicznie 10000 jako liczbe przy indeksowaniu mapy (jest x*10000 +y)
+	
+		
+______________________________________________________________________________________________________________
+4 marca
+
+	->poprawiona funkcja Grid::MarkInOutPoints tak aby dobrze ustawiac wej i wyj tez dla skosnej siatki;
+	 	TRZEBA TO BEDIZE POZNIEJ JESZCZE DOPRACOWAC
+	->napisna funkcja Simulation::SetInitialConcentration
+		DO DOPRACOWANIA
+	
+17:40
+	- rozwijaja klasy Schematow
+
+22:20
+	-> przygotowalam klasy schematow
+	-> dodalam dodatkowe zmieny odpwoeidzialne za usatwienie wskanika na odpowiedni schemat w parametrach symulacji
+	-> dopisalm odpwienie funkcje do powyzszego SimualtionParameter::set i get _s_schemat
+	-> _s_schemat jest wskanikem do odpowiedniego obiektu innego w zaleznosci od schamatu, a schemat stringiem
+		w ktorym przechowywana jest nazwa odpwoiadajac wybranemu schematowi zapisana w pliku z parameterami wejsciowymi
+	-> dopislam odpowiednik kawlaek w Simualtion:MySimulation;
+
+	to do:
+		* kontynuowac  kawlaek w Simualtion:MySimulation;
+		* dodadc odpowiednie funkcje do Klas Schematow
+______________________________________________________________________________________________________________
+
+7 marca
+
+dopisaam nowa wirtualna funkcej do Schematow - tera trzaba ja uzupelnic;
+
+dopisalm nowa opcje jesli chodzi o zapisayanie do pliku - zpisywanie koncentracjio - ulepszy c tak aj bediz epotrzeba
+
+_____________________________________________________________________________________________________
+
+9 marca 
+
+napisane funkcje zadajace odpowiednie wspolczynniki ukladu rownaan w przy[pdaku roznych schamatow
+dobrze zrobione tylko dla Cranka Nicolsona;  nie zrobione brzegi...
+
+_________________________________________________________________________________________________________
+
+1 kwietnia;
+
+dla diagonalnego tensora - sparwdzone - wszytko ok
+dla niediagonalnego adi poprawiona, sparwdzic adi2; poprawic cn
+	w adi trzeba bylo wspolczynniki przy pozadiagonalnych pomnozyc przez 2, (ocja II w programie)
+	opcja 
+
+
+____________________________________________________________________________________________________________
+
+4 maja
+
+przygotowania do szkloy hydrauliki
+
+przygotowuje do symulacji pokazujacej wzanosc poza diagonalnych wspolczynnikow dyspersji!
+
+________________________________________________________________________________________________________________
+
+13 MAJA 
+zminiam sposob zapisaywanie - z mniejsza dokladnosci
+__________________________________________________________________
+
+20 maja
+
+przygotowuje do uruchamiania symulacji z PSI 
+zapisawynie inf do pliku
+
+nazwa pliku z siadko = grid.txt
+
+czezsc zrobion tymczasowo - kawalki dpo dopracowania w przyszlosci oznaczono przez //INFO
+
+________________________________________________________________________________________________________________
+1 lipca 2005
+
+rozijam funkcje double SimulationParameters::ComputePecletNumber() i double SimulationParameters::ComputeCourantNumber(){
+
+- doadaje inne sposoby "normalne" liczenialiczby Pekleta - zapisuje do pliku
+- funkcje zamiast zwraca jak przedtem 2D liczby Couranta i Pekleta teraz zwracaja najwieksza z 2D i liczonych w kierunku x i y
+
+________________________________________________________________________________________________________________
+6 lipca 2005
+
+zaimplementowny algorytm Thomsona dal macierzy trojdiagonalnych blokowych w przypadku schematu ADI dla pierwszego ukladu 
+rowanan;
+
+wygflada na to ze dizla duzo szybciej niz SOR!!!
+
+
+to do:
+	zrobic porzadek z roznymi metodami rozwiazywania ukl rownan;
+	 dodac rozwiazywanie metoda Thomcsona dla ADi drugiego ukladu row
+
+________________________________________________________________________________________________________________
+14 lipca 2005
+
+	-dopisana brakujaca dokuumentcaja  do pliku scheme.h
+	- robie porzadek w pliku scheme.cpp
+		* dodana nowa funkcja do kalsy z krankiem nikolsonem odpowiedzialna
+		za rozwiazywanie ukladu rownan
+		
+		
+________________________________________________________________________________________________________________
+15 lipca 2005
+	
+	- zreorganizowalam i dopisal rozwiazywanie ukladow rownani
+	- do konca zrobiony w przypadku CN
+to do:		dorobic dla ADI
+	- dopisana metoda znajdowania najlepszego omega dal SOR;
+to do: poprawci bo nie dizla - miejsce wyanczania nowego przedzialuy dla w
+
+________________________________________________________________________________________________________________
+18 lipca 2005
+
+	-	napisana metoda do znajdownai najlepszego omega - parametru relaksacji dla schematu CN
+!!!!!!!! sprawdzic w przyszlosci czy nie mozna by lepiej tego zrobic:
+			1. czy zeczywiscie to jest najlepsze omega
+			2. jak konczyc dobieranie po wybraniu juz i kiedu zmiana omegi juz nie ma sensu a tylko zminia sie tam i sporotem
+			3. indexowanie w mapie w - moze da sie to jakos inaczej (teraz jelsi jet ta smama liczba ieteracji dla roznych krokow
+				to sie nadpisuje)
+
+	zabieram sie za porzdek w ADI i nastepnie przygotownie do testwo na czas symulcji itp
+	
+16:41
+
+porzadkowanie adi
+
+	- w trakcie okazlao sie ze wychodza inne wyniki gdy zamiast dopiero w miejscu wywolywani saora przy druggim rownaniu
+		dodaje watrstoc wyliczona z pierwszego - robie to przed obliczeniem drugiego ukl rownwn uzywajac iteratora po f1;
+		
+		sprawdzic dlaczego i czy to neisistotny bla - czy nie
+		
+		(moze liczba pkt jest inna niz liczba f1???)
+		
+16:51
+	wyglada ze nei ejst to kwestia f1 i dopisywania wyniku pierwszefo rownnia wczesniej; 
+	
+17:04 JEST BLAD
+		znow wywolywalam SOR z tymi samimi wspolczynnikami dla obu ukladow rownan!!! oczywiscie zle!
+		musze napisac osobne funkcje dla obu rownan jak wprzypadku metod neiiteracyjnyuch - nei ma wtedy problemu z wektorem f1 i nei trzeba go zminaic
+		
+17:52 JEST OK
+					
+________________________________________________________________________________________________________________
+4 sierpnia 2005
+13:50
+
+Dodalam 2 kalsy pochodne do klasy DTensor : 
+	- DVector - traktujaca tensor dyspersji jako wektor 
+	- DFischer2 - wyznaczajca wspolczyniki dyspesri wg Fischera ale pomijaca wspolczynniki poza diagonalne w obliczeniach
+	
+pozatym zmainy w kometarzach 
+
+________________________________________________________________________________________________________________
+2 listopada 2005
+12:10
+
+	trzeba bylo zminic sopsob zadawania koncentracji poczatkowej gausem neidiagonalnym, rozdzilone na trzy wywolania 
+	funkcji gx*gy*gxy trzeba bylo zrrobic za jdenym zamaczem bo byl problem z liczeim eksponenty i wychodzeniem poz zakres:
+	root [0] exp(-0.5*-1417.09)
+(double)5.21415191375389469e+307
+root [1] exp(-0.5*-1424.74)
+Error: exp param[0]=712.37 up:709 low:-inf out of range FILE:(tmpfile) LINE:1
+*** Interpreter error recovered ***
+root [2] 
+
+rozeiazannie: Jak masz np. e^x w kilku miejscach to uprosc to do e^{a+b+c}
+
+
+________________________________________________________________________________________________________________
+24 pazdziernik 2006
+16:24
+
+BRAK flag dla neiktorych skaplikowanych warunkow brzegowych;
+w przypadku uzywnai pkt typu i+1,i-1  jak w ADI potrzeba inaczej oznaczyc kanty niz flaga 1
+pracuje nad dodaniem odpowiednich rzeczy w pliku grid.cpp w klasie Make_Bordes_Point
+
+________________________________________________________________________________________________________________
+25 pazdziernik 2006
+12:07
+
+BLAD - glupoty gdy zly format pliku wej param.txt
+zapomnialm wpisac metody oblicznai tensora dypersji i w ten sposob robily si glupoty
+bo zamiast sposobu sczytylwal wartosc DL; tym sposobem DT bylo rowne -9999 i wyglaodalo jakby schamat byl neistabilny...
+
+nie ma ostrzezenia ze zle wisano sposob zadawnai tensora dyspersji 

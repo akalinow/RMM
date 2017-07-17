@@ -1,0 +1,87 @@
+\hypertarget{class_grid_only}{}\section{Dokumentacja klasy Grid\+Only}
+\label{class_grid_only}\index{Grid\+Only@{Grid\+Only}}
+
+
+Klasa Przygotowujaca siatke do symulacji.  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+Diagram dziedziczenia dla Grid\+Only\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid_only}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_only_a71437d24648d7d4db8836eefbda7a360}{Grid\+Only} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_only_a86e143a957ba61c0a5b215b65ea24902}{Read\+Data} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, const string \&file, \hyperlink{class_simulation_parameters}{Simulation\+Parameters} \&sym\+\_\+param)
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa Przygotowujaca siatke do symulacji. 
+
+Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa tylko wspolrzedne pktow przeplywu, a wartosci predkosci i wspolczynniki dyspersji sa stale na calej siatce. 
+
+Definicja w linii 197 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_grid_only_a71437d24648d7d4db8836eefbda7a360}{}\index{Grid\+Only@{Grid\+Only}!Grid\+Only@{Grid\+Only}}
+\index{Grid\+Only@{Grid\+Only}!Grid\+Only@{Grid\+Only}}
+\subsubsection[{Grid\+Only}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+Only\+::\+Grid\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_only_a71437d24648d7d4db8836eefbda7a360}
+
+
+Konstruktor. 
+
+Tworzy obiekt \hyperlink{class_grid}{Grid} Only 
+
+Definicja w linii 204 pliku grid.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_grid_only_a86e143a957ba61c0a5b215b65ea24902}{}\index{Grid\+Only@{Grid\+Only}!Read\+Data@{Read\+Data}}
+\index{Read\+Data@{Read\+Data}!Grid\+Only@{Grid\+Only}}
+\subsubsection[{Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+Only\+::\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{const string \&}]{file, }
+\item[{{\bf Simulation\+Parameters} \&}]{sym\+\_\+param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_grid_only_a86e143a957ba61c0a5b215b65ea24902}
+Wczytywania dane z pliku wejsciowego do mapy punktow 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ referencja do Mapy Punktow \\
+\hline
+{\em file} & -\/ nazwa pliku z danymi \\
+\hline
+{\em sym\+\_\+param} & -\/ obiekt z parametrami symulacji \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \hyperlink{class_grid_ac0cf78c28206fd44fba21c5a91d0a0e0}{Grid}.
+
+
+
+Definicja w linii 520 pliku grid.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{grid_8h}{grid.\+h}\item 
+\hyperlink{grid_8cpp}{grid.\+cpp}\end{DoxyCompactItemize}

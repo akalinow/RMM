@@ -1,0 +1,331 @@
+.TH "Simulation" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Simulation \- Klasa odpowiedzialna za symulacje\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <simulation\&.h>\fP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSimulation\fP (const string &paramFile, const string &saveFile)"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBMySimulation\fP (const string &param_file, const string &save_file)"
+.br
+.ti -1c
+.RI "int \fBSetParam\fP (\fBSimulationParameters\fP *param, const string &file)"
+.br
+.ti -1c
+.RI "int \fBPrepareMap\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param)"
+.br
+.ti -1c
+.RI "int \fBSetSaveParameters\fP (const string &file, int n)"
+.br
+.RI "\fIOdczytuje z pliku i ustawia parametry zapisu wyników symulacji\&. \fP"
+.ti -1c
+.RI "void \fBSaveMap\fP (map< int, \fBPoint\fP > &PointMap, const string &file, const string &opt)"
+.br
+.ti -1c
+.RI "void \fBSetSourceConcentration\fP (map< int, \fBPoint\fP > &PointMap, double &val)"
+.br
+.ti -1c
+.RI "void \fBSetSourceConcentrationTemp\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param, double &val)"
+.br
+.ti -1c
+.RI "double \fBComputeEffectiveTemp\fP (\fBPoint\fP &p, double dx, double val, double hz=-9999\&.99, double Qz=-9999\&.99)"
+.br
+.ti -1c
+.RI "int \fBSetInitialConcentration\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param)"
+.br
+.ti -1c
+.RI "void \fBSetInitialConcentrationPoint\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param, double x0, double y0, double val)"
+.br
+.ti -1c
+.RI "void \fBSetInitialConcentrationPlaneWave\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "void \fBSetInitialConcentrationGauss\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param, double x0, double y0, double val, int krok)"
+.br
+.ti -1c
+.RI "void \fBSetInitialConcentrationGaussNonDiag\fP (map< int, \fBPoint\fP > &PointMap, \fBSimulationParameters\fP &param, double x0, double y0, double val, int krok)"
+.br
+.ti -1c
+.RI "double \fBGaus\fP (double x, double mean, double sigma, bool norm)"
+.br
+.ti -1c
+.RI "int \fBSetInitialConcentrationFile\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "void \fBSetInOutPointValue\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.ti -1c
+.RI "double \fBMy_Gaus\fP (double x, double y, double meanX, double meanY, double sigma)"
+.br
+.ti -1c
+.RI "void \fBset_file\fP (string file)"
+.br
+.ti -1c
+.RI "string \fBget_file\fP () const "
+.br
+.ti -1c
+.RI "double \fBComputeEffectiveTemp\fP (\fBPoint\fP pkt, double arg2, double arg3, double val1, double hz, double Qz)"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiedzialna za symulacje\&. 
+
+Odpowiedizlna za przygotowanie danych do symulacji start i przebieg symulacji 
+.PP
+Definicja w linii 35 pliku simulation\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "Simulation::Simulation (const string & paramFile, const string & saveFile)"
+
+.PP
+Konstruktor\&. Tworzy obiekt simuation 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIparamFile\fP - nazwa pliku z parametrami symulacji 
+.br
+\fIsaveFile\fP - nazwa pliku z parametrami zapisu wyników symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 15 pliku simulation\&.cpp\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "double Simulation::ComputeEffectiveTemp (\fBPoint\fP & p, double dx, double val, double hz = \fC-9999\&.99\fP, double Qz = \fC-9999\&.99\fP)"
+
+.PP
+Definicja w linii 936 pliku simulation\&.cpp\&.
+.SS "double Simulation::ComputeEffectiveTemp (\fBPoint\fP pkt, double arg2, double arg3, double val1, double hz, double Qz)"
+
+.SS "double Simulation::Gaus (double x, double mean, double sigma, bool norm)"
+
+.PP
+Definicja w linii 768 pliku simulation\&.cpp\&.
+.SS "string Simulation::get_file () const\fC [inline]\fP"
+
+.PP
+Definicja w linii 176 pliku simulation\&.h\&.
+.SS "double Simulation::My_Gaus (double x, double y, double meanX, double meanY, double sigma)"
+
+.PP
+Definicja w linii 925 pliku simulation\&.cpp\&.
+.SS "void Simulation::MySimulation (const string & param_file, const string & save_file)"
+Przebieg symulacji od ustawienia parametrow przez uruchominie obiczen po zapis danych i zakonczenie double val = 2\&.0; //wisla, ekspertyza dla kroku dx =10, na krotkim odcinku 
+.PP
+Definicja w linii 23 pliku simulation\&.cpp\&.
+.SS "int Simulation::PrepareMap (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param)"
+Przygotowuje Mape Punktow (siatke) na ktorej bedize przeprowadona symulacja 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - pusta mapa 
+.br
+\fIparam\fP - obiekt z parametrami symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 196 pliku simulation\&.cpp\&.
+.SS "void Simulation::SaveMap (map< int, \fBPoint\fP > & PointMap, const string & file, const string & opt)"
+zapisueje Mape Punktow do podanego pliku 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa pkt 
+.br
+\fIfile\fP - nazwa pliku do ktorego ma byc zapisana mapa punktow 
+.br
+\fIopt\fP - opcja wskazujaca co mam byc zapisane 
+.PD 0
+
+.IP "\(bu" 2
+all - zapisuje wszystkie dostepne wartosci dla kazdego pkt 
+.IP "\(bu" 2
+grid - zapisuje tylko siatke pkt (wpolrzedne x, y pktow i ich flagi)  
+.PP
+.RE
+.PP
+
+.PP
+Definicja w linii 356 pliku simulation\&.cpp\&.
+.SS "void Simulation::set_file (string file)\fC [inline]\fP"
+
+.PP
+Definicja w linii 175 pliku simulation\&.h\&.
+.SS "void Simulation::SetInitialConcentration (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param)"
+Wczytuje dane z pliku  'ini_cond\&.txt' dotyczące wartości początkowej koncentracji/temperatury i wywołuje właściwą funckcję zająca wartosci koncentracji/temperatur początkowej na siatce 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - pusta mapa 
+.br
+\fIparam\fP - obiekt z parametrami symulacji 
+.br
+.RE
+.PP
+format pliku \fC'ini_cond\&.txt'\fP :
+.br
+ ----------------------------------------- 
+.br
+ \fBpollutant\fP 
+.br
+ \fBdump\fP 
+.br
+ \fBarea\fP 
+.br
+ \fBmod\fP $x$ $y$ $val$ $h_{z}$ $Q_{z}$ 
+.br
+ \fBmod\fP $x$ $y$ $val$ $h_{z}$ $Q_{z}$ 
+.br
+ \&.\&.\&.
+.br
+ \fBmod\fP $x$ $y$ $val$ $h_{z}$ $Q_{z}$ 
+.br
+ ----------------------------------------- 
+.br
+ Kliknij na zmienną aby zoabczyć możliwe wartości
+.br
+ $x$ $y$ - współrzędne punktu lokalizacji źródła 
+.br
+ jeśli mod == val $h_{z}$ $Q_{z}$ - wartości głebokości oraz natężenia przepływu w miejscu źródła 
+.br
+ $val$ - wartość koncentracji/temperatury w miejscu źródła\\ Można podać wiele punktów w kolejnych liniach !!!!! zrobic by bylo to czytane z pliku 
+.PP
+Definicja w linii 950 pliku simulation\&.cpp\&.
+.SS "int Simulation::SetInitialConcentrationFile (map< int, \fBPoint\fP > & PointMap)"
+
+.SS "void Simulation::SetInitialConcentrationGauss (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param, double x0, double y0, double val, int krok)"
+
+.PP
+Definicja w linii 703 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetInitialConcentrationGaussNonDiag (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param, double x0, double y0, double val, int krok)"
+!!! double norm = 4*pi*krok*dt*sqrt(D); 
+.PP
+Definicja w linii 785 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetInitialConcentrationPlaneWave (map< int, \fBPoint\fP > & PointMap)"
+
+.PP
+Definicja w linii 889 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetInitialConcentrationPoint (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param, double x0, double y0, double val)"
+
+.PP
+Definicja w linii 676 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetInOutPointValue (map< int, \fBPoint\fP > & PointMap)"
+
+.PP
+Definicja w linii 1048 pliku simulation\&.cpp\&.
+.SS "int Simulation::SetParam (\fBSimulationParameters\fP * param, const string & file)"
+Pobiera i ustawia parametry symulacji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIparam\fP - obiekt w ktorym beda zapisane parmetry symulacji 
+.br
+\fIfile\fP - nazwa pliku z param symulacji 
+.RE
+.PP
+
+.PP
+Definicja w linii 131 pliku simulation\&.cpp\&.
+.SS "int Simulation::SetSaveParameters (const string & file, int n)"
+
+.PP
+Odczytuje z pliku i ustawia parametry zapisu wyników symulacji\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIfile\fP - plik w który zapsano parametry symulacji 
+.br
+\fIn\fP - liczba kroków czasowych symylacji 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+1 gdy wszystko poszło OK
+.RE
+.PP
+.PP
+.nf
+format pliku wejściowego "save\&.txt" (domyślnie): 
+.fi
+.PP
+ 
+.PP
+.nf
+1 range   pattern 
+2 step0   step1   \&.\&.\&. stepN 
+
+.fi
+.PP
+.PP
+\fCrange\fP - definiuje czy maja zapisywane być wszystkie kroki symulacji czy tylko kroki wybrane możliwe wartości: 
+.PD 0
+
+.IP "\(bu" 2
+\fIsteps\fP – zapisuje tylko wybrane kroki symulacji,  
+.IP "\(bu" 2
+\fIall\fP – zapisuje wszystkie kroki symulacji\&.  
+.PP
+\fCpattern\fP - definiuje, co ile kroków czasowych ma się odbywać zapis do pliku, możliwe wartości: 
+.PD 0
+
+.IP "\(bu" 2
+\fIlast\fP (wartość domyślna) – zapisuje tylko ostatni krok symulacji, 
+.IP "\(bu" 2
+\fIint\fP (zmienna typu int) – dodatnia liczba naturalna określająca, co ile kroków czasowych ma być dokonywany zapis do pliku np\&. 1, 10, 100, 1000 \&.\&.\&. - oznacza odpowiednio zapis, co 1, 10, 100 lub 1000 kroków czasowych\&. 
+.PP
+\fCstep0\fP, \fCstep1\fP, \&.\&.\&. - opcjonalnie istnieje możliwość zdefiniowania w 2 linii pliku save\&.txt dodatkowych kroków czasowych, w których ma być dokonywany zapis\&. Możliwe tylko dodatnie liczby naturalne oddzielone od siebie tabulatorami\&. Przykład: oprócz zapisu ostatniego kroku (co zdefiniowano w pierwszej linijce pliku save\&.txt, podając wartości „steps” i „last”), chcemy dokonać zapisu pierwszych 10 kroków czasowych; druga linijka pliku save\&.txt powinna wyglądać następująco: 
+.PP
+.nf
+1   2   3   4   5   6   7   8   9   10
+
+.fi
+.PP
+ 
+.PP
+Definicja w linii 309 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetSourceConcentration (map< int, \fBPoint\fP > & PointMap, double & val)"
+ustawia w miejscu zrodla odpowiednia wartosc koncentracji 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa pkt 
+.br
+\fIval\fP - wartosc koncentracji zadawanej w punkcie zrodla 
+.RE
+.PP
+!!!!! zrobic by bylo to czytane z pliku 
+.PP
+Definicja w linii 443 pliku simulation\&.cpp\&.
+.SS "void Simulation::SetSourceConcentrationTemp (map< int, \fBPoint\fP > & PointMap, \fBSimulationParameters\fP & param, double & val)"
+ustawia w miejscu zrodla odpowiednia wartosc koncentracji dla temeratury 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa pkt 
+.br
+\fIparam\fP - obiekt z parametrami symulacji 
+.br
+\fIval\fP - wartosc koncentracji zadawanej w punkcie zrodla 
+.RE
+.PP
+double x0 = 1730/param\&.get_dx(), y0 = 690/param\&.get_dy();//dla Wisly - ekspertyza 
+.PP
+Definicja w linii 521 pliku simulation\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

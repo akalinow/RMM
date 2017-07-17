@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_d_vector" kind="class" language="C++" prot="public">
+    <compoundname>DVector</compoundname>
+    <basecompoundref refid="class_d_tensor" prot="public" virt="non-virtual">DTensor</basecompoundref>
+    <includes refid="tensor_8h" local="no">tensor.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_vector_1a8acb7f030a2049c718f79d265da12e62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DVector::DVector</definition>
+        <argsstring>()</argsstring>
+        <name>DVector</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy obiekt Tensora Dyspersji traktowanego jako wektor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/tensor.h" line="95" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_vector_1a2069ef34d3db2a9965f07e27f17e12dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DVector::ComputeTensor</definition>
+        <argsstring>(double Dl, double Dt, Point &amp;p)</argsstring>
+        <name>ComputeTensor</name>
+        <reimplements refid="class_d_tensor_1a0ed66ce3f3ab159c4d7f6a019bfea9da">ComputeTensor</reimplements>
+        <param>
+          <type>double</type>
+          <declname>Dl</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dt</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Dl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczyniki dyspersji podluznej </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- wspolczynnik dyspersji porzecznej </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- punkt dla ktorego obiczany jest tensor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/tensor.h" line="97" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.cpp" bodystart="82" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa tensora dyspersji. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, traktujac tensor jako wektor w ukaladzie wspolrzednych [Dl,Dt] i obracajac go do wektora [Dxx, Dyy]. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14">
+        <label>DTensor</label>
+        <link refid="class_d_tensor"/>
+      </node>
+      <node id="13">
+        <label>DVector</label>
+        <link refid="class_d_vector"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16">
+        <label>DTensor</label>
+        <link refid="class_d_tensor"/>
+      </node>
+      <node id="15">
+        <label>DVector</label>
+        <link refid="class_d_vector"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mkalinow/projects/rmmt/tensor.h" line="88" column="1" bodyfile="/home/mkalinow/projects/rmmt/tensor.h" bodystart="88" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_d_vector_1a2069ef34d3db2a9965f07e27f17e12dd" prot="public" virt="virtual"><scope>DVector</scope><name>ComputeTensor</name></member>
+      <member refid="class_d_tensor_1ae52ee454318be2245042568f16d5688a" prot="public" virt="non-virtual"><scope>DVector</scope><name>DTensor</name></member>
+      <member refid="class_d_vector_1a8acb7f030a2049c718f79d265da12e62" prot="public" virt="non-virtual"><scope>DVector</scope><name>DVector</name></member>
+      <member refid="class_d_tensor_1a341090bb4a7fe3fcb8d21ef27aa84d88" prot="public" virt="non-virtual"><scope>DVector</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

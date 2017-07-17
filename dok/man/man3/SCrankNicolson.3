@@ -1,0 +1,88 @@
+.TH "SCrankNicolson" 3 "Pn, 11 sty 2016" "Version 15.1" "RivMix" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SCrankNicolson \- Schemat Cranka Nicolsona\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <scheme\&.h>\fP
+.PP
+Dziedziczy \fBSScheme\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBSCrankNicolson\fP ()"
+.br
+.RI "\fIKonstruktor\&. \fP"
+.ti -1c
+.RI "void \fBComputeConcentration\fP (map< int, \fBPoint\fP > &PointMap)"
+.br
+.RI "\fIOblicza koncentracje uzywajac schamatu Cranka Nicolsona\&. \fP"
+.ti -1c
+.RI "void \fBGetFactors\fP (\fBPoint\fP *p, const double &CAx, const double &CAy, const double &CDx, const double &CDxy, const double &CDy, const vector< int > &flag)"
+.br
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Schemat Cranka Nicolsona\&. 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu metoda Crnka Nicolsona\&. 
+.PP
+Definicja w linii 193 pliku scheme\&.h\&.
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "SCrankNicolson::SCrankNicolson ()\fC [inline]\fP"
+
+.PP
+Konstruktor\&. Tworzy schemat do rozwiazywania rownania transporu metoda Cranka Nicolsona 
+.PP
+Definicja w linii 201 pliku scheme\&.h\&.
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void SCrankNicolson::ComputeConcentration (map< int, \fBPoint\fP > & PointMap)\fC [virtual]\fP"
+
+.PP
+Oblicza koncentracje uzywajac schamatu Cranka Nicolsona\&. Oblicza koncentracje w daneym kroku uzywajac metody Cranka Nicolsona 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIPointMap\fP - mapa punktow 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 382 pliku scheme\&.cpp\&.
+.SS "void SCrankNicolson::GetFactors (\fBPoint\fP * p, const double & CAx, const double & CAy, const double & CDx, const double & CDxy, const double & CDy, const vector< int > & flag)\fC [virtual]\fP"
+Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja dla schemtau Cranka Nicolsona
+.PP
+\fBParametry:\fP
+.RS 4
+\fI*p\fP - pkt dla ktorego wyznaczane sa czynniki 
+.br
+\fICAx\fP - adwekcyjna liczba Couranta w kieruynku x 
+.br
+\fICAy\fP - adwekcyjna liczba Couranta w kieruynku y 
+.br
+\fICDx\fP - dyfuzyjna liczba Couranta w kieruynku x 
+.br
+\fICDxy\fP - dyfuzyjna liczba Couranta w kieruynku xy 
+.br
+\fICDy\fP - dyfuzyjna liczba Couranta w kieruynku y 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBSScheme\fP\&.
+.PP
+Definicja w linii 426 pliku scheme\&.cpp\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla RivMix\&.

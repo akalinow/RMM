@@ -1,0 +1,871 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_grid" kind="class" language="C++" prot="public">
+    <compoundname>Grid</compoundname>
+    <derivedcompoundref refid="class_grid_all" prot="public" virt="non-virtual">GridAll</derivedcompoundref>
+    <derivedcompoundref refid="class_grid_dispersion" prot="public" virt="non-virtual">GridDispersion</derivedcompoundref>
+    <derivedcompoundref refid="class_grid_only" prot="public" virt="non-virtual">GridOnly</derivedcompoundref>
+    <derivedcompoundref refid="class_grid_velocity" prot="public" virt="non-virtual">GridVelocity</derivedcompoundref>
+    <includes refid="grid_8h" local="no">grid.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Grid::empty_index</definition>
+        <argsstring></argsstring>
+        <name>empty_index</name>
+        <initializer>= -99999999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="183" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1a1f0576a19198685cba8f1067b7e1ba7c" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Grid::_xmax</definition>
+        <argsstring></argsstring>
+        <name>_xmax</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1a293bb2eb514f57749e92d2dcf914ca57" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Grid::_xmin</definition>
+        <argsstring></argsstring>
+        <name>_xmin</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1ab4c6a5500c2540b48194a7bcdefab235" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Grid::_ymax</definition>
+        <argsstring></argsstring>
+        <name>_ymax</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1a6e548ba7ad924ef369c7fc24be04f0b2" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Grid::_ymin</definition>
+        <argsstring></argsstring>
+        <name>_ymin</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="184" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_grid_1a00678dda26299b2fd16bb0634504426d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::_pxmax</definition>
+        <argsstring></argsstring>
+        <name>_pxmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="186" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1a6b34e65eb2a7851f8ee3fbf39db823d3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::_pymax</definition>
+        <argsstring></argsstring>
+        <name>_pymax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="186" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1a0fd18efe99d878129b79defb6f448b7d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::_pxmin</definition>
+        <argsstring></argsstring>
+        <name>_pxmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="186" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_1abb15f18c29ff6e6a6cf6138d5f00c8bf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::_pymin</definition>
+        <argsstring></argsstring>
+        <name>_pymin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="186" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_grid_1ac0cf78c28206fd44fba21c5a91d0a0e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int Grid::ReadData</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, const string &amp;file, SimulationParameters &amp;sym_param)</argsstring>
+        <name>ReadData</name>
+        <reimplementedby refid="class_grid_only_1a86e143a957ba61c0a5b215b65ea24902">ReadData</reimplementedby>
+        <reimplementedby refid="class_grid_velocity_1a00143f2982252ae30ceb725886c11ab6">ReadData</reimplementedby>
+        <reimplementedby refid="class_grid_all_1aa513371e605fe9bea7489edfe3d40a1f">ReadData</reimplementedby>
+        <reimplementedby refid="class_grid_dispersion_1afbc03fca9459c90c19959c24df944766">ReadData</reimplementedby>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>sym_param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wczytywania dane z pliku wejsciowego do mapy punktow <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku z danymi </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sym_param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="34" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1affe0d058372cb86ef7816d536793341b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::SetMaxValues</definition>
+        <argsstring>(double &amp;vx, double &amp;vy, double &amp;Dxx, double &amp;Dxy, double Dyy, SimulationParameters &amp;param)</argsstring>
+        <name>SetMaxValues</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>Dxx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>Dxy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dyy</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawianie max wartosci zmiennych w parametrcha symulacji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do maksymalnej skladowej x wektora predkosci </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do maksymalnej skladowej y wektora predkosci </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dxx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do maksymalnej skladowej xx tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do maksymalnej skladowej xy tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dyy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do maksymalnej skladowej tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencje do obiektu z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="45" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="23" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a25ecf93fd041648dcde213623589fa27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::SetMinValues</definition>
+        <argsstring>(double &amp;vx, double &amp;vy, double &amp;Dxx, double &amp;Dxy, double Dyy, SimulationParameters &amp;param)</argsstring>
+        <name>SetMinValues</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>Dxx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>Dxy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Dyy</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawianie min wartosci zmiennych w parametrcha symulacji <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do minimalnej skladowej x wektora predkosci </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do minimalnej skladowej y wektora predkosci </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dxx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do minimalnej skladowej xx tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do minimalnej skladowej xy tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Dyy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do minimalnej skladowej tensora Dyspersji </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencje do obiektu z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="57" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="33" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a4fc635f29b3dfa2075dc7e3cc6861762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::SetExtremeValues</definition>
+        <argsstring>(double &amp;xmax, double &amp;xmin, double &amp;ymax, double &amp;ymin)</argsstring>
+        <name>SetExtremeValues</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>xmax</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>xmin</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ymax</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ymin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia wartosci max i min wspolrzednych x i y na siatce <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do najwiekszej wartosc wspolz. x na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do najmniejszej wartosc wspolz. x na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do najwiekszej wartosc wspolz. y na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do najmniejszej wartosc wspolz. y na siatce </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="67" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a03696ec5383f1a0222b447a0ff15d47c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::SetExtremePoints</definition>
+        <argsstring>(Point &amp;pxmax, Point &amp;pxmin, Point &amp;pymax, Point &amp;pymin)</argsstring>
+        <name>SetExtremePoints</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>pxmax</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>pxmin</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>pymax</declname>
+        </param>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref> &amp;</type>
+          <declname>pymin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia punkty graniczne siatki <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pxmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do punktu psosiadajacego najwieksza wartosc wspolz. x na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do punktu psosiadajacego najmniejsza wartosc wspolz. x na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do punktu psosiadajacego najwieksza wartosc wspolz. y na siatce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- refer. do punktu psosiadajacego najmniejsza wartosc wspolz. y na siatce </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="76" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="51" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a3070db37370246f2028310f412d3d8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::CompleteOutsideFlow</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>CompleteOutsideFlow</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Korzystajac z wyznaczony wartosci namniejszych i najwiekszych wspolrzednych na siatce, uzuplnia siatke punktami, ktore leza poza przeplywem nadajac im flage 0 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="83" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="65" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1ac438ff968a29cfaaebb410f2a08a48f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Grid::CorrectGrid</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>CorrectGrid</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Po oznaczeniu najblizszych sasiadow kazdego pktu koryguje siatkę (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia flagi 0 (poza przepływem) dla &quot;dziwnych&quot; punktow dla których punkty obok są poza przepływem (nie ma sensu liczyc w tych punktach - generowaloby to tylko bledy nyumeryczne): <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="92" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="84" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a1e040eda61d389f8e0d141933ed6fb48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::MarkBorderPoints</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>MarkBorderPoints</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Po oznaczeniu najblizszych sasiadow kazdego pktu i ewentulanie korekcji siatki wyznacza brzeg obszaru przeplywu (korzysta z flag pkt onaczonych jako przeplyw i poz przeplywem); Ustawia odpowiednie flagi punktow w zaleznosci od rodzaju brzegu do ktorego pktr nalezy: <itemizedlist>
+<listitem>
+<para>brzeg gorny -&gt; flaga <bold>2</bold> </para></listitem>
+<listitem>
+<para>brzeg dolny -&gt; flaga <bold>3</bold> </para></listitem>
+<listitem>
+<para>brzeg lewy -&gt; flaga <bold>4</bold> </para></listitem>
+<listitem>
+<para>brzeg prawy -&gt; flaga <bold>5</bold> </para></listitem>
+<listitem>
+<para>rog gorny-lewy -&gt; flaga <bold>24</bold> </para></listitem>
+<listitem>
+<para>rog gorny-prawy -&gt; flaga <bold>25</bold> </para></listitem>
+<listitem>
+<para>rog dolny-lewy -&gt; flaga <bold>34</bold> </para></listitem>
+<listitem>
+<para>rog dolny-prawy -&gt; flaga <bold>35</bold> </para></listitem>
+<listitem>
+<para>kanty -&gt; flaga <bold>1</bold> </para></listitem>
+<listitem>
+<para>zrodla -&gt; flaga <bold>101</bold> </para></listitem>
+</itemizedlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="113" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="174" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a6270d5bfcdefee9477865a3a60baae73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::MarkNearBorderPoints</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>MarkNearBorderPoints</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Po oznaczeniu dalszych sasiadow kazdego pktu, Ustawia odpowiednie flagi punktow lezacych przy brzegach; w zaleznosci od rodzaju brzegu do ktorym lezy pkt : <itemizedlist>
+<listitem>
+<para>przy brzegu gornym -&gt; flaga <bold>22</bold> </para></listitem>
+<listitem>
+<para>przy brzegu dolnym -&gt; flaga <bold>33</bold> </para></listitem>
+<listitem>
+<para>przy brzegu lewym -&gt; flaga <bold>44</bold> </para></listitem>
+<listitem>
+<para>przy brzegu prawym -&gt; flaga <bold>55</bold> </para></listitem>
+<listitem>
+<para>przy rogu gornym-lewym -&gt; flaga <bold>2244</bold> </para></listitem>
+<listitem>
+<para>przy rogu gornym-prawym -&gt; flaga <bold>2255</bold> </para></listitem>
+<listitem>
+<para>przy rogu dolnym-lewym -&gt; flaga <bold>3344</bold> </para></listitem>
+<listitem>
+<para>przy rogu dolnym-prawym -&gt; flaga <bold>3355</bold> </para></listitem>
+</itemizedlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="132" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="464" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a0cc5771c532b0a92abb64d7f2df8eb1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Grid::MarkInOutPoints</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap)</argsstring>
+        <name>MarkInOutPoints</name>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia odpowiednie flagi punktow lezacych na wejsciach i wyjsciach; <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>DO NAPISANIA </bold> na razie prowizorycznie w konkretnym przypadku!!! </para>        </detaileddescription>
+        <inbodydescription>
+<para>!! moze pozniej bedzie potrzbne !! </para>        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="141" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="361" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1acdec1d78fe3ead312d1098837325d113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_pxmax</definition>
+        <argsstring>(Point pkt)</argsstring>
+        <name>set_pxmax</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia pkt z maxymalana wartoscia wspolrzednej x </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="145" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a51aaeb13d9c299ebc07e1e9d3b9fe47f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_pymax</definition>
+        <argsstring>(Point pkt)</argsstring>
+        <name>set_pymax</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia pkt z maxymalana wartoscia wspolrzednej y </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="148" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1ab01ea11cdb5d87a4d8cddb51b40dd52c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_pxmin</definition>
+        <argsstring>(Point pkt)</argsstring>
+        <name>set_pxmin</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia pkt z minimalan wartoscia wspolrzednej x </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="151" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a666541ca159aebd16470f1fa7b2d16c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_pymin</definition>
+        <argsstring>(Point pkt)</argsstring>
+        <name>set_pymin</name>
+        <param>
+          <type><ref refid="class_point" kindref="compound">Point</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ustawia pkt z minimalna wartoscia wspolrzednej y </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="154" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1ae90bb3028aa13b363d61e6617f4dbd89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::get_pxmax</definition>
+        <argsstring>() const </argsstring>
+        <name>get_pxmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca pkt majacy maksymalna wartosc wspolrzednej x na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="159" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1ab45d29e63d5a92a97d2a8bc034e96234" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::get_pymax</definition>
+        <argsstring>() const </argsstring>
+        <name>get_pymax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca pkt majacy maksymalna wartosc wspolrzednej y na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="162" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1aa52105935ef29936395898215bcf40a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::get_pxmin</definition>
+        <argsstring>() const </argsstring>
+        <name>get_pxmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca pkt majacy minimalna wartosc wspolzrednej x na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="165" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a9865c790dde45934add338c055247a4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_point" kindref="compound">Point</ref></type>
+        <definition>Point Grid::get_pymin</definition>
+        <argsstring>() const </argsstring>
+        <name>get_pymin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca pkt majacy minimalna wartosc wpolrzednej y na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="168" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a2646150f8d14820de6c40a296d2eba17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid::get_xmax</definition>
+        <argsstring>() const </argsstring>
+        <name>get_xmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca maksymalna wartosc wspolrzednej x na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="172" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="172" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a385b11b22ff42896d522400d9ddd7e97" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid::get_ymax</definition>
+        <argsstring>() const </argsstring>
+        <name>get_ymax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca maksymalna wartosc wspolrzednej y na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="175" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1a1ff74bf0898894452d67ccda6e3dc266" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid::get_xmin</definition>
+        <argsstring>() const </argsstring>
+        <name>get_xmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca minimalna wartosc wspolzrednej x na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="178" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_1ae776aec819443b168ebe15a52632ad77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Grid::get_ymin</definition>
+        <argsstring>() const </argsstring>
+        <name>get_ymin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zwaraca minimalna wartosc wpolrzednej y na siatce </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="181" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa Przygotowujaca siatke do symulacji. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera funkcje potrzebne do przgotowania siatki, wspolne dla roznych sposobow wczytywania danych. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>GridVelocity</label>
+        <link refid="class_grid_velocity"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>GridOnly</label>
+        <link refid="class_grid_only"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>GridAll</label>
+        <link refid="class_grid_all"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>GridDispersion</label>
+        <link refid="class_grid_dispersion"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/mkalinow/projects/rmmt/grid.h" line="26" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="26" bodyend="188"/>
+    <listofallmembers>
+      <member refid="class_grid_1a00678dda26299b2fd16bb0634504426d" prot="private" virt="non-virtual"><scope>Grid</scope><name>_pxmax</name></member>
+      <member refid="class_grid_1a0fd18efe99d878129b79defb6f448b7d" prot="private" virt="non-virtual"><scope>Grid</scope><name>_pxmin</name></member>
+      <member refid="class_grid_1a6b34e65eb2a7851f8ee3fbf39db823d3" prot="private" virt="non-virtual"><scope>Grid</scope><name>_pymax</name></member>
+      <member refid="class_grid_1abb15f18c29ff6e6a6cf6138d5f00c8bf" prot="private" virt="non-virtual"><scope>Grid</scope><name>_pymin</name></member>
+      <member refid="class_grid_1a1f0576a19198685cba8f1067b7e1ba7c" prot="public" virt="non-virtual"><scope>Grid</scope><name>_xmax</name></member>
+      <member refid="class_grid_1a293bb2eb514f57749e92d2dcf914ca57" prot="public" virt="non-virtual"><scope>Grid</scope><name>_xmin</name></member>
+      <member refid="class_grid_1ab4c6a5500c2540b48194a7bcdefab235" prot="public" virt="non-virtual"><scope>Grid</scope><name>_ymax</name></member>
+      <member refid="class_grid_1a6e548ba7ad924ef369c7fc24be04f0b2" prot="public" virt="non-virtual"><scope>Grid</scope><name>_ymin</name></member>
+      <member refid="class_grid_1a3070db37370246f2028310f412d3d8c3" prot="public" virt="non-virtual"><scope>Grid</scope><name>CompleteOutsideFlow</name></member>
+      <member refid="class_grid_1ac438ff968a29cfaaebb410f2a08a48f4" prot="public" virt="non-virtual"><scope>Grid</scope><name>CorrectGrid</name></member>
+      <member refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" prot="public" virt="non-virtual"><scope>Grid</scope><name>empty_index</name></member>
+      <member refid="class_grid_1ae90bb3028aa13b363d61e6617f4dbd89" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_pxmax</name></member>
+      <member refid="class_grid_1aa52105935ef29936395898215bcf40a7" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_pxmin</name></member>
+      <member refid="class_grid_1ab45d29e63d5a92a97d2a8bc034e96234" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_pymax</name></member>
+      <member refid="class_grid_1a9865c790dde45934add338c055247a4c" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_pymin</name></member>
+      <member refid="class_grid_1a2646150f8d14820de6c40a296d2eba17" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_xmax</name></member>
+      <member refid="class_grid_1a1ff74bf0898894452d67ccda6e3dc266" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_xmin</name></member>
+      <member refid="class_grid_1a385b11b22ff42896d522400d9ddd7e97" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_ymax</name></member>
+      <member refid="class_grid_1ae776aec819443b168ebe15a52632ad77" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_ymin</name></member>
+      <member refid="class_grid_1a1e040eda61d389f8e0d141933ed6fb48" prot="public" virt="non-virtual"><scope>Grid</scope><name>MarkBorderPoints</name></member>
+      <member refid="class_grid_1a0cc5771c532b0a92abb64d7f2df8eb1f" prot="public" virt="non-virtual"><scope>Grid</scope><name>MarkInOutPoints</name></member>
+      <member refid="class_grid_1a6270d5bfcdefee9477865a3a60baae73" prot="public" virt="non-virtual"><scope>Grid</scope><name>MarkNearBorderPoints</name></member>
+      <member refid="class_grid_1ac0cf78c28206fd44fba21c5a91d0a0e0" prot="public" virt="virtual"><scope>Grid</scope><name>ReadData</name></member>
+      <member refid="class_grid_1acdec1d78fe3ead312d1098837325d113" prot="public" virt="non-virtual"><scope>Grid</scope><name>set_pxmax</name></member>
+      <member refid="class_grid_1ab01ea11cdb5d87a4d8cddb51b40dd52c" prot="public" virt="non-virtual"><scope>Grid</scope><name>set_pxmin</name></member>
+      <member refid="class_grid_1a51aaeb13d9c299ebc07e1e9d3b9fe47f" prot="public" virt="non-virtual"><scope>Grid</scope><name>set_pymax</name></member>
+      <member refid="class_grid_1a666541ca159aebd16470f1fa7b2d16c2" prot="public" virt="non-virtual"><scope>Grid</scope><name>set_pymin</name></member>
+      <member refid="class_grid_1a03696ec5383f1a0222b447a0ff15d47c" prot="public" virt="non-virtual"><scope>Grid</scope><name>SetExtremePoints</name></member>
+      <member refid="class_grid_1a4fc635f29b3dfa2075dc7e3cc6861762" prot="public" virt="non-virtual"><scope>Grid</scope><name>SetExtremeValues</name></member>
+      <member refid="class_grid_1affe0d058372cb86ef7816d536793341b" prot="public" virt="non-virtual"><scope>Grid</scope><name>SetMaxValues</name></member>
+      <member refid="class_grid_1a25ecf93fd041648dcde213623589fa27" prot="public" virt="non-virtual"><scope>Grid</scope><name>SetMinValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_grid_only" kind="class" language="C++" prot="public">
+    <compoundname>GridOnly</compoundname>
+    <basecompoundref refid="class_grid" prot="public" virt="non-virtual">Grid</basecompoundref>
+    <includes refid="grid_8h" local="no">grid.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_grid_only_1a13b5fdecb5110e6d04cd4fe0cda8c12f" prot="private" static="no" mutable="no">
+        <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt;</type>
+        <definition>map&lt;int, Point&gt; GridOnly::_PointMap</definition>
+        <argsstring></argsstring>
+        <name>_PointMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="209" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_only_1acc7b9ad9b0d2ab4894af3a199dbe8159" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GridOnly::_file</definition>
+        <argsstring></argsstring>
+        <name>_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="210" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_grid_only_1a71437d24648d7d4db8836eefbda7a360" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GridOnly::GridOnly</definition>
+        <argsstring>()</argsstring>
+        <name>GridOnly</name>
+        <briefdescription>
+<para>Konstruktor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Tworzy obiekt <ref refid="class_grid" kindref="compound">Grid</ref> Only </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="204" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="204" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_only_1a86e143a957ba61c0a5b215b65ea24902" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int GridOnly::ReadData</definition>
+        <argsstring>(map&lt; int, Point &gt; &amp;PointMap, const string &amp;file, SimulationParameters &amp;sym_param)</argsstring>
+        <name>ReadData</name>
+        <reimplements refid="class_grid_1ac0cf78c28206fd44fba21c5a91d0a0e0">ReadData</reimplements>
+        <param>
+          <type>map&lt; int, <ref refid="class_point" kindref="compound">Point</ref> &gt; &amp;</type>
+          <declname>PointMap</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="class_simulation_parameters" kindref="compound">SimulationParameters</ref> &amp;</type>
+          <declname>sym_param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wczytywania dane z pliku wejsciowego do mapy punktow <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PointMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- referencja do Mapy Punktow </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- nazwa pliku z danymi </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sym_param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- obiekt z parametrami symulacji </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mkalinow/projects/rmmt/grid.h" line="206" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.cpp" bodystart="520" bodyend="586"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Klasa Przygotowujaca siatke do symulacji. </para>    </briefdescription>
+    <detaileddescription>
+<para>Zawiera funkcje potrzebne do przgotowania siatki, gdy z pliku wczytywane sa tylko wspolrzedne pktow przeplywu, a wartosci predkosci i wspolczynniki dyspersji sa stale na calej siatce. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="31">
+        <label>GridOnly</label>
+        <link refid="class_grid_only"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="33">
+        <label>GridOnly</label>
+        <link refid="class_grid_only"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Grid</label>
+        <link refid="class_grid"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mkalinow/projects/rmmt/grid.h" line="197" column="1" bodyfile="/home/mkalinow/projects/rmmt/grid.h" bodystart="197" bodyend="211"/>
+    <listofallmembers>
+      <member refid="class_grid_only_1acc7b9ad9b0d2ab4894af3a199dbe8159" prot="private" virt="non-virtual"><scope>GridOnly</scope><name>_file</name></member>
+      <member refid="class_grid_only_1a13b5fdecb5110e6d04cd4fe0cda8c12f" prot="private" virt="non-virtual"><scope>GridOnly</scope><name>_PointMap</name></member>
+      <member refid="class_grid_1a1f0576a19198685cba8f1067b7e1ba7c" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>_xmax</name></member>
+      <member refid="class_grid_1a293bb2eb514f57749e92d2dcf914ca57" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>_xmin</name></member>
+      <member refid="class_grid_1ab4c6a5500c2540b48194a7bcdefab235" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>_ymax</name></member>
+      <member refid="class_grid_1a6e548ba7ad924ef369c7fc24be04f0b2" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>_ymin</name></member>
+      <member refid="class_grid_1a3070db37370246f2028310f412d3d8c3" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>CompleteOutsideFlow</name></member>
+      <member refid="class_grid_1ac438ff968a29cfaaebb410f2a08a48f4" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>CorrectGrid</name></member>
+      <member refid="class_grid_1a557878ff6ca7473b0a0acb3ae9c599cb" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>empty_index</name></member>
+      <member refid="class_grid_1ae90bb3028aa13b363d61e6617f4dbd89" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_pxmax</name></member>
+      <member refid="class_grid_1aa52105935ef29936395898215bcf40a7" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_pxmin</name></member>
+      <member refid="class_grid_1ab45d29e63d5a92a97d2a8bc034e96234" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_pymax</name></member>
+      <member refid="class_grid_1a9865c790dde45934add338c055247a4c" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_pymin</name></member>
+      <member refid="class_grid_1a2646150f8d14820de6c40a296d2eba17" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_xmax</name></member>
+      <member refid="class_grid_1a1ff74bf0898894452d67ccda6e3dc266" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_xmin</name></member>
+      <member refid="class_grid_1a385b11b22ff42896d522400d9ddd7e97" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_ymax</name></member>
+      <member refid="class_grid_1ae776aec819443b168ebe15a52632ad77" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>get_ymin</name></member>
+      <member refid="class_grid_only_1a71437d24648d7d4db8836eefbda7a360" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>GridOnly</name></member>
+      <member refid="class_grid_1a1e040eda61d389f8e0d141933ed6fb48" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>MarkBorderPoints</name></member>
+      <member refid="class_grid_1a0cc5771c532b0a92abb64d7f2df8eb1f" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>MarkInOutPoints</name></member>
+      <member refid="class_grid_1a6270d5bfcdefee9477865a3a60baae73" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>MarkNearBorderPoints</name></member>
+      <member refid="class_grid_only_1a86e143a957ba61c0a5b215b65ea24902" prot="public" virt="virtual"><scope>GridOnly</scope><name>ReadData</name></member>
+      <member refid="class_grid_1acdec1d78fe3ead312d1098837325d113" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>set_pxmax</name></member>
+      <member refid="class_grid_1ab01ea11cdb5d87a4d8cddb51b40dd52c" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>set_pxmin</name></member>
+      <member refid="class_grid_1a51aaeb13d9c299ebc07e1e9d3b9fe47f" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>set_pymax</name></member>
+      <member refid="class_grid_1a666541ca159aebd16470f1fa7b2d16c2" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>set_pymin</name></member>
+      <member refid="class_grid_1a03696ec5383f1a0222b447a0ff15d47c" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>SetExtremePoints</name></member>
+      <member refid="class_grid_1a4fc635f29b3dfa2075dc7e3cc6861762" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>SetExtremeValues</name></member>
+      <member refid="class_grid_1affe0d058372cb86ef7816d536793341b" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>SetMaxValues</name></member>
+      <member refid="class_grid_1a25ecf93fd041648dcde213623589fa27" prot="public" virt="non-virtual"><scope>GridOnly</scope><name>SetMinValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

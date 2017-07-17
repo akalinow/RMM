@@ -1,0 +1,504 @@
+\hypertarget{class_net_heat_flux}{}\section{Dokumentacja klasy Net\+Heat\+Flux}
+\label{class_net_heat_flux}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+
+
+Klasa do obliczen członu źródłowego wyminay ciepla z atmosfera.  
+
+
+
+
+{\ttfamily \#include $<$netheatflux.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_net_heat_flux_a6e4c7b7a65cc582fe7f812b10d8dd0ae}{Net\+Heat\+Flux} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_net_heat_flux_a49a9703237a48c6851464376b0892246}{Net\+Heat\+Flux} (double Ta, double Rh, double pa, double Js, double u)
+\item 
+long double \hyperlink{class_net_heat_flux_a31570d0c05e45b2a01a05b3976617ac4}{Compute\+Net\+Heat\+Flux} (long double Tw)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc czlonu zródłowego \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a5bf457660c754e02562840cc90cf00ac}{Compute\+Net\+Solar} ()
+\begin{DoxyCompactList}\small\item\em oblicza wartosc promieniowania słonecznego krotkofalowe \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a8c35767d0fdf37fd6216e0c2f1e71cc2}{Compute\+Long\+Wave\+Atmosf} ()
+\begin{DoxyCompactList}\small\item\em oblicza wartosc promieniowania atmosferycznego długofalowego \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a87b1a80ed14554fcaf903a3383f25a77}{Emissivity\+\_\+\+Brunt1932} (double a1=0.\+55, double a2=0.\+065)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a867bd311aaaf67ba057ad24f8e8ba5af}{Compute\+Long\+Wave\+Water} (long double \&Tw)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc promieniowania długofalowego W\+O\+D\+Y \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a7029244ff808627ebc74a9e74d00abe4}{Compute\+Evap\+Condens} (long double \&Tw)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc strat ciepła zwiazanego z praowaniem \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_a3209796cc63c1b6f1d8040f7bb815053}{Wind\+Function\+\_\+\+Chapra2008} (float c1=19.\+0, float c2=0.\+95)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci waitru wg zależnosci f(u) = c1 + c2 u$^\wedge$2 -\/ domyślnie c1 = 19.\+0, c2 = 0.\+95 -\/ Chapra 2008, Edinger et al 1974 \end{DoxyCompactList}\item 
+long double \hyperlink{class_net_heat_flux_ab3807fc076b38645302be22d62c70c65}{Compute\+Cond\+Conv} (long double \&Tw)
+\begin{DoxyCompactList}\small\item\em oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji \end{DoxyCompactList}\item 
+double \hyperlink{class_net_heat_flux_a495d266066abc2afdfc6f67e73e9f5d6}{get\+\_\+\+Ta} () const 
+\item 
+double \hyperlink{class_net_heat_flux_aaf841691bf132c9b7d26c7ff3a60b798}{get\+\_\+\+Rh} () const 
+\item 
+double \hyperlink{class_net_heat_flux_ab6d1ce8e3f2f4034c256bd32b9285b01}{get\+\_\+pa} () const 
+\item 
+double \hyperlink{class_net_heat_flux_a37bddd6b4413bf9a4265b0e6121dc53a}{get\+\_\+\+Js} () const 
+\item 
+double \hyperlink{class_net_heat_flux_ad5d42768c59f90e629dd033a6fd1ac77}{get\+\_\+u} () const 
+\item 
+double \hyperlink{class_net_heat_flux_a1f7f06ac4ad2d3e71a2c9c7203ffc833}{get\+\_\+aw} () const 
+\item 
+double \hyperlink{class_net_heat_flux_a1a1c94edb55d10722782ac1e76f1c8b8}{get\+\_\+ea} () const 
+\item 
+double \hyperlink{class_net_heat_flux_ab48ea591c24a62581348cc291d565076}{get\+\_\+emis\+\_\+w} () const 
+\item 
+void \hyperlink{class_net_heat_flux_a9e9700acebfa6481f24b93c2f7d1efd6}{set\+\_\+\+Ta} (double Ta)
+\item 
+void \hyperlink{class_net_heat_flux_a870e6db2db832d88f88a0f75516f39d7}{set\+\_\+\+Rh} (double Rh)
+\item 
+void \hyperlink{class_net_heat_flux_ac4d58893c28e07cd05a7988d098df46b}{set\+\_\+pa} (double pa)
+\item 
+void \hyperlink{class_net_heat_flux_a4608ba4ec5bade409d066b9e2370a4a0}{set\+\_\+\+Js} (double Js)
+\item 
+void \hyperlink{class_net_heat_flux_ac4c880ee001af382d098191843b4fafb}{set\+\_\+u} (double u)
+\item 
+void \hyperlink{class_net_heat_flux_a4f17f1801cbea3b76715fdc873be78b6}{set\+\_\+aw} (double aw=0.\+06)
+\item 
+void \hyperlink{class_net_heat_flux_ae90ff0b43ec0e41e2f40f28df7c9612d}{set\+\_\+ea} ()
+\item 
+long double \hyperlink{class_net_heat_flux_a3baa4ec5f1504d7e5c01efd21530637f}{e\+\_\+sat} (long double T, double b1=6.\+12, double b2=17.\+27, double b3=237.\+3)
+\item 
+void \hyperlink{class_net_heat_flux_ac6c12bccd613d87ffae5a90b4910eaeb}{set\+\_\+emis\+\_\+w} (double emis\+\_\+w=0.\+97)
+\item 
+void \hyperlink{class_net_heat_flux_ae127a9c31f1bd777f40b9034395d4f96}{set\+\_\+cb} (double cb=0.\+62)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa do obliczen członu źródłowego wyminay ciepla z atmosfera. 
+
+Zawiera metody potrzebane do wyznaczenia wratosci wypadkowego strumienia ciepła na granicy woda powietrze 
+
+Definicja w linii 23 pliku netheatflux.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_net_heat_flux_a6e4c7b7a65cc582fe7f812b10d8dd0ae}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Net\+Heat\+Flux}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Heat\+Flux\+::\+Net\+Heat\+Flux (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a6e4c7b7a65cc582fe7f812b10d8dd0ae}
+
+
+Konstruktor. 
+
+Tworzy obiekt \hyperlink{class_net_heat_flux}{Net\+Heat\+Flux} 
+
+Definicja w linii 31 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a49a9703237a48c6851464376b0892246}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Net\+Heat\+Flux}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Heat\+Flux\+::\+Net\+Heat\+Flux (
+\begin{DoxyParamCaption}
+\item[{double}]{Ta, }
+\item[{double}]{Rh, }
+\item[{double}]{pa, }
+\item[{double}]{Js, }
+\item[{double}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a49a9703237a48c6851464376b0892246}
+
+
+Definicja w linii 35 pliku netheatflux.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_net_heat_flux_ab3807fc076b38645302be22d62c70c65}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Cond\+Conv@{Compute\+Cond\+Conv}}
+\index{Compute\+Cond\+Conv@{Compute\+Cond\+Conv}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Cond\+Conv}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Cond\+Conv (
+\begin{DoxyParamCaption}
+\item[{long double \&}]{Tw}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_ab3807fc076b38645302be22d62c70c65}
+
+
+oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji 
+
+Oblicza wartosc strumienia ciepła w wyniku przewodzenia i konwekscji 
+\begin{DoxyParams}{Parametry}
+{\em Tw} & -\/ temp wody \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc strumienia ciepła w wyniku przewodzenia i konwekscji 
+\end{DoxyReturn}
+
+
+Definicja w linii 106 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a7029244ff808627ebc74a9e74d00abe4}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Evap\+Condens@{Compute\+Evap\+Condens}}
+\index{Compute\+Evap\+Condens@{Compute\+Evap\+Condens}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Evap\+Condens}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Evap\+Condens (
+\begin{DoxyParamCaption}
+\item[{long double \&}]{Tw}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a7029244ff808627ebc74a9e74d00abe4}
+
+
+oblicza wartosc strat ciepła zwiazanego z praowaniem 
+
+Oblicza wartosc strat ciepła zwiazanego z parowaniem lub dostarcenia ciepła związnego z procesem kondensacji 
+\begin{DoxyParams}{Parametry}
+{\em Tw} & -\/ temp wody \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej 
+\end{DoxyReturn}
+
+
+Definicja w linii 91 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a8c35767d0fdf37fd6216e0c2f1e71cc2}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Long\+Wave\+Atmosf@{Compute\+Long\+Wave\+Atmosf}}
+\index{Compute\+Long\+Wave\+Atmosf@{Compute\+Long\+Wave\+Atmosf}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Long\+Wave\+Atmosf}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Long\+Wave\+Atmosf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a8c35767d0fdf37fd6216e0c2f1e71cc2}
+
+
+oblicza wartosc promieniowania atmosferycznego długofalowego 
+
+
+\begin{DoxyParams}{Parametry}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc promieniowania atmosferycznego długofalowego 
+\end{DoxyReturn}
+
+
+Definicja w linii 40 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a867bd311aaaf67ba057ad24f8e8ba5af}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Long\+Wave\+Water@{Compute\+Long\+Wave\+Water}}
+\index{Compute\+Long\+Wave\+Water@{Compute\+Long\+Wave\+Water}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Long\+Wave\+Water}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Long\+Wave\+Water (
+\begin{DoxyParamCaption}
+\item[{long double \&}]{Tw}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a867bd311aaaf67ba057ad24f8e8ba5af}
+
+
+oblicza wartosc promieniowania długofalowego W\+O\+D\+Y 
+
+Oblicza wartosc promieniowania długofalowego W\+O\+D\+Y kożystając z prawa Stefana-\/\+Boltzmana 
+\begin{DoxyParams}{Parametry}
+{\em Tw} & -\/ temp wody \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc promieniowania długofalowego wody 
+\end{DoxyReturn}
+
+
+Definicja w linii 83 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a31570d0c05e45b2a01a05b3976617ac4}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Net\+Heat\+Flux@{Compute\+Net\+Heat\+Flux}}
+\index{Compute\+Net\+Heat\+Flux@{Compute\+Net\+Heat\+Flux}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Net\+Heat\+Flux}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Net\+Heat\+Flux (
+\begin{DoxyParamCaption}
+\item[{long double}]{Tw}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a31570d0c05e45b2a01a05b3976617ac4}
+
+
+oblicza wartosc czlonu zródłowego 
+
+Oblicza wartosc czlonu zrodlowego dla danej temp wody na podstawie podsnaych danych meteorologicznych
+
+
+\begin{DoxyParams}{Parametry}
+{\em Tw} & -\/ wartość temperatury wody dla ktorej ma być obliczony czlon zrodlowy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc czlonu zrodlowego dla danej temp 
+\end{DoxyReturn}
+
+
+Definicja w linii 16 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a5bf457660c754e02562840cc90cf00ac}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Compute\+Net\+Solar@{Compute\+Net\+Solar}}
+\index{Compute\+Net\+Solar@{Compute\+Net\+Solar}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Compute\+Net\+Solar}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Compute\+Net\+Solar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a5bf457660c754e02562840cc90cf00ac}
+
+
+oblicza wartosc promieniowania słonecznego krotkofalowe 
+
+Oblicza wartosc promieniowania słonecznego krotkofalowego na podstawie pomiarów promieniowania słonecznego padającego oraz albedo wody
+
+\begin{DoxyReturn}{Zwraca}
+wartosc promieniowania słonecznego krotkofalowe 
+\end{DoxyReturn}
+
+
+Definicja w linii 32 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a3baa4ec5f1504d7e5c01efd21530637f}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!e\+\_\+sat@{e\+\_\+sat}}
+\index{e\+\_\+sat@{e\+\_\+sat}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{e\+\_\+sat}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::e\+\_\+sat (
+\begin{DoxyParamCaption}
+\item[{long double}]{T, }
+\item[{double}]{b1 = {\ttfamily 6.12}, }
+\item[{double}]{b2 = {\ttfamily 17.27}, }
+\item[{double}]{b3 = {\ttfamily 237.3}}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a3baa4ec5f1504d7e5c01efd21530637f}
+oblicza wartosc prężności (ciśnienia) pary wodnej (defoltowo wg formuly Raudkivi 1979, Chapra 1997\+: 6.\+12 exp(17.\+27$\ast$\+Ta/(Ta+237.3)) 
+
+Definicja w linii 77 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a87b1a80ed14554fcaf903a3383f25a77}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Emissivity\+\_\+\+Brunt1932@{Emissivity\+\_\+\+Brunt1932}}
+\index{Emissivity\+\_\+\+Brunt1932@{Emissivity\+\_\+\+Brunt1932}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Emissivity\+\_\+\+Brunt1932}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Emissivity\+\_\+\+Brunt1932 (
+\begin{DoxyParamCaption}
+\item[{double}]{a1 = {\ttfamily 0.55}, }
+\item[{double}]{a2 = {\ttfamily 0.065}}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a87b1a80ed14554fcaf903a3383f25a77}
+
+
+oblicza wartosc emisyjnosci atmosfery wg formuły podanej przez Brunt (1932) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a1} & -\/ coefficient \mbox{[}\mbox{]} \\
+\hline
+{\em a2} & -\/ coefficient \mbox{[}h\+Pa$^\wedge$(-\/1/2)\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wartosc emisyjnosci atmosfery 
+\end{DoxyReturn}
+
+
+Definicja w linii 49 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_a1f7f06ac4ad2d3e71a2c9c7203ffc833}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+aw@{get\+\_\+aw}}
+\index{get\+\_\+aw@{get\+\_\+aw}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+aw}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+aw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a1f7f06ac4ad2d3e71a2c9c7203ffc833}
+zwraca wartosc albedo wody 
+
+Definicja w linii 154 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a1a1c94edb55d10722782ac1e76f1c8b8}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+ea@{get\+\_\+ea}}
+\index{get\+\_\+ea@{get\+\_\+ea}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+ea}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+ea (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a1a1c94edb55d10722782ac1e76f1c8b8}
+zwraca wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu 
+
+Definicja w linii 159 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ab48ea591c24a62581348cc291d565076}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+emis\+\_\+w@{get\+\_\+emis\+\_\+w}}
+\index{get\+\_\+emis\+\_\+w@{get\+\_\+emis\+\_\+w}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+emis\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+emis\+\_\+w (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ab48ea591c24a62581348cc291d565076}
+zwraca wartosc ustawionej zdolności emisyjnej wody 
+
+Definicja w linii 164 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a37bddd6b4413bf9a4265b0e6121dc53a}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+\+Js@{get\+\_\+\+Js}}
+\index{get\+\_\+\+Js@{get\+\_\+\+Js}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+\+Js}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+\+Js (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a37bddd6b4413bf9a4265b0e6121dc53a}
+zwraca wartosc promieniowania krotkofalowego 
+
+Definicja w linii 144 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ab6d1ce8e3f2f4034c256bd32b9285b01}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+pa@{get\+\_\+pa}}
+\index{get\+\_\+pa@{get\+\_\+pa}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+pa}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+pa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ab6d1ce8e3f2f4034c256bd32b9285b01}
+zwraca wartość ciśnienie atmosferycznego 
+
+Definicja w linii 139 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_aaf841691bf132c9b7d26c7ff3a60b798}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+\+Rh@{get\+\_\+\+Rh}}
+\index{get\+\_\+\+Rh@{get\+\_\+\+Rh}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+\+Rh}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+\+Rh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_aaf841691bf132c9b7d26c7ff3a60b798}
+zwraca wartość wilgotnosci powietrza 
+
+Definicja w linii 134 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a495d266066abc2afdfc6f67e73e9f5d6}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+\+Ta@{get\+\_\+\+Ta}}
+\index{get\+\_\+\+Ta@{get\+\_\+\+Ta}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+\+Ta}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+\+Ta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a495d266066abc2afdfc6f67e73e9f5d6}
+zwraca wartość temp powietrza 
+
+Definicja w linii 129 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ad5d42768c59f90e629dd033a6fd1ac77}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!get\+\_\+u@{get\+\_\+u}}
+\index{get\+\_\+u@{get\+\_\+u}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{get\+\_\+u}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Heat\+Flux\+::get\+\_\+u (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ad5d42768c59f90e629dd033a6fd1ac77}
+zwraca wartosc predkosci wiatru 
+
+Definicja w linii 149 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a4f17f1801cbea3b76715fdc873be78b6}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+aw@{set\+\_\+aw}}
+\index{set\+\_\+aw@{set\+\_\+aw}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+aw}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+aw (
+\begin{DoxyParamCaption}
+\item[{double}]{aw = {\ttfamily 0.06}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a4f17f1801cbea3b76715fdc873be78b6}
+ustawia wartosc albedo dla wody 
+
+Definicja w linii 197 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ae127a9c31f1bd777f40b9034395d4f96}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+cb@{set\+\_\+cb}}
+\index{set\+\_\+cb@{set\+\_\+cb}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{double}]{cb = {\ttfamily 0.62}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ae127a9c31f1bd777f40b9034395d4f96}
+ustawia wartosc wspolczynnika Bowena -\/ domyślnie )0.\+62 mb/st\+C 
+
+Definicja w linii 214 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ae90ff0b43ec0e41e2f40f28df7c9612d}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+ea@{set\+\_\+ea}}
+\index{set\+\_\+ea@{set\+\_\+ea}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+ea}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+ea (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_ae90ff0b43ec0e41e2f40f28df7c9612d}
+oblicza i ustawia wartosc aktualnej prężności (ciśnienia) pary wodnej w powietrzu 
+
+Definicja w linii 58 pliku netheatflux.\+cpp.
+
+\hypertarget{class_net_heat_flux_ac6c12bccd613d87ffae5a90b4910eaeb}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+emis\+\_\+w@{set\+\_\+emis\+\_\+w}}
+\index{set\+\_\+emis\+\_\+w@{set\+\_\+emis\+\_\+w}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+emis\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+emis\+\_\+w (
+\begin{DoxyParamCaption}
+\item[{double}]{emis\+\_\+w = {\ttfamily 0.97}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ac6c12bccd613d87ffae5a90b4910eaeb}
+ustawia wartosc dla zdolności emisyjnej wody 
+
+Definicja w linii 209 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a4608ba4ec5bade409d066b9e2370a4a0}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+\+Js@{set\+\_\+\+Js}}
+\index{set\+\_\+\+Js@{set\+\_\+\+Js}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+\+Js}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+\+Js (
+\begin{DoxyParamCaption}
+\item[{double}]{Js}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a4608ba4ec5bade409d066b9e2370a4a0}
+ustawia wartosc promieniowania krotkofalowego 
+
+Definicja w linii 187 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ac4d58893c28e07cd05a7988d098df46b}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+pa@{set\+\_\+pa}}
+\index{set\+\_\+pa@{set\+\_\+pa}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+pa}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+pa (
+\begin{DoxyParamCaption}
+\item[{double}]{pa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ac4d58893c28e07cd05a7988d098df46b}
+ustawia wartość ciśnienie atmosferycznego 
+
+Definicja w linii 182 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a870e6db2db832d88f88a0f75516f39d7}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+\+Rh@{set\+\_\+\+Rh}}
+\index{set\+\_\+\+Rh@{set\+\_\+\+Rh}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+\+Rh}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+\+Rh (
+\begin{DoxyParamCaption}
+\item[{double}]{Rh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a870e6db2db832d88f88a0f75516f39d7}
+ustawia wartość wilgotnosci powietrza 
+
+Definicja w linii 176 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a9e9700acebfa6481f24b93c2f7d1efd6}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+\+Ta@{set\+\_\+\+Ta}}
+\index{set\+\_\+\+Ta@{set\+\_\+\+Ta}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+\+Ta}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+\+Ta (
+\begin{DoxyParamCaption}
+\item[{double}]{Ta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_a9e9700acebfa6481f24b93c2f7d1efd6}
+ustawia wartość temp powietrza 
+
+Definicja w linii 171 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_ac4c880ee001af382d098191843b4fafb}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!set\+\_\+u@{set\+\_\+u}}
+\index{set\+\_\+u@{set\+\_\+u}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{set\+\_\+u}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Heat\+Flux\+::set\+\_\+u (
+\begin{DoxyParamCaption}
+\item[{double}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_net_heat_flux_ac4c880ee001af382d098191843b4fafb}
+ustawia wartosc predkosci wiatru 
+
+Definicja w linii 192 pliku netheatflux.\+h.
+
+\hypertarget{class_net_heat_flux_a3209796cc63c1b6f1d8040f7bb815053}{}\index{Net\+Heat\+Flux@{Net\+Heat\+Flux}!Wind\+Function\+\_\+\+Chapra2008@{Wind\+Function\+\_\+\+Chapra2008}}
+\index{Wind\+Function\+\_\+\+Chapra2008@{Wind\+Function\+\_\+\+Chapra2008}!Net\+Heat\+Flux@{Net\+Heat\+Flux}}
+\subsubsection[{Wind\+Function\+\_\+\+Chapra2008}]{\setlength{\rightskip}{0pt plus 5cm}long double Net\+Heat\+Flux\+::\+Wind\+Function\+\_\+\+Chapra2008 (
+\begin{DoxyParamCaption}
+\item[{float}]{c1 = {\ttfamily 19.0}, }
+\item[{float}]{c2 = {\ttfamily 0.95}}
+\end{DoxyParamCaption}
+)}\label{class_net_heat_flux_a3209796cc63c1b6f1d8040f7bb815053}
+
+
+oblicza wartosc funkcji zależnej od predkosci waitru oblicza wartosc funkcji zależnej od predkosci waitru wg zależnosci f(u) = c1 + c2 u$^\wedge$2 -\/ domyślnie c1 = 19.\+0, c2 = 0.\+95 -\/ Chapra 2008, Edinger et al 1974 
+
+\begin{DoxyReturn}{Zwraca}
+wartosc strumienia energii w wyniku parowania/kondenscji pary wodnej 
+\end{DoxyReturn}
+
+
+Definicja w linii 100 pliku netheatflux.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{netheatflux_8h}{netheatflux.\+h}\item 
+\hyperlink{netheatflux_8cpp}{netheatflux.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_d_fischer2}{}\section{Dokumentacja klasy D\+Fischer2}
+\label{class_d_fischer2}\index{D\+Fischer2@{D\+Fischer2}}
+
+
+Klasa tensora dyspersji.  
+
+
+
+
+{\ttfamily \#include $<$tensor.\+h$>$}
+
+Diagram dziedziczenia dla D\+Fischer2\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_fischer2}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_fischer2_afa71f15373ca57859ab3f09ec3306bde}{D\+Fischer2} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_fischer2_ae9c984ac693b39d8ea947aaa975cb0d7}{Compute\+Tensor} (double Dl, double Dt, \hyperlink{class_point}{Point} \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa tensora dyspersji. 
+
+Zawiera metody potrzebane do obliczenia wratosci wspolczynnikow tensora dyspersji, wg Fischer et al 1979 \char`\"{}\+Mixing in inland and coastal waters\char`\"{}, ale zaniedbujaca pozadiagonalne wspolczynniki. 
+
+Definicja w linii 69 pliku tensor.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_d_fischer2_afa71f15373ca57859ab3f09ec3306bde}{}\index{D\+Fischer2@{D\+Fischer2}!D\+Fischer2@{D\+Fischer2}}
+\index{D\+Fischer2@{D\+Fischer2}!D\+Fischer2@{D\+Fischer2}}
+\subsubsection[{D\+Fischer2}]{\setlength{\rightskip}{0pt plus 5cm}D\+Fischer2\+::\+D\+Fischer2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_d_fischer2_afa71f15373ca57859ab3f09ec3306bde}
+
+
+Konstruktor. 
+
+Tworzy obiekt Tensora Dyspersji wyznaczanego metoda Fischera z zaniedbaniem wspolczynnikow pozadiagonalnych 
+
+Definicja w linii 76 pliku tensor.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_d_fischer2_ae9c984ac693b39d8ea947aaa975cb0d7}{}\index{D\+Fischer2@{D\+Fischer2}!Compute\+Tensor@{Compute\+Tensor}}
+\index{Compute\+Tensor@{Compute\+Tensor}!D\+Fischer2@{D\+Fischer2}}
+\subsubsection[{Compute\+Tensor}]{\setlength{\rightskip}{0pt plus 5cm}void D\+Fischer2\+::\+Compute\+Tensor (
+\begin{DoxyParamCaption}
+\item[{double}]{Dl, }
+\item[{double}]{Dt, }
+\item[{{\bf Point} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_d_fischer2_ae9c984ac693b39d8ea947aaa975cb0d7}
+Oblicza wspolczyniki tensora Dyspersji uzywjac odpowieniej metody w zaleznosci od opcji podanej w pliku wejsciowym 
+\begin{DoxyParams}{Parametry}
+{\em Dl} & -\/ wspolczyniki dyspersji podluznej \\
+\hline
+{\em Dt} & -\/ wspolczynnik dyspersji porzecznej \\
+\hline
+{\em p} & -\/ punkt dla ktorego obiczany jest tensor \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \hyperlink{class_d_tensor_a0ed66ce3f3ab159c4d7f6a019bfea9da}{D\+Tensor}.
+
+
+
+Definicja w linii 50 pliku tensor.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tensor_8h}{tensor.\+h}\item 
+\hyperlink{tensor_8cpp}{tensor.\+cpp}\end{DoxyCompactItemize}

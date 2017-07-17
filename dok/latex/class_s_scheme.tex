@@ -1,0 +1,474 @@
+\hypertarget{class_s_scheme}{}\section{Dokumentacja klasy S\+Scheme}
+\label{class_s_scheme}\index{S\+Scheme@{S\+Scheme}}
+
+
+Klasa podstawowa Schematow.  
+
+
+
+
+{\ttfamily \#include $<$scheme.\+h$>$}
+
+Diagram dziedziczenia dla S\+Scheme\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_scheme}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_scheme_a007f3a5b981419391f6a57222f7d7da6}{S\+Scheme} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_s_scheme_a1607f2363ea074bde9ad9c585b5a4019}{Compute\+Concentration} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\begin{DoxyCompactList}\small\item\em Oblicza koncentracje. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_scheme_a9f9da388c80058c59123ea58e28f6408}{Set\+Factors} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map)
+\begin{DoxyCompactList}\small\item\em Ustawia czynniki w rownaniu transportu dla calej siatki. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_s_scheme_ae1e554b35ec2d8a902f6fdb30d95ab20}{Get\+Factors} (\hyperlink{class_point}{Point} $\ast$p, const double \&C\+Ax, const double \&C\+Ay, const double \&C\+Dx, const double \&C\+Dxy, const double \&C\+Dy, const vector$<$ int $>$ \&flag)
+\begin{DoxyCompactList}\small\item\em Odpowiedzialna za wyznaczenie czynnikow w row transportu dla danego pkt. \end{DoxyCompactList}\item 
+long double \hyperlink{class_s_scheme_a1b66164d72e54d4b85322fa68f307c30}{Jakobi} (\hyperlink{class_point}{Point} $\ast$p, map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)
+\begin{DoxyCompactList}\small\item\em metoda iteracyjna Jakobiego \end{DoxyCompactList}\item 
+long double \hyperlink{class_s_scheme_a78c4706ab3f69423302451983ad44022}{Jakobi} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, map$<$ int, long double $>$ \&f, vector$<$ string $>$ \&a)
+\item 
+long double \hyperlink{class_s_scheme_a0dd0343c9bcb4b35849403d8a76f9d18}{Gauss\+\_\+\+Seidel} (\hyperlink{class_point}{Point} $\ast$p, map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i)
+\begin{DoxyCompactList}\small\item\em metoda iteracyjna Gaussa Seidela \end{DoxyCompactList}\item 
+long double \hyperlink{class_s_scheme_a48ee384f6206a5c55931a8e3361f7d57}{Gauss\+\_\+\+Seidel} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, map$<$ int, long double $>$ \&f, vector$<$ string $>$ \&a)
+\item 
+long double \hyperlink{class_s_scheme_a48fa493450e8c55967bdaa78e9e1bd7c}{S\+O\+R} (\hyperlink{class_point}{Point} $\ast$p, map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, double fij, double a, double b, double c, double d, double e, double f, double g, double h, double i, long double omega)
+\begin{DoxyCompactList}\small\item\em metoda iteracyjna S\+O\+R \end{DoxyCompactList}\item 
+long double \hyperlink{class_s_scheme_a4bf15feac00aed3dd724fbf4921a4144}{S\+O\+R} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, map$<$ int, long double $>$ \&f, vector$<$ string $>$ \&a, long double omega=1.\+0)
+\item 
+void \hyperlink{class_s_scheme_a2032e9d35d0931c17d8f96170d5d843a}{set\+\_\+sym\+\_\+step} (int step)
+\item 
+int \hyperlink{class_s_scheme_acadf8feab53234c5923990af908c2733}{get\+\_\+sym\+\_\+step} () const 
+\item 
+void \hyperlink{class_s_scheme_a99fefa3de0fa0859be662faa9e21a01b}{set\+\_\+omega} (long double omega)
+\item 
+long double \hyperlink{class_s_scheme_a69a8b9ea4d5c04b5def66db3d64c4c22}{get\+\_\+omega} () const 
+\item 
+void \hyperlink{class_s_scheme_a3749de0c92f9a4a50c10ded4d7713344}{set\+\_\+method} (string method)
+\item 
+string \hyperlink{class_s_scheme_a8c73b695beb2beb76079444aa92f7922}{get\+\_\+method} () const 
+\item 
+float \hyperlink{class_s_scheme_ab5e7404ff79c4c13d12f64e69b284027}{Find\+Best\+Omega} (map$<$ int, \hyperlink{class_point}{Point} $>$ \&Point\+Map, map$<$ int, long double $>$ \&f)
+\item 
+void \hyperlink{class_s_scheme_a04180646227c260880ddc35ee0b563e7}{Read\+Method} (string scheme)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \hyperlink{class_s_scheme_a875c9280df6dcdbc3a41ef1c148202da}{\+\_\+i}
+\item 
+map$<$ int, double $>$ \hyperlink{class_s_scheme_a7d998bc77fe043ec3dfba082bf7c570a}{\+\_\+w}
+\item 
+int \hyperlink{class_s_scheme_a6c8e7253815c7ac85996ee8fba438f53}{powrot}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa podstawowa Schematow. 
+
+Zawiera metody potrzebane do rozwiazania rownania transportu w zaleznosci od wybranego schematu numrycznego uzywna sa metody z tej lub jednej z klas pochodnych. 
+
+Definicja w linii 40 pliku scheme.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_s_scheme_a007f3a5b981419391f6a57222f7d7da6}{}\index{S\+Scheme@{S\+Scheme}!S\+Scheme@{S\+Scheme}}
+\index{S\+Scheme@{S\+Scheme}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{S\+Scheme}]{\setlength{\rightskip}{0pt plus 5cm}S\+Scheme\+::\+S\+Scheme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a007f3a5b981419391f6a57222f7d7da6}
+
+
+Konstruktor. 
+
+Tworzy schemat do rozwiazywania rownania transportu. 
+
+Definicja w linii 47 pliku scheme.\+h.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_s_scheme_a1607f2363ea074bde9ad9c585b5a4019}{}\index{S\+Scheme@{S\+Scheme}!Compute\+Concentration@{Compute\+Concentration}}
+\index{Compute\+Concentration@{Compute\+Concentration}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Compute\+Concentration}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::\+Compute\+Concentration (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_scheme_a1607f2363ea074bde9ad9c585b5a4019}
+
+
+Oblicza koncentracje. 
+
+Oblicza koncentracje w daneym kroku uzywajac odpwoiedniej metody w zaeleznosci od wybranego schamtu do rozwiazywanie row transportu 
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa punktow \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \hyperlink{class_s_a_d_i2_a41903e3b443ba68fe68cbad73fe44970}{S\+A\+D\+I2}, \hyperlink{class_s_a_d_i_aed849c2b3b1a1c5b346edcfb69460457}{S\+A\+D\+I}, \hyperlink{class_s_up_wind_a500de829a9c8da4b43cb411014ff3b35}{S\+Up\+Wind} i \hyperlink{class_s_crank_nicolson_abe37e0a2d5078a17420b3e9d815fc85f}{S\+Crank\+Nicolson}.
+
+
+
+Definicja w linii 24 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_ab5e7404ff79c4c13d12f64e69b284027}{}\index{S\+Scheme@{S\+Scheme}!Find\+Best\+Omega@{Find\+Best\+Omega}}
+\index{Find\+Best\+Omega@{Find\+Best\+Omega}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Find\+Best\+Omega}]{\setlength{\rightskip}{0pt plus 5cm}float S\+Scheme\+::\+Find\+Best\+Omega (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{map$<$ int, long double $>$ \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_ab5e7404ff79c4c13d12f64e69b284027}
+
+
+Definicja w linii 233 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a0dd0343c9bcb4b35849403d8a76f9d18}{}\index{S\+Scheme@{S\+Scheme}!Gauss\+\_\+\+Seidel@{Gauss\+\_\+\+Seidel}}
+\index{Gauss\+\_\+\+Seidel@{Gauss\+\_\+\+Seidel}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Gauss\+\_\+\+Seidel}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+Gauss\+\_\+\+Seidel (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{p, }
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{double}]{fij, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{d, }
+\item[{double}]{e, }
+\item[{double}]{f, }
+\item[{double}]{g, }
+\item[{double}]{h, }
+\item[{double}]{i}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a0dd0343c9bcb4b35849403d8a76f9d18}
+
+
+metoda iteracyjna Gaussa Seidela 
+
+Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Gaussa Seidela do rozwiazywanai ukladow rownan linowych
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$p} & -\/ wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji \\
+\hline
+{\em Point\+Map} & -\/ referencja do mapy punktow siatki \\
+\hline
+{\em fij} & -\/ wartosc wyrazu wolnego odpowiedniego dla danego pkt \\
+\hline
+{\em a,b,c,d,e,f,g,h,i} & -\/ wspolczynniki ukl rownnan odpowiednie dla danego pkt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+koncentracje dla danego pkt 
+\end{DoxyReturn}
+
+
+Definicja w linii 143 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a48ee384f6206a5c55931a8e3361f7d57}{}\index{S\+Scheme@{S\+Scheme}!Gauss\+\_\+\+Seidel@{Gauss\+\_\+\+Seidel}}
+\index{Gauss\+\_\+\+Seidel@{Gauss\+\_\+\+Seidel}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Gauss\+\_\+\+Seidel}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+Gauss\+\_\+\+Seidel (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{map$<$ int, long double $>$ \&}]{f, }
+\item[{vector$<$ string $>$ \&}]{a}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a48ee384f6206a5c55931a8e3361f7d57}
+
+
+Definicja w linii 160 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a8c73b695beb2beb76079444aa92f7922}{}\index{S\+Scheme@{S\+Scheme}!get\+\_\+method@{get\+\_\+method}}
+\index{get\+\_\+method@{get\+\_\+method}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{get\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}string S\+Scheme\+::get\+\_\+method (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a8c73b695beb2beb76079444aa92f7922}
+zwraca wrtosc metody ktora ma byc uzyta do rozwiazywania ukladow rownan 
+
+Definicja w linii 170 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a69a8b9ea4d5c04b5def66db3d64c4c22}{}\index{S\+Scheme@{S\+Scheme}!get\+\_\+omega@{get\+\_\+omega}}
+\index{get\+\_\+omega@{get\+\_\+omega}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{get\+\_\+omega}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::get\+\_\+omega (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a69a8b9ea4d5c04b5def66db3d64c4c22}
+zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do S\+O\+Ra) 
+
+Definicja w linii 164 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_acadf8feab53234c5923990af908c2733}{}\index{S\+Scheme@{S\+Scheme}!get\+\_\+sym\+\_\+step@{get\+\_\+sym\+\_\+step}}
+\index{get\+\_\+sym\+\_\+step@{get\+\_\+sym\+\_\+step}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{get\+\_\+sym\+\_\+step}]{\setlength{\rightskip}{0pt plus 5cm}int S\+Scheme\+::get\+\_\+sym\+\_\+step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_acadf8feab53234c5923990af908c2733}
+zwraca wrtosc rowna aktualnemu krokowi symulacji (potrzebny do S\+O\+Ra) 
+
+Definicja w linii 158 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_ae1e554b35ec2d8a902f6fdb30d95ab20}{}\index{S\+Scheme@{S\+Scheme}!Get\+Factors@{Get\+Factors}}
+\index{Get\+Factors@{Get\+Factors}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Get\+Factors}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::\+Get\+Factors (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{p, }
+\item[{const double \&}]{C\+Ax, }
+\item[{const double \&}]{C\+Ay, }
+\item[{const double \&}]{C\+Dx, }
+\item[{const double \&}]{C\+Dxy, }
+\item[{const double \&}]{C\+Dy, }
+\item[{const vector$<$ int $>$ \&}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_scheme_ae1e554b35ec2d8a902f6fdb30d95ab20}
+
+
+Odpowiedzialna za wyznaczenie czynnikow w row transportu dla danego pkt. 
+
+Odpowiedzilan za wyznaczenie czynnikow (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rowenanie transportu dal zadanego pkt w ktorym obliczana jest koncentracja w zaleznosci od schematu jaki wykorzystywany jest do rozwiazania rownania 
+\begin{DoxyParams}{Parametry}
+{\em $\ast$p} & -\/ pkt dla ktorego wyznaczane sa czynniki \\
+\hline
+{\em C\+Ax} & -\/ adwekcyjna liczba Couranta w kieruynku x \\
+\hline
+{\em C\+Ay} & -\/ adwekcyjna liczba Couranta w kieruynku y \\
+\hline
+{\em C\+Dx} & -\/ dyfuzyjna liczba Couranta w kieruynku x \\
+\hline
+{\em C\+Dxy} & -\/ dyfuzyjna liczba Couranta w kieruynku xy \\
+\hline
+{\em C\+Dy} & -\/ dyfuzyjna liczba Couranta w kieruynku y \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \hyperlink{class_s_a_d_i2_afac90c203840a07b31f73418af815063}{S\+A\+D\+I2}, \hyperlink{class_s_a_d_i_aec6b8007d89c0c72648b4cad7aba1274}{S\+A\+D\+I}, \hyperlink{class_s_up_wind_a64e2e7d8ce37fd489c375fdd9a99c105}{S\+Up\+Wind} i \hyperlink{class_s_crank_nicolson_a1fd8e8aee2c7fb9f61e6c4b02b74e1b3}{S\+Crank\+Nicolson}.
+
+
+
+Definicja w linii 98 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a1b66164d72e54d4b85322fa68f307c30}{}\index{S\+Scheme@{S\+Scheme}!Jakobi@{Jakobi}}
+\index{Jakobi@{Jakobi}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Jakobi}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+Jakobi (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{p, }
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{double}]{fij, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{d, }
+\item[{double}]{e, }
+\item[{double}]{f, }
+\item[{double}]{g, }
+\item[{double}]{h, }
+\item[{double}]{i}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a1b66164d72e54d4b85322fa68f307c30}
+
+
+metoda iteracyjna Jakobiego 
+
+Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne Jakobiego do rozwiazywanai ukladow rownan linowych
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$p} & -\/ wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji \\
+\hline
+{\em Point\+Map} & -\/ referencja do mapy punktow siatki \\
+\hline
+{\em fij} & -\/ wartosc wyrazu wolnego odpowiedniego dla danego pkt \\
+\hline
+{\em a,b,c,d,e,f,g,h,i} & -\/ wspolczynniki ukl rownnan odpowiednie dla danego pkt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+koncentracje dla danego pkt 
+\end{DoxyReturn}
+
+
+Definicja w linii 102 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a78c4706ab3f69423302451983ad44022}{}\index{S\+Scheme@{S\+Scheme}!Jakobi@{Jakobi}}
+\index{Jakobi@{Jakobi}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Jakobi}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+Jakobi (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{map$<$ int, long double $>$ \&}]{f, }
+\item[{vector$<$ string $>$ \&}]{a}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a78c4706ab3f69423302451983ad44022}
+
+
+Definicja w linii 117 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a04180646227c260880ddc35ee0b563e7}{}\index{S\+Scheme@{S\+Scheme}!Read\+Method@{Read\+Method}}
+\index{Read\+Method@{Read\+Method}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Read\+Method}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::\+Read\+Method (
+\begin{DoxyParamCaption}
+\item[{string}]{scheme}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a04180646227c260880ddc35ee0b563e7}
+
+
+Definicja w linii 239 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a3749de0c92f9a4a50c10ded4d7713344}{}\index{S\+Scheme@{S\+Scheme}!set\+\_\+method@{set\+\_\+method}}
+\index{set\+\_\+method@{set\+\_\+method}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{set\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::set\+\_\+method (
+\begin{DoxyParamCaption}
+\item[{string}]{method}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a3749de0c92f9a4a50c10ded4d7713344}
+ustawia metode ktora ma byc uzyta do rozwiazywania ukladow rownan 
+
+Definicja w linii 167 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a99fefa3de0fa0859be662faa9e21a01b}{}\index{S\+Scheme@{S\+Scheme}!set\+\_\+omega@{set\+\_\+omega}}
+\index{set\+\_\+omega@{set\+\_\+omega}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{set\+\_\+omega}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::set\+\_\+omega (
+\begin{DoxyParamCaption}
+\item[{long double}]{omega}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a99fefa3de0fa0859be662faa9e21a01b}
+ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do S\+O\+Ra) 
+
+Definicja w linii 161 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a2032e9d35d0931c17d8f96170d5d843a}{}\index{S\+Scheme@{S\+Scheme}!set\+\_\+sym\+\_\+step@{set\+\_\+sym\+\_\+step}}
+\index{set\+\_\+sym\+\_\+step@{set\+\_\+sym\+\_\+step}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{set\+\_\+sym\+\_\+step}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::set\+\_\+sym\+\_\+step (
+\begin{DoxyParamCaption}
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_scheme_a2032e9d35d0931c17d8f96170d5d843a}
+ustawia wartosc rowna aktualnemu krokowi symulacji (potrzebny do S\+O\+Ra) 
+
+Definicja w linii 155 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a9f9da388c80058c59123ea58e28f6408}{}\index{S\+Scheme@{S\+Scheme}!Set\+Factors@{Set\+Factors}}
+\index{Set\+Factors@{Set\+Factors}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{Set\+Factors}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Scheme\+::\+Set\+Factors (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a9f9da388c80058c59123ea58e28f6408}
+
+
+Ustawia czynniki w rownaniu transportu dla calej siatki. 
+
+Ustawia czynniki (a, b, c, d, e, f, g, h, i) i (fa, fb, fc, fd, fe, ff, fg, fh, fi) w rownaniu transportu dla wszytskich pktow
+
+\[ a~c_{i,j}^{n+1} + b~c_{i+1,j}^{n+1} + c~c_{i-1,j}^{n+1} + d~c_{i,j+1}^{n+1} + e~c_{i,j-1}^{n+1} + f~c_{i+1,j+1}^{n+1} + g~c_{i+1,j-1}^{n+1} + h~c_{i-1,j+1}^{n+1} + i~c_{i-1,j-1}^{n+1} \] \[ = fa~c_{i,j}^{n} + fb~c_{i+1,j}^{n} + fc~c_{i-1,j}^{n} + fd~c_{i,j+1}^{n} + fe~c_{i,j-1}^{n} + ff~c_{i+1,j+1}^{n} + fg~c_{i+1,j-1}^{n} + fh~c_{i-1,j+1}^{n} + fi~c_{i-1,j-1}^{n} \]
+
+
+\begin{DoxyParams}{Parametry}
+{\em Point\+Map} & -\/ mapa punktow \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 27 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a48fa493450e8c55967bdaa78e9e1bd7c}{}\index{S\+Scheme@{S\+Scheme}!S\+O\+R@{S\+O\+R}}
+\index{S\+O\+R@{S\+O\+R}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{S\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+S\+O\+R (
+\begin{DoxyParamCaption}
+\item[{{\bf Point} $\ast$}]{p, }
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{double}]{fij, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{d, }
+\item[{double}]{e, }
+\item[{double}]{f, }
+\item[{double}]{g, }
+\item[{double}]{h, }
+\item[{double}]{i, }
+\item[{long double}]{omega}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a48fa493450e8c55967bdaa78e9e1bd7c}
+
+
+metoda iteracyjna S\+O\+R 
+
+Wyznacza koncentracje w danym punkcie rozwiazywanego ukladu rownan, uzywajac formuly iteracyjne S\+O\+R (Saccessive Over Relaksation) do rozwiazywanai ukladow rownan linowych
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$p} & -\/ wskaznik do pktu dla ktorego obliczana jest wartosc koncentracji \\
+\hline
+{\em Point\+Map} & -\/ referencja do mapy punktow siatki \\
+\hline
+{\em fij} & -\/ wartosc wyrazu wolnego odpowiedniego dla danego pkt \\
+\hline
+{\em a,b,c,d,e,f,g,h,i} & -\/ wspolczynniki ukl rownnan odpowiednie dla danego pkt \\
+\hline
+{\em omega} & -\/ parametr relaksacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+koncentracje dla danego pkt 
+\end{DoxyReturn}
+
+
+Definicja w linii 185 pliku scheme.\+cpp.
+
+\hypertarget{class_s_scheme_a4bf15feac00aed3dd724fbf4921a4144}{}\index{S\+Scheme@{S\+Scheme}!S\+O\+R@{S\+O\+R}}
+\index{S\+O\+R@{S\+O\+R}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{S\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}long double S\+Scheme\+::\+S\+O\+R (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, {\bf Point} $>$ \&}]{Point\+Map, }
+\item[{map$<$ int, long double $>$ \&}]{f, }
+\item[{vector$<$ string $>$ \&}]{a, }
+\item[{long double}]{omega = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{class_s_scheme_a4bf15feac00aed3dd724fbf4921a4144}
+
+
+Definicja w linii 208 pliku scheme.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_s_scheme_a875c9280df6dcdbc3a41ef1c148202da}{}\index{S\+Scheme@{S\+Scheme}!\+\_\+i@{\+\_\+i}}
+\index{\+\_\+i@{\+\_\+i}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{\+\_\+i}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ S\+Scheme\+::\+\_\+i}\label{class_s_scheme_a875c9280df6dcdbc3a41ef1c148202da}
+
+
+Definicja w linii 177 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a7d998bc77fe043ec3dfba082bf7c570a}{}\index{S\+Scheme@{S\+Scheme}!\+\_\+w@{\+\_\+w}}
+\index{\+\_\+w@{\+\_\+w}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,double$>$ S\+Scheme\+::\+\_\+w}\label{class_s_scheme_a7d998bc77fe043ec3dfba082bf7c570a}
+
+
+Definicja w linii 178 pliku scheme.\+h.
+
+\hypertarget{class_s_scheme_a6c8e7253815c7ac85996ee8fba438f53}{}\index{S\+Scheme@{S\+Scheme}!powrot@{powrot}}
+\index{powrot@{powrot}!S\+Scheme@{S\+Scheme}}
+\subsubsection[{powrot}]{\setlength{\rightskip}{0pt plus 5cm}int S\+Scheme\+::powrot}\label{class_s_scheme_a6c8e7253815c7ac85996ee8fba438f53}
+
+
+Definicja w linii 179 pliku scheme.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{scheme_8h}{scheme.\+h}\item 
+\hyperlink{scheme_8cpp}{scheme.\+cpp}\item 
+\hyperlink{scheme__new__bez_q_8cpp}{scheme\+\_\+new\+\_\+bez\+Q.\+cpp}\item 
+\hyperlink{scheme__new__z_q_8cpp}{scheme\+\_\+new\+\_\+z\+Q.\+cpp}\item 
+\hyperlink{scheme__przed__zmina__09092015_8cpp}{scheme\+\_\+przed\+\_\+zmina\+\_\+09092015.\+cpp}\end{DoxyCompactItemize}
