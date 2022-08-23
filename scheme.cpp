@@ -1319,7 +1319,6 @@ cout<<endl<<"--->-> wszytskie punkty dookola to przeplyw; oznaczono wiec pkt jak
 		}
 	}
 	
-	
 	for(IT = PointMap.begin(); IT != PointMap.end(); IT++){
 		val = IT->second.get_Curr();
 		IT->second.set_Prev(val);

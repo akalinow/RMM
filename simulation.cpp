@@ -79,10 +79,7 @@
 	//tutaj nowa funkcja ustawiajaca zapis
 	
 	for (i = 1; i < sym_param.get_n() + 1; i++ ){
-		ostringstream buffer;
-		buffer << i;		// send the int to the ostringstream
-		step =  buffer.str();	// capture the string
-		cout<<"KROK: "<<i<<"  ";
+	  cout<<"KROK: "<<i<<"  "<<std::endl;
 		out<<"KROK: "<<i<<endl;
 		my_scheme->set_sym_step(i);
 		t0 = time(NULL);
@@ -109,8 +106,8 @@
 			SaveMap(PointMap, step_plus, "conc");
 		}*/
 		if ( _save.find(i) != _save.end()) {
-			cout<<"Zapisuję krok: "<<i<<endl;
-			step_plus = _file + "_Conc_" + sch + "_" + step + ".dat";
+			cout<<"Zapisuję krok: "<<i<<endl;			
+			step_plus = _file + "_Conc_" + sch + "_" + std::to_string(i) + ".dat";
 			SaveMap(PointMap, step_plus, "conc");
 		}
 		//SetInitialConcentrationGauss(PointMap, sym_param);	
@@ -453,13 +450,13 @@ void Simulation::SaveMap(map<int, Point> &PointMap, const string &file, const st
         			<<CI->second.get_y()<<" "
         			<<CI->second.get_flag()<<" "
         			<<CI->second.get_vx()<<" "
-        			<<CI->second.get_vy()<<" "
-        			<<CI->second.get_Dxx()<<" "
-					<<CI->second.get_Dxy()<<" "
-        			<<CI->second.get_Dyy()<<" "
-					<<CI->second.get_Prev()<<" "
-					<<CI->second.get_Curr()<<" "
-					<<CI->second.get_Next()<<endl;
+				   <<CI->second.get_vy()<<" "
+				   <<CI->second.get_Dxx()<<" "
+				   <<CI->second.get_Dxy()<<" "
+				   <<CI->second.get_Dyy()<<" "
+				   <<CI->second.get_Prev()<<" "
+				   <<CI->second.get_Curr()<<" "
+				   <<CI->second.get_Next()<<endl;
 			}
 		}
 	}	
@@ -1071,6 +1068,7 @@ int Simulation::SetInitialConcentration (map<int, Point> &PointMap, SimulationPa
 	  
 	in.close();
 	out.close();
+	return 1;
 }
 
 
